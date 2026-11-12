@@ -52,12 +52,12 @@ const WHATSAPP_NUMBER = WA_NUMBER;
 
 const ComoFunciona = () => {
   useEffect(() => {
-    document.title = "Como Funciona o Atendimento Técnico | Passo a Passo";
+    document.title = "Como funciona o atendimento técnico de informática";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Triagem, diagnóstico, aprovação e execução: veja como funciona o atendimento técnico de informática em Curitiba, quando é remoto."
+        "Veja como funcionam triagem, escolha da modalidade, diagnóstico, aprovação do valor e execução, e quando o caso é remoto, visita ou bancada."
       );
     }
     trackPageView("/como-funciona", "Como Funciona");
@@ -71,7 +71,7 @@ const ComoFunciona = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO title="Como Funciona o Atendimento Técnico | Passo a Passo" description="Triagem, diagnóstico, aprovação e execução: veja como funciona o atendimento técnico de informática em Curitiba, quando é remoto." path="/como-funciona" breadcrumbs={[{ name: "Início", path: "/" }, { name: "Como Funciona", path: "/como-funciona" }]} />
+      <PageSEO title="Como funciona o atendimento técnico de informática" description="Veja como funcionam triagem, escolha da modalidade, diagnóstico, aprovação do valor e execução, e quando o caso é remoto, visita ou bancada." path="/como-funciona" breadcrumbs={[{ name: "Início", path: "/" }, { name: "Como Funciona", path: "/como-funciona" }]} />
       {/* JSON-LD FAQPage */}
       <script
         type="application/ld+json"

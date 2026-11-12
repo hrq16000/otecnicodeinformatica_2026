@@ -9,6 +9,11 @@ on:
     # Weekly Monday 06:00 UTC re-scan to catch drift in dependencies.
     - cron: "0 6 * * 1"
 
+# Evita que commits antigos da mesma PR continuem consumindo runner.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
   security-events: write
@@ -17,6 +22,7 @@ jobs:
   audit:
     name: Dependency audit + secret scan
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
         with:
@@ -59,7 +65,7 @@ jobs:
       - name: Gitleaks secret scan
         if: always()
         run: |
-          docker run --rm \
+          timeout 8m docker run --rm \
             -v "${{ github.workspace }}:/repo" \
             ghcr.io/gitleaks/gitleaks:v8.30.1 \
             git /repo --redact --no-banner --verbose

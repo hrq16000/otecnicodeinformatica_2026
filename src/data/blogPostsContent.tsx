@@ -239,197 +239,6 @@ export const blogPostsContentBase: Record<string, BlogPostContent> = {
       </>
     ),
   },
-  "comandos-linux-essenciais-iniciantes": {
-    title: "50 Comandos Linux Essenciais Para Iniciantes e Técnicos",
-    excerpt: "Guia definitivo de comandos do terminal.",
-    date: "2026-04-13",
-    readTime: "16 min",
-    category: "Linux",
-    content: (
-      <>
-        <p className="lead">O terminal do Linux pode parecer intimidador, mas dominar os comandos básicos transforma sua produtividade. Este guia reúne <strong>50 comandos essenciais</strong> organizados por categoria, com exemplos práticos.</p>
-
-        <h2>Navegação e Arquivos</h2>
-        <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm"><code>{`pwd          # Mostra o diretório atual
-ls           # Lista arquivos e pastas
-ls -la       # Lista com detalhes e ocultos
-cd /caminho  # Navega para um diretório
-cd ..        # Volta um nível
-cd ~         # Vai para o home do usuário
-mkdir pasta  # Cria diretório
-rmdir pasta  # Remove diretório vazio
-rm arquivo   # Remove arquivo
-rm -rf pasta # Remove pasta e conteúdo (CUIDADO!)
-cp orig dest # Copia arquivo
-mv orig dest # Move ou renomeia
-touch arq    # Cria arquivo vazio
-cat arquivo  # Mostra conteúdo do arquivo
-less arquivo # Mostra com paginação
-head -n 20 arq # Primeiras 20 linhas
-tail -f log  # Acompanha arquivo em tempo real`}</code></pre>
-
-        <h2>Busca e Filtros</h2>
-        <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm"><code>{`find / -name "*.log"        # Busca arquivos por nome
-find . -size +100M          # Arquivos maiores que 100MB
-grep "texto" arquivo        # Busca texto em arquivo
-grep -r "texto" /pasta/     # Busca recursiva
-grep -i "texto" arq         # Ignora maiúsculas
-wc -l arquivo               # Conta linhas
-sort arquivo                # Ordena conteúdo
-uniq                        # Remove duplicatas
-diff arq1 arq2              # Compara dois arquivos`}</code></pre>
-
-        <h2>Permissões e Usuários</h2>
-        <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm"><code>{`chmod 755 arquivo    # Define permissões (rwxr-xr-x)
-chmod +x script.sh   # Torna executável
-chown user:grupo arq # Altera dono do arquivo
-sudo comando         # Executa como root
-whoami               # Mostra usuário atual
-id                   # Mostra UID, GID e grupos
-passwd               # Altera senha
-adduser nome         # Cria novo usuário
-usermod -aG grupo user # Adiciona user ao grupo`}</code></pre>
-
-        <h2>Processos e Sistema</h2>
-        <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm"><code>{`ps aux           # Lista todos os processos
-top              # Monitor em tempo real
-htop             # Monitor interativo (instalar)
-kill PID         # Encerra processo por PID
-kill -9 PID      # Força encerramento
-systemctl status serviço  # Status de serviço
-systemctl restart serviço # Reinicia serviço
-df -h            # Espaço em disco
-du -sh /pasta    # Tamanho de uma pasta
-free -h          # Uso de memória RAM
-uname -a         # Info do kernel
-uptime           # Tempo ligado`}</code></pre>
-
-        <h2>Rede</h2>
-        <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm"><code>{`ip a             # Mostra interfaces de rede
-ping google.com  # Testa conectividade
-curl url         # Faz requisição HTTP
-wget url         # Baixa arquivo da web
-ss -tulnp        # Portas em uso
-traceroute host  # Rota até o destino
-nslookup domínio # Consulta DNS
-scp arq user@host:/path  # Copia via SSH
-ssh user@host    # Acesso remoto seguro`}</code></pre>
-
-        <h2>Compactação</h2>
-        <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm"><code>{`tar -czf backup.tar.gz /pasta  # Compacta com gzip
-tar -xzf backup.tar.gz        # Descompacta
-zip -r backup.zip /pasta       # Compacta em ZIP
-unzip backup.zip               # Descompacta ZIP`}</code></pre>
-
-        <h2>Dicas de Produtividade no Terminal</h2>
-        <ul>
-          <li><strong>Tab</strong> — autocompleta comandos e caminhos</li>
-          <li><strong>Ctrl+R</strong> — busca no histórico de comandos</li>
-          <li><strong>!!</strong> — repete o último comando (útil: <code>sudo !!</code>)</li>
-          <li><strong>Ctrl+C</strong> — cancela comando em execução</li>
-          <li><strong>Ctrl+L</strong> — limpa a tela</li>
-          <li><strong>comando1 | comando2</strong> — pipe: saída de um vira entrada do outro</li>
-          <li><strong>comando &gt; arquivo</strong> — redireciona saída para arquivo</li>
-          <li><strong>comando &gt;&gt; arquivo</strong> — adiciona ao final do arquivo</li>
-        </ul>
-
-        <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Precisa de Ajuda com Linux?</h3>
-          <p className="text-muted-foreground mb-0">Instalamos, configuramos e damos suporte a Linux em Curitiba e região. De servidores a desktops.</p>
-        </div>
-      </>
-    ),
-  },
-  "como-instalar-ubuntu-do-zero": {
-    title: "Como Instalar Ubuntu do Zero: Guia Completo 2026",
-    excerpt: "Passo a passo desde o pendrive bootável até a configuração pós-instalação.",
-    date: "2026-04-13",
-    readTime: "12 min",
-    category: "Linux",
-    content: (
-      <>
-        <p className="lead">O Ubuntu é a distribuição Linux mais popular do mundo — e por bons motivos. É gratuito, seguro, leve e fácil de usar. Este guia mostra <strong>como instalar o Ubuntu do zero</strong>, desde a criação do pendrive bootável até as configurações essenciais pós-instalação.</p>
-
-        <h2>Requisitos Mínimos</h2>
-        <ul>
-          <li>Processador dual-core de 2 GHz ou superior</li>
-          <li>4 GB de RAM (recomendado 8 GB)</li>
-          <li>25 GB de espaço em disco (recomendado 50 GB)</li>
-          <li>Pendrive USB de 4 GB ou mais</li>
-          <li>Conexão com internet (recomendado)</li>
-        </ul>
-
-        <h2>Passo 1: Baixar a ISO do Ubuntu</h2>
-        <p>Acesse <strong>ubuntu.com/download</strong> e baixe a versão LTS mais recente (Ubuntu 24.04 LTS). A versão LTS tem suporte de 5 anos — ideal para estabilidade.</p>
-
-        <h2>Passo 2: Criar Pendrive Bootável</h2>
-        <p>No Windows, use o <strong>Rufus</strong> (gratuito):</p>
-        <ol>
-          <li>Baixe e abra o Rufus</li>
-          <li>Selecione o pendrive USB</li>
-          <li>Em "Seleção de Boot", escolha a ISO do Ubuntu</li>
-          <li>Partição: GPT (para UEFI) ou MBR (para BIOS legado)</li>
-          <li>Clique em "Iniciar" e aguarde</li>
-        </ol>
-
-        <h2>Passo 3: Configurar Boot pelo Pendrive</h2>
-        <p>Reinicie o computador e acesse o menu de boot:</p>
-        <ul>
-          <li><strong>Dell/Lenovo:</strong> F12</li>
-          <li><strong>HP:</strong> F9</li>
-          <li><strong>ASUS/Acer:</strong> F2 ou ESC</li>
-          <li><strong>MSI:</strong> F11</li>
-        </ul>
-        <p>Selecione o pendrive USB na lista de dispositivos de boot.</p>
-
-        <h2>Passo 4: Instalação</h2>
-        <ol>
-          <li>Selecione "Instalar Ubuntu" (não "Experimentar")</li>
-          <li>Escolha o idioma: <strong>Português do Brasil</strong></li>
-          <li>Marque "Instalar software de terceiros" (codecs, drivers Wi-Fi)</li>
-          <li>Tipo de instalação: "Apagar disco e instalar Ubuntu" (para instalação limpa)</li>
-          <li>Selecione fuso horário: <strong>São Paulo</strong></li>
-          <li>Crie seu usuário e senha</li>
-          <li>Aguarde a instalação (10-20 minutos)</li>
-          <li>Reinicie e remova o pendrive quando solicitado</li>
-        </ol>
-
-        <h2>Passo 5: Configurações Pós-Instalação</h2>
-        <p>Após o primeiro boot, execute no terminal:</p>
-        <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm"><code>{`# Atualizar tudo
-sudo apt update && sudo apt upgrade -y
-
-# Instalar codecs multimídia
-sudo apt install ubuntu-restricted-extras -y
-
-# Instalar ferramentas essenciais
-sudo apt install git curl wget htop neofetch -y
-
-# Instalar navegador alternativo (ex: Chrome)
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-
-# Instalar Flatpak (mais apps)
-sudo apt install flatpak gnome-software-plugin-flatpak -y
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`}</code></pre>
-
-        <h2>Softwares Essenciais Para Instalar</h2>
-        <ul>
-          <li><strong>LibreOffice</strong> — já vem instalado (equivalente ao Office)</li>
-          <li><strong>VLC</strong> — player de mídia universal</li>
-          <li><strong>GIMP</strong> — editor de imagens (alternativa ao Photoshop)</li>
-          <li><strong>Visual Studio Code</strong> — editor de código</li>
-          <li><strong>Timeshift</strong> — backup/restauração do sistema</li>
-          <li><strong>Flameshot</strong> — captura de tela avançada</li>
-        </ul>
-
-        <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Instalação Profissional de Linux</h3>
-          <p className="text-muted-foreground mb-0">Nosso técnico instala Ubuntu, Mint ou qualquer distribuição no seu computador com todos os drivers e softwares configurados. Atendemos em Curitiba e região.</p>
-        </div>
-      </>
-    ),
-  },
   "distribuicoes-linux-qual-melhor-para-voce": {
     title: "Distribuições Linux: Qual a Melhor Para Você?",
     excerpt: "Comparativo entre as principais distros.",
@@ -508,9 +317,9 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
     ),
   },
   "trocar-windows-por-linux-vale-a-pena": {
-    title: "Trocar Windows por Linux vale a pena? Checklist de compatibilidade antes de migrar",
+    title: "Linux vale a pena no seu PC? O que testar antes de trocar o Windows",
     excerpt:
-      "Decida com base em aplicativos, periféricos, arquivos, jogos e suporte do hardware. Veja como testar Linux por USB antes de alterar o disco.",
+      "Veja como avaliar aplicativos, jogos, periféricos, drivers e arquivos e como testar Linux por USB antes de alterar o disco ou abandonar o Windows.",
     date: "2026-09-25",
     readTime: "11 min",
     category: "Linux",
@@ -801,284 +610,6 @@ sudo certbot renew --dry-run`}</code></pre>
         <div className="bg-accent/10 rounded-xl p-6 my-8">
           <h3 className="text-accent font-bold mb-2">Precisa Configurar um Servidor Web?</h3>
           <p className="text-muted-foreground mb-0">Configuramos servidores Apache e Nginx para empresas em Curitiba e região. Desde a instalação até SSL, proxy reverso e otimização de performance.</p>
-        </div>
-      </>
-    ),
-  },
-  "como-gerenciar-pacotes-apt-dnf-linux": {
-    title: "Como Gerenciar Pacotes no Linux com APT e DNF: Guia Completo",
-    excerpt: "Domine os gerenciadores de pacotes APT (Debian/Ubuntu) e DNF (Fedora/RHEL) com exemplos práticos.",
-    date: "2026-04-13",
-    readTime: "12 min",
-    category: "Linux",
-    content: (
-      <>
-        <p className="lead">No Linux, instalar, atualizar e remover programas é feito pelo <strong>gerenciador de pacotes</strong>. Entender APT e DNF é fundamental para qualquer administrador Linux. Neste guia, cobrimos desde o básico até técnicas avançadas como pinning, repositórios de terceiros e resolução de dependências.</p>
-
-        <h2>APT — Debian, Ubuntu, Mint e Derivados</h2>
-        <p>O APT (Advanced Package Tool) é o gerenciador padrão das distribuições baseadas em Debian — as mais populares do mundo.</p>
-
-        <h3>Comandos Essenciais do APT</h3>
-        <pre><code>{`# Atualizar lista de pacotes disponíveis
-sudo apt update
-
-# Atualizar todos os pacotes instalados
-sudo apt upgrade -y
-
-# Atualização completa (inclui remoção de pacotes obsoletos)
-sudo apt full-upgrade -y
-
-# Instalar um pacote
-sudo apt install nome-do-pacote -y
-
-# Instalar múltiplos pacotes
-sudo apt install nginx php mysql-server -y
-
-# Remover pacote (mantém configs)
-sudo apt remove nome-do-pacote
-
-# Remover pacote + configurações
-sudo apt purge nome-do-pacote
-
-# Remover dependências órfãs
-sudo apt autoremove -y
-
-# Buscar pacotes
-apt search "servidor web"
-
-# Ver informações de um pacote
-apt show nginx
-
-# Listar pacotes instalados
-apt list --installed
-
-# Ver pacotes atualizáveis
-apt list --upgradable`}</code></pre>
-
-        <h3>Gerenciando Repositórios</h3>
-        <pre><code>{`# Adicionar repositório PPA (Ubuntu)
-sudo add-apt-repository ppa:ondrej/php
-sudo apt update
-
-# Adicionar repositório manualmente
-echo "deb http://repo.exemplo.com/ubuntu jammy main" | sudo tee /etc/apt/sources.list.d/exemplo.list
-
-# Adicionar chave GPG do repositório
-curl -fsSL https://repo.exemplo.com/key.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/exemplo.gpg
-
-# Remover PPA
-sudo add-apt-repository --remove ppa:ondrej/php`}</code></pre>
-
-        <h3>APT Pinning — Prioridade de Versões</h3>
-        <pre><code>{`# /etc/apt/preferences.d/firefox
-Package: firefox
-Pin: release a=jammy-security
-Pin-Priority: 1000`}</code></pre>
-        <p>O pinning permite favaliar o valor uma versão específica de um pacote, útil quando você precisa manter uma versão estável mesmo com repositórios mais novos adicionados.</p>
-
-        <h2>DNF — Fedora, RHEL, CentOS Stream, AlmaLinux</h2>
-        <p>O DNF (Dandified YUM) é o gerenciador padrão da família Red Hat — dominante em servidores corporativos.</p>
-
-        <h3>Comandos Essenciais do DNF</h3>
-        <pre><code>{`# Atualizar lista + instalar atualizações
-sudo dnf upgrade -y
-
-# Instalar pacote
-sudo dnf install nginx -y
-
-# Remover pacote
-sudo dnf remove nginx
-
-# Buscar pacotes
-dnf search "servidor web"
-
-# Ver informações
-dnf info nginx
-
-# Listar instalados
-dnf list installed
-
-# Ver histórico de transações
-dnf history
-
-# Desfazer última transação
-sudo dnf history undo last
-
-# Limpar cache
-sudo dnf clean all
-
-# Instalar grupo de pacotes
-sudo dnf groupinstall "Development Tools"
-
-# Listar grupos disponíveis
-dnf grouplist`}</code></pre>
-
-        <h3>Repositórios no DNF</h3>
-        <pre><code>{`# Habilitar repositório EPEL (Enterprise Linux)
-sudo dnf install epel-release -y
-
-# Adicionar RPM Fusion (codecs e drivers)
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-
-# Listar repositórios
-dnf repolist
-
-# Desabilitar um repositório temporariamente
-sudo dnf --disablerepo=epel install pacote`}</code></pre>
-
-        <h2>Comparativo APT vs DNF</h2>
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm">
-            <thead><tr><th className="text-left p-2 border-b">Ação</th><th className="text-left p-2 border-b">APT</th><th className="text-left p-2 border-b">DNF</th></tr></thead>
-            <tbody>
-              <tr><td className="p-2 border-b">Atualizar lista</td><td className="p-2 border-b">apt update</td><td className="p-2 border-b">(automático)</td></tr>
-              <tr><td className="p-2 border-b">Atualizar tudo</td><td className="p-2 border-b">apt upgrade</td><td className="p-2 border-b">dnf upgrade</td></tr>
-              <tr><td className="p-2 border-b">Instalar</td><td className="p-2 border-b">apt install pkg</td><td className="p-2 border-b">dnf install pkg</td></tr>
-              <tr><td className="p-2 border-b">Remover</td><td className="p-2 border-b">apt remove pkg</td><td className="p-2 border-b">dnf remove pkg</td></tr>
-              <tr><td className="p-2 border-b">Buscar</td><td className="p-2 border-b">apt search</td><td className="p-2 border-b">dnf search</td></tr>
-              <tr><td className="p-2 border-b">Desfazer</td><td className="p-2 border-b">❌</td><td className="p-2 border-b">dnf history undo</td></tr>
-              <tr><td className="p-2 border-b">Formato</td><td className="p-2 border-b">.deb</td><td className="p-2 border-b">.rpm</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h2>Flatpak e Snap — Alternativas Universais</h2>
-        <p>Além de APT e DNF, existem formatos universais que funcionam em qualquer distro:</p>
-        <ul>
-          <li><strong>Flatpak:</strong> sandbox seguro, usado pelo GNOME Software. Ideal para apps desktop (Firefox, LibreOffice, VLC)</li>
-          <li><strong>Snap:</strong> desenvolvido pela Canonical. Atualizações automáticas, mas mais pesado que Flatpak</li>
-          <li><strong>AppImage:</strong> executável portátil sem instalação. Basta dar permissão e executar</li>
-        </ul>
-
-        <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Suporte Linux Para Sua Empresa</h3>
-          <p className="text-muted-foreground mb-0">Gerenciamos servidores Linux, configuramos repositórios e mantemos seus sistemas atualizados e seguros. Atendimento em Curitiba e região.</p>
-        </div>
-      </>
-    ),
-  },
-  "como-configurar-ssh-seguro-linux": {
-    title: "Como Configurar SSH Seguro no Linux: Guia Anti-Invasão",
-    excerpt: "Hardening completo do SSH: chaves, fail2ban, porta customizada e autenticação de dois fatores.",
-    date: "2026-04-13",
-    readTime: "13 min",
-    category: "Linux",
-    content: (
-      <>
-        <p className="lead">O SSH (Secure Shell) é a porta de entrada para administrar servidores Linux remotamente — e também o alvo número 1 de atacantes. Neste guia, mostramos como configurar o SSH de forma <strong>realmente segura</strong>, com autenticação por chaves, fail2ban, porta customizada e MFA.</p>
-
-        <h2>Por Que a Configuração Padrão do SSH é Insegura?</h2>
-        <ul>
-          <li>Porta 22 é escaneada automaticamente por bots 24/7</li>
-          <li>Login por senha permite ataques de força bruta</li>
-          <li>Root com acesso direto é um risco crítico</li>
-          <li>Sem rate-limiting, um bot pode testar milhares de senhas por minuto</li>
-        </ul>
-        <p>Um servidor na internet sem hardening recebe <strong>centenas de tentativas de login por hora</strong>. Veja como se proteger:</p>
-
-        <h2>Passo 1: Gerar Par de Chaves SSH</h2>
-        <p>Autenticação por chaves é infinitamente mais segura que senhas:</p>
-        <pre><code>{`# No seu computador local (não no servidor!)
-ssh-keygen -t ed25519 -C "seu-email@exemplo.com"
-
-# Vai gerar:
-# ~/.ssh/id_ed25519       (chave privada - NUNCA compartilhe!)
-# ~/.ssh/id_ed25519.pub   (chave pública - copie para o servidor)
-
-# Copiar chave pública para o servidor
-ssh-copy-id usuario@IP-DO-SERVIDOR
-
-# Testar conexão com chave
-ssh usuario@IP-DO-SERVIDOR
-# Deve conectar sem pedir senha`}</code></pre>
-
-        <h2>Passo 2: Hardening do sshd_config</h2>
-        <pre><code>{`sudo nano /etc/ssh/sshd_config
-
-# Altere as seguintes linhas:
-Port 2222                          # Porta customizada (evita 99% dos bots)
-PermitRootLogin no                 # Bloqueia login como root
-PasswordAuthentication no          # Desabilita login por senha
-PubkeyAuthentication yes           # Somente chaves SSH
-MaxAuthTries 3                     # Máximo de tentativas
-LoginGraceTime 30                  # Tempo máximo para autenticar
-ClientAliveInterval 300            # Desconecta sessões ociosas
-ClientAliveCountMax 2              # Após 2 pings sem resposta
-AllowUsers seuusuario              # Somente usuários específicos
-Protocol 2                         # Somente protocolo SSH2
-X11Forwarding no                   # Desabilita X11 (desnecessário)
-PermitEmptyPasswords no            # Bloqueia senhas vazias
-
-# Reiniciar SSH (mantenha a sessão atual aberta!)
-sudo systemctl restart sshd`}</code></pre>
-        <p className="text-sm text-muted-foreground"><strong>⚠️ IMPORTANTE:</strong> Antes de reiniciar o SSH, abra uma segunda sessão SSH para testar. Se algo der errado, você ainda terá acesso pela sessão original.</p>
-
-        <h2>Passo 3: Instalar fail2ban</h2>
-        <p>O fail2ban monitora logs e bane IPs que tentam força bruta:</p>
-        <pre><code>{`sudo apt install fail2ban -y  # Debian/Ubuntu
-sudo dnf install fail2ban -y  # Fedora/RHEL
-
-# Criar configuração local
-sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
-sudo nano /etc/fail2ban/jail.local`}</code></pre>
-        <pre><code>{`[sshd]
-enabled = true
-port = 2222
-filter = sshd
-logpath = /var/log/auth.log
-maxretry = 3
-bantime = 3600
-findtime = 600`}</code></pre>
-        <pre><code>{`sudo systemctl enable fail2ban
-sudo systemctl start fail2ban
-
-# Ver IPs banidos
-sudo fail2ban-client status sshd`}</code></pre>
-
-        <h2>Passo 4: Firewall (UFW)</h2>
-        <pre><code>{`# Permitir apenas a porta SSH customizada
-sudo ufw allow 2222/tcp
-sudo ufw enable
-
-# Verificar regras
-sudo ufw status verbose`}</code></pre>
-
-        <h2>Passo 5: Autenticação de Dois Fatores (MFA)</h2>
-        <pre><code>{`sudo apt install libpam-google-authenticator -y
-
-# Configurar para seu usuário
-google-authenticator
-# Responda: y, y, y, n, y
-# Escaneie o QR code com Google Authenticator ou Authy
-
-# Editar PAM
-sudo nano /etc/pam.d/sshd
-# Adicionar no final:
-auth required pam_google_authenticator.so
-
-# Editar sshd_config
-sudo nano /etc/ssh/sshd_config
-# Alterar:
-ChallengeResponseAuthentication yes
-AuthenticationMethods publickey,keyboard-interactive
-
-sudo systemctl restart sshd`}</code></pre>
-
-        <h2>Checklist de Segurança SSH</h2>
-        <ul>
-          <li>✅ Porta customizada (não 22)</li>
-          <li>✅ Autenticação somente por chaves</li>
-          <li>✅ Root login desabilitado</li>
-          <li>✅ fail2ban ativo e configurado</li>
-          <li>✅ Firewall permitindo apenas portas necessárias</li>
-          <li>✅ MFA habilitado (para ambientes críticos)</li>
-          <li>✅ Logs monitorados regularmente</li>
-          <li>✅ Atualizações de segurança automáticas</li>
-        </ul>
-
-        <div className="bg-accent/10 rounded-xl p-6 my-8">
-          <h3 className="text-accent font-bold mb-2">Precisa Proteger Seu Servidor?</h3>
-          <p className="text-muted-foreground mb-0">Fazemos hardening completo de servidores Linux: SSH, firewall, fail2ban, atualizações automáticas e monitoramento. Consultoria técnica em Curitiba e remoto.</p>
         </div>
       </>
     ),
@@ -3055,9 +2586,9 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "como-proteger-computador-golpes-internet": {
-    title: "Como se proteger de golpes na internet: o que checar antes de clicar",
+    title: "Golpes na internet: como identificar phishing e falso suporte",
     excerpt:
-      "Phishing, sites clonados, falso suporte técnico e extensões maliciosas: como reconhecer cada padrão, o que verificar antes de clicar e o que fazer nas primeiras horas depois de cair em um golpe.",
+      "Aprenda a reconhecer phishing, sites clonados, falso suporte e extensões suspeitas e o que fazer após clicar, informar senha ou instalar acesso remoto.",
     date: "2026-08-12",
     readTime: "14 min",
     category: "Segurança",
@@ -3184,77 +2715,111 @@ docker run -d --name db --network minha-rede postgres
   },
 
   "windows-11-lento-como-resolver": {
-    title: "Windows 11 lento: como descobrir a causa antes de sair otimizando",
+    title: "Windows 11 lento? Como descobrir o que está travando o PC",
     excerpt:
-      "Lentidão no Windows 11 quase nunca tem uma causa única. Como ler os sinais, separar limite de hardware de software mal configurado e decidir entre ajuste, upgrade e reinstalação.",
+      "Windows 11 lento ao iniciar, abrir programas ou alternar tarefas? Veja como comparar CPU, memória, disco, temperatura e processos antes de otimizar ou trocar peças.",
     date: "2026-08-12",
-    readTime: "11 min",
+    readTime: "13 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">A maior parte das listas de "otimização" trata sintoma. Elas desativam animação, limpam pasta temporária e prometem velocidade — sem nunca perguntar por que a máquina ficou lenta. Aqui o caminho é o contrário: primeiro identificar qual recurso está saturado, depois agir só onde faz diferença.</p>
+        <p className="lead">“Windows 11 lento” descreve um resultado, não a causa. Antes de desativar recursos, instalar otimizadores ou comprar memória e SSD, registre <strong>quando</strong> a lentidão aparece e observe qual recurso muda naquele momento. O objetivo é transformar sensação de lentidão em evidência reproduzível.</p>
 
-        <h2>Lentidão não é um sintoma só</h2>
-        <p>Antes de qualquer ajuste, descreva com precisão o que está lento. Demora para chegar à área de trabalho é um problema. Travamento momentâneo ao abrir programas é outro. Interface que engasga ao rolar página é outro ainda. Cada um aponta para um recurso diferente e exige decisão diferente.</p>
+        <h2>Resposta direta</h2>
+        <p>Comece pelo padrão da falha: inicialização demorada, programas que abrem devagar, travadas ao alternar tarefas, navegador pesado ou queda de desempenho depois de alguns minutos. Em seguida, compare CPU, memória, disco e processos no Gerenciador de Tarefas durante o problema. <strong>Um percentual isolado não condena hardware</strong>; o que importa é a relação entre a saturação observada e o sintoma reproduzido.</p>
+
+        <h2>Primeiro descreva o tipo de lentidão</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Quando acontece</th>
+              <th>Hipóteses que merecem verificação</th>
+              <th>Próximo passo útil</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Logo após entrar no Windows</td><td>Aplicativos de inicialização, atualização, sincronização, armazenamento lento</td><td>Observar Inicializar aplicativos e atividade de disco/processos</td></tr>
+            <tr><td>Ao abrir vários programas ou abas</td><td>Pressão de memória, paginação, extensão pesada, aplicativo específico</td><td>Comparar memória e processo responsável durante a travada</td></tr>
+            <tr><td>Sob carga de CPU/GPU</td><td>Processo legítimo pesado, refrigeração, energia, driver ou aplicativo</td><td>Reproduzir a tarefa e observar uso, temperatura e frequência</td></tr>
+            <tr><td>Apenas em um aplicativo</td><td>Configuração, extensão, perfil, cache ou requisito daquele programa</td><td>Testar o mesmo cenário sem extensões/perfil secundário quando possível</td></tr>
+            <tr><td>Piorou de repente</td><td>Atualização recente, software novo, falha de armazenamento, malware ou mudança de driver</td><td>Relacionar a data da mudança com o início do sintoma</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Leia o Gerenciador de Tarefas sem usar “números mágicos”</h2>
+        <p>Observe a máquina durante a lentidão, não apenas parada. CPU, memória e disco podem atingir uso alto de forma normal por alguns instantes. O sinal relevante é a saturação que <strong>permanece ou se repete junto com o sintoma</strong> e aponta para um processo ou recurso específico.</p>
         <ul>
-          <li><strong>Demora na inicialização:</strong> disco lento ou fila grande de programas iniciando junto com o sistema.</li>
-          <li><strong>Travadas curtas e repetidas:</strong> falta de memória — o sistema passa a usar o disco como memória de apoio.</li>
-          <li><strong>Lentidão constante em tudo:</strong> processador saturado por algum processo em segundo plano ou por limite térmico.</li>
-          <li><strong>Só o navegador pesa:</strong> excesso de abas, extensões e cache — não é o Windows.</li>
-          <li><strong>Piorou de repente:</strong> atualização mal aplicada, driver trocado ou software indesejado instalado.</li>
+          <li><strong>Disco muito ocupado:</strong> identifique qual processo está lendo ou gravando e se o comportamento coincide com a travada. Atualização, antivírus, sincronização e armazenamento com problema podem produzir sintomas diferentes.</li>
+          <li><strong>Memória pressionada:</strong> procure aumento consistente do uso enquanto aplicativos ficam sem resposta ou o sistema passa a paginar intensamente. Não existe um percentual universal que, sozinho, determine necessidade de upgrade.</li>
+          <li><strong>CPU alta:</strong> descubra qual processo sustenta o consumo. Uma tarefa conhecida e temporária tem interpretação diferente de um processo desconhecido ou de uso alto contínuo sem atividade esperada.</li>
+          <li><strong>Uso aparentemente baixo:</strong> lentidão ainda pode estar ligada a armazenamento com erro, driver, aplicação específica, temperatura, energia ou latência externa. “Tudo abaixo de 100%” não significa que o sistema está saudável.</li>
         </ul>
 
-        <h2>Leia o Gerenciador de Tarefas antes de mexer</h2>
-        <p>Abra o Gerenciador de Tarefas e observe a aba de desempenho durante alguns minutos de uso normal, não com a máquina parada. O que interessa é qual coluna encosta no teto:</p>
-        <ol>
-          <li><strong>Disco em 100% de forma contínua:</strong> gargalo clássico de disco mecânico com Windows 11. Nenhum ajuste de software resolve de forma duradoura.</li>
-          <li><strong>Memória acima de 80% em uso comum:</strong> a máquina está trabalhando no limite; qualquer programa a mais gera engasgo.</li>
-          <li><strong>Processador alto sem você fazer nada:</strong> vale identificar o processo. Indexação e atualização em andamento são temporários; mineração, adware e antivírus duplicado não são.</li>
-          <li><strong>Tudo baixo e mesmo assim lento:</strong> suspeite de disco com setores em falha ou de queda de desempenho por temperatura.</li>
-        </ol>
-        <p>Essa leitura de dois minutos evita horas de ajustes inúteis, porque troca palpite por evidência.</p>
+        <h2>Armazenamento lento não é sinônimo automático de “troque por SSD”</h2>
+        <p>Um computador com HD mecânico pode ter maior latência de acesso que um sistema em SSD, mas isso não transforma todo uso alto de disco em diagnóstico fechado. Primeiro diferencie fila de I/O causada pela carga normal, pouca memória com paginação, atualização, sincronização, antivírus e possível degradação da própria unidade.</p>
+        <p>Se o armazenamento for de fato o gargalo e o equipamento for compatível, migrar para SSD pode reduzir a espera por leitura e escrita. A decisão fica mais sólida quando o problema é reproduzido e o restante do sistema não está impondo um limite diferente. Para planejar a troca sem comprar pela expectativa, veja <Link to="/blog/como-fazer-upgrade-ssd-nvme">upgrade para SSD/NVMe</Link>.</p>
 
-        <h2>Limite de hardware não se resolve com ajuste</h2>
-        <p>O Windows 11 assume armazenamento de estado sólido e folga de memória. Em disco mecânico, o sistema fica preso na fila de leitura mesmo com processador sobrando: é por isso que a máquina demora para abrir a área de trabalho e trava por alguns segundos ao clicar em qualquer coisa. Trocar para SSD é a mudança com maior efeito perceptível, e nenhum ajuste de configuração substitui isso.</p>
-        <p>Memória é a segunda barreira. Com pouca RAM, o sistema empurra parte do conteúdo para o arquivo de paginação no disco, e a lentidão vira ciclo: falta memória, sobra acesso a disco, tudo engasga. Antes de comprar módulo, porém, confirme a leitura no Gerenciador de Tarefas — máquina com memória sobrando não melhora nada com mais memória.</p>
-        <p>Existe ainda o caso do notebook que começa rápido e vai perdendo desempenho depois de alguns minutos. Isso não é software: é refrigeração saturada reduzindo a frequência do processador para conter temperatura. O tratamento está em <Link to="/blog/como-limpar-notebook-por-dentro">limpeza interna e manutenção da refrigeração</Link>, não em configuração do Windows.</p>
+        <h2>Memória: observe pressão, não um percentual fixo</h2>
+        <p>RAM insuficiente pode aumentar paginação e deixar a troca entre aplicativos mais lenta, mas o número exibido pelo Gerenciador de Tarefas precisa ser interpretado junto com a carga real. Antes de comprar memória, compare o uso em repouso e durante a tarefa que trava, confira quais processos cresceram e verifique a compatibilidade física e lógica do equipamento.</p>
+        <p>Mais RAM ajuda quando existe pressão real de memória. Se há folga consistente durante o problema, aumentar capacidade não corrige um gargalo que está em outro lugar.</p>
 
-        <h2>O que ajustar quando o gargalo é software</h2>
-        <p>Quando o hardware é compatível e a máquina ainda arrasta, os ajustes que realmente pesam são poucos:</p>
+        <h2>Quando a máquina começa rápida e degrada depois</h2>
+        <p>Queda de desempenho depois de alguns minutos pode envolver temperatura, política de energia, carga acumulada de processos ou o próprio aplicativo. Superaquecimento é uma hipótese importante em notebooks, mas não deve ser declarado sem medir temperatura, frequência e comportamento sob a mesma carga.</p>
+        <p>Se houver temperatura alta acompanhada de redução de frequência e perda de desempenho, investigue ventilação, poeira, ventoinha e montagem térmica. Se a temperatura estiver normal, continue procurando a causa em software, energia, driver ou carga de trabalho.</p>
+
+        <h2>Aplicativos de inicialização: ajuste documentado, não “limpeza milagrosa”</h2>
+        <p>A Microsoft documenta que aplicativos configurados para iniciar automaticamente podem afetar o tempo de inicialização e a atividade do sistema. Desabilite somente o que você reconhece e não precisa abrir com o Windows. Evite desativar serviços aleatórios ou usar scripts de “debloat” sem entender o que removem.</p>
+
+        <h2>Quando a suspeita é software</h2>
         <ul>
-          <li><strong>Programas na inicialização:</strong> tudo que sobe junto com o sistema disputa disco e memória no pior momento. Mantenha só o necessário.</li>
-          <li><strong>Antivírus duplicado:</strong> duas soluções de proteção ativas ao mesmo tempo verificam o mesmo arquivo duas vezes e brigam entre si. Uma é o bastante.</li>
-          <li><strong>Sincronização de nuvem:</strong> pastas grandes sincronizando em segundo plano consomem disco e rede continuamente. Vale limitar as pastas envolvidas.</li>
-          <li><strong>Driver de vídeo e chipset:</strong> instalados pelo fabricante do equipamento, resolvem travamento de interface que nenhuma limpeza corrige.</li>
-          <li><strong>Espaço livre no disco do sistema:</strong> disco quase cheio degrada desempenho de forma real. Deixe folga de trabalho.</li>
+          <li><strong>Inicialização:</strong> reduza aplicativos automáticos que não são necessários no começo da sessão.</li>
+          <li><strong>Atualizações:</strong> verifique se Windows e aplicativos estão concluindo uma atualização ou reinicialização pendente antes de comparar desempenho.</li>
+          <li><strong>Espaço de armazenamento:</strong> pouco espaço pode dificultar operações do sistema; libere espaço com ferramentas do próprio Windows e confirme o resultado.</li>
+          <li><strong>Aplicativo específico:</strong> teste extensões, perfil secundário ou reinstalação daquele aplicativo antes de concluir que o Windows inteiro está lento.</li>
+          <li><strong>Software indesejado:</strong> anúncios inesperados, redirecionamentos, processos estranhos ou mudanças não autorizadas justificam uma verificação de segurança, mas lentidão sozinha não prova infecção.</li>
         </ul>
-        <p>Efeitos visuais e "dicas do sistema" entram por último, e com expectativa modesta: mudam a sensação de resposta, não a capacidade da máquina.</p>
 
-        <h2>Quando desconfiar de infecção</h2>
-        <p>Lentidão que aparece de um dia para o outro, junto com anúncios fora do lugar, página inicial trocada ou processos desconhecidos consumindo processador, tem cara de software indesejado. Nesse caso, otimizar não adianta — o consumo volta. O caminho está em <Link to="/blog/como-remover-virus-windows-iniciantes">como remover vírus e adware do Windows</Link>, e só depois vale reavaliar o desempenho.</p>
+        <h2>Antivírus: confirme qual proteção está realmente ativa</h2>
+        <p>Não presuma conflito apenas porque existem nomes diferentes instalados. Verifique no Windows Security qual solução está registrada como proteção ativa e revise produtos antigos ou incompletamente removidos quando houver evidência de conflito. A investigação deve partir do estado real do sistema, não de uma regra genérica de “um antivírus sempre deixa o PC lento”.</p>
 
-        <h2>Reinstalar: quando faz sentido e quando é atalho errado</h2>
-        <p>Reinstalação limpa resolve acúmulo de configuração quebrada, software residual e perfil corrompido. É a saída correta quando a máquina foi usada por anos, passou por várias instalações e continua lenta mesmo com hardware adequado.</p>
-        <p>Não é a saída quando o gargalo é disco mecânico ou pouca memória: nesses casos o sistema fica rápido por alguns dias e volta ao mesmo ponto. Reinstalar também exige backup verificado antes — arquivo copiado e conferido, não presumido. O procedimento de resguardo está em <Link to="/servicos/recuperacao-de-dados">recuperação e proteção de dados</Link>.</p>
+        <h2>Reinstalação do Windows: quando ela entra na decisão</h2>
+        <p>Reinstalar pode ser útil quando existe corrupção persistente, configuração difícil de rastrear ou acúmulo de software que não compensa corrigir individualmente. Ela <strong>não é teste diagnóstico</strong> para armazenamento defeituoso, pouca memória, superaquecimento ou problema elétrico.</p>
+        <p>Antes de reinstalar, faça backup verificável dos dados, confirme chaves de recuperação e licenças necessárias e registre o que precisará ser restaurado. Para decidir entre reparar e reinstalar, consulte <Link to="/decisoes/formatar-ou-reparar">formatar ou reparar</Link>.</p>
 
-        <h2>Ordem de trabalho que usamos na bancada</h2>
+        <aside className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Critério de parada:</strong> interrompa tentativas de “otimização” se houver ruído anormal de armazenamento, erros recorrentes de leitura, desligamentos, cheiro de queimado, bateria estufada ou risco aos dados. Nesses casos, preservar dados e diagnosticar hardware vem antes de limpar, formatar ou atualizar.</p>
+        </aside>
+
+        <h2>Sequência prática de diagnóstico</h2>
         <ol>
-          <li>Reproduzir a lentidão descrita pelo cliente, no mesmo cenário de uso.</li>
-          <li>Medir qual recurso satura durante essa reprodução.</li>
-          <li>Verificar saúde do disco e temperatura sob carga.</li>
-          <li>Descartar software indesejado e proteção duplicada.</li>
-          <li>Ajustar inicialização, drivers e sincronização.</li>
-          <li>Só então propor upgrade ou reinstalação, com o motivo medido registrado.</li>
+          <li>Defina uma tarefa em que a lentidão possa ser reproduzida.</li>
+          <li>Registre quais recursos e processos mudam durante essa tarefa.</li>
+          <li>Separe inicialização, memória, armazenamento, CPU e temperatura em hipóteses diferentes.</li>
+          <li>Altere uma variável por vez e repita o mesmo teste.</li>
+          <li>Só proponha upgrade quando o componente atual estiver demonstravelmente limitando a tarefa.</li>
+          <li>Considere reinstalação depois de proteger os dados e quando o problema estiver realmente na camada de software.</li>
         </ol>
-        <p>Essa ordem existe para não vender peça antes de provar necessidade. O critério de verificação e cobrança está em <Link to="/diagnostico-tecnico">como funciona o diagnóstico técnico</Link>; quando o desfecho é troca de armazenamento, o passo a passo está em <Link to="/blog/como-clonar-hd-para-ssd">como clonar o HD para SSD sem perder nada</Link>.</p>
 
-        <h2>Resumo prático</h2>
-        <p>Descreva o tipo de lentidão, meça qual recurso satura, elimine causas externas (infecção, proteção duplicada, temperatura) e trate o gargalo real. Ajuste de sistema muda sensação; disco, memória e refrigeração mudam capacidade. Quando a máquina está lenta em Curitiba e você não quer trocar peça no escuro, o atendimento começa pela medição — não pela venda.</p>
+        <h2>Perguntas rápidas</h2>
+        <h3>Disco em 100% significa que o HD está ruim?</h3>
+        <p>Não. Mostra que o recurso de disco está muito ocupado naquele momento. É preciso identificar o processo, observar duração e repetição e, quando houver sinais de falha, avaliar a saúde da unidade separadamente.</p>
+
+        <h3>Memória em 80% significa que preciso de mais RAM?</h3>
+        <p>Não existe um limite universal desse tipo. O diagnóstico depende da carga, paginação, aplicativos em uso, possibilidade de expansão e de a falta de memória coincidir com o sintoma.</p>
+
+        <h3>SSD sempre deixa qualquer PC rápido?</h3>
+        <p>Não. SSD reduz latência de armazenamento, mas não corrige CPU limitada, RAM insuficiente, superaquecimento, malware, driver defeituoso ou aplicação pesada.</p>
+
+        <h3>Formatar é a melhor forma de descobrir a causa?</h3>
+        <p>Não. Formatação altera muitas variáveis de uma vez e pode mascarar o diagnóstico. Use-a quando houver motivo para reconstruir a camada de software e somente após proteger os dados.</p>
+
+        <h2>Próximos passos relacionados</h2>
+        <p>Para uma triagem estruturada, use <Link to="/ferramentas/checklist-computador-lento">checklist de computador lento</Link> e <Link to="/diagnostico-tecnico">diagnóstico técnico</Link>. Se o problema apontar para armazenamento, continue em <Link to="/blog/como-fazer-upgrade-ssd-nvme">upgrade de SSD/NVMe</Link>; se houver sinais de software indesejado, veja <Link to="/blog/como-remover-virus-windows-iniciantes">remoção segura de malware</Link>.</p>
+
+        <EditorialReferences slug="windows-11-lento-como-resolver" />
       </>
     ),
   },
-
-
 
   "windows-11-vale-a-pena-atualizar": {
     title: "Windows 11: Vale a Pena Atualizar?",
@@ -4088,143 +3653,97 @@ docker run -d --name db --network minha-rede postgres
     ),
   },
 
-  "como-clonar-hd-para-ssd": {
-    title: "Clonar HD para SSD: quando clonar, quando reinstalar e onde o processo falha",
-    excerpt:
-      "A diferença real entre clonar e reinstalar, como saber se o disco de origem aguenta a clonagem, os pontos em que o processo trava e o que conferir antes de apagar o disco antigo.",
-    date: "2026-08-12",
-    readTime: "11 min",
-    category: "Manutenção",
-    content: (
-      <>
-        <p className="lead">Clonar copia o disco inteiro para outro: sistema, programas, arquivos e configurações. A máquina volta igual, só que em um disco mais rápido. É prático — mas nem sempre é a melhor decisão, e há pontos em que a clonagem falha de forma previsível.</p>
-
-        <h2>Clonar ou reinstalar</h2>
-        <p>Clonar preserva tudo, inclusive o que estava errado. Reinstalar limpa tudo, inclusive o que estava certo. A escolha depende do estado atual do sistema.</p>
-        <ul>
-          <li><strong>Clonagem faz sentido</strong> quando o sistema está saudável, com programas licenciados difíceis de reinstalar e configurações que levariam horas para refazer.</li>
-          <li><strong>Reinstalação faz sentido</strong> quando há travamentos, erros recorrentes, infecção recente ou histórico longo de instalações e desinstalações. Clonar um sistema problemático apenas leva o problema para o disco novo, mais rápido.</li>
-        </ul>
-
-        <h2>Antes de começar: a origem aguenta?</h2>
-        <p>Clonagem lê o disco inteiro de ponta a ponta — é a leitura mais exigente que um disco recebe. Se o HD já apresenta setores defeituosos, ruído mecânico ou travamentos, esse esforço pode ser o empurrão final.</p>
-        <p>Nesse cenário, a ordem correta se inverte: primeiro copia-se os arquivos pessoais para outro lugar, depois se avalia a clonagem. Disco com sinal de falha física não é caso de clonagem doméstica; é caso de recuperação, tratado em <Link to="/blog/como-recuperar-dados-hd-com-defeito">recuperação de dados em HD com defeito</Link>.</p>
-        <p>Existe ainda o requisito de espaço: o que importa não é a capacidade do disco antigo, e sim o volume realmente ocupado. Um HD de 1 TB com 180 GB usados cabe em um SSD de 240 GB, desde que a ferramenta consiga redimensionar as partições.</p>
-
-        <h2>Preparação que evita retrabalho</h2>
-        <ol>
-          <li><strong>Backup separado dos arquivos que não podem sumir.</strong> Clonagem não é backup: se algo der errado no meio, você precisa de uma cópia independente.</li>
-          <li><strong>Liberar espaço antes.</strong> Arquivos temporários e downloads antigos ocupam tempo de cópia sem servir para nada.</li>
-          <li><strong>Conferir como o disco será conectado.</strong> Em desktop, sobra porta interna. Em notebook, quase sempre é preciso um adaptador USB para conectar o disco novo durante o processo.</li>
-          <li><strong>Alimentação estável.</strong> Queda de energia no meio da cópia deixa o destino inconsistente. Em notebook, com carregador ligado.</li>
-        </ol>
-
-        <h2>Onde o processo costuma falhar</h2>
-        <ul>
-          <li><strong>Erro de leitura na origem.</strong> A ferramenta para em determinada porcentagem e não avança: são setores ilegíveis. Insistir castiga o disco.</li>
-          <li><strong>Partição de inicialização ausente.</strong> Copiar apenas a partição visível do sistema deixa de fora a partição de boot, e o computador não inicia. A cópia precisa incluir todas as partições do disco, não só a maior.</li>
-          <li><strong>Destino menor que o ocupado.</strong> A cópia nem começa, ou começa e para no fim.</li>
-          <li><strong>Disco antigo ainda conectado no primeiro boot.</strong> Dois discos com o mesmo identificador de sistema geram confusão de inicialização. O primeiro boot deve ser feito só com o disco novo.</li>
-          <li><strong>Modo de inicialização divergente.</strong> Se o firmware está configurado de um jeito e o disco clonado espera outro, a máquina não encontra sistema — e o sintoma engana, parecendo clonagem malfeita.</li>
-        </ul>
-
-        <h2>Depois da clonagem</h2>
-        <ol>
-          <li>Inicie apenas com o disco novo instalado e confirme que o sistema sobe normalmente.</li>
-          <li>Confira se os arquivos pessoais estão todos lá — pastas de documentos, imagens e área de trabalho.</li>
-          <li>Verifique se o espaço total do novo disco aparece disponível. Sobra não alocada significa que a partição não foi expandida e precisa ser ajustada.</li>
-          <li>Use a máquina alguns dias antes de apagar o disco antigo. Ele é a sua rede de segurança nesse intervalo.</li>
-        </ol>
-        <p>Só depois desse período faz sentido reaproveitar o disco antigo como armazenamento secundário — procedimento descrito em <Link to="/blog/como-instalar-segundo-ssd-notebook">segundo SSD no notebook</Link>.</p>
-
-        <h2>O que a troca de disco resolve — e o que não resolve</h2>
-        <p>Sair de HD mecânico para SSD muda a percepção de velocidade de forma clara: o sistema inicia mais rápido, programas abrem quase imediatamente e a máquina para de travar durante tarefas simples. Esse ganho é real e não depende de configuração.</p>
-        <p>O que não muda: pouca memória continua limitando quem trabalha com muitas abas e programas simultâneos; processador antigo continua sendo o limite em tarefas pesadas; e sistema cheio de programas iniciando junto continua demorando a ficar utilizável. Esses fatores estão separados em <Link to="/blog/computador-lento-causas-solucoes">computador lento: causas e como decidir</Link>.</p>
-
-        <h2>Quando levar para a bancada</h2>
-        <p>Faz sentido buscar atendimento quando o disco de origem faz ruído, quando a clonagem trava sempre no mesmo ponto, quando a máquina não inicia depois da cópia ou quando os dados envolvidos não têm backup nenhum. Nesses casos, cada tentativa adicional por conta própria reduz a chance de recuperar o que ainda está lá.</p>
-        <p>O critério de verificação e cobrança está em <Link to="/diagnostico-tecnico">como funciona o diagnóstico técnico</Link>, e a migração completa faz parte do <Link to="/servicos/upgrade-ssd-ram">upgrade de SSD e memória</Link>.</p>
-
-        <h2>Resumo prático</h2>
-        <p>Clone quando o sistema está saudável e reinstale quando não está. Confira a saúde do disco de origem antes, tenha backup independente dos arquivos essenciais, copie o disco inteiro e não apenas a partição visível, inicie com um disco só e mantenha o antigo intacto por alguns dias antes de apagar qualquer coisa.</p>
-      </>
-    ),
-  },
   "como-testar-fonte-de-alimentacao-pc": {
-    title: "Testar a fonte do PC: o que o teste prova, o que ele não prova e quando trocar",
+    title: "Como testar a fonte do PC sem condenar a peça por engano",
     excerpt:
-      "Como separar defeito de fonte de defeito de placa antes de comprar peça: o que cada teste mede, por que fonte que liga pode estar ruim e quais sinais fecham a decisão de troca.",
+      "PC não liga, reinicia ou desliga sob carga? Veja o que testes de fonte realmente provam, quando parar e como separar fonte, cabos e placa-mãe com segurança.",
     date: "2026-08-12",
-    readTime: "10 min",
+    readTime: "12 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">A fonte é o componente que mais leva a culpa e o que menos é testado direito. Ela alimenta tudo, então qualquer falha estranha parece "problema de fonte". O objetivo aqui não é decorar valores: é entender o que cada teste realmente prova, para não trocar peça boa nem insistir em peça ruim.</p>
+        <p className="lead">Uma fonte defeituosa pode causar computador sem sinal, reinícios, desligamentos sob carga e partidas abortadas — mas nenhum desses sintomas identifica a fonte sozinho. O diagnóstico mais confiável combina padrão da falha, inspeção, isolamento de componentes e comparação controlada. Medições energizadas ficam para bancada: em casa, o objetivo é reduzir risco e evitar trocar uma peça boa.</p>
 
-        <h2>Por que a fonte engana o diagnóstico</h2>
-        <p>Uma fonte não falha só de um jeito. Ela pode não ligar, pode ligar e entregar tensão fora de faixa, pode entregar tensão certa em repouso e afundar quando o processador e a placa de vídeo puxam corrente ao mesmo tempo, ou pode entregar tensão média correta com ruído elétrico alto o suficiente para reiniciar o sistema. Só o primeiro caso é óbvio.</p>
-        <p>Por isso o padrão de sintomas importa mais do que qualquer leitura isolada. Falha que aparece só sob carga, só depois de aquecer, ou só ao ligar o computador com tudo conectado aponta para regulação sob demanda — exatamente o que um teste rápido de bancada não vê.</p>
+        <h2>Resposta direta</h2>
+        <p>Se você quer saber se a fonte do PC está ruim, não use um único teste como veredito. Primeiro observe quando a falha acontece e desligue o equipamento da tomada antes de mexer em cabos. Depois elimine periféricos e conexões não essenciais. Quando houver uma fonte compatível e comprovadamente funcional, a comparação controlada é uma evidência muito mais útil do que apenas ver uma ventoinha girar. Se o próximo passo exigir abrir a fonte ou medir conectores energizados, pare e leve para bancada.</p>
 
-        <h2>Sintomas que combinam com fonte</h2>
+        <h2>Sintomas compatíveis com fonte — mas não exclusivos dela</h2>
         <ul>
-          <li>Nada acende: sem LED, sem giro de ventoinha, sem reação ao botão.</li>
-          <li>Liga por um instante e desliga sozinho, em ciclo repetido.</li>
-          <li>Reinício súbito sob esforço — jogo, renderização, cópia grande de arquivos.</li>
-          <li>Desligamentos que aumentam quando a máquina já está quente.</li>
-          <li>Cheiro de queimado ou ruído elétrico agudo vindo do gabinete.</li>
+          <li>O computador não apresenta qualquer reação ao botão de ligar.</li>
+          <li>Energiza por um instante e desliga em seguida.</li>
+          <li>Reinicia ou desliga apenas quando CPU e GPU entram em carga.</li>
+          <li>A falha aparece depois de algum tempo de funcionamento e some após esfriar.</li>
+          <li>Há cheiro de queimado, estalo, plástico deformado ou marca escura próxima à alimentação.</li>
         </ul>
-        <p>Os mesmos sintomas aparecem em memória com contato sujo, em refrigeração saturada e em placa-mãe com regulagem defeituosa. Nenhum deles fecha diagnóstico sozinho: eles apenas colocam a fonte na lista de suspeitos.</p>
+        <p>Memória, placa-mãe, superaquecimento, cabo mal assentado, periférico em falha e até contato indevido com o gabinete podem produzir sintomas semelhantes. Por isso, <strong>sintoma serve para ordenar hipóteses; não serve para condenar a fonte</strong>.</p>
 
-        <h2>Segurança antes de qualquer teste</h2>
-        <p>Fonte de computador guarda energia em capacitores mesmo depois de desligada da tomada. Isso muda as regras:</p>
+        <h2>Antes de testar: a linha de segurança</h2>
         <ul>
-          <li>Não abra a caixa metálica da fonte. Não há manutenção doméstica ali dentro.</li>
-          <li>Trabalhe sempre com o cabo de força retirado ao conectar ou desconectar qualquer coisa.</li>
-          <li>Nunca teste com o gabinete apoiado em superfície metálica ou úmida.</li>
-          <li>Se houver marca de queimado, estufamento visível ou cheiro forte, o teste acabou: a peça é descartada, não investigada.</li>
+          <li><strong>Não abra a carcaça metálica da fonte.</strong> O lado primário trabalha com tensão de rede e capacitores podem reter carga.</li>
+          <li><strong>Retire o cabo da tomada antes de conectar ou desconectar peças.</strong></li>
+          <li><strong>Não reutilize cabos modulares de outra fonte por aparência.</strong> A compatibilidade deve ser confirmada para o modelo específico.</li>
+          <li><strong>Pare diante de queimado, líquido, conector derretido ou carbonização.</strong> Não vale energizar novamente apenas para “ver se ainda liga”.</li>
+          <li><strong>Se você não trabalha com medição elétrica, não transforme o multímetro em primeiro teste.</strong> A comparação com uma fonte compatível conhecida reduz muito o risco de erro e exposição.</li>
         </ul>
 
-        <h2>Teste 1 — a fonte reage sozinha?</h2>
-        <p>Existe um teste clássico que força a fonte a ligar fora da placa-mãe, curtocircuitando o sinal de acionamento a um terra do conector principal. Ele responde uma única pergunta: a fonte reage ao comando de ligar.</p>
-        <p>É um teste de exclusão, não de aprovação. Fonte que gira a ventoinha nesse teste pode continuar entregando tensão errada. E fonte que não reage também pode estar apenas em proteção por causa de curto em outro componente ligado a ela. Por isso o teste vale com todos os cabos de periférico desconectados.</p>
-
-        <h2>Teste 2 — medir com o multímetro</h2>
-        <p>Medir tensão contínua nos conectores mostra se a saída está dentro das faixas previstas pelo padrão de fonte do PC. As linhas principais toleram cerca de 5% de variação; a linha auxiliar de standby permanece ativa mesmo com a máquina desligada, o que explica placa com LED aceso e computador que não liga.</p>
+        <h2>Ordem de diagnóstico com menor risco</h2>
         <ol>
-          <li>Ajuste o instrumento para tensão contínua, em escala compatível.</li>
-          <li>Fixe a ponta de referência em um terra do próprio conector.</li>
-          <li>Toque as linhas positivas uma a uma e anote cada leitura em vez de decidir na hora.</li>
-          <li>Repita a medição com a máquina montada e ligada, não apenas em teste isolado.</li>
+          <li><strong>Registre o padrão.</strong> Anote se a falha ocorre ao apertar o botão, durante carga, depois de aquecer ou ao conectar um componente específico.</li>
+          <li><strong>Faça inspeção com tudo desenergizado.</strong> Confira ATX principal, alimentação do processador, conectores da GPU, cabos danificados e sinais físicos.</li>
+          <li><strong>Reduza o sistema.</strong> Desconecte dispositivos não essenciais e observe se o comportamento muda. Mude uma variável por vez.</li>
+          <li><strong>Separe fonte de placa.</strong> Se houver uma fonte de capacidade adequada e compatível, use os cabos correspondentes a ela e repita o mesmo cenário.</li>
+          <li><strong>Use os sinais da placa.</strong> LEDs de diagnóstico, códigos ou bipes documentados pelo fabricante ajudam a localizar em qual etapa a inicialização parou.</li>
+          <li><strong>Escalone para bancada.</strong> Persistindo a dúvida, o próximo passo é medição controlada com equipamento e carga apropriados — não tentativa aleatória de peças.</li>
         </ol>
-        <p>Leitura estável dentro da faixa em repouso não aprova a fonte. Aprova só aquele momento, naquela demanda.</p>
 
-        <h2>Teste 3 — o único que vale a decisão: sob carga</h2>
-        <p>A prova real é medir enquanto o computador trabalha. Se a linha de 12 V cai abaixo da faixa quando o processador e o vídeo puxam junto, ou se a leitura oscila de forma visível, a fonte não está regulando. É esse comportamento que derruba a máquina no meio de um jogo e volta a "funcionar perfeitamente" no teste seguinte em repouso.</p>
-        <p>O mesmo raciocínio vale para a temperatura: fonte que só falha depois de meia hora ligada precisa ser testada depois de meia hora ligada. Teste de dois minutos aprova defeito térmico.</p>
+        <h2>O teste de acionamento prova muito pouco</h2>
+        <p>O conhecido teste que aciona a fonte sem a placa-mãe verifica apenas se ela responde ao sinal de ligar. Ele <strong>não aprova regulação de tensão, comportamento sob carga, ripple, resposta térmica nem todas as proteções</strong>. Uma fonte pode reagir nesse teste e ainda falhar quando o computador exige potência real.</p>
+        <p>Por isso, para quem não tem experiência de bancada, esse procedimento não deve ser usado como atalho para “confirmar” que a fonte está boa. Um testador apropriado ou a substituição controlada por uma unidade compatível fornece uma comparação mais útil.</p>
 
-        <h2>Substituição controlada: o teste mais confiável</h2>
-        <p>Em bancada, o método que menos erra não é medição — é troca por uma fonte sabidamente boa e de capacidade adequada. Se o sintoma some, a peça estava ruim. Se o sintoma continua idêntico, a fonte foi descartada como causa e o próximo suspeito é a placa, a memória ou a refrigeração. Esse cruzamento evita comprar peça por eliminação errada.</p>
+        <h2>Tensão correta em repouso também não encerra o caso</h2>
+        <p>O guia ATX define faixas de regulação para as saídas da fonte e exige que elas sejam atendidas nas condições especificadas de linha, carga e ambiente. Isso é diferente de medir um único valor com o computador praticamente sem demanda. Uma leitura aceitável em repouso mostra apenas que aquela saída estava dentro da faixa naquele instante.</p>
+        <p>Falhas de regulação podem surgir quando a carga muda, quando a unidade aquece ou durante transientes. Por esse motivo, medir conectores energizados sob carga é um procedimento de bancada, com técnica para evitar curto acidental e interpretação da especificação aplicável — não um passo obrigatório para o usuário doméstico.</p>
 
-        <h2>Quando trocar sem hesitar</h2>
+        <h2>Proteções explicam alguns desligamentos instantâneos</h2>
+        <p>Fontes ATX incluem requisitos de proteção, inclusive contra curto-circuito nas saídas. Quando uma condição anormal aparece, a fonte pode interromper a alimentação. Isso explica por que um PC pode “tentar ligar” e desligar imediatamente, mas <strong>não identifica onde está o defeito</strong>: o problema pode estar na própria fonte ou em outro ramo do sistema.</p>
+        <p>Se esse é o seu sintoma, veja também <Link to="/blog/curto-circuito-placa-mae-como-identificar" className="text-accent">curto-circuito na placa-mãe: sinais, teste mínimo e diagnóstico seguro</Link>, que separa montagem, periféricos, fonte e placa sem assumir a causa.</p>
+
+        <h2>O que cada teste realmente responde</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Teste</th>
+              <th>O que ele pode indicar</th>
+              <th>O que ele não prova</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Inspeção visual e olfativa</td><td>Dano físico evidente, aquecimento anormal, conector comprometido</td><td>Que a eletrônica interna está saudável</td></tr>
+            <tr><td>Acionamento sem placa-mãe</td><td>Resposta ao comando de ligar</td><td>Regulação sob carga, ripple ou estabilidade</td></tr>
+            <tr><td>Leitura de tensão em bancada</td><td>Se uma saída permanece na faixa nas condições medidas</td><td>Que todas as saídas e transientes estão corretos em qualquer carga</td></tr>
+            <tr><td>Fonte compatível conhecida</td><td>Se o comportamento muda ao substituir uma variável importante</td><td>Diagnóstico absoluto sem conferir cabos, potência e demais componentes</td></tr>
+            <tr><td>Falha reproduzida sob carga</td><td>Relação entre demanda e defeito</td><td>Que a fonte é necessariamente a origem sem comparação adicional</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Quando a substituição da fonte fica bem sustentada</h2>
         <ul>
-          <li>Tensão fora de faixa em qualquer linha principal, mesmo que só sob carga.</li>
-          <li>Oscilação perceptível durante a medição.</li>
-          <li>Sem reação no teste de acionamento com tudo desconectado.</li>
-          <li>Sinais físicos: estufamento, vazamento, marca de queimado, ruído elétrico.</li>
-          <li>Fonte genérica sem especificação clara em máquina que ganhou placa de vídeo dedicada.</li>
+          <li>Existe dano físico ou térmico evidente na unidade ou em seus conectores.</li>
+          <li>Uma medição de bancada confirma saída fora da especificação aplicável ou instabilidade reproduzível.</li>
+          <li>O defeito desaparece de forma consistente com uma fonte compatível conhecida, usando cabeamento correto, e volta com a unidade suspeita.</li>
+          <li>A própria fonte entra repetidamente em proteção sem carga externa problemática identificada.</li>
         </ul>
-        <p>Não trocamos fonte por idade. Trocamos por comportamento medido ou por evidência física — e registramos qual dos dois motivou a decisão.</p>
+        <p>Idade, marca, ruído de ventoinha ou uma leitura isolada não são motivo suficiente para condenar a peça. A decisão melhora quando existe uma evidência reproduzível.</p>
 
-        <h2>Quando o caso deixa de ser doméstico</h2>
-        <p>Se a máquina já queimou fonte mais de uma vez, se houve surto elétrico, se há marca de carbonização na placa ou se o computador desliga também com fonte boa, o problema saiu da fonte. Nesse ponto o caminho é diagnóstico de placa, não substituição repetida de peça.</p>
-        <p>O critério de verificação e cobrança está em <Link to="/diagnostico-tecnico">como funciona o diagnóstico técnico</Link>. Quando o quadro é de máquina que não dá sinal, comece por <Link to="/servicos/computador-nao-liga">computador não liga</Link>; se a suspeita passa para a eletrônica, o procedimento está em <Link to="/servicos/conserto-placa">conserto de placa</Link>. Para separar os dois casos, veja <Link to="/blog/como-diagnosticar-placa-mae-defeituosa">como diagnosticar placa-mãe defeituosa</Link>.</p>
+        <h2>Quando parar de testar em casa</h2>
+        <p>Pare quando houver cheiro de queimado, carbonização, líquido, conector derretido, mais de uma fonte danificada no mesmo computador, necessidade de abrir a fonte, ou quando o próximo passo exigir medição energizada. Se a máquina também falha com uma fonte compatível comprovadamente funcional, passe a investigar placa-mãe, montagem e periféricos em vez de repetir trocas.</p>
+        <p>O fluxo completo está em <Link to="/diagnostico-tecnico">diagnóstico técnico</Link>. Para computador que não apresenta sinal, veja <Link to="/servicos/computador-nao-liga">computador não liga</Link>; quando a suspeita migra para a placa, consulte <Link to="/blog/como-diagnosticar-placa-mae-defeituosa">como diagnosticar placa-mãe defeituosa</Link>.</p>
 
         <h2>Resumo prático</h2>
-        <p>Comece pelos sintomas e pelo padrão em que eles aparecem. Confirme reação da fonte com tudo desconectado, meça as linhas em repouso, repita sob carga real e, se ainda houver dúvida, troque por uma fonte boa para cruzar o resultado. Decisão de troca vem de medição fora de faixa, oscilação ou dano físico — nunca de suposição.</p>
+        <p>Trate a fonte como uma hipótese, não como culpada automática. Observe o padrão da falha, desenergize antes de mexer, isole componentes, compare com uma unidade compatível conhecida e só use medição sob carga em bancada. O melhor diagnóstico é o que muda uma variável por vez e registra o resultado — não o que força uma conclusão a partir de um único teste.</p>
       </>
     ),
   },
-
   "como-limpar-notebook-por-dentro": {
     title: "Limpeza interna de notebook: o que muda de verdade e onde estão os riscos",
     excerpt:
@@ -4477,78 +3996,6 @@ docker run -d --name db --network minha-rede postgres
           <li><Link to="/servicos/redes-e-wifi" className="text-accent">Redes e Wi-Fi</Link></li>
           <li><Link to="/servicos/suporte-tecnico-empresarial" className="text-accent">Suporte técnico empresarial</Link></li>
         </ul>
-      </>
-    ),
-  },
-
-  "como-diagnosticar-placa-mae-defeituosa": {
-    title: "Placa-mãe defeituosa: como confirmar antes de trocar a peça errada",
-    excerpt:
-      "Inspeção visual, teste mínimo e eliminação sistemática para distinguir falha de placa-mãe de falha de memória, fonte ou refrigeração — e quando reparo eletrônico ainda faz sentido.",
-    date: "2026-08-12",
-    readTime: "11 min",
-    category: "Procedimentos Técnicos",
-    content: (
-      <>
-        <p className="lead">Placa-mãe é o diagnóstico que mais se conclui por eliminação e o que mais se erra por pressa. Ela não costuma dar um sintoma próprio: ela faz outro componente parecer defeituoso. Confirmar exige método, e o método é sempre reduzir a máquina até sobrar uma variável.</p>
-
-        <h2>Por que o sintoma engana</h2>
-        <p>A placa distribui energia, comanda o vídeo integrado, controla memória, armazenamento e portas. Quando um desses caminhos falha na própria placa, o efeito aparece no periférico ligado ali. Um slot de memória com contato ruim gera erro que parece pente defeituoso; uma regulagem instável na placa gera reinício que parece fonte fraca; um controlador de USB travado parece cabo ou dispositivo.</p>
-        <p>Por isso a regra é simples: nunca se conclui placa por sintoma. Conclui-se placa quando todo o resto já foi testado e o comportamento não mudou.</p>
-
-        <h2>Inspeção visual — o passo que resolve muitos casos</h2>
-        <p>Antes de qualquer teste, com o cabo de força retirado, observe a placa com boa luz:</p>
-        <ul>
-          <li><strong>Capacitores deformados ou com resíduo:</strong> topo abaulado, aberto ou com crosta escura indicam peça no fim.</li>
-          <li><strong>Escurecimento e carbonização:</strong> trilha ou componente queimado é evidência direta.</li>
-          <li><strong>Corrosão:</strong> manchas esverdeadas ou esbranquiçadas indicam umidade ou líquido derramado, comum em máquinas guardadas.</li>
-          <li><strong>Dano mecânico:</strong> pino torto no soquete, trava de slot quebrada, trilha rompida perto de furo de parafuso.</li>
-          <li><strong>Poeira compactada e pasta térmica ressecada:</strong> não é defeito de placa, mas muda o comportamento térmico e precisa ser corrigido antes de qualquer conclusão.</li>
-        </ul>
-
-        <h2>Teste mínimo: reduzir até sobrar o essencial</h2>
-        <p>A montagem mínima existe para eliminar interferência. Ficam apenas placa, processador com refrigeração, um módulo de memória e a fonte. Saem armazenamento, placa de vídeo dedicada, periféricos e cabos de painel frontal que não sejam necessários.</p>
-        <ol>
-          <li>Monte só o essencial e tente ligar usando o vídeo integrado, quando existir.</li>
-          <li>Se chegar à tela de configuração da BIOS, a placa responde no nível básico — o defeito está no que foi removido.</li>
-          <li>Se não chegar, devolva um componente por vez e observe em qual deles o comportamento muda.</li>
-          <li>Anote cada passo. Diagnóstico de placa se perde quando se troca duas coisas ao mesmo tempo.</li>
-        </ol>
-
-        <h2>Isolando memória e slots</h2>
-        <p>Teste um módulo por vez, e cada módulo em cada slot. Se um módulo específico falha em todos os slots, o módulo é o problema. Se qualquer módulo falha sempre no mesmo slot, o defeito é do slot — e slot é placa. Antes de concluir, limpe os contatos e verifique se o módulo está travado até o fim, porque encaixe parcial produz exatamente o mesmo sintoma.</p>
-
-        <h2>Descartando a fonte antes de acusar a placa</h2>
-        <p>Metade dos casos de "placa morta" é energia. Confirme a fonte com medição sob carga ou, melhor, com substituição por uma fonte sabidamente boa. O procedimento completo está em <Link to="/blog/como-testar-fonte-de-alimentacao-pc">como testar a fonte de alimentação</Link>. Só depois desse descarte o diagnóstico de placa começa a ter valor.</p>
-
-        <h2>Sinais de diagnóstico da própria placa</h2>
-        <p>Muitas placas indicam onde o processo parou: sequência sonora quando existe alto-falante interno, LEDs de estágio identificando processador, memória, vídeo ou inicialização, e visor de código em modelos mais completos. Esses códigos variam por fabricante — o valor deles é apontar a etapa que travou, não entregar a peça culpada. Confira o significado no manual do modelo exato, nunca em tabela genérica.</p>
-
-        <h2>Quando a placa é o veredito</h2>
-        <ul>
-          <li>Montagem mínima não inicia mesmo com fonte, memória e processador comprovados em outra máquina.</li>
-          <li>Slot ou porta específica falha de forma reproduzível com qualquer peça.</li>
-          <li>Dano físico visível: queimado, corrosão, trilha rompida, pino do soquete danificado.</li>
-          <li>Instabilidade persistente após descartar energia, memória e temperatura.</li>
-        </ul>
-
-        <h2>Reparar ou substituir</h2>
-        <p>Nem todo defeito de placa é fim de linha. Capacitor deformado, conector de energia danificado e trilha rompida em região acessível costumam ter reparo eletrônico viável. Já falha de chipset, corrosão espalhada por líquido e dano após surto elétrico com marcas em vários pontos raramente compensam o reparo — o custo se aproxima do de uma placa compatível, e a confiabilidade não volta.</p>
-        <p>A decisão também depende da plataforma: placa antiga exige processador e memória da mesma geração, então trocar a placa às vezes puxa dois componentes junto. Esse cálculo é apresentado antes de qualquer autorização, com peça e mão de obra separadas.</p>
-
-        <h2>O que não fazer</h2>
-        <ul>
-          <li>Insistir em ligar repetidamente uma máquina com cheiro de queimado.</li>
-          <li>Aquecer a placa com fonte de calor doméstica na esperança de reativar solda.</li>
-          <li>Trocar processador por suspeita, sem descarte prévio de fonte e memória.</li>
-          <li>Comprar placa antes de confirmar compatibilidade com o processador e a memória que já existem.</li>
-        </ul>
-
-        <h2>Próximo passo</h2>
-        <p>Se a máquina não dá nenhum sinal, comece por <Link to="/servicos/computador-nao-liga">computador não liga</Link>. Quando a suspeita se firma na eletrônica, o procedimento de bancada está em <Link to="/servicos/conserto-placa">conserto de placa</Link>, e o critério de verificação e cobrança em <Link to="/diagnostico-tecnico">como funciona o diagnóstico técnico</Link>.</p>
-
-        <h2>Resumo prático</h2>
-        <p>Inspecione antes de testar, reduza a máquina ao mínimo, isole memória por slot, descarte a fonte com substituição e só então trate a placa como responsável. Com dano físico evidente, o veredito é imediato; sem ele, é a eliminação registrada passo a passo que sustenta a decisão de reparar ou substituir.</p>
       </>
     ),
   },
@@ -6113,75 +5560,125 @@ Ideal: 1000VA / 600W (para crescimento)`}</code></pre>
   },
 
   "como-fazer-upgrade-ssd-nvme": {
-    title: "Upgrade para SSD NVMe: quando compensa e como é feito",
-    excerpt: "Como saber se a sua placa aceita NVMe, o que muda de verdade no uso diário e quais são as etapas do serviço feito em bancada.",
+    title: "Upgrade para SSD NVMe: como saber se seu PC é compatível",
+    excerpt:
+      "Veja como confirmar slot M.2, suporte a NVMe, boot e espaço antes da compra e como escolher entre clonagem e instalação limpa sem confundir formato e interface.",
     date: "2026-04-20",
-    readTime: "11 min",
+    readTime: "13 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Trocar um HD por SSD pode transformar a resposta do computador, mas comprar apenas pelo rótulo “M.2” é uma fonte comum de erro. Este guia ajuda a confirmar formato, interface, capacidade e condições do disco atual antes de gastar — e coloca backup e acesso à chave BitLocker antes de qualquer intervenção.</p>
+        <p className="lead">SSD NVMe pode reduzir o tempo gasto em operações de armazenamento, mas o ganho depende do ponto de partida e da carga de trabalho. Antes da compra, confirme o que o slot realmente suporta, proteja os dados e separe três perguntas diferentes: o módulo cabe, a interface é compatível e o firmware consegue inicializar por ele.</p>
 
-        <h2>O que diferencia um NVMe de um SSD comum</h2>
-        <p>Um SSD SATA conversa com a placa-mãe pelo barramento SATA. Um SSD NVMe usa uma interface criada para armazenamento de estado sólido e, em computadores pessoais, normalmente se comunica por PCI Express. Já <strong>M.2 é o formato físico</strong>: uma unidade M.2 pode usar SATA ou PCIe/NVMe. Na prática, ambos eliminam o atraso mecânico do HD; a diferença entre SATA e NVMe aparece principalmente em cópias grandes, compilação, edição de vídeo e abertura de projetos pesados.</p>
-        <p>Por isso a resposta honesta é: sair de HD para qualquer SSD é uma mudança que se percebe no primeiro boot. Sair de SSD SATA para NVMe é um ganho real, porém mais discreto em uso comum de navegador e pacote de escritório. Quando alguém promete que o NVMe vai "resolver tudo", desconfie — o disco é apenas um dos componentes envolvidos.</p>
+        <h2>Resposta direta</h2>
+        <p>Se o computador ainda usa HD e aceita SSD, migrar o sistema para armazenamento de estado sólido tende a remover uma parte importante da latência de leitura e escrita. Se a máquina já usa SSD SATA, a troca por NVMe pode aumentar a taxa de transferência e reduzir latência em cargas específicas, mas não corrige pouca memória, processador saturado, superaquecimento ou software mal configurado. <strong>O rótulo M.2 sozinho não confirma que o equipamento aceita NVMe.</strong></p>
 
-        <h2>Checklist antes de comprar</h2>
-        <p>Registre o modelo completo do notebook ou da placa-mãe e consulte o manual oficial. Em seguida, confirme:</p>
+        <h2>M.2, SATA e NVMe não significam a mesma coisa</h2>
+        <p><strong>M.2 descreve o formato físico.</strong> O módulo instalado nesse formato pode usar uma interface diferente conforme a unidade e o equipamento. NVMe é um protocolo projetado para armazenamento não volátil e normalmente opera sobre PCI Express. Por isso, dois módulos que parecem semelhantes podem não ser eletricamente ou logicamente equivalentes.</p>
+        <p>O manual do notebook ou da placa-mãe continua sendo a referência para saber quais formatos, comprimentos e interfaces o slot aceita. Inspecionar apenas o encaixe não responde se o firmware oferece suporte de inicialização nem se o slot compartilha recursos com outras portas.</p>
+
+        <h2>Quando o upgrade faz sentido — e o que verificar primeiro</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Cenário atual</th>
+              <th>O que um SSD/NVMe pode melhorar</th>
+              <th>Verifique antes de comprar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Sistema em HD mecânico</td><td>Latência de armazenamento e operações que aguardam leitura/escrita</td><td>Interface disponível, capacidade necessária, backup e saúde do disco de origem</td></tr>
+            <tr><td>Já existe SSD SATA</td><td>Cargas que transferem muitos dados ou fazem muitas operações de armazenamento</td><td>Se a rotina realmente é limitada pelo disco e se há slot PCIe/NVMe compatível</td></tr>
+            <tr><td>Memória vive saturada</td><td>O SSD não elimina a falta de RAM</td><td>Uso de memória, possibilidade de upgrade e comportamento da paginação</td></tr>
+            <tr><td>Notebook perde desempenho ao aquecer</td><td>Trocar o disco não corrige redução térmica de CPU/GPU</td><td>Temperaturas, refrigeração e frequência sob carga</td></tr>
+            <tr><td>Travamentos e erros de leitura no disco atual</td><td>Um novo SSD substitui a mídia, mas a prioridade é preservar os dados</td><td>Cópia independente antes de insistir em clonagem</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Checklist de compatibilidade antes da compra</h2>
         <ul>
-          <li><strong>Formato e interface:</strong> existe slot M.2 e ele aceita PCIe/NVMe, SATA ou ambos? O formato semelhante não torna os protocolos intercambiáveis.</li>
-          <li><strong>Chave e comprimento:</strong> confirme a chave mecânica e medidas como 2230, 2242 ou 2280; não presuma que todo módulo cabe.</li>
-          <li><strong>Inicialização:</strong> o firmware do equipamento permite usar uma unidade NVMe como disco de boot, e existe atualização documentada necessária?</li>
-          <li><strong>Capacidade útil:</strong> os dados ocupados no disco antigo cabem no novo com folga? Compare espaço usado, não apenas a capacidade anunciada.</li>
-          <li><strong>Slot ou porta compartilhada:</strong> instalar o M.2 desativa alguma porta SATA ou reduz linhas de outro slot? A tabela do manual resolve a dúvida.</li>
-          <li><strong>Fixação e dissipação:</strong> há parafuso, suporte e contato térmico adequados para o comprimento escolhido?</li>
+          <li><strong>Modelo exato do equipamento:</strong> consulte o manual ou documentação oficial da placa-mãe/notebook.</li>
+          <li><strong>Interface do slot:</strong> confirme se ele aceita PCIe/NVMe, SATA ou ambos.</li>
+          <li><strong>Comprimento:</strong> formatos como 2230, 2242 e 2280 usam posições de fixação diferentes.</li>
+          <li><strong>Chave e encaixe:</strong> semelhança física não deve ser usada como prova de compatibilidade.</li>
+          <li><strong>Inicialização:</strong> confirme que o firmware permite usar a unidade escolhida como disco de boot quando esse for o objetivo.</li>
+          <li><strong>Recursos compartilhados:</strong> algumas placas compartilham linhas ou desativam determinadas portas quando um slot M.2 é ocupado; confira a tabela do fabricante.</li>
+          <li><strong>Fixação e solução térmica:</strong> use o suporte, parafuso e dissipação previstos para o equipamento, quando existirem.</li>
         </ul>
-        <p>Se o manual não identifica claramente interface, dimensões e suporte de boot, pare antes da compra. Abrir a tampa apenas para “ver se encaixa” não confirma compatibilidade elétrica nem suporte do firmware.</p>
+        <p>Se a documentação não esclarece a interface ou o suporte do slot, não compre apenas porque “parece encaixar”. Formato, protocolo e suporte do sistema precisam coincidir.</p>
 
-        <h2>Proteja os dados antes de abrir a máquina</h2>
+        <h2>Proteja os dados e a chave de recuperação primeiro</h2>
         <ol>
-          <li><strong>Faça uma cópia independente:</strong> salve primeiro os arquivos insubstituíveis em outra unidade e abra uma amostra para confirmar a leitura.</li>
-          <li><strong>Confira a criptografia:</strong> se o Windows usa BitLocker ou Criptografia do dispositivo, faça backup da chave de recuperação e confirme seu acesso em outro aparelho.</li>
-          <li><strong>Registre o estado atual:</strong> anote espaço usado, partições, aplicativos indispensáveis e licenças que possam exigir reativação.</li>
-          <li><strong>Leia a saúde do disco:</strong> alertas críticos, desconexões, ruído ou erros de leitura tornam a clonagem uma carga arriscada. Priorize os dados e interrompa tentativas repetidas.</li>
+          <li><strong>Crie uma cópia independente:</strong> os arquivos importantes devem existir em outra unidade ou destino antes da migração.</li>
+          <li><strong>Valide a cópia:</strong> abra uma amostra no destino para não descobrir um backup incompleto depois da troca.</li>
+          <li><strong>Confira a criptografia:</strong> com BitLocker ou Criptografia do dispositivo, faça backup da chave de recuperação e confirme que consegue acessá-la fora do computador que será alterado.</li>
+          <li><strong>Registre o estado atual:</strong> espaço ocupado, partições, aplicativos essenciais e qualquer configuração de boot relevante.</li>
+          <li><strong>Observe a mídia de origem:</strong> desconexões, ruído mecânico, erros de leitura ou alertas de saúde mudam a prioridade de “migrar o sistema” para “preservar os dados”.</li>
         </ol>
-        <p>Clonagem facilita a migração, mas não substitui backup: ela replica o estado do sistema e pode falhar quando a unidade de origem está degradada.</p>
+        <p>Clonagem não substitui backup. Ela copia o estado do disco de origem; se a origem estiver instável, insistir em leituras repetidas pode ser uma estratégia pior do que salvar primeiro o que é insubstituível.</p>
 
-        <h2>Quando o upgrade não é a resposta</h2>
-        <p>Existem situações em que instalar um NVMe apenas troca a peça errada:</p>
+        <h2>Clonar ou instalar o sistema do zero?</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Situação</th>
+              <th>Caminho a considerar</th>
+              <th>Motivo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Sistema estável, origem saudável e aplicativos difíceis de reconstruir</td><td>Clonagem, depois de backup independente</td><td>Preserva estrutura, aplicativos e configurações com menos reconstrução</td></tr>
+            <tr><td>Sistema apresenta corrupção persistente ou configuração muito degradada</td><td>Instalação limpa, depois de preservar dados e licenças</td><td>Evita transportar para o disco novo problemas do sistema antigo</td></tr>
+            <tr><td>Origem apresenta falha física ou erros de leitura importantes</td><td>Priorizar cópia/recuperação dos dados</td><td>Clonagem completa pode impor leitura extensa a uma mídia instável</td></tr>
+            <tr><td>Novo SSD será apenas unidade adicional</td><td>Instalar, reconhecer e criar o volume sem mexer no disco do sistema</td><td>Não existe sistema para migrar nesse cenário</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Instalação física: onde os erros costumam acontecer</h2>
+        <p>Desligue o equipamento, retire a alimentação externa e siga o procedimento de abertura previsto pelo fabricante. Em notebook com bateria interna desconectável pelo projeto, isole a bateria antes de manipular a placa. O módulo M.2 deve entrar alinhado no conector e ser fixado no ponto correspondente ao seu comprimento; não force o módulo nem improvise parafuso ou espaçador.</p>
+        <p>Se houver dissipador, thermal pad ou cobertura original, preserve a montagem prevista para o modelo. Em equipamento sob garantia, bateria estufada, conector danificado ou desmontagem complexa, a melhor decisão pode ser interromper a intervenção em vez de avançar por tentativa.</p>
+
+        <h2>Depois de instalar: valide reconhecimento antes de mexer em partições</h2>
+        <ol>
+          <li><strong>Confira o firmware:</strong> verifique se a unidade aparece na UEFI/BIOS antes de alterar modos de armazenamento.</li>
+          <li><strong>Se é disco de boot:</strong> confirme o carregador e a ordem de inicialização sem mudar configurações que não estejam documentadas para o equipamento.</li>
+          <li><strong>Se é disco novo adicional:</strong> no Windows, uma unidade vazia pode precisar ser colocada online, inicializada e receber partição/volume antes de aparecer no Explorador.</li>
+          <li><strong>Confira duas vezes o disco selecionado:</strong> inicialização e formatação são operações destrutivas quando aplicadas à unidade errada.</li>
+          <li><strong>Valide capacidade e arquivos:</strong> depois da migração, confirme o espaço esperado e abra arquivos importantes no novo ambiente.</li>
+        </ol>
+
+        <aside className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Critério de parada:</strong> não inicialize, formate ou recrie partições de uma unidade que contenha dados importantes apenas porque ela aparece como “não reconhecida” no sistema. Se houver dúvida sobre qual disco é qual, desligue e identifique as unidades antes de continuar.</p>
+        </aside>
+
+        <h2>O que um NVMe não resolve</h2>
         <ul>
-          <li>Memória insuficiente para a rotina de trabalho — o sistema continua recorrendo ao arquivo de paginação e a lentidão volta.</li>
-          <li>Superaquecimento com redução de frequência do processador: a máquina fica rápida por alguns minutos e cai de novo.</li>
-          <li>Sistema comprometido por programas indesejados ou por dezenas de itens em inicialização automática.</li>
-          <li>Placa com defeito intermitente, que se manifesta como travamento e é frequentemente confundido com disco lento.</li>
-        </ul>
-        <p>É por isso que, em atendimento, o disco só é indicado depois de um diagnóstico que observa temperatura, consumo de memória, integridade do disco atual e comportamento sob carga. Trocar antes de medir é o caminho mais rápido para gastar sem resolver.</p>
-
-        <h2>Como o serviço é executado em bancada</h2>
-        <h3>1. Leitura de saúde do disco atual</h3>
-        <p>A primeira etapa é verificar os indicadores de saúde do disco de origem. Um disco com setores realocados em crescimento ou com erros de leitura muda toda a estratégia: nesse caso, não se clona — copiam-se os dados enquanto o disco ainda responde, e a instalação do sistema é feita do zero no disco novo.</p>
-        <h3>2. Decisão entre clonar e instalar limpo</h3>
-        <p>Clonar tende a preservar programas e configurações, mas algumas licenças podem pedir nova ativação. É a opção mais confortável quando o sistema e o disco de origem estão saudáveis. Instalação limpa é preferível quando há corrupção persistente, drivers antigos ou falhas de atualização. A decisão deve considerar estado da origem, cópia dos dados e possibilidade de reinstalar aplicativos — não apenas conveniência.</p>
-        <h3>3. Cópia de segurança antes de tocar no hardware</h3>
-        <p>Nenhum disco é aberto ou substituído sem cópia prévia dos arquivos do usuário em mídia separada. Esse passo é inegociável, porque é justamente durante uma migração que aparecem os defeitos silenciosos de um disco antigo.</p>
-        <h3>4. Instalação física</h3>
-        <p>O equipamento é desligado da tomada e, em notebooks, tem a bateria desconectada quando o projeto permite. O SSD entra em ângulo no slot M.2, é apoiado e só então parafusado — pressionar o módulo para baixo antes de encaixar é o erro que mais danifica o conector. Quando existe dissipador ou espuma térmica de fábrica, o contato é refeito.</p>
-        <h3>5. Configuração de firmware</h3>
-        <p>Com o disco instalado, confere-se na UEFI se ele foi reconhecido e se a ordem de inicialização aponta para o carregador correto. Não altere modos de armazenamento ao acaso: uma mudança incompatível pode impedir a inicialização. Em máquinas com criptografia ativa, a chave de recuperação deve estar acessível antes da intervenção.</p>
-        <h3>6. Testes e devolução</h3>
-        <p>Antes de devolver, o equipamento passa por reinicializações sucessivas, verificação de temperatura em carga, checagem de espaço e conferência por amostragem dos arquivos copiados. Se a unidade for adicional e estiver vazia, o Windows pode exigir que ela seja colocada online, inicializada e receba um volume; confirme com cuidado o disco selecionado. O disco antigo é entregue ao cliente ou, mediante autorização por escrito, higienizado.</p>
-
-        <h2>Detalhes que evitam retrabalho</h2>
-        <ul>
-          <li><strong>Espaço reservado:</strong> manter uma folga livre no SSD ajuda o controlador a distribuir a escrita e preserva a estabilidade de desempenho.</li>
-          <li><strong>Firmware do SSD:</strong> alguns modelos receberam correções de estabilidade depois do lançamento; conferir a versão evita problemas que parecem defeito de placa.</li>
-          <li><strong>Temperatura:</strong> NVMe em notebook fino esquenta. Sem contato térmico adequado, ele reduz a velocidade justamente nas tarefas longas.</li>
-          <li><strong>Backup continua necessário:</strong> SSD falha de forma diferente do HD — costuma avisar menos. O upgrade não substitui rotina de cópia.</li>
+          <li><strong>RAM insuficiente:</strong> armazenamento mais rápido não cria memória física.</li>
+          <li><strong>CPU ou GPU limitando a tarefa:</strong> o gargalo permanece onde o processamento acontece.</li>
+          <li><strong>Superaquecimento:</strong> a redução térmica de frequência precisa ser diagnosticada separadamente.</li>
+          <li><strong>Malware ou processo em segundo plano:</strong> trocar o disco sem tratar a causa pode apenas levar o mesmo problema para a nova instalação ou clonagem.</li>
+          <li><strong>Falha de placa ou alimentação:</strong> travamentos elétricos não se tornam defeito de armazenamento só porque um SSD novo foi instalado.</li>
         </ul>
 
-        <h2>Quando levar para atendimento técnico</h2>
-        <p>Interrompa e busque ajuda quando o notebook exige desmontagem completa para chegar ao slot, quando a bateria está colada ou estufada, quando você não consegue acessar a chave de recuperação, quando o disco atual apresenta erros de leitura ou quando os dados não podem ser perdidos. Nesses cenários, insistir amplia o risco.</p>
-        <p>Se quiser conferir antes se o gargalo é mesmo o disco, o caminho é o <Link to="/diagnostico-tecnico">diagnóstico técnico</Link>. Para o serviço de troca e migração, veja <Link to="/servicos/upgrade-ssd-ram">instalação de SSD e upgrade de memória</Link>; se a intenção for reinstalar o sistema no disco novo, a página de <Link to="/servicos/formatacao">formatação e instalação</Link> explica o procedimento.</p>
+        <h2>Temperatura, firmware e espaço livre: detalhes que importam</h2>
+        <p>Unidades NVMe podem aquecer sob carga contínua, e o comportamento térmico depende do controlador, do fluxo de ar e da solução prevista pelo equipamento. Em vez de assumir que todo NVMe precisa do mesmo dissipador, siga a documentação da unidade e do computador.</p>
+        <p>Também vale conferir se o fabricante da unidade publicou atualização de firmware relevante para o modelo. Depois da instalação, mantenha espaço suficiente para o sistema e os aplicativos trabalharem, mas evite transformar uma porcentagem fixa de espaço livre em regra universal: a necessidade varia conforme a carga e o uso.</p>
+
+        <h2>Perguntas rápidas</h2>
+        <h3>Todo SSD M.2 é NVMe?</h3>
+        <p>Não. M.2 é formato físico; o dispositivo pode usar interfaces diferentes. Confirme o protocolo aceito pelo slot e pela unidade.</p>
+
+        <h3>Vale trocar SSD SATA por NVMe só para navegar e usar escritório?</h3>
+        <p>O NVMe oferece uma interface de armazenamento mais capaz, mas a diferença percebida depende da carga. Se a rotina não está limitada pelo SSD SATA, outros componentes podem ter impacto maior no uso real.</p>
+
+        <h3>Preciso formatar o SSD novo?</h3>
+        <p>Uma unidade adicional vazia pode precisar ser inicializada e receber um volume. Isso é diferente de formatar uma unidade que já contém dados ou de preparar um disco para receber uma clonagem. Identifique o disco e o objetivo antes de executar qualquer operação destrutiva.</p>
+
+        <h3>Posso clonar sem fazer backup?</h3>
+        <p>Não é uma boa estratégia. Clonagem é um método de migração, não uma cópia de segurança independente. Preserve os arquivos importantes antes de começar.</p>
+
+        <h2>Próximos passos relacionados</h2>
+        <p>Para verificar se a lentidão realmente vem do armazenamento, use o <Link to="/diagnostico-tecnico">diagnóstico técnico</Link>. Se o plano já estiver definido, veja <Link to="/servicos/upgrade-ssd-ram">instalação de SSD e upgrade de memória</Link>. Para migrar um sistema existente, o guia de <Link to="/blog/como-clonar-hd-para-ssd">clonagem de HD para SSD</Link> complementa esta decisão; para instalação nova do sistema, consulte <Link to="/servicos/formatacao">formatação e instalação</Link>.</p>
       </>
     ),
   },
@@ -6238,116 +5735,120 @@ Ideal: 1000VA / 600W (para crescimento)`}</code></pre>
     ),
   },
   "como-trocar-tela-notebook-passo-a-passo": {
-    title: "Como Trocar a Tela do Notebook: Passo a Passo Profissional",
-    excerpt: "Guia técnico para identificar a tela correta, desmontar com segurança e instalar a nova sem danificar o flat cable.",
+    title: "Como trocar a tela do notebook: compatibilidade, diagnóstico e troca segura",
+    excerpt:
+      "Antes de comprar um painel novo, confirme se o defeito está mesmo na tela, identifique o modelo e o conector corretos e saiba quando a desmontagem deve parar para evitar dano ao flat cable, moldura ou placa.",
     date: "2026-04-20",
-    readTime: "10 min",
+    readTime: "12 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Realizar <strong>trocar a tela do notebook</strong> exige procedimento técnico, ferramentas adequadas e atenção a detalhes que separam o trabalho amador do profissional. Neste guia, você vai aprender o passo a passo real usado em laboratórios de assistência técnica em Curitiba.</p>
+        <p className="lead">Tela quebrada é um caso; notebook sem imagem é outro. Antes de comprar um painel novo, separe dano físico de falha de backlight, cabo de vídeo, conector, dobradiça, GPU ou placa-mãe. A troca só faz sentido quando o defeito do conjunto de display está suficientemente sustentado e a peça substituta é compatível com o modelo real do equipamento.</p>
 
-        <h2>Por Que o Procedimento Importa</h2>
-        <p>Trabalhar em hardware sem método é a principal causa de dano permanente em equipamentos. Pequenos descuidos — descarga eletrostática, parafuso errado, conector mal encaixado — podem transformar um serviço simples em um problema irreversível. Por isso, todo técnico profissional segue um <strong>checklist documentado</strong> antes, durante e depois de cada intervenção.</p>
-        <p>O custo médio de um erro evitável em manutenção de hardware varia entre R$ 200 e R$ 2.000, dependendo da peça danificada. Já o custo de seguir o procedimento correto é apenas o tempo de leitura deste artigo.</p>
+        <h2>Resposta direta</h2>
+        <p>O procedimento seguro tem quatro etapas: <strong>confirmar o sintoma, identificar a tela compatível, desenergizar corretamente o notebook e validar imagem/backlight antes de fechar a moldura</strong>. Não compre apenas pelo tamanho em polegadas. Resolução, conector, posição do conector, tecnologia do painel, espessura, fixação e requisitos elétricos precisam coincidir.</p>
 
-        <h2>Ferramentas e Materiais Necessários</h2>
-        <p>Antes de começar, separe todo o material. Interromper o procedimento no meio para buscar uma chave Phillips é como abrir uma cirurgia sem o instrumental.</p>
+        <h2>Primeiro confirme se o problema é realmente a tela</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Sintoma</th>
+              <th>Hipóteses a separar</th>
+              <th>Verificação inicial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Vidro/painel rachado e imagem distorcida</td><td>Painel fisicamente danificado</td><td>Inspeção visual com equipamento desligado</td></tr>
+            <tr><td>Imagem muito escura, visível com luz externa</td><td>Backlight, alimentação, cabo ou circuito do painel</td><td>Comparar comportamento desde a inicialização</td></tr>
+            <tr><td>Linhas ou áreas sem imagem</td><td>Painel, cabo ou conector</td><td>Observar se muda ao movimentar a tampa, sem forçar</td></tr>
+            <tr><td>Tela interna preta, monitor externo funciona</td><td>Painel, flat cable, backlight ou conector</td><td>Usar saída externa apenas como teste comparativo</td></tr>
+            <tr><td>Sem imagem interna e externa</td><td>Falha de inicialização, placa, GPU, memória ou alimentação</td><td>Investigar o computador antes de condenar a tela</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Compatibilidade: o mesmo tamanho não significa a mesma tela</h2>
+        <p>Duas telas de 15,6 polegadas podem ser incompatíveis. Antes da compra, use o modelo exato do notebook e, quando possível, o código do painel original como referência. Compare pelo menos:</p>
         <ul>
-          <li><strong>Pulseira antiestática</strong> (ESD) — protege componentes contra descarga eletrostática, principal causa silenciosa de morte de placas</li>
-          <li><strong>Chaves Phillips e Torx</strong> — kit de precisão com bits magnéticos, indispensável para notebooks modernos</li>
-          <li><strong>Pasta térmica de qualidade</strong> — Arctic MX-6, Noctua NT-H2 ou Thermal Grizzly Kryonaut (evite genéricas)</li>
-          <li><strong>Álcool isopropílico 99,9%</strong> — para limpeza de pasta térmica antiga e contatos oxidados</li>
-          <li><strong>Pincel antiestático</strong> e pano de microfibra — limpeza segura de placas e dissipadores</li>
-          <li><strong>Pinça de precisão</strong> — manuseio de conectores flat cable e parafusos pequenos</li>
-          <li><strong>Pendrive com Ventoy</strong> — para boot de utilitários (MemTest86, Hiren's BootCD, Hard Disk Sentinel)</li>
+          <li><strong>Tamanho e resolução:</strong> o novo painel precisa ser suportado pelo equipamento.</li>
+          <li><strong>Tipo e posição do conector:</strong> conectores visualmente parecidos podem ter posição, pinagem ou interface diferentes.</li>
+          <li><strong>Espessura e pontos de fixação:</strong> painel com suporte lateral, abas ou montagem adesiva exige construção compatível.</li>
+          <li><strong>Recursos:</strong> toque, alta taxa de atualização, brilho especial ou câmera integrada podem alterar o conjunto.</li>
+          <li><strong>Interface do display:</strong> a compatibilidade elétrica precisa ser confirmada, não inferida apenas pelo encaixe físico.</li>
         </ul>
-        <p>Investir R$ 300-500 num kit profissional retorna em economia já no primeiro serviço evitando danos.</p>
+        <p>Se o código da tela original não estiver legível ou a documentação do fabricante não esclarecer a compatibilidade, é melhor identificar a peça antes de comprar do que tentar adaptar um painel por aparência.</p>
 
-        <h2>Preparação do Ambiente</h2>
-        <p>O local de trabalho influencia diretamente a qualidade do serviço. Profissionais sérios trabalham em ambientes controlados — não em cima do sofá da sala.</p>
+        <h2>Antes de abrir: proteja o equipamento</h2>
         <ul>
-          <li><strong>Bancada plana e iluminada</strong> — preferencialmente com manta antiestática</li>
-          <li><strong>Recipientes para parafusos</strong> — separe por etapa da desmontagem (use bandejas magnéticas ou organizadores)</li>
-          <li><strong>Documentação aberta</strong> — manual de serviço do equipamento, vídeos do iFixit, fórum específico</li>
-          <li><strong>Câmera ou celular</strong> — fotografe cada etapa antes de desconectar (especialmente conectores flat)</li>
-          <li><strong>Sem animais ou crianças</strong> — peças pequenas se perdem em frações de segundo</li>
-          <li><strong>Temperatura ambiente</strong> — entre 18-25°C, sem umidade alta (problemas comuns em Curitiba no inverno)</li>
+          <li><strong>Desligue completamente o notebook.</strong> Suspensão e hibernação não substituem desligamento.</li>
+          <li><strong>Desconecte o carregador.</strong></li>
+          <li><strong>Desconecte a bateria interna quando o projeto permitir acesso seguro antes do cabo de vídeo.</strong></li>
+          <li><strong>Organize parafusos e presilhas por etapa.</strong> Parafuso incorreto pode marcar carcaça, painel ou placa.</li>
+          <li><strong>Não trabalhe sobre tecido ou superfície condutiva.</strong> Use bancada firme, limpa e bem iluminada.</li>
         </ul>
 
-        <h2>Diagnóstico Inicial</h2>
-        <p>Nunca comece um procedimento sem entender o estado atual do equipamento. O diagnóstico determina se a intervenção planejada é realmente a correta — ou se você está prestes a substituir uma peça boa enquanto o problema real é outro.</p>
-        <p>Documente:</p>
-        <ul>
-          <li>Modelo exato do equipamento e número de série</li>
-          <li>Sintomas relatados pelo usuário e quando começaram</li>
-          <li>Última intervenção realizada (atualização, queda, contato com líquido)</li>
-          <li>Estado físico aparente — pontos de impacto, sinais de líquido, cheiro de queimado</li>
-          <li>Comportamento ao ligar — LEDs, ventoinhas, beeps, mensagens de POST</li>
-        </ul>
-        <p>Esse registro vale ouro: serve de proteção em caso de discussão sobre danos pré-existentes e ajuda a refinar o diagnóstico se o problema persistir.</p>
+        <aside className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Critério de parada:</strong> pare se a moldura estiver colada de forma que você não consiga removê-la sem deformar, se a bateria estiver estufada, houver líquido/corrosão, dobradiça quebrada pressionando o display, conector carbonizado ou se o cabo da tela só puder ser acessado após desmontagem que você não domina.</p>
+        </aside>
 
-        <h2>Procedimento Passo a Passo</h2>
-        <p>Com tudo preparado, execute o procedimento na ordem correta. <strong>Pular etapas é o caminho mais curto para o retrabalho.</strong></p>
+        <h2>Remoção da moldura e acesso ao painel</h2>
+        <p>O método varia por modelo. Algumas molduras usam presilhas; outras combinam presilhas e adesivo. Comece pela documentação do equipamento e use ferramenta plástica adequada. Não use força localizada em um canto: a moldura e o próprio LCD podem trincar.</p>
+        <p>Em modelos com montagem adesiva, puxe as fitas no sentido previsto pelo fabricante. Se elas romperem ou a desmontagem exigir aquecimento, o risco aumenta e pode ser melhor interromper o procedimento.</p>
+
+        <h2>Desconecte o cabo de vídeo sem puxar pelos fios</h2>
+        <p>Depois de expor o painel, apoie-o sem tensionar o cabo. O conector costuma ter fita ou trava específica. Remova a fixação prevista e desconecte pelo corpo do conector, nunca pelos fios.</p>
+        <p>Antes de conectar o painel novo, compare o conector, a posição, os pontos de fixação e o código da peça. Se algo não coincide, não tente “fazer caber”.</p>
+
+        <h2>Teste antes de remontar tudo</h2>
         <ol>
-          <li><strong>Backup completo dos dados</strong> — antes de qualquer intervenção em hardware com armazenamento, copie tudo. HD/SSD podem morrer durante o processo.</li>
-          <li><strong>Desligue completamente</strong> — não basta hibernar. Desconecte da tomada e remova a bateria (se removível). Aguarde 30 segundos para descarga residual.</li>
-          <li><strong>Aterre-se</strong> — toque numa parte metálica aterrada antes de manusear componentes. Use pulseira ESD em peças sensíveis (RAM, GPU, SSD NVMe).</li>
-          <li><strong>Desmontagem documentada</strong> — fotografe cada parafuso retirado e cada conector desconectado. Use bandejas separadas por etapa.</li>
-          <li><strong>Execução técnica</strong> — siga o procedimento específico para o tipo de intervenção. Não force nada. Se está duro, há algo errado.</li>
-          <li><strong>Limpeza durante a montagem</strong> — aproveite o equipamento aberto para limpeza completa de coolers, dissipadores e contatos.</li>
-          <li><strong>Remontagem na ordem inversa</strong> — sem pular conectores. Confira cada flat cable e cada parafuso antes de fechar.</li>
-          <li><strong>Teste antes de fechar definitivamente</strong> — ligue com a tampa solta e verifique se tudo funciona. Só então parafuse tudo.</li>
+          <li>Conecte o painel novo com o equipamento desenergizado.</li>
+          <li>Garanta que o conector esteja totalmente assentado e fixado.</li>
+          <li>Reative a bateria quando necessário para o teste.</li>
+          <li>Ligue o notebook apenas o suficiente para verificar imagem, backlight, resolução e estabilidade.</li>
+          <li>Desligue novamente antes de reposicionar cabos e fechar moldura ou tampa.</li>
         </ol>
+        <p>Se o novo painel continua sem imagem, não conclua automaticamente que ele veio defeituoso. Volte ao diagnóstico e compare cabo, conector, alimentação do display e comportamento em monitor externo.</p>
 
-        <h2>Erros Comuns Que Devem Ser Evitados</h2>
-        <p>Mesmo técnicos experientes cometem erros recorrentes. Conhecê-los previamente reduz drasticamente as chances de problema.</p>
+        <h2>O que validar depois da troca</h2>
         <ul>
-          <li><strong>Excesso de pasta térmica</strong> — uma quantidade do tamanho de um grão de arroz é suficiente. Excesso prejudica a dissipação.</li>
-          <li><strong>Apertar parafusos demais</strong> — especialmente em notebooks, pode quebrar o plástico ou empenar a placa</li>
-          <li><strong>Favaliar o valor conectores</strong> — flat cables têm orientação específica. Se está duro, está errado.</li>
-          <li><strong>Misturar parafusos</strong> — usar parafuso longo onde deveria ser curto pode perfurar componentes internos</li>
-          <li><strong>Trabalhar com o equipamento ligado</strong> — exceto em testes específicos, sempre desligue. Curtos acidentais são fatais.</li>
-          <li><strong>Pular o teste pós-procedimento</strong> — fechar tudo sem testar é receita para retrabalho</li>
+          <li><strong>Imagem desde o boot:</strong> a tela deve acender antes mesmo de entrar no Windows.</li>
+          <li><strong>Brilho:</strong> confirme que o controle responde sem cintilação ou apagamento.</li>
+          <li><strong>Cor e uniformidade:</strong> procure linhas, manchas, pixels anormais ou áreas sem backlight.</li>
+          <li><strong>Movimento da tampa:</strong> abra e feche lentamente para verificar se o cabo não está tensionado.</li>
+          <li><strong>Fixação:</strong> confira moldura, parafusos, dobradiças e folgas antes da entrega.</li>
         </ul>
 
-        <h2>Validação e Testes Pós-Procedimento</h2>
-        <p>O serviço só está concluído quando passa nos testes. Profissionais entregam o equipamento com relatório de testes, não com base em "tá funcionando".</p>
+        <h2>Erros que causam dano durante a troca</h2>
         <ul>
-          <li><strong>Teste de boot completo</strong> — entrar no SO sem erros, sem mensagens de POST anormais</li>
-          <li><strong>Stress test de CPU</strong> — Cinebench R23 ou Prime95 por 30 minutos, monitorando temperatura</li>
-          <li><strong>Stress test de GPU</strong> — FurMark ou 3DMark por 20 minutos (em GPUs dedicadas)</li>
-          <li><strong>Teste de memória RAM</strong> — MemTest86 por pelo menos um ciclo completo</li>
-          <li><strong>Teste de disco</strong> — CrystalDiskInfo (saúde) e CrystalDiskMark (performance)</li>
-          <li><strong>Teste de carga prolongada</strong> — uso real por algumas horas antes de devolver ao cliente</li>
+          <li>Comprar tela somente pelo tamanho em polegadas.</li>
+          <li>Conectar ou desconectar o cabo do display com a bateria ainda alimentando a placa.</li>
+          <li>Puxar o flat cable pelos fios.</li>
+          <li>Forçar moldura colada ou presilha sem entender o método de fixação.</li>
+          <li>Usar parafuso de comprimento diferente do original.</li>
+          <li>Fechar tudo antes de testar imagem e backlight.</li>
+          <li>Insistir na troca quando o notebook também não gera vídeo externo.</li>
         </ul>
 
-        <h2>Quando Chamar um Profissional</h2>
-        <p>Há situações em que tentar resolver sozinho não compensa. O custo do erro é maior que o do serviço técnico.</p>
-        <ul>
-          <li>Equipamento ainda em garantia — abrir cancela a cobertura do fabricante</li>
-          <li>Problema envolve solda em placa-mãe (BGA, SMD, microsoldagem)</li>
-          <li>Recuperação de dados de HD com falha mecânica (cabeça travada, motor queimado)</li>
-          <li>Contato com líquido — cada minuto sem limpeza profissional causa mais corrosão</li>
-          <li>Falta de ferramenta específica (estação de retrabalho, microscópio, oscilador)</li>
-          <li>Quando o equipamento tem valor sentimental ou contém dados insubstituíveis</li>
-        </ul>
+        <h2>Quando o defeito pode estar no cabo, e não no painel</h2>
+        <p>Falha que muda ao movimentar a tampa, imagem que aparece em determinados ângulos ou artefatos intermitentes podem apontar para cabo ou conector. Isso não é prova isolada, mas é razão suficiente para inspecionar o caminho do cabo antes de comprar outra tela.</p>
+        <p>Dobradiça quebrada também pode puxar ou esmagar o cabo. Nesse cenário, trocar apenas o painel pode deixar a causa mecânica intacta.</p>
 
-        <h2>Garantia e Documentação do Serviço</h2>
-        <p>Todo serviço técnico profissional vem com <strong>garantia escrita</strong> e documentação. Se o serviço não tem nota fiscal, ordem de serviço e prazo de garantia, não é serviço profissional.</p>
-        <p>Em Curitiba, a {BRAND_NAME} emite ordem de serviço completa com:</p>
-        <ul>
-          <li>Diagnóstico inicial documentado</li>
-          <li>Lista de peças trocadas (com nota fiscal das peças)</li>
-          <li>Procedimentos realizados</li>
-          <li>Testes executados e resultados</li>
-          <li>Garantia mínima de 90 dias para serviços e peças</li>
-        </ul>
+        <h2>Perguntas rápidas</h2>
+        <h3>Posso comprar qualquer tela de 15,6 polegadas?</h3>
+        <p>Não. Tamanho é apenas uma característica. Confirme resolução, interface, conector, posição, espessura, fixação e recursos do modelo.</p>
 
-        <h2>Fazendo Trocar a Tela do Notebook em Curitiba</h2>
-        <p>Se você prefere deixar o serviço com quem faz isso todos os dias, a <strong>{BRAND_NAME}</strong> realiza trocar a tela do notebook em Curitiba e região metropolitana. Atendimento a domicílio, laboratório próprio, garantia escrita e valor transparente antes da execução.</p>
-        <p>Atendemos Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande. Diagnóstico via WhatsApp em até 5 minutos.</p>
+        <h3>Monitor externo funcionando prova que a tela está queimada?</h3>
+        <p>Não. Ele mostra que o computador consegue gerar vídeo externo, mas a falha interna ainda pode estar no painel, no cabo, no conector ou na alimentação do display.</p>
 
+        <h3>Preciso trocar pasta térmica para trocar a tela?</h3>
+        <p>Normalmente não. São intervenções diferentes. Não desmonte o sistema de refrigeração sem necessidade apenas porque o notebook já está aberto.</p>
+
+        <h3>Vale testar a tela nova antes de fechar a moldura?</h3>
+        <p>Sim, desde que o equipamento seja energizado apenas com os conectores corretamente assentados e você desligue novamente antes de continuar a montagem.</p>
+
+        <h2>Próximos passos relacionados</h2>
+        <p>Se o notebook não dá vídeo nem em tela externa, comece por <Link to="/problemas/computador-nao-da-imagem">computador sem imagem</Link>. Se o equipamento não liga, use <Link to="/problemas/notebook-nao-liga">notebook não liga</Link>. Para manutenção profissional, veja <Link to="/servicos/manutencao-de-notebook">manutenção de notebook</Link>.</p>
+
+        <EditorialReferences slug="como-trocar-tela-notebook-passo-a-passo" />
       </>
     ),
   },
@@ -7634,126 +7135,6 @@ crontab -e
     content: (
       <>
         <p className="lead">Instalar LAMP Stack no Ubuntu é uma das habilidades mais valorizadas em ambientes de servidor e desenvolvimento. Neste guia técnico, vamos cobrir desde os conceitos fundamentais até os comandos avançados que técnicos e sysadmins usam no dia a dia.</p>
-
-        <h2>Por Que Aprender Esse Recurso do Linux</h2>
-        <p>Linux domina mais de 96% dos servidores web do mundo. Cada loja online, cada streaming, cada API que você usa provavelmente roda em Linux. Dominar suas ferramentas é dominar a infraestrutura moderna.</p>
-        <p>Para profissionais de TI em Curitiba, conhecimento sólido de Linux é diferencial competitivo direto: empresas pagam mais por quem sabe administrar servidores Linux do que por quem só sabe Windows.</p>
-
-        <h2>Pré-Requisitos Antes de Começar</h2>
-        <p>Para acompanhar este guia com proveito, você deve ter:</p>
-        <ul>
-          <li>Uma instalação Linux funcional — Ubuntu 22.04+, Debian 12+ ou derivada</li>
-          <li>Acesso ao terminal com privilégios sudo</li>
-          <li>Conhecimento básico de navegação por linha de comando (cd, ls, mv, cp)</li>
-          <li>Editor de texto preferido (nano para iniciantes, vim para experientes)</li>
-          <li>Conexão à internet para instalação de pacotes</li>
-        </ul>
-        <p>Se nunca usou Linux, comece com nossos artigos sobre comandos essenciais antes de avançar.</p>
-
-        <h2>Conceitos Fundamentais</h2>
-        <p>Antes de digitar qualquer comando, é importante entender <strong>por que</strong> as coisas funcionam de determinada forma no Linux. Diferente do Windows, onde muitas operações são abstraídas pela interface, no Linux você está mais próximo do sistema operacional real.</p>
-        <ul>
-          <li><strong>Tudo é arquivo</strong> — dispositivos, processos, sockets, tudo é representado como arquivo no filesystem</li>
-          <li><strong>Permissões granulares</strong> — leitura, escrita, execução para dono, grupo e outros</li>
-          <li><strong>Pipes e composição</strong> — comandos pequenos que se combinam para tarefas complexas</li>
-          <li><strong>Configuração em texto puro</strong> — quase tudo é configurado em arquivos /etc/* legíveis</li>
-          <li><strong>Open Source</strong> — você pode auditar, modificar e contribuir para qualquer ferramenta</li>
-        </ul>
-
-        <h2>Instalação e Configuração Inicial</h2>
-        <p>A maioria das ferramentas que vamos usar já vem pré-instalada nas distribuições principais. Quando não vem, a instalação é direta:</p>
-        <pre><code>{`sudo apt update
-sudo apt install -y curl wget git build-essential`}</code></pre>
-        <p>Para distribuições baseadas em RHEL (Fedora, Rocky, AlmaLinux), substitua <code>apt</code> por <code>dnf</code>. Para Arch Linux, use <code>pacman -S</code>.</p>
-        <p>Depois da instalação, verifique a versão dos pacotes para garantir compatibilidade com este guia:</p>
-        <pre><code>{`uname -a              # informações do kernel
-lsb_release -a       # versão da distribuição
-which bash python3   # caminho dos interpretadores`}</code></pre>
-
-        <h2>Comandos e Operações Principais</h2>
-        <p>Os comandos básicos que você vai usar com frequência:</p>
-        <ul>
-          <li><strong>ls -lah</strong> — listagem detalhada com tamanhos legíveis</li>
-          <li><strong>grep -r "padrao" .</strong> — busca recursiva por texto em arquivos</li>
-          <li><strong>find /var/log -name "*.log" -mtime -7</strong> — encontra logs modificados nos últimos 7 dias</li>
-          <li><strong>tail -f /var/log/syslog</strong> — monitora arquivo em tempo real</li>
-          <li><strong>ps aux | grep nome</strong> — encontra processos por nome</li>
-          <li><strong>du -sh *</strong> — tamanho de cada diretório no atual</li>
-          <li><strong>df -h</strong> — espaço livre em todas as partições</li>
-          <li><strong>journalctl -u nome.service -f</strong> — logs de serviço em tempo real</li>
-        </ul>
-        <p>Combine comandos com pipes para tarefas complexas. Por exemplo, encontrar os 10 maiores arquivos do sistema:</p>
-        <pre><code>{`sudo find / -type f -exec du -h {} + 2>/dev/null | sort -rh | head -10`}</code></pre>
-
-        <h2>Configuração Avançada</h2>
-        <p>Depois do básico, é hora de aprofundar. As configurações avançadas separam o usuário casual do profissional.</p>
-        <p>Edite o arquivo de configuração com permissão adequada:</p>
-        <pre><code>{`sudo nano /etc/configuracao.conf`}</code></pre>
-        <p>Aplique as alterações:</p>
-        <ul>
-          <li><strong>Recarregar configuração</strong> sem reiniciar o serviço quando possível</li>
-          <li><strong>Reiniciar o serviço</strong> com <code>sudo systemctl restart nome</code></li>
-          <li><strong>Verificar status</strong> com <code>sudo systemctl status nome</code></li>
-          <li><strong>Ver logs recentes</strong> com <code>sudo journalctl -u nome -n 50</code></li>
-        </ul>
-        <p>Sempre faça backup de arquivos de configuração antes de editar:</p>
-        <pre><code>{`sudo cp /etc/configuracao.conf /etc/configuracao.conf.bak`}</code></pre>
-
-        <h2>Boas Práticas de Segurança</h2>
-        <p>Servidores Linux são alvos constantes na internet. Seguir boas práticas não é opcional, é obrigatório.</p>
-        <ul>
-          <li><strong>Nunca rode como root</strong> em uso normal — use sudo apenas quando necessário</li>
-          <li><strong>Mantenha o sistema atualizado</strong> — <code>sudo apt update && sudo apt upgrade</code> semanalmente</li>
-          <li><strong>Configure firewall</strong> — UFW para desktops, iptables/nftables para servidores</li>
-          <li><strong>Desabilite serviços não usados</strong> — menos superfície de ataque</li>
-          <li><strong>Use chaves SSH</strong> em vez de senha — desabilite login por senha em produção</li>
-          <li><strong>Fail2ban</strong> — bloqueia IPs após tentativas falhas de login</li>
-          <li><strong>Monitore logs</strong> — falhas de autenticação suspeitas em /var/log/auth.log</li>
-        </ul>
-
-        <h2>Troubleshooting de Problemas Comuns</h2>
-        <p>Quando algo dá errado — e vai dar — saber depurar é fundamental.</p>
-        <ul>
-          <li><strong>Comando não encontrado</strong> — verifique o PATH com <code>echo $PATH</code></li>
-          <li><strong>Permissão negada</strong> — confira as permissões com <code>ls -la</code> e quem é o dono</li>
-          <li><strong>Disco cheio</strong> — use <code>df -h</code> e <code>du -sh *</code> para encontrar consumidores</li>
-          <li><strong>Processo travado</strong> — identifique com <code>htop</code> e termine com <code>kill -9 PID</code></li>
-          <li><strong>Serviço não inicia</strong> — sempre comece por <code>journalctl -u nome.service</code></li>
-          <li><strong>Rede não funciona</strong> — teste com <code>ping</code>, <code>ip a</code>, <code>ss -tuln</code></li>
-        </ul>
-
-        <h2>Automação e Produtividade</h2>
-        <p>O verdadeiro poder do Linux está em automatizar tudo. Tarefas que levam horas em interfaces gráficas são resolvidas em segundos com scripts.</p>
-        <p>Crie um script bash básico para tarefas repetitivas:</p>
-        <pre><code>{`#!/bin/bash
-set -euo pipefail
-echo "Iniciando manutencao em $(date)"
-sudo apt update && sudo apt upgrade -y
-sudo apt autoremove -y
-sudo journalctl --vacuum-time=7d
-echo "Concluido em $(date)"`}</code></pre>
-        <p>Torne executável e agende com cron para rodar automaticamente:</p>
-        <pre><code>{`chmod +x manutencao.sh
-crontab -e
-# adicione: 0 3 * * 0 /caminho/manutencao.sh > /var/log/manut.log 2>&1`}</code></pre>
-
-        <h2>Suporte Linux em Curitiba</h2>
-        <p>A <strong>{BRAND_NAME}</strong> oferece suporte profissional para servidores e desktops Linux em Curitiba e região. Configuração de servidores web, e-mail, samba, firewall, monitoramento, backup e migração de Windows para Linux. Atendemos empresas de todos os portes com SLA definido e técnicos certificados.</p>
-        <p>Cobertura: Curitiba, São José dos Pinhais, Pinhais, Colombo, Almirante Tamandaré, Araucária, Campo Largo, Campo Magro, Piraquara, Quatro Barras e Fazenda Rio Grande.</p>
-
-      </>
-    ),
-  },
-
-  "como-usar-rsync-backup-linux": {
-    title: "Como Usar rsync Para Backup no Linux: Guia Definitivo",
-    excerpt: "Sincronização local e remota, backup incremental, exclusões e automação com cron — o canivete suíço do sysadmin.",
-    date: "2026-04-20",
-    readTime: "11 min",
-    category: "Linux",
-    content: (
-      <>
-        <p className="lead">Usar rsync Para Backup no Linux é uma das habilidades mais valorizadas em ambientes de servidor e desenvolvimento. Neste guia técnico, vamos cobrir desde os conceitos fundamentais até os comandos avançados que técnicos e sysadmins usam no dia a dia.</p>
 
         <h2>Por Que Aprender Esse Recurso do Linux</h2>
         <p>Linux domina mais de 96% dos servidores web do mundo. Cada loja online, cada streaming, cada API que você usa provavelmente roda em Linux. Dominar suas ferramentas é dominar a infraestrutura moderna.</p>
@@ -11386,8 +10767,8 @@ crontab -e
   },
 
   "como-saber-quem-esta-usando-meu-wifi": {
-    title: "Como saber quem está usando o seu Wi-Fi (e o que fazer)",
-    excerpt: "Como listar os dispositivos conectados, identificar cada um pelo nome e pelo endereço físico e retomar o controle da rede sem quebrar o que funciona.",
+    title: "Como ver quem está usando meu Wi‑Fi: dispositivos conectados",
+    excerpt: "Veja quem está conectado ao seu Wi‑Fi pelo roteador, como identificar dispositivos desconhecidos, entender MAC privado e reforçar a segurança sem bloquear aparelho legítimo.",
     date: "2026-04-22",
     readTime: "10 min",
     category: "Redes e Wi-Fi",
@@ -11396,15 +10777,15 @@ crontab -e
         <p className="lead">A suspeita costuma começar assim: a internet ficou lenta sem motivo, ou apareceu um aparelho desconhecido na lista do roteador. Antes de trocar tudo, vale entender o que a lista de dispositivos realmente mostra — e o que ela não mostra.</p>
 
         <h2>Resposta rápida</h2>
-        <p>Abra o painel do roteador e procure a lista de dispositivos conectados ou clientes DHCP: ela é a única fonte confiável, porque enxerga também o que está em economia de energia. Compare a lista com o inventário dos aparelhos da casa, desligando um por vez para identificar o que não reconhecer. Nome estranho não prova invasão — celulares modernos usam endereço físico aleatório por rede. Se, mesmo com todos os aparelhos desligados, restar alguém conectado, ou se houver configuração alterada sem sua ação, troque a senha do Wi-Fi e a senha de administração, desligue WPS e acesso remoto e atualize o firmware.</p>
+        <p>Abra o painel do roteador e procure a lista de clientes conectados, dispositivos associados ou concessões DHCP. O nome varia por fabricante, e nenhuma dessas telas é perfeita: aparelhos em repouso podem aparecer como inativos e alguns roteadores mantêm entradas antigas por um tempo. Compare a lista com os dispositivos da casa e identifique um por vez. Nome estranho ou MAC diferente não prova invasão — celulares e notebooks podem usar endereço privado por rede. Se surgir dispositivo ativo que você não reconhece ou houver configuração alterada sem sua ação, troque a senha do Wi‑Fi e a senha de administração, revise WPS/acesso remoto e atualize o firmware pelo canal oficial.</p>
 
         <h2>Onde ver os aparelhos conectados</h2>
-        <p>O lugar confiável é o painel do próprio roteador, normalmente em uma seção chamada "dispositivos conectados", "clientes DHCP" ou "mapa da rede". Ali aparecem o nome informado por cada aparelho, o endereço IP recebido e o endereço físico (MAC) da placa de rede.</p>
+        <p>O melhor ponto de partida é o painel do próprio roteador, normalmente em uma seção chamada “dispositivos conectados”, “clientes”, “DHCP” ou “mapa da rede”. Dependendo do modelo, ali aparecem nome informado pelo aparelho, IP, MAC, banda e estado da conexão. A interface do roteador é mais útil que um aplicativo de varredura, mas também pode manter entradas antigas ou mostrar nomes genéricos.</p>
         <p>Aplicativos de celular que "escaneiam a rede" ajudam a ter uma visão rápida, mas só enxergam o que responde no momento da varredura. Um aparelho desligado ou em economia de energia não aparece — por isso a lista do roteador é a referência.</p>
 
         <h2>Por que a lista parece cheia de estranhos</h2>
         <p>Uma casa comum tem mais dispositivos conectados do que as pessoas imaginam: TV, console, caixa de som, aspirador, lâmpadas, câmeras, relógio, tablet antigo esquecido na gaveta. Muitos se apresentam com nomes genéricos ou apenas com um código do fabricante.</p>
-        <p>Some-se a isso a privacidade de endereço MAC: celulares modernos geram um endereço aleatório por rede, o que faz o mesmo aparelho aparecer com identidades diferentes ao longo do tempo. Ou seja, um nome estranho na lista não é prova de invasão.</p>
+        <p>Some-se a isso a privacidade de endereço MAC: sistemas modernos podem usar um endereço privado para cada rede e, em alguns modos, rotacioná-lo ao longo do tempo. Por isso o mesmo aparelho pode aparecer com um MAC diferente do endereço físico gravado no hardware. Um nome estranho ou um MAC novo, sozinho, não é prova de invasão.</p>
 
         <h2>Como identificar cada aparelho com método</h2>
         <ol>
@@ -11428,8 +10809,8 @@ crontab -e
         <p>Use uma frase longa e mude o padrão de segurança para WPA3 ou WPA2 com AES. Todos os aparelhos precisarão reconectar — separe uma hora tranquila para isso.</p>
         <h3>2. Troque a senha de administração</h3>
         <p>É diferente da senha do Wi-Fi e é a que realmente protege as configurações. Se ela ainda era a de fábrica, considere que qualquer pessoa que já esteve na rede pôde acessá-la.</p>
-        <h3>3. Desative WPS e acesso remoto</h3>
-        <p>O WPS permite entrar sem digitar senha e é o atalho mais explorado em redes domésticas. O acesso remoto ao painel expõe o roteador à internet inteira.</p>
+        <h3>3. Revise WPS e acesso remoto</h3>
+        <p>Se você não usa WPS, desativá-lo reduz uma superfície de acesso desnecessária. O gerenciamento remoto também deve permanecer desligado quando não houver necessidade clara e configuração segura; quando habilitado, ele expõe a interface administrativa para além da rede local.</p>
         <h3>4. Atualize o firmware</h3>
         <p>Boa parte das invasões de roteador explora falhas já corrigidas pelo fabricante em versões mais novas.</p>
         <h3>5. Isole o que não precisa da rede principal</h3>
@@ -11461,7 +10842,7 @@ crontab -e
           <li>A lista mostra algum dispositivo ativo com todos os aparelhos da casa desligados? Se não, o problema provavelmente é consumo ou cobertura, não intrusão.</li>
           <li>Se sim, alguma configuração do roteador mudou sem você mexer (DNS, acesso remoto, rede de visitantes)? Se mudou, trate como roteador comprometido: atualização de firmware e reconfiguração completa, não apenas bloqueio de um endereço.</li>
           <li>Se nada mudou, troque primeiro a senha do Wi-Fi. Se a entrada desconhecida some e não volta, o caso está resolvido.</li>
-          <li>Se a entrada volta mesmo após a troca de senha, a senha de administração provavelmente também está comprometida. Restaure o roteador ao padrão de fábrica e configure do zero.</li>
+          <li>Se a entrada desconhecida reaparece após trocar a senha, confirme primeiro se não é um dispositivo legítimo com MAC privado e revise a senha/administração do roteador. Restauração de fábrica fica como etapa posterior, depois de registrar configuração do provedor e demais ajustes necessários.</li>
           <li>Se o equipamento é antigo, não recebe mais firmware do fabricante e o problema persiste, a substituição passa a ser a alternativa técnica realista.</li>
         </ol>
 
@@ -11481,7 +10862,7 @@ crontab -e
         <ul>
           <li><strong>Cliente DHCP:</strong> aparelho que recebeu automaticamente um endereço IP do roteador.</li>
           <li><strong>Endereço físico (MAC):</strong> identificador da placa de rede; pode ser aleatório por rede em celulares recentes.</li>
-          <li><strong>WPS:</strong> conexão sem digitar senha, apertando um botão; é o atalho mais explorado em redes domésticas.</li>
+          <li><strong>WPS:</strong> mecanismo de associação simplificada; se não for necessário no seu ambiente, pode ser desativado para reduzir recursos de acesso que você não usa.</li>
           <li><strong>Firmware:</strong> o sistema interno do roteador; atualizações corrigem falhas exploradas remotamente.</li>
           <li><strong>Rede de convidados:</strong> rede separada que impede o visitante de alcançar os demais aparelhos da casa.</li>
         </ul>
@@ -11494,84 +10875,126 @@ crontab -e
     ),
   },
   "como-conectar-wifi-tv-nao-conecta": {
-    title: "Smart TV não conecta no Wi-Fi: como separar problema de rede de defeito da TV",
+    title: "Smart TV não conecta no Wi‑Fi? Veja o que testar primeiro",
     excerpt:
-      "Como descobrir se a Smart TV não conecta por causa da rede, da faixa de 5 GHz, do isolamento do roteador ou de falha no módulo Wi-Fi do aparelho — e o que fazer em cada caso.",
+      "TV não acha a rede, conecta sem internet ou cai do Wi‑Fi? Veja como separar sinal, compatibilidade, roteador, software e falha da TV antes de resetar.",
     date: "2026-08-12",
-    readTime: "11 min",
+    readTime: "14 min",
     category: "Redes",
     content: (
       <>
-        <p className="lead">Smart TV que não conecta tem duas famílias de causa muito diferentes: a rede não está entregando conexão utilizável naquele ponto da casa, ou o módulo Wi-Fi da própria TV está falhando. Os dois sintomas parecem iguais na tela. A diferença aparece no teste, e é ela que decide se o caso se resolve no roteador ou exige avaliação do aparelho.</p>
+        <p className="lead">Quando a Smart TV não conecta ao Wi‑Fi, o erro pode estar na cobertura, na compatibilidade entre TV e roteador, na autenticação, no acesso à internet, no software do aparelho ou no próprio hardware sem fio. O diagnóstico melhora muito quando você identifica <strong>qual etapa falha</strong>: a TV não vê a rede, vê mas não autentica, conecta sem internet ou conecta e cai depois.</p>
 
-        <h2>O teste que separa os dois cenários</h2>
-        <p>Antes de qualquer configuração, leve um celular até o local exato da TV — mesma altura, mesma parede, TV ligada. Depois observe:</p>
-        <ul>
-          <li><strong>Celular também pega mal ali:</strong> o problema é cobertura. A TV está apenas na pior posição da casa, normalmente atrás de móvel, em parede com estrutura metálica ou no cômodo mais distante do roteador.</li>
-          <li><strong>Celular conecta bem e a TV não enxerga a rede:</strong> o caso costuma ser de faixa ou de configuração do roteador, não de alcance.</li>
-          <li><strong>A TV conecta, mas cai sozinha depois de minutos ou horas:</strong> comportamento típico de rede saturada, canal congestionado ou módulo Wi-Fi do aparelho com falha térmica — nessa ordem de probabilidade.</li>
-          <li><strong>A TV não enxerga nenhuma rede, nem a do vizinho:</strong> forte indício de falha no módulo Wi-Fi do aparelho.</li>
-        </ul>
+        <h2>Resposta direta</h2>
+        <p>Antes de resetar a TV, trocar o roteador ou condenar o módulo Wi‑Fi, faça quatro comparações: <strong>outro dispositivo no mesmo ponto da TV, a TV perto do roteador quando isso for viável, a TV por cabo Ethernet quando o modelo permitir e a configuração declarada pelo fabricante para aquela TV</strong>. O objetivo é reduzir variáveis e descobrir se a falha acompanha o local, a rede ou o aparelho.</p>
 
-        <h2>Faixa de 5 GHz: a causa mais frequente de "a rede não aparece"</h2>
-        <p>Muitas TVs, inclusive modelos recentes de linha de entrada, operam apenas em 2,4 GHz. Se o roteador transmite as duas faixas com o mesmo nome de rede, a TV pode simplesmente não listar nada — para ela, aquela rede não existe.</p>
-        <p>A solução é separar os nomes das faixas no roteador e conectar a TV explicitamente à faixa de 2,4 GHz. Ela alcança mais longe e atravessa parede melhor; a perda de velocidade é irrelevante para vídeo, que consome muito menos banda do que a maioria das pessoas imagina.</p>
-
-        <h2>Isolamento de clientes e rede de visitantes</h2>
-        <p>Roteadores de operadora frequentemente vêm com rede de visitantes ativa e isolamento entre aparelhos. A TV conectada nessa rede acessa a internet, mas não conversa com celular nem computador — e aí o espelhamento de tela e os aplicativos de controle deixam de funcionar, mesmo com o vídeo rodando normalmente.</p>
-        <p>Quando o sintoma é "a TV tem internet mas o celular não a encontra", esse é o primeiro item a verificar. A separação correta entre rede de trabalho, rede doméstica e rede de visitantes faz parte do que ajustamos em <Link to="/servicos/redes-e-wifi">redes e Wi-Fi</Link>.</p>
-
-        <h2>Canal congestionado em prédio</h2>
-        <p>Em edifício, dezenas de redes disputam as mesmas frequências. A TV conecta, o ícone fica normal, e mesmo assim o vídeo trava e a conexão cai. Não é defeito: é disputa por espaço no ar. Fixar um canal menos ocupado em 2,4 GHz e reposicionar o roteador para longe de metal, espelho, caixa d'água e do próprio armário costuma mudar o resultado mais do que trocar de aparelho.</p>
-
-        <h2>O que fazer, na ordem que evita retrabalho</h2>
-        <ol>
-          <li><strong>Desligar TV e roteador da tomada</strong> por um minuto, religando primeiro o roteador e aguardando ele estabilizar. Isso limpa sessões travadas dos dois lados.</li>
-          <li><strong>Esquecer a rede na TV e reconectar</strong>, digitando a senha com atenção a maiúsculas e minúsculas — o teclado da TV frequentemente ativa maiúscula automática na primeira letra.</li>
-          <li><strong>Conectar à faixa de 2,4 GHz</strong> com nome próprio, se as faixas ainda estiverem unificadas.</li>
-          <li><strong>Verificar rede de visitantes e isolamento de clientes</strong> no roteador.</li>
-          <li><strong>Atualizar o sistema da TV</strong>, quando ela conseguir conectar ao menos por cabo — correções de conectividade são comuns nessas atualizações.</li>
-          <li><strong>Testar por cabo de rede.</strong> É o teste decisivo: se por cabo funciona perfeitamente e por Wi-Fi nunca funciona, o módulo sem fio do aparelho é o suspeito principal.</li>
-        </ol>
-        <p>Reset de fábrica só faz sentido depois desses passos. Ele apaga contas, aplicativos e preferências e raramente resolve o que os itens anteriores não resolveram.</p>
-
-        <aside className="not-prose my-8 rounded-2xl border border-accent/25 bg-accent/[0.04] p-5 md:p-6" aria-labelledby="matriz-tv-wifi">
-          <span className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">Matriz de diagnóstico</span>
-          <h2 id="matriz-tv-wifi" className="mt-2 text-xl font-heading font-bold text-foreground">Sintoma, teste e próximo passo</h2>
+        <aside className="not-prose my-8 rounded-2xl border border-accent/25 bg-accent/[0.04] p-5 md:p-6" aria-labelledby="tv-wifi-sintomas">
+          <span className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">Diagnóstico por sintoma</span>
+          <h2 id="tv-wifi-sintomas" className="mt-2 text-xl font-heading font-bold text-foreground">O que o comportamento da TV realmente indica</h2>
           <div className="mt-5 overflow-x-auto rounded-xl border border-border bg-background">
-            <table className="w-full min-w-[620px] text-left text-sm">
+            <table className="w-full min-w-[720px] text-left text-sm">
               <thead className="bg-muted/60 text-foreground">
                 <tr>
-                  <th className="p-3 font-semibold">O que aparece</th>
-                  <th className="p-3 font-semibold">Teste seguro</th>
-                  <th className="p-3 font-semibold">Decisão</th>
+                  <th className="p-3 font-semibold">Sintoma</th>
+                  <th className="p-3 font-semibold">O que comparar</th>
+                  <th className="p-3 font-semibold">Hipóteses que ganham força</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-border text-muted-foreground">
-                <tr><td className="p-3">Celular e TV falham no mesmo ponto</td><td className="p-3">Compare perto do roteador e no local da TV</td><td className="p-3">Trate cobertura antes de mexer na TV.</td></tr>
-                <tr><td className="p-3">TV não encontra a rede, mas o celular encontra</td><td className="p-3">Confira a faixa disponível e separe o nome de 2,4 GHz</td><td className="p-3">Ajuste a rede; não compre adaptador por palpite.</td></tr>
-                <tr><td className="p-3">TV navega, mas não aparece para o celular</td><td className="p-3">Verifique rede de visitantes e isolamento de clientes</td><td className="p-3">Mantenha os dois na mesma rede doméstica.</td></tr>
-                <tr><td className="p-3">Cabo funciona e Wi‑Fi falha sempre</td><td className="p-3">Atualize o sistema e repita o teste após reconectar a rede</td><td className="p-3">Só então avalie o módulo Wi‑Fi ou uma solução cabeada.</td></tr>
+                <tr><td className="p-3">A TV não encontra a rede</td><td className="p-3">Outro aparelho no mesmo ponto + bandas suportadas pela TV</td><td className="p-3">Cobertura, banda/canal, configuração do roteador, rádio da TV</td></tr>
+                <tr><td className="p-3">A TV vê a rede, mas não conecta</td><td className="p-3">Senha, modo de segurança, rede salva e outro SSID compatível</td><td className="p-3">Autenticação, compatibilidade de segurança, configuração persistida</td></tr>
+                <tr><td className="p-3">A TV conecta, mas fica sem internet</td><td className="p-3">Outro dispositivo na mesma rede e teste por cabo</td><td className="p-3">Roteador, DHCP/DNS, link do provedor ou software da TV</td></tr>
+                <tr><td className="p-3">Conecta e cai depois</td><td className="p-3">Horário, distância, outros aparelhos e comportamento por cabo</td><td className="p-3">Cobertura, interferência, roteador, software ou hardware sem fio</td></tr>
+                <tr><td className="p-3">Internet funciona, mas celular não encontra a TV</td><td className="p-3">Rede de visitantes, isolamento e se ambos estão no mesmo segmento</td><td className="p-3">Descoberta local bloqueada, não necessariamente falha de internet</td></tr>
               </tbody>
             </table>
           </div>
         </aside>
 
-        <aside className="not-prose my-8 rounded-xl border border-amber-500/30 bg-amber-500/10 p-5 text-sm text-foreground" aria-label="Antes de restaurar a Smart TV">
-          <strong>Não comece pelo reset de fábrica.</strong> Ele remove contas, aplicativos e preferências, mas não corrige falta de cobertura, instabilidade da operadora ou isolamento configurado no roteador. Faça os testes acima e registre o resultado antes de apagar qualquer configuração.
+        <h2>1. Compare outro aparelho exatamente onde a TV está</h2>
+        <p>Use um celular ou notebook no mesmo ponto físico da TV. A FCC destaca que o desempenho dentro de casa depende da rede Wi‑Fi, da posição do roteador e dos dispositivos conectados; por isso, a comparação no mesmo local é mais útil do que testar em outro cômodo.</p>
+        <ul>
+          <li><strong>Se celular e TV falham no mesmo ponto:</strong> investigue primeiro cobertura, interferência e posicionamento antes de concluir que a TV está defeituosa.</li>
+          <li><strong>Se o celular funciona bem e a TV não encontra a rede:</strong> a diferença pode estar na compatibilidade da TV, no rádio do aparelho, no software ou na configuração usada pelo roteador.</li>
+          <li><strong>Se só a TV cai:</strong> registre quando ocorre e compare o resultado por cabo ou perto do roteador antes de trocar hardware.</li>
+        </ul>
+
+        <h2>2. Não presuma que toda Smart TV suporta as mesmas bandas e modos</h2>
+        <p>O suporte a 2,4 GHz, 5 GHz, canais, largura de canal e modos de segurança varia por modelo e mercado. Verifique o manual ou a especificação oficial da TV. O fato de um celular enxergar determinada rede não prova que a TV consiga usar a mesma combinação de banda, canal e segurança.</p>
+        <p>Quando o roteador usa um único nome para várias bandas, separar temporariamente os SSIDs pode ser útil como <strong>teste de compatibilidade</strong>. Isso não significa que redes separadas sejam obrigatoriamente melhores no uso diário; serve apenas para descobrir em qual combinação a TV consegue se associar.</p>
+
+        <h2>3. Se a TV vê a rede, mas não autentica</h2>
+        <p>Nesse cenário a cobertura já foi suficiente para a TV enxergar o SSID. A investigação muda para senha, perfil salvo, modo de segurança e compatibilidade. Faça a sequência sem alterar várias coisas ao mesmo tempo:</p>
+        <ol>
+          <li>Confirme a senha em outro dispositivo.</li>
+          <li>Remova apenas a rede salva na TV e cadastre novamente.</li>
+          <li>Confira no manual se o modelo tem alguma limitação de banda ou modo de segurança.</li>
+          <li>Se você alterar temporariamente a configuração do roteador para testar, registre como estava antes e reverta o que não for necessário.</li>
+        </ol>
+        <p>Evite desativar proteção da rede apenas para “fazer funcionar”. Uma incompatibilidade de segurança deve ser tratada escolhendo uma configuração suportada e adequada para os dispositivos da casa, não deixando a rede aberta.</p>
+
+        <h2>4. Se aparece “conectado”, mas a TV fica sem internet</h2>
+        <p>Estar associado ao Wi‑Fi não significa que a TV conseguiu chegar à internet. Compare outro aparelho conectado ao mesmo roteador naquele momento. Se todos ficam sem internet, a causa pode estar no roteador, modem/ONU ou provedor. Se apenas a TV falha, reiniciar a conexão da TV, renovar a rede salva e atualizar o software do aparelho passam a ser verificações mais relevantes.</p>
+        <p>Alterar DNS manualmente pode ser um teste em casos específicos, mas não deve ser o primeiro reflexo: ele não corrige sinal fraco, senha, falha de associação nem queda do link do provedor.</p>
+
+        <h2>5. Cabo Ethernet é uma comparação controlada, não um veredito automático</h2>
+        <p>Se a TV possui Ethernet, o cabo ajuda a retirar o rádio Wi‑Fi da equação. <strong>Se por cabo funciona e por Wi‑Fi não, isso estreita o diagnóstico para o caminho sem fio, mas não prova sozinho que o módulo Wi‑Fi queimou.</strong> Ainda podem existir diferenças de configuração, compatibilidade, cobertura ou software.</p>
+        <p>O hardware da TV ganha peso na hipótese quando a falha persiste em redes conhecidas como funcionais, perto do roteador, com configuração compatível e após atualização do sistema, enquanto a interface cabeada permanece estável.</p>
+
+        <h2>6. Rede de visitantes e isolamento explicam falhas de espelhamento</h2>
+        <p>Uma TV pode navegar normalmente e, ainda assim, não aparecer para o celular ou notebook. Isso acontece quando os aparelhos estão em redes diferentes ou quando o roteador impede comunicação entre clientes. Nesses casos, o problema é de <strong>descoberta local</strong>, não necessariamente de acesso à internet.</p>
+        <p>Antes de mexer em aplicativo, Bluetooth ou resetar a TV, confirme se telefone e TV estão na mesma rede doméstica e se a rede de visitantes ou o isolamento entre clientes não está separando os dispositivos.</p>
+
+        <h2>7. Quedas recorrentes exigem registrar padrão, não adivinhar causa</h2>
+        <p>Se a TV conecta e cai depois, anote horário, duração, intensidade do sinal percebida por outros aparelhos e se o problema aparece em outros dispositivos. Em prédios e ambientes densos, interferência e disputa de canal podem contribuir, mas não devem ser presumidas sem comparação.</p>
+        <p>Uma boa sequência é testar a TV no ponto habitual, depois mais perto do roteador e, quando possível, por cabo. Se o problema só existe em um local, a rede ganha prioridade. Se acompanha a TV em condições diferentes, o aparelho ganha prioridade.</p>
+
+        <h2>8. Ordem de testes que reduz retrabalho</h2>
+        <ol>
+          <li><strong>Defina o sintoma exato:</strong> não vê rede, não autentica, conecta sem internet ou cai.</li>
+          <li><strong>Compare outro dispositivo no mesmo ponto.</strong></li>
+          <li><strong>Confirme bandas e requisitos do modelo da TV.</strong></li>
+          <li><strong>Remova e recrie somente a conexão Wi‑Fi da TV.</strong></li>
+          <li><strong>Atualize o software da TV</strong> pelo método oficial disponível para o modelo.</li>
+          <li><strong>Teste mais perto do roteador</strong> se houver suspeita de cobertura.</li>
+          <li><strong>Teste por Ethernet</strong> quando a TV oferecer essa interface.</li>
+          <li><strong>Verifique rede de visitantes/isolamento</strong> se internet funciona, mas espelhamento e controle local não.</li>
+          <li><strong>Considere reset de fábrica por último</strong>, depois de registrar contas, configurações e o resultado dos testes anteriores.</li>
+        </ol>
+
+        <aside className="not-prose my-8 rounded-xl border border-amber-500/30 bg-amber-500/10 p-5 text-sm text-foreground" aria-label="Antes do reset de fábrica">
+          <strong>Reset não é diagnóstico.</strong> Ele apaga contas, aplicativos e preferências, mas não corrige cobertura ruim, incompatibilidade entre rádio e roteador, isolamento de clientes ou falha física. Use-o somente quando os testes menos destrutivos não explicaram o comportamento e o procedimento oficial do fabricante o indicar.
         </aside>
 
-        <h2>Quando é defeito da TV — e o que isso significa na prática</h2>
-        <p>Quando a TV não lista nenhuma rede, conecta por cabo sem falha e o problema persiste após atualização e reset, o cenário aponta para o módulo Wi-Fi do aparelho. Nesse ponto entra uma conversa honesta de custo: em boa parte dos televisores de linha de entrada, o reparo dessa parte custa mais do que resolver o uso com conexão cabeada ou com um aparelho externo de streaming ligado à porta HDMI.</p>
-        <p>Não prometemos reparo antes de avaliar, e não trocamos placa por suposição. A avaliação de imagem, som, placa e alimentação segue o escopo descrito em <Link to="/servicos/conserto-tv">conserto de TV</Link>, com o critério de verificação e cobrança explicado em <Link to="/diagnostico-tecnico">como funciona o diagnóstico técnico</Link>.</p>
+        <h2>Quando suspeitar do hardware da TV</h2>
+        <p>A suspeita de módulo Wi‑Fi, antena, cabo interno ou placa aumenta quando a TV falha em mais de uma rede funcional, perto do roteador, com configuração compatível, enquanto outros dispositivos funcionam normalmente. Mesmo assim, o diagnóstico físico deve separar módulo, antena/conexão, alimentação e placa antes de comprar peça.</p>
+        <p>Se houver cheiro de queimado, aquecimento anormal, sinais de líquido ou instabilidade elétrica, interrompa testes repetidos de liga/desliga. A avaliação de imagem, som, placa e alimentação está descrita em <Link to="/servicos/conserto-tv" className="text-accent">conserto de TV</Link>. O processo de triagem e seus limites estão em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
+
+        <h2>Perguntas frequentes</h2>
+        <h3>Por que a TV encontra o Wi‑Fi, mas não conecta?</h3>
+        <p>Porque encontrar o nome da rede é apenas a etapa de detecção. A autenticação ainda depende de senha, modo de segurança e compatibilidade entre a TV e a configuração do roteador.</p>
+
+        <h3>Devo usar 2,4 GHz ou 5 GHz na Smart TV?</h3>
+        <p>Use a banda que o modelo declara suportar e que se comporta melhor no local. Não há uma resposta universal: distância, paredes, capacidade do roteador e da própria TV mudam o resultado.</p>
+
+        <h3>Se por cabo funciona e por Wi‑Fi não, o módulo sem fio está queimado?</h3>
+        <p>Não necessariamente. O cabo remove várias variáveis do Wi‑Fi e torna o caminho sem fio mais suspeito, mas ainda é preciso separar cobertura, compatibilidade, configuração e software antes de concluir por defeito físico.</p>
+
+        <h3>Trocar o DNS resolve TV sem internet?</h3>
+        <p>Pode ser um teste em situações específicas, mas não é solução universal. Primeiro descubra se outros aparelhos também estão sem internet e se a TV recebeu conexão estável com o roteador.</p>
+
+        <h3>Reset de fábrica deve ser o primeiro passo?</h3>
+        <p>Não. É uma medida destrutiva de configuração. Compare rede, bandas, outro dispositivo, software e cabo antes; assim você preserva informações úteis para o diagnóstico.</p>
 
         <h2>Resumo prático</h2>
-        <p>Compare a TV com o celular no mesmo ponto para separar cobertura de configuração. Se a rede não aparece na lista, quase sempre é faixa de 5 GHz; se aparece e cai, é congestionamento ou distância; se o celular não encontra a TV, é rede de visitantes ou isolamento; se por cabo funciona e por Wi-Fi nunca funciona, é o módulo sem fio do aparelho — e aí vale comparar o custo do reparo com a solução por cabo ou aparelho externo.</p>
+        <p>O melhor diagnóstico não começa pelo reset nem pela compra de peça. Começa classificando o sintoma e comparando condições. Outro aparelho no mesmo ponto separa parte dos problemas de cobertura; a documentação do modelo separa compatibilidade; o cabo ajuda a isolar o caminho sem fio; e testes em mais de uma rede evitam condenar a TV por um problema do roteador. Para revisar posicionamento, cobertura e configuração da rede, consulte <Link to="/servicos/redes-e-wifi" className="text-accent">redes e Wi‑Fi</Link> e o <Link to="/guia-tecnico-informatica#tema-redes-wifi" className="text-accent">Atlas de redes e Wi‑Fi</Link>.</p>
+
+        <EditorialReferences slug="como-conectar-wifi-tv-nao-conecta" />
       </>
     ),
   },
 
-  
+
   "como-fazer-teste-velocidade-internet": {
     title: "Como fazer teste de velocidade da internet e interpretar download, latência e Wi-Fi",
     excerpt:
@@ -11741,22 +11164,22 @@ crontab -e
   // Intenção informacional. Não localiza a página: a ponte comercial e local
   // acontece por links contextuais, nunca por repetição de cidade no texto.
   "como-formatar-pc-sem-perder-arquivos": {
-    title: "Como formatar o PC ou notebook sem perder arquivos",
+    title: "Como formatar PC ou notebook sem perder arquivos: checklist seguro",
     excerpt:
-      "O que decidir antes de formatar: quando a reinstalação resolve, quando não resolve, como preservar arquivos, contas e licenças, e a diferença entre redefinir o sistema e instalar do zero.",
+      "Como formatar PC ou notebook sem perder arquivos: backup, BitLocker, contas, licenças, drivers e escolha entre redefinir, reparar ou instalar o Windows do zero.",
     date: "2026-08-14",
     readTime: "12 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Formatar é uma decisão, não um botão. Feita na hora certa, devolve uma máquina previsível. Feita como palpite, apaga anos de arquivo e devolve o mesmo problema em duas semanas. Este guia mostra como decidir e como executar sem perder o que importa.</p>
+        <p className="lead">Formatar é uma decisão, não um botão de “acelerar”. Antes de reinstalar o Windows, confirme que os arquivos importantes têm cópia verificável, registre contas e licenças, guarde a chave do BitLocker quando existir e descubra se a causa é realmente software. Este guia organiza essa decisão para reduzir o risco de apagar dados e terminar com o mesmo defeito.</p>
 
         <h2>Antes: formatar resolve o seu caso?</h2>
         <p>Reinstalar o sistema resolve o que é software: configuração quebrada, perfil corrompido, resíduo de programas desinstalados pela metade, atualização mal aplicada, infecção persistente. Não resolve o que é físico nem o que é limite de hardware.</p>
         <ul>
-          <li><strong>Disco mecânico com Windows 10/11:</strong> a máquina volta rápida por poucos dias e regride. O gargalo é a fila de leitura do disco, não o sistema.</li>
+          <li><strong>Disco mecânico sob carga alta:</strong> a reinstalação pode aliviar software acumulado, mas não elimina a limitação de latência do HD. Meça uso de disco e saúde da unidade antes de concluir que formatar resolve.</li>
           <li><strong>Pouca memória:</strong> o sistema recém-instalado abre menos coisas ao mesmo tempo — isso não é ganho de desempenho, é uso menor.</li>
-          <li><strong>Superaquecimento:</strong> queda de velocidade depois de alguns minutos é temperatura, não software.</li>
+          <li><strong>Superaquecimento:</strong> se o desempenho cai conforme a temperatura sobe, a causa pode ser térmica; confirme temperatura e ventilação antes de reinstalar.</li>
           <li><strong>Disco com setores em falha:</strong> formatar sobre um disco falhando costuma travar no meio da instalação e pode inviabilizar a recuperação depois.</li>
           <li><strong>Travamento ao ligar, sem chegar ao sistema:</strong> investigue hardware antes; formatação não é diagnóstico.</li>
         </ul>
@@ -11777,15 +11200,15 @@ crontab -e
         <h2>Redefinir o sistema x instalar do zero</h2>
         <p>São procedimentos diferentes com resultados diferentes:</p>
         <ul>
-          <li><strong>Redefinir mantendo arquivos:</strong> o Windows reinstala a si mesmo e preserva as pastas do usuário. Remove programas instalados. É o caminho mais rápido para configuração quebrada.</li>
+          <li><strong>Redefinir mantendo arquivos:</strong> o Windows reinstala componentes do sistema e preserva arquivos pessoais conforme a opção escolhida, mas remove aplicativos e pode exigir reconfiguração. Faça backup mesmo assim.</li>
           <li><strong>Reinstalação por cima (mantendo tudo):</strong> repara componentes do sistema preservando programas e arquivos. Útil quando o Windows falha em atualizar ou apresenta erro recorrente.</li>
-          <li><strong>Instalação limpa:</strong> apaga a partição do sistema e começa do zero. É a única opção confiável quando houve infecção séria ou quando a máquina acumulou anos de instalação.</li>
+          <li><strong>Instalação limpa:</strong> recria o ambiente do zero e pode ser adequada quando há corrupção persistente ou quando você quer eliminar aplicações/configurações acumuladas. Em incidentes de segurança, a decisão também depende de backup confiável, credenciais e do tipo de comprometimento.</li>
         </ul>
         <p>O passo a passo detalhado da instalação limpa, incluindo mídia de instalação e particionamento, está em <Link to="/blog/como-instalar-windows-11-do-zero">como instalar o Windows 11 do zero</Link>. Se a motivação for infecção, leia antes <Link to="/blog/como-remover-virus-windows-iniciantes">como remover vírus e adware</Link>: em boa parte dos casos a limpeza dirigida resolve sem apagar nada.</p>
 
         <h2>Licença, contas e drivers</h2>
-        <p>Em máquinas de fábrica, a licença normalmente está vinculada ao equipamento e é reconhecida automaticamente após a instalação. Em máquinas montadas, a licença costuma estar vinculada a uma conta — entrar com a mesma conta evita perder a ativação. Programas pagos exigem o registro original; sem ele, reinstalar significa comprar de novo.</p>
-        <p>Depois da instalação, a ordem dos drivers importa: chipset primeiro, depois vídeo, rede, áudio e periféricos. Prefira sempre o site do fabricante do equipamento. Pacotes genéricos de "atualizador de drivers" são uma das causas mais comuns de instabilidade em máquina recém-formatada.</p>
+        <p>A ativação do Windows depende do tipo de licença e do vínculo existente com o hardware ou a conta Microsoft. Muitas máquinas reativam automaticamente após reinstalação da mesma edição, mas isso não deve ser presumido. Antes de apagar o sistema, confirme edição, status de ativação e credenciais. Programas pagos seguem regras próprias do fornecedor; registre chaves, conta e método de recuperação antes de reinstalar.</p>
+        <p>Depois da instalação, prefira Windows Update e os canais oficiais do fabricante do notebook, placa-mãe ou componente. Em alguns equipamentos a sequência de chipset, armazenamento, vídeo, rede e áudio influencia dependências. Evite “atualizadores universais” de terceiros, que podem instalar versões inadequadas.</p>
 
         <h2>O que costuma dar errado</h2>
         <ul>
@@ -12831,15 +12254,15 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   },
 
   "troquei-o-ssd-e-o-pc-so-abre-a-bios": {
-    title: "Troquei o HD/SSD e o PC só abre a BIOS: o que fazer",
+    title: "Troquei o SSD e o PC só abre a BIOS: diagnóstico passo a passo",
     excerpt:
-      "Disco novo vem vazio: sem sistema instalado, o computador para no Setup. Como confirmar a detecção do M.2, resolver conflito de portas e instalar o Windows do zero.",
+      "Após trocar HD/SSD, o PC entra direto na BIOS? Veja como confirmar detecção do disco, UEFI/boot, VMD/RST/AHCI, clonagem e Windows Boot Manager sem apagar dados por tentativa.",
     date: "2026-08-25",
     readTime: "11 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Instalar um SSD novo e ver a máquina parar na tela de configuração não é sinal de defeito. É o comportamento esperado: <strong>disco novo sai de fábrica vazio</strong>, sem sistema operacional e sem carregador de inicialização. Não existe nada para o firmware iniciar.</p>
+        <p className="lead">Se você substituiu o HD/SSD e o PC passou a abrir direto na BIOS/UEFI, primeiro descubra se o disco novo é detectado e se existe um sistema inicializável nele. SSD novo normalmente vem sem Windows, mas uma clonagem, um disco reaproveitado ou outro armazenamento ainda conectado mudam o diagnóstico. Não altere modo SATA, apague partições ou recrie boot antes de identificar qual cenário é o seu.</p>
 
         <h2>Resposta curta</h2>
         <p>Confirme que o disco novo aparece na lista de dispositivos do Setup, verifique se o slot M.2 usado não desativou uma porta SATA, e instale o sistema a partir de um pendrive — ou, se a intenção era manter tudo como estava, faça a clonagem corretamente em vez de instalar do zero.</p>
@@ -12854,7 +12277,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li><strong>M.2 mal encaixado:</strong> o módulo entra inclinado, encosta no fim do conector e só então é preso pelo parafuso. Sem o parafuso, ele fica levantado e perde contato.</li>
           <li><strong>Slot incompatível:</strong> há slots M.2 apenas SATA, apenas NVMe (PCIe) e híbridos. Confira no manual da placa ou do notebook qual é o do seu modelo. Chave B, M ou B+M no conector do módulo é o primeiro indício.</li>
           <li><strong>Conflito de portas:</strong> ativar o segundo M.2 desabilita portas SATA específicas em muitas placas. É por isso que, ao instalar o SSD novo, o HD antigo às vezes "some".</li>
-          <li><strong>SATA em modo errado:</strong> o controlador precisa estar em <strong>AHCI</strong>. Modo RAID ou Intel RST esconde discos do instalador do Windows.</li>
+          <li><strong>Controlador de armazenamento:</strong> AHCI, RAID, Intel RST/VMD e opções equivalentes precisam corresponder à instalação e aos drivers usados. Em alguns equipamentos o Windows Setup exige driver do controlador. Mudar esse modo por tentativa pode impedir um Windows existente de iniciar.</li>
           <li><strong>Adaptador ou caddy:</strong> adaptadores baratos de baia ótica falham com frequência. Teste o disco direto na placa antes de culpar o disco.</li>
         </ul>
         <p>Detalhes de compatibilidade antes da compra estão em <Link to="/blog/como-fazer-upgrade-ssd-nvme" className="text-accent">upgrade para SSD NVMe</Link>, e o caso específico de notebooks com dois armazenamentos em <Link to="/blog/como-instalar-segundo-ssd-notebook" className="text-accent">como instalar um segundo SSD no notebook</Link>.</p>
@@ -12865,7 +12288,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li><strong>M.2 Mode / M.2 Configuration:</strong> alterna entre SATA e PCIe para o slot. Em <em>Auto</em> geralmente funciona; em modo fixo errado, o disco desaparece.</li>
           <li><strong>Geração PCIe (Gen3 × Gen4):</strong> deixar em <em>Auto</em> é o recomendado. Forçar Gen4 em placa ou disco que não suportam produz instabilidade e detecção intermitente; forçar Gen3 num disco Gen4 apenas limita a velocidade, sem impedir o funcionamento.</li>
           <li><strong>Divisão de linhas PCIe:</strong> em algumas placas, ocupar o segundo M.2 reduz as linhas da placa de vídeo. Não impede o boot, mas explica queda de desempenho depois do upgrade.</li>
-          <li><strong>Boot mode:</strong> para instalar Windows 11, mantenha <strong>UEFI</strong> com CSM desabilitado e Secure Boot ligado.</li>
+          <li><strong>Modo de boot:</strong> instalações suportadas do Windows 11 usam UEFI e requisitos de Secure Boot/TPM conforme o equipamento. Não altere CSM, Secure Boot ou modo do controlador sem registrar o estado atual, especialmente se existe sistema antigo ou BitLocker.</li>
         </ul>
 
         <h2>Passo 3 — instalar o Windows a partir do Setup</h2>
@@ -12874,7 +12297,7 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li>Conecte o pendrive, ligue e abra o menu de inicialização (F12, F11 ou F8) ou coloque o pendrive em primeiro lugar na lista de prioridade.</li>
           <li>Escolha a entrada com prefixo <strong>UEFI:</strong> para que a instalação use GPT.</li>
           <li>Ao chegar na escolha do disco, selecione o <strong>espaço não alocado</strong> do SSD novo e avance. O instalador cria automaticamente a partição EFI, a reservada e a do sistema.</li>
-          <li>Se o instalador informar que não é possível instalar naquele disco, quase sempre é conflito de modo (MBR × GPT) ou controlador em RAID — ajuste no Setup e recomece.</li>
+          <li>Se o instalador não permitir avançar, leia a mensagem exata antes de mudar firmware ou partições. Particionamento, driver de controlador, edição do Windows, BitLocker e estado do disco exigem soluções diferentes.</li>
           <li>Depois da instalação, entre no Setup e confirme que <strong>Windows Boot Manager</strong> ficou como primeira opção.</li>
         </ol>
         <aside className="rounded-lg border border-border bg-muted/40 p-4 not-prose my-6">
@@ -12890,10 +12313,10 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
           <li><strong>Instalar do zero</strong> quando o sistema antigo estava lento, instável, infectado ou muito antigo. Você perde a configuração, mas ganha um ambiente limpo.</li>
           <li><strong>Clonar</strong> quando o sistema funciona bem e há muitos programas configurados. O critério, os riscos e o motivo de uma cópia às vezes não inicializar estão em <Link to="/blog/como-clonar-hd-para-ssd" className="text-accent">clonar HD para SSD</Link>.</li>
         </ul>
-        <p>Se você clonou e a máquina parou no Setup, o problema não é o disco novo: é o carregador que não veio junto — o reparo está em <Link to="/blog/erro-no-bootable-device-como-resolver" className="text-accent">erro "No Bootable Device"</Link>.</p>
+        <p>Se você clonou e a máquina passou a abrir o Setup, verifique ordem de boot, presença do Windows Boot Manager, partição EFI/BCD e compatibilidade entre o modo de firmware e o esquema de partições. A clonagem pode ter copiado dados corretamente e ainda assim deixar a inicialização incompleta — o diagnóstico está em <Link to="/blog/erro-no-bootable-device-como-resolver" className="text-accent">erro "No Bootable Device"</Link>.</p>
 
         <h2>Conclusão</h2>
-        <p>Disco novo sempre para na BIOS até receber um sistema. A sequência correta é confirmar a detecção, ajustar o slot e o modo de boot, instalar com apenas o disco novo conectado e só depois reconectar o antigo para copiar os arquivos.</p>
+        <p>Se o SSD novo é o único disco e ainda não possui sistema, o computador não terá o que inicializar e pode abrir a BIOS/UEFI. A sequência segura é confirmar detecção e compatibilidade, identificar se você quer instalação limpa ou clonagem, preservar o disco antigo e só então ajustar boot ou instalar o Windows.</p>
         <p>Para o quadro completo de causas de parada no Setup, volte ao guia principal: <Link to="/blog/computador-entra-direto-na-bios" className="text-accent">meu computador entra direto na BIOS</Link>. Para executar o upgrade com dados preservados e teste de saúde do disco, veja <Link to="/servicos/upgrade-ssd-ram" className="text-accent">upgrade de SSD e memória</Link>.</p>
 
         <p className="text-sm text-muted-foreground">Conteúdo produzido e revisado pela equipe editorial de O Técnico de Informática. Revisado em 25 de agosto de 2026.</p>
@@ -13247,76 +12670,91 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   },
 
   "curto-circuito-placa-mae-como-identificar": {
-    title: "Curto-circuito na placa-mãe: como identificar e isolar o problema",
+    title: "PC liga e desliga na hora? Como identificar possível curto",
     excerpt:
-      "Como reconhecer um curto de alimentação, isolar componente por componente com o teste fora do gabinete e saber quando o reparo deixa de ser viável.",
+      "Veja como separar fonte, cabos, gabinete, periféricos e placa-mãe quando o PC liga e desliga, sem tratar continuidade ou troca de peças como prova de curto.",
     date: "2026-08-26",
-    readTime: "10 min",
+    readTime: "12 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Existe uma diferença clara entre um computador que não liga e um computador que tenta ligar e desiste. O segundo caso quase sempre significa que a proteção da fonte encontrou consumo fora do esperado — o comportamento típico de um curto na alimentação da placa ou de algum componente ligado a ela.</p>
+        <p className="lead">Um computador que energiza por um instante e desliga não confirma, sozinho, curto-circuito na placa-mãe. O mesmo padrão pode aparecer quando a proteção da fonte atua, quando a própria fonte falha, quando existe contato indevido com o gabinete, quando um cabo ou periférico derruba uma linha de alimentação ou quando há defeito no circuito de energia da placa. O diagnóstico seguro consiste em reduzir o sistema ao mínimo e observar o que muda a cada comparação.</p>
 
         <h2>Resposta curta</h2>
-        <p>Se as ventoinhas giram por uma fração de segundo e tudo desliga, repetidamente, trate como suspeita de curto. O caminho é remover tudo o que não é essencial e testar a placa fora do gabinete com processador, um módulo de memória e fonte — o chamado teste de bancada mínima. O que reintroduzir e provocar o desligamento é o culpado.</p>
+        <p>Se o PC liga e desliga imediatamente, pare de repetir tentativas. Desligue da tomada, procure cheiro de queimado, líquido, carbonização ou conector danificado e desconecte os componentes não essenciais. Se você tem prática de montagem, compare uma configuração mínima fora do gabinete e uma fonte compatível comprovadamente funcional. Se o sintoma persistir mesmo assim, a placa-mãe se torna uma hipótese mais forte, mas ainda precisa de diagnóstico de bancada antes de ser condenada.</p>
 
-        <h2>O que é um curto de alimentação</h2>
-        <p>A fonte entrega tensões fixas (12 V, 5 V, 3,3 V) e monitora quanto está sendo consumido. Quando um caminho de corrente indevido aparece — um componente rompido internamente, um parafuso solto encostando na placa, um cabo pinçado — o consumo dispara. Em vez de queimar, a fonte corta a saída em milissegundos. É por isso que o sintoma aparece como uma partida abortada, e não como fumaça.</p>
+        <h2>O que significa “curto” neste diagnóstico</h2>
+        <p>Fontes ATX possuem circuitos de proteção e podem interromper a saída quando detectam uma condição elétrica anormal. Um desligamento quase instantâneo é compatível com proteção atuando, mas não informa onde está a falha. A origem pode estar na fonte, no cabeamento, em um periférico, em uma porta danificada, no contato da placa com o gabinete ou no próprio circuito de alimentação da placa-mãe.</p>
+        <p>Por isso, <strong>“liga e desliga” é um sintoma, não um diagnóstico</strong>. A confirmação vem de comparações controladas: retirar um ramo, mudar uma única variável por vez e verificar se o comportamento se repete.</p>
 
-        <h2>Por que acontece</h2>
+        <h2>O que pode provocar o mesmo sintoma</h2>
         <ul>
-          <li><strong>Capacitor eletrolítico degradado:</strong> topo abaulado, base suja ou eletrólito seco. Um dos motivos mais comuns em placas com mais de cinco anos.</li>
-          <li><strong>Montagem incorreta:</strong> espaçador metálico em furo sem furo correspondente na placa, parafuso extra, chapa do gabinete tocando a solda.</li>
-          <li><strong>Surto elétrico:</strong> descarga na rede que compromete o estágio de entrada da placa ou de um periférico.</li>
-          <li><strong>Líquido e corrosão:</strong> resíduo condutivo entre trilhas, frequente após limpeza malfeita ou umidade.</li>
-          <li><strong>Periférico com defeito:</strong> disco, placa de vídeo, cooler ou porta USB com curto derruba a alimentação inteira, e a placa leva a culpa injustamente.</li>
+          <li><strong>Contato indevido com o gabinete:</strong> espaçador em posição errada, parafuso solto, chapa ou conector pressionando uma região da placa.</li>
+          <li><strong>Cabo ou periférico com falha:</strong> placa de vídeo, unidade de armazenamento, hub USB, cabo frontal ou outro dispositivo pode derrubar a alimentação quando conectado.</li>
+          <li><strong>Conector de energia inadequado ou mal assentado:</strong> ATX de 24 pinos, alimentação do processador e conexões da placa de vídeo precisam estar corretos para o equipamento.</li>
+          <li><strong>Fonte defeituosa ou incompatibilidade de cabeamento:</strong> uma fonte pode entrar em proteção por falha própria. Em fontes modulares, não reutilize cabos de outro modelo a menos que o fabricante declare compatibilidade explícita.</li>
+          <li><strong>Líquido, corrosão ou dano térmico:</strong> resíduos condutivos, oxidação e carbonização podem criar caminhos elétricos indesejados.</li>
+          <li><strong>Falha na placa-mãe:</strong> componentes do estágio de alimentação, controladores, capacitores ou outras partes da placa podem falhar sem deixar marca visível.</li>
         </ul>
 
-        <h2>Onde procurar</h2>
-        <p>Concentre a inspeção visual em quatro regiões: a área de regulagem em volta do soquete do processador, onde ficam bobinas e capacitores; o entorno dos conectores de energia de 24 e 8 pinos; a face traseira da placa, sob os pontos de fixação; e a região das portas USB, que sofre com conexões forçadas. Procure abaulamento, resíduo esbranquiçado, marca escura e cheiro característico.</p>
+        <h2>Onde olhar antes de desmontar tudo</h2>
+        <p>Com o equipamento desligado da tomada, faça primeiro uma inspeção visual. Observe os conectores principais de energia, a região de alimentação ao redor do processador, as portas USB, os cabos do painel frontal, a face traseira próxima aos pontos de fixação e qualquer área com resíduo, oxidação, plástico deformado ou marca escura. Ausência de marca visível não exclui falha elétrica.</p>
 
-        <h2>O que fazer: isolamento em etapas</h2>
+        <h2>Isolamento em etapas: mude uma variável por vez</h2>
         <ol>
-          <li><strong>Registre o estado atual.</strong> Fotografe as conexões antes de desmontar — isso evita erro na remontagem.</li>
-          <li><strong>Desconecte tudo o que não é essencial:</strong> discos, placa de vídeo dedicada, leitores, cabos frontais de USB e áudio, ventoinhas extras. Deixe placa, processador com o cooler, um módulo de memória e a fonte.</li>
-          <li><strong>Teste fora do gabinete.</strong> Apoie a placa sobre a própria caixa de papelão dela, nunca sobre superfície metálica. Se assim ela liga, o curto era contato com o gabinete — quase sempre um espaçador fora de lugar.</li>
-          <li><strong>Reintroduza um item por vez</strong>, ligando e desligando a cada passo. O componente que reproduzir o desligamento imediato é o responsável.</li>
-          <li><strong>Troque a fonte por outra comprovadamente boa.</strong> Proteção disparando também é sintoma de fonte em degradação, e o roteiro de verificação está em <Link to="/blog/como-testar-fonte-de-alimentacao-pc" className="text-accent">como testar a fonte de alimentação</Link>.</li>
-          <li><strong>Observe o LED de diagnóstico</strong> ou o display de código, quando a placa tiver. Ele diferencia falha de alimentação de falha de memória ou de vídeo.</li>
+          <li><strong>Registre o estado atual.</strong> Fotografe cabos e conectores antes de remover qualquer peça. Se a falha começou após upgrade ou limpeza, anote exatamente o que foi mexido.</li>
+          <li><strong>Corte a energia.</strong> Desligue o computador, retire o cabo da tomada e não manipule conectores com o sistema energizado.</li>
+          <li><strong>Retire o que não é necessário para o teste.</strong> Desconecte armazenamento, acessórios USB internos, placas adicionais e demais periféricos que não sejam necessários para observar se a placa permanece energizada. A configuração mínima exata depende do processador e da placa.</li>
+          <li><strong>Confira montagem e conectores.</strong> Verifique espaçadores, parafusos soltos, ATX de 24 pinos e alimentação do processador. Não force conectores parecidos em posições para as quais não foram projetados.</li>
+          <li><strong>Compare fora do gabinete somente se você tiver prática.</strong> Apoie a placa em superfície firme e não condutiva e teste a configuração mínima. Se o comportamento muda fora do gabinete, contato mecânico ou montagem passam a merecer prioridade de inspeção; isso não identifica automaticamente um espaçador específico.</li>
+          <li><strong>Compare com uma fonte compatível e conhecida como funcional.</strong> Não reaproveite cabos modulares de outra fonte por aparência. Use os cabos destinados ao modelo que está sendo testado.</li>
+          <li><strong>Reintroduza um ramo por vez.</strong> Se o desligamento reaparece após conectar um dispositivo ou cabo, esse ramo vira a principal hipótese a confirmar. Correlação nesse teste não basta para condenar a peça sem uma segunda verificação.</li>
+          <li><strong>Use os sinais da própria placa.</strong> LEDs, códigos de diagnóstico ou bipes podem indicar em qual etapa o POST parou, conforme o manual do modelo.</li>
         </ol>
+
         <aside className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 not-prose my-6">
-          <p className="m-0 text-sm"><strong>Segurança:</strong> desligue a chave da fonte e retire o cabo antes de qualquer manipulação. Não abra a fonte de alimentação. Não faça medições com o equipamento energizado se você não tem prática — a medição correta de curto é feita com o aparelho desligado, em modo de continuidade ou resistência, e conclusões erradas levam à troca de peças boas.</p>
+          <p className="m-0 text-sm"><strong>Critério de parada:</strong> não abra a fonte de alimentação. Não use apenas o bipe de continuidade do multímetro para “provar” um curto: algumas linhas de baixa tensão podem apresentar resistência baixa sem estarem em curto. Injeção de tensão, medições energizadas e diagnóstico em nível de componente exigem instrumentação, limite de corrente e experiência de bancada. Pare também diante de líquido, carbonização, cheiro forte de queimado ou conector derretido.</p>
         </aside>
 
-        <h2>Tabela diagnóstica: o que o comportamento indica</h2>
+        <h2>Tabela de triagem: sintoma, hipótese e próximo teste</h2>
         <table>
           <thead>
             <tr>
               <th>Comportamento observado</th>
-              <th>Causa provável</th>
-              <th>O que verificar</th>
+              <th>Hipótese a priorizar</th>
+              <th>Próximo teste seguro</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>Ventoinhas giram meio segundo e tudo desliga, em ciclo</td><td>Proteção da fonte contra consumo excessivo</td><td>Bancada mínima fora do gabinete</td></tr>
-            <tr><td>Fora do gabinete liga, dentro não</td><td>Contato metálico indevido</td><td>Espaçadores, parafusos extras e chapa traseira</td></tr>
-            <tr><td>Só desliga quando um disco ou a placa de vídeo está conectada</td><td>Periférico em curto</td><td>Reintrodução um item por vez</td></tr>
-            <tr><td>Capacitor abaulado ou resíduo esbranquiçado visível</td><td>Componente degradado ou corrosão</td><td>Inspeção nas duas faces da placa</td></tr>
-            <tr><td>Não liga nem com outra fonte comprovadamente boa</td><td>Falha no circuito de regulagem da placa</td><td>Avaliação de bancada e decisão econômica</td></tr>
+            <tr><td>Energiza por um instante e desliga em ciclo</td><td>Proteção da fonte, fonte defeituosa ou falha em algum ramo alimentado</td><td>Reduzir a configuração e comparar com fonte compatível conhecida</td></tr>
+            <tr><td>Fora do gabinete permanece ligado, montado volta a desligar</td><td>Contato mecânico, espaçador, parafuso ou cabo pressionado</td><td>Revisar pontos de fixação e remontar sem adicionar componentes</td></tr>
+            <tr><td>O sintoma reaparece ao conectar um dispositivo específico</td><td>Dispositivo, cabo, conector ou ramo associado</td><td>Confirmar o comportamento sem esse ramo e testar o item separadamente</td></tr>
+            <tr><td>Há líquido, corrosão, plástico deformado ou carbonização</td><td>Dano físico ou contaminação condutiva</td><td>Não energizar novamente antes de inspeção e limpeza técnica adequadas</td></tr>
+            <tr><td>Persiste em configuração mínima e com fonte compatível funcional</td><td>Placa-mãe, processador ou alimentação local ainda precisam ser separados</td><td>Diagnóstico de bancada com esquema e medições apropriadas quando disponíveis</td></tr>
           </tbody>
         </table>
 
-        <h2>Como resolver</h2>
+        <h2>Como decidir o reparo sem trocar peças por tentativa</h2>
         <ul>
-          <li><strong>Curto por montagem:</strong> remontar com os espaçadores corretos resolve definitivamente e sem custo de peça.</li>
-          <li><strong>Periférico em curto:</strong> substituir o item identificado devolve a máquina ao normal; a placa estava íntegra.</li>
-          <li><strong>Capacitores degradados:</strong> a substituição é reparo em nível de componente, com ferro de solda adequado e peça de mesma especificação. Não é serviço para improviso.</li>
-          <li><strong>Curto no circuito de regulagem:</strong> exige instrumentação de bancada. Em placas comuns, o custo do reparo costuma se aproximar do valor de uma placa nova — a decisão passa a ser econômica.</li>
+          <li><strong>Problema de montagem:</strong> corrija o ponto de contato e valide o equipamento novamente antes de reconectar todos os componentes.</li>
+          <li><strong>Ramo periférico suspeito:</strong> confirme cabo, porta e dispositivo separadamente antes de substituir qualquer peça.</li>
+          <li><strong>Fonte suspeita:</strong> compare com unidade compatível e funcional; não conclua pela ventoinha da fonte nem por um teste isolado sem carga.</li>
+          <li><strong>Corrosão ou líquido:</strong> interrompa a energização. O dano pode avançar sob componentes e conectores mesmo quando a superfície parece seca.</li>
+          <li><strong>Falha em nível de placa:</strong> o reparo depende do componente afetado, disponibilidade de peças, complexidade da placa e valor do equipamento. A decisão econômica vem depois do diagnóstico, não antes.</li>
         </ul>
-        <p>Depois que a máquina volta a ligar, confirme estabilidade sob carga e temperatura antes de fechar o caso: o padrão de ligar e desligar também aparece por aquecimento, com sintoma parecido mas causa diferente.</p>
 
-        <h2>Quando chamar um técnico</h2>
-        <p>Chame quando houver cheiro de queimado, marca de carbonização, líquido derramado ou capacitor estufado; quando o desligamento persistir com a bancada mínima e outra fonte; quando existirem dados importantes no disco; e sempre que o reparo envolver solda. O diagnóstico com instrumentos está em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>, e o atendimento de bancada em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>. Se o próximo passo for eliminar dúvida sobre a placa, o roteiro complementar está em <Link to="/blog/como-diagnosticar-placa-mae-defeituosa" className="text-accent">como diagnosticar placa-mãe defeituosa</Link>.</p>
+        <h2>Perguntas rápidas</h2>
+        <h3>PC liga e desliga significa placa-mãe queimada?</h3>
+        <p>Não. O sintoma também pode vir da fonte, de um periférico, de um cabo, da montagem ou de uma proteção acionada por outra condição elétrica. A placa-mãe só deve ser condenada depois que essas hipóteses forem separadas.</p>
+
+        <h3>Multímetro em continuidade confirma curto na placa?</h3>
+        <p>Não sozinho. O bipe indica que a resistência ficou abaixo do limiar definido pelo instrumento; em alguns circuitos isso pode acontecer sem defeito. Diagnóstico de placa exige conhecer a linha medida e interpretar resistência, esquema e comportamento do circuito.</p>
+
+        <h3>Posso testar com outra fonte?</h3>
+        <p>Sim, desde que a unidade seja adequada ao equipamento e esteja comprovadamente funcional. Em fonte modular, use os cabos corretos daquela fonte; conectores fisicamente parecidos não garantem pinagem compatível.</p>
+
+        <h2>Quando procurar avaliação técnica</h2>
+        <p>Procure bancada quando houver cheiro de queimado, carbonização, líquido ou corrosão; quando a falha persistir em configuração mínima e com fonte compatível funcional; quando o equipamento estiver em garantia; ou quando o próximo passo exigir medição energizada ou reparo em componente. O método está descrito em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>, e o atendimento de bancada em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>. Para ampliar a investigação da placa sem assumir curto como causa, veja <Link to="/blog/como-diagnosticar-placa-mae-defeituosa" className="text-accent">como diagnosticar placa-mãe defeituosa</Link>.</p>
       </>
     ),
   },
@@ -14143,63 +13581,94 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   },
 
   "webcam-usb-nao-e-detectada": {
-    title: "Webcam USB não é detectada: porta, cabo, alimentação e driver",
+    title: "Webcam USB não aparece no Windows? Veja o que verificar",
     excerpt:
-      "Roteiro de eliminação para webcam externa que o Windows não enxerga: teste de porta, hub sem alimentação, cabo, dispositivo desconhecido no Gerenciador e teste cruzado em outro computador.",
+      "Webcam USB não é detectada? Veja como separar porta, hub, enumeração, driver UVC, permissões e defeito físico antes de reinstalar drivers ou trocar a câmera.",
     date: "2026-08-26",
-    readTime: "8 min",
+    readTime: "10 min",
     category: "Procedimentos Técnicos",
     content: (
       <>
-        <p className="lead">Webcam USB que não aparece é, na maioria das vezes, um problema de porta, cabo ou alimentação — não da câmera. O caminho mais curto é eliminar essas três variáveis antes de tocar em driver.</p>
+        <p className="lead">Quando uma webcam USB não aparece, a primeira pergunta não é “qual driver instalar?”, mas <strong>em que ponto ela deixou de ser reconhecida</strong>. Conexão física, enumeração USB, driver, permissões e aplicativo são camadas diferentes. Testar uma camada por vez evita reinstalar software quando o Windows nem está enxergando o dispositivo.</p>
 
-        <h2>Resposta curta</h2>
-        <p>Conecte a câmera direto em uma porta traseira do computador, sem hub e sem extensão. Se o Windows emitir o som de conexão e o dispositivo surgir no Gerenciador de Dispositivos, o problema estava no caminho anterior. Se nada acontece em nenhuma porta, teste o mesmo cabo e a mesma câmera em outro computador antes de concluir qualquer coisa.</p>
+        <h2>Resposta direta</h2>
+        <p>Conecte a webcam diretamente a outra porta USB do mesmo computador, sem hub ou extensão durante o teste. Depois verifique se ela aparece no Gerenciador de Dispositivos. Se continuar ausente, teste a mesma webcam em outro computador compatível. A própria Microsoft recomenda essas comparações para separar problema da câmera de problema da máquina. Se o Windows detecta a câmera, mas um aplicativo não mostra imagem, passe a investigar permissão, seleção do dispositivo e driver em vez de continuar trocando portas.</p>
 
-        <h2>Por que acontece?</h2>
+        <h2>Primeiro separe “não detectada” de “detectada, mas sem imagem”</h2>
         <table>
           <thead>
-            <tr><th>Causa</th><th>Sintoma</th><th>Como diferenciar</th><th>Risco</th></tr>
+            <tr>
+              <th>O que você observa</th>
+              <th>Camada a investigar primeiro</th>
+              <th>Próximo teste útil</th>
+            </tr>
           </thead>
           <tbody>
-            <tr><td>Hub sem fonte própria</td><td>Câmera não liga ou desconecta ao gravar</td><td>Funciona ligada direto na máquina</td><td>Nenhum</td></tr>
-            <tr><td>Porta frontal com cabo interno frouxo</td><td>Falha só nas portas da frente</td><td>Porta traseira funciona normalmente</td><td>Baixo</td></tr>
-            <tr><td>Cabo rompido ou extensão longa demais</td><td>Conexão intermitente ao mover o cabo</td><td>Outro cabo resolve</td><td>Nenhum</td></tr>
-            <tr><td>Driver não instalado</td><td>Dispositivo desconhecido no Gerenciador</td><td>Aparece com alerta amarelo</td><td>Médio</td></tr>
-            <tr><td>Conflito com outra câmera</td><td>Programa escolhe o dispositivo errado</td><td>Duas câmeras listadas no programa</td><td>Nenhum</td></tr>
-            <tr><td>Câmera com defeito</td><td>Nada em nenhuma porta e em outro computador</td><td>Teste cruzado negativo</td><td>—</td></tr>
+            <tr><td>Nada muda ao conectar</td><td>Porta, cabo, hub, alimentação ou dispositivo</td><td>Outra porta direta e depois outro computador</td></tr>
+            <tr><td>Aparece como dispositivo desconhecido ou com alerta</td><td>Enumeração/driver</td><td>Identificar o dispositivo e verificar alterações de hardware</td></tr>
+            <tr><td>Aparece em Câmeras, mas o app não mostra vídeo</td><td>Aplicativo, permissão ou seleção de câmera</td><td>Testar no aplicativo Câmera e conferir acesso à câmera</td></tr>
+            <tr><td>Funciona fora do hub, mas não no hub</td><td>Caminho USB, energia ou banda compartilhada</td><td>Testar o hub sem outros periféricos ou usar conexão direta</td></tr>
+            <tr><td>Falha também em outro computador</td><td>Câmera, cabo removível ou compatibilidade</td><td>Trocar apenas o cabo, se removível, antes de condenar a câmera</td></tr>
           </tbody>
         </table>
 
-        <h2>Árvore de eliminação</h2>
+        <h2>Etapa 1 — elimine o caminho físico sem abrir nada</h2>
         <ol>
-          <li><strong>É detectada?</strong> Ao conectar, o Windows emite som e mostra notificação? Não → troque de porta, de preferência traseira, e remova hub e extensão.</li>
-          <li><strong>Aparece no Gerenciador de Dispositivos?</strong> Procure em Câmeras, em Dispositivos de imagem e também em Controladores USB. Um item "Dispositivo desconhecido" já é resposta: falta driver ou o dispositivo não está se identificando.</li>
-          <li><strong>O aplicativo Câmera abre imagem?</strong> Sim → hardware e driver estão bem; o resto é permissão ou seleção de dispositivo.</li>
-          <li><strong>Outros programas acessam?</strong> Se só um falha, o assunto é <Link to="/blog/permissoes-de-camera-no-windows" className="text-accent">permissão de câmera</Link>.</li>
-          <li><strong>Funciona em outro computador?</strong> Sim → o problema é da máquina. Não → é da câmera ou do cabo.</li>
+          <li>Desconecte hubs, extensões e adaptadores que não sejam indispensáveis.</li>
+          <li>Conecte a câmera diretamente a outra porta USB do computador.</li>
+          <li>Se o cabo for removível e houver outro cabo compatível conhecido, compare um de cada vez.</li>
+          <li>Observe se o Windows reage à conexão e se o item aparece ou desaparece no Gerenciador de Dispositivos.</li>
         </ol>
+        <p>Não existe regra de que “porta traseira resolve”: em desktops ela pode ser uma boa comparação porque reduz intermediários, mas o que interessa é usar uma porta funcional e direta. Em notebook, compare portas diferentes sem assumir que todas compartilham exatamente o mesmo controlador ou capacidade.</p>
 
-        <h2>USB 2, USB 3 e alimentação</h2>
-        <p>Câmeras de resolução mais alta consomem banda e energia. Ligadas em hub passivo compartilhado com teclado, mouse, disco externo e outros periféricos, elas simplesmente somem ou travam durante a transmissão. Portas traseiras costumam ser ligadas diretamente aos controladores da placa e são a referência de teste. Se a câmera exige USB 3 e a porta é USB 2, a imagem pode abrir em resolução reduzida ou nem abrir.</p>
+        <h2>Etapa 2 — veja se o Windows conseguiu enumerar a câmera</h2>
+        <p>No Gerenciador de Dispositivos, procure em <strong>Câmeras</strong>, <strong>Dispositivos de geração de imagens</strong> e <strong>Controladores de som, vídeo e jogos</strong>. Se a câmera não estiver listada, a Microsoft orienta verificar alterações de hardware. Um item com alerta informa que existe um problema de reconhecimento ou driver, mas o ícone sozinho não identifica a causa.</p>
+        <p>Se conectar e desconectar a webcam faz um item desconhecido aparecer e sumir, você ganhou uma pista: a camada USB está percebendo alguma coisa. Registre o nome, código de erro e identificadores antes de remover ou instalar qualquer driver.</p>
 
-        <h2>Driver: quando e de onde</h2>
-        <p>A maioria das webcams atuais usa o driver de classe genérico do próprio Windows e não exige instalação. Quando exige, o pacote correto vem do site do fabricante da câmera, para o modelo exato. Vale também deixar o Windows Update procurar drivers opcionais antes de qualquer coisa. Programas que prometem "atualizar todos os drivers" e sites agregadores de driver são desnecessários e frequentemente instalam algo pior do que o problema original.</p>
+        <h2>Etapa 3 — teste a câmera em outro dispositivo</h2>
+        <p>O teste cruzado reduz a quantidade de hipóteses. Se a mesma câmera funciona em outro computador, volte a investigar porta, driver, política e sistema do primeiro equipamento. Se falha nos dois, ainda confira cabo removível, alimentação própria e requisitos do modelo antes de concluir defeito físico.</p>
+        <p>Esse teste é mais informativo do que repetir várias instalações de driver no mesmo Windows, porque altera o computador mantendo a câmera como variável comum.</p>
 
-        <h2>O que NÃO fazer</h2>
+        <h2>Etapa 4 — se foi detectada, separe driver de permissão</h2>
+        <p>Abra o aplicativo Câmera do Windows. Se ele mostra vídeo, a cadeia básica dispositivo → driver → captura está funcionando, e o problema tende a estar no aplicativo específico, na seleção da câmera ou nas permissões. Nesse caso, siga o guia de <Link to="/blog/permissoes-de-camera-no-windows" className="text-accent">permissões de câmera no Windows</Link>.</p>
+        <p>Se o aplicativo Câmera também falha, volte ao Gerenciador de Dispositivos e ao histórico da falha. Uma atualização recente, um driver incompatível ou uma câmera que deixou de enumerar corretamente exigem caminhos diferentes; evite instalar pacotes genéricos de sites agregadores.</p>
+
+        <h2>Driver UVC: quando ele entra no diagnóstico</h2>
+        <p>A Microsoft informa que muitas webcams USB são compatíveis com <strong>USB Video Class (UVC)</strong> e podem usar o driver UVC incluído no Windows. Isso não significa que toda webcam deve ser forçada a usar esse driver: recursos específicos do fabricante podem depender de extensões próprias.</p>
+        <p>Se o dispositivo está presente no Gerenciador, o modelo é UVC compatível e o problema aponta para driver, a documentação da Microsoft descreve a troca para o driver <em>USB Video Device</em> como uma alternativa de diagnóstico. Faça isso somente depois de registrar o driver atual e sabendo que recursos específicos, como determinadas integrações biométricas, podem deixar de funcionar.</p>
+
+        <h2>Hub, energia e banda: hipótese, não diagnóstico automático</h2>
+        <p>Uma webcam pode dividir energia e banda USB com outros dispositivos conectados ao mesmo hub ou caminho. Se ela funciona diretamente no computador e falha somente quando volta ao hub, essa comparação sustenta investigar o hub, sua alimentação e os demais periféricos. Ela não prova, por si só, que “USB 2 é insuficiente” ou que uma porta específica está defeituosa.</p>
+        <p>Use a especificação da própria câmera para saber requisitos de interface e alimentação. Evite inferir resolução ou compatibilidade apenas pela cor da porta ou pelo formato do conector.</p>
+
+        <h2>O que não fazer</h2>
         <ul>
-          <li>Instalar utilitário de driver de origem desconhecida para resolver uma webcam de baixo custo.</li>
-          <li>Testar apenas nas portas frontais e concluir que a câmera morreu.</li>
-          <li>Empilhar hub em hub para ganhar portas com periféricos de vídeo.</li>
-          <li>Abrir a carcaça da câmera antes do teste cruzado em outro computador.</li>
+          <li>Instalar “atualizador universal de drivers” para tentar fazer a webcam aparecer.</li>
+          <li>Desinstalar vários controladores USB em sequência sem registrar o estado original.</li>
+          <li>Concluir que a webcam queimou depois de um único teste negativo.</li>
+          <li>Abrir a câmera antes de comparar porta, cabo e outro computador.</li>
+          <li>Ignorar reinício, cheiro de queimado ou aquecimento anormal ao conectar um periférico.</li>
         </ul>
 
-        <h2>Quando chamar um técnico</h2>
-        <p>Chame quando o Gerenciador acusar erro de controlador USB, quando várias portas pararem de funcionar ao mesmo tempo ou quando o computador reiniciar ao conectar o periférico. Esses sinais apontam para a placa, não para a câmera — avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link> e reparo em <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>.</p>
+        <aside className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 not-prose my-6">
+          <p className="m-0 text-sm"><strong>Pare o teste</strong> se o computador reinicia ou desliga ao conectar a webcam, se há conector aquecendo, cheiro de queimado, líquido ou dano físico na porta. Nesses casos, continuar conectando o dispositivo pode ampliar um defeito elétrico.</p>
+        </aside>
+
+        <h2>Perguntas rápidas</h2>
+        <h3>Se a webcam aparece no Gerenciador, ela está boa?</h3>
+        <p>Não necessariamente. Isso confirma que o Windows conseguiu identificar algum dispositivo, mas ainda podem existir problema de driver, captura, cabo intermitente ou falha do próprio módulo.</p>
+
+        <h3>Se funciona no aplicativo Câmera, preciso reinstalar driver?</h3>
+        <p>Normalmente o próximo passo é verificar o aplicativo que falha, sua câmera selecionada e as permissões. Reinstalar driver sem uma evidência nessa camada pode acrescentar uma variável sem resolver a causa.</p>
+
+        <h3>Uma webcam USB sempre precisa de driver do fabricante?</h3>
+        <p>Não. Muitas usam o driver UVC incluído no Windows. Modelos com recursos específicos podem usar software ou extensões do fabricante, então confirme a documentação do modelo.</p>
+
+        <h2>Quando escalar para diagnóstico técnico</h2>
+        <p>Vale escalar quando várias portas USB apresentam a mesma falha, o Gerenciador registra erros persistentes de controlador, a máquina reinicia ao conectar o periférico ou a webcam continua ausente depois dos testes cruzados. O caminho é <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>; se a investigação apontar para a máquina, veja também <Link to="/servicos/manutencao-de-computador" className="text-accent">manutenção de computador</Link>.</p>
       </>
     ),
   },
-
   "windows-update-nao-funciona-o-que-verificar": {
     title: "Windows Update não funciona: como descobrir em qual estágio a atualização falha",
     excerpt:
@@ -14439,67 +13908,6 @@ bcdboot C:\\Windows /s S: /f UEFI`}</code></pre>
   // ── Onda 11A / Lote 4 — BIOS, UEFI e inicialização do Windows.
   // Rascunhos: sem aprovação editorial enquanto o gate da Onda 10C não consolidar
   // (noindex, fora do sitemap e fora da listagem pública — fail-closed).
-
-  "boot-uefi-ou-legacy-como-identificar": {
-    title: "UEFI ou Legacy: como identificar o modo de inicialização do seu PC",
-    excerpt:
-      "Como descobrir em qual modo o Windows foi instalado, por que GPT e MBR importam e o que muda ao alternar entre UEFI e Legacy sem preparar o disco.",
-    date: "2026-08-31",
-    readTime: "9 min",
-    category: "Diagnóstico",
-    content: (
-      <>
-        <p className="lead">Trocar o modo de inicialização às cegas é uma das formas mais rápidas de transformar uma máquina que ligava em uma máquina que só abre a tela de configuração. Antes de mexer, vale saber em que modo o sistema foi instalado.</p>
-
-        <h2>Resposta curta</h2>
-        <p>O modo de inicialização precisa combinar com o formato da tabela de partições do disco em que o Windows foi instalado: UEFI trabalha com GPT, Legacy/CSM trabalha com MBR. Se você alternar o modo sem converter o disco, o firmware deixa de encontrar o carregador do sistema e a máquina para na configuração ou exibe mensagem de dispositivo de inicialização ausente.</p>
-
-        <h2>Como identificar sem abrir a máquina</h2>
-        <h3>Pelo próprio Windows</h3>
-        <p>Nas informações do sistema, o campo de modo de BIOS mostra "UEFI" ou "Legacy". No gerenciador de discos, as propriedades do disco indicam se o estilo de partição é GPT ou MBR. Os dois precisam ser coerentes entre si.</p>
-        <h3>Pelo firmware</h3>
-        <p>Na tela de configuração, a lista de dispositivos de inicialização entrega a resposta: entradas com o prefixo "UEFI" antes do nome do disco indicam modo UEFI; entradas apenas com o nome do disco costumam indicar Legacy. A presença de opções como CSM, Secure Boot e "Windows UEFI mode" também sinaliza o modo ativo.</p>
-        <h3>Pelo comportamento</h3>
-        <p>Instalações UEFI normalmente iniciam mais rápido, exibem o logotipo do fabricante e usam uma partição de sistema separada. Instalações Legacy tendem a mostrar mais texto durante o POST.</p>
-
-        <h2>Tabela de combinações</h2>
-        <table>
-          <thead>
-            <tr><th>Modo do firmware</th><th>Partição do disco</th><th>Resultado</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>UEFI</td><td>GPT</td><td>Inicializa normalmente</td></tr>
-            <tr><td>UEFI</td><td>MBR</td><td>Disco não aparece como opção de boot</td></tr>
-            <tr><td>Legacy/CSM</td><td>MBR</td><td>Inicializa normalmente</td></tr>
-            <tr><td>Legacy/CSM</td><td>GPT</td><td>Firmware ignora o carregador</td></tr>
-            <tr><td>UEFI com Secure Boot</td><td>GPT, mídia não assinada</td><td>Pendrive de instalação recusado</td></tr>
-          </tbody>
-        </table>
-
-        <h2>Quando isso aparece na prática</h2>
-        <ul>
-          <li><strong>Depois de limpar o CMOS:</strong> o firmware volta ao padrão de fábrica e pode reativar CSM ou desligar UEFI.</li>
-          <li><strong>Depois de trocar o disco:</strong> o novo disco pode estar em outro estilo de partição. O cenário completo está em <Link to="/blog/troquei-o-ssd-e-o-pc-so-abre-a-bios" className="text-accent">troquei o SSD e o PC só abre a BIOS</Link>.</li>
-          <li><strong>Na instalação do Windows:</strong> a mídia criada em MBR não inicia em modo UEFI puro.</li>
-          <li><strong>Depois de atualizar o firmware:</strong> a configuração pode ser redefinida — veja <Link to="/blog/bios-corrompida-reset-cmos-atualizacao" className="text-accent">BIOS corrompida, reset de CMOS e atualização</Link>.</li>
-        </ul>
-
-        <h2>O que NÃO fazer</h2>
-        <ul>
-          <li>Alternar UEFI ↔ Legacy "para testar" sem saber o estilo de partição do disco.</li>
-          <li>Converter o disco de MBR para GPT sem cópia dos arquivos.</li>
-          <li>Desativar Secure Boot permanentemente sem necessidade.</li>
-          <li>Reinstalar o sistema antes de confirmar que o problema é só de modo de inicialização.</li>
-        </ul>
-
-        <h2>Quando parar</h2>
-        <p>Pare quando o disco não aparecer em nenhum dos modos: aí o assunto deixa de ser configuração e passa a ser detecção de hardware — o caminho é <Link to="/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer" className="text-accent">HD não reconhecido na BIOS</Link>. Se houver arquivos importantes sem cópia, priorize <Link to="/servicos/recuperacao-de-dados" className="text-accent">recuperação de dados</Link>.</p>
-
-        <h2>Quando chamar um técnico</h2>
-        <p>Chame quando a máquina só iniciar em um modo específico depois de uma troca de peça, quando houver criptografia de disco ativa ou quando a conversão de partição envolver dados sem backup. Avaliação em <Link to="/diagnostico-tecnico" className="text-accent">diagnóstico técnico</Link>.</p>
-      </>
-    ),
-  },
 
   "ordem-de-boot-na-bios-como-configurar": {
     title: "Ordem de boot na BIOS: como configurar sem quebrar a inicialização",

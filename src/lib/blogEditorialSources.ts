@@ -92,14 +92,124 @@ export const ALLOWED_SOURCE_HOSTS = [
   "wireguard.com",
   "openvpn.net",
   "www.kingston.com",
+  "edc.intel.com",
+  "intel.com",
+  "www.intel.com",
   "nsa.gov",
   "www.nsa.gov",
+  "www.dell.com",
+  "support.hp.com",
+  "www.gov.br",
+  "download.lenovo.com",
+  "acm.org",
+  "www.acm.org",
+  "ccecc.acm.org",
+  "csed.acm.org",
 ] as const;
 
 // ─────────────────────────────────────────────────────────────
 // FONTES CONSULTADAS (URLs confirmadas em 2026-07-12).
 // ─────────────────────────────────────────────────────────────
 export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
+  "acm-computing-curricula-2020": {
+    id: "acm-computing-curricula-2020",
+    title: "Computing Curricula 2020 (CC2020)",
+    publisher: "Association for Computing Machinery / IEEE Computer Society",
+    url: "https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf",
+    accessedAt: "2026-09-30",
+    sourceType: "standard",
+    supports: [
+      "Computing é tratado como um campo amplo com múltiplas disciplinas e especializações, incluindo ciência da computação, engenharia de computação, sistemas de informação, tecnologia da informação e engenharia de software.",
+      "As disciplinas de computing compartilham fundamentos, mas diferem em foco, competências e aplicações.",
+    ],
+  },
+  "acm-computing-subdisciplines-2026": {
+    id: "acm-computing-subdisciplines-2026",
+    title: "The Sub-Disciplines of Computing",
+    publisher: "ACM Committee for Computing Education in Community Colleges",
+    url: "https://ccecc.acm.org/guidance",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A ACM categoriza computing em disciplinas como Computer Science, Computer Engineering, Software Engineering, Information Systems e Information Technology.",
+      "As descrições disciplinares ajudam a diferenciar fundamentos/algoritmos, integração hardware-software, desenvolvimento de software, sistemas organizacionais e infraestrutura/tecnologia da informação.",
+    ],
+  },
+  "acm-cs2023-vision-2026": {
+    id: "acm-cs2023-vision-2026",
+    title: "CS2023 Vision Statement",
+    publisher: "ACM / IEEE-CS / AAAI",
+    url: "https://csed.acm.org/vision-statement/",
+    accessedAt: "2026-09-30",
+    sourceType: "standard",
+    supports: [
+      "Ciência da Computação é apresentada como disciplina fundamental de computing voltada ao uso de computadores para resolver problemas de forma sistemática.",
+      "Competências práticas e disposições profissionais complementam conhecimento conceitual em currículos modernos de computação.",
+    ],
+  },
+
+  "ms-print-spooler-service-2026": {
+    id: "ms-print-spooler-service-2026",
+    title: "Corrigir o problema do serviço de spooler de impressão não estar executando erros no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/printer/fix-print-spooler-service-not-running-errors-in-windows",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "O Spooler de Impressão gerencia trabalhos de impressão no Windows; quando falha, documentos podem ficar presos na fila e a impressora pode deixar de responder.",
+      "A Microsoft orienta reiniciar o serviço e revisar drivers conflitantes ou desatualizados quando o spooler apresenta falhas recorrentes.",
+    ],
+  },
+  "ms-print-job-stuck-queue-2026": {
+    id: "ms-print-job-stuck-queue-2026",
+    title: "Corrigir o trabalho de impressão travado em erros de fila no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/printer/fix-print-job-stuck-in-queue-errors-in-windows",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A Microsoft orienta primeiro cancelar trabalhos pela fila e reiniciar o Spooler de Impressão.",
+      "Quando o cancelamento não limpa a fila, o procedimento oficial é parar o spooler, excluir os arquivos de trabalhos em C:\\Windows\\System32\\spool\\PRINTERS e iniciar o serviço novamente.",
+    ],
+  },
+  "ms-printer-connection-printing-2026": {
+    id: "ms-printer-connection-printing-2026",
+    title: "Corrigir problemas de conexão e impressão de impressora no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/printer/fix-printer-connection-and-printing-problems-in-windows",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "O roteiro oficial separa atualização de driver, limpeza/redefinição do spooler e problemas de status offline, sustentando o diagnóstico por camadas.",
+      "A Microsoft recomenda usar o driver mais recente apropriado para a impressora antes de concluir que a fila é a causa de toda falha de impressão.",
+    ],
+  },
+
+  "dell-bios-recovery-2026": {
+    id: "dell-bios-recovery-2026",
+    title: "Recuperar o BIOS em um computador ou tablet Dell após uma falha de inicialização ou POST",
+    publisher: "Dell Support",
+    url: "https://www.dell.com/support/kbdoc/pt-br/000132453/recuperar-o-bios-em-um-computador-ou-tablet-dell-ap%C3%B3s-uma-falha-de-inicializa%C3%A7%C3%A3o-ou-post",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A Dell documenta mecanismos próprios de recuperação de BIOS por imagem no disco e por USB em equipamentos compatíveis, confirmando que recuperação de firmware é específica do fabricante/modelo.",
+      "O procedimento oficial exige alimentação adequada e orienta não desligar o equipamento durante a recuperação.",
+    ],
+  },
+  "hp-bios-recovery-2026": {
+    id: "hp-bios-recovery-2026",
+    title: "HP Notebook – Recuperar o BIOS (Basic Input/Output System)",
+    publisher: "HP Support",
+    url: "https://support.hp.com/br-pt/document/ish_4120903-4029041-16",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A HP documenta recuperação de BIOS por combinação de teclas ou unidade de recuperação em modelos compatíveis e ressalva que o recurso não é universal.",
+      "A recuperação depende do suporte do equipamento e do procedimento específico do fabricante, não de uma sequência genérica aplicável a qualquer placa.",
+    ],
+  },
+
   "ms-win11-requirements": {
     id: "ms-win11-requirements",
     title: "Windows 11 requirements",
@@ -201,6 +311,59 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "NVMe foi projetado para armazenamento de estado sólido sobre PCI Express e é usado em vários formatos, inclusive M.2.",
     ],
   },
+  "intel-atx3-dc-regulation": {
+    id: "intel-atx3-dc-regulation",
+    title: "ATX Version 3 Multi Rail Desktop Platform Power Supply Design Guide — DC Voltage Regulation",
+    publisher: "Intel",
+    url: "https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/atx-version-3-0-multi-rail-desktop-platform-power-supply-design-guide/2.1a/dc-voltage-regulation-required/",
+    accessedAt: "2026-09-29",
+    sourceType: "standard",
+    supports: [
+      "O guia ATX define faixas de regulação das saídas DC e exige conformidade nas condições especificadas de linha, carga e ambiente.",
+      "Uma leitura isolada em repouso não representa, por si só, o comportamento da fonte em todas as condições de carga.",
+    ],
+  },
+  "intel-atx3-short-circuit-protection": {
+    id: "intel-atx3-short-circuit-protection",
+    title: "ATX Version 3 Multi Rail Desktop Platform Power Supply Design Guide — Short Circuit Protection",
+    publisher: "Intel",
+    url: "https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/atx-version-3-0-multi-rail-desktop-platform-power-supply-design-guide/2.1/short-circuit-protection-scp-required/",
+    accessedAt: "2026-09-29",
+    sourceType: "standard",
+    supports: [
+      "O guia ATX exige proteção contra curto-circuito nas principais saídas da fonte.",
+      "O desligamento por proteção é compatível com condição anormal de saída, mas não identifica sozinho qual componente do sistema originou a falha.",
+    ],
+  },
+
+  "ms-camera-privacy-windows-2026": {
+    id: "ms-camera-privacy-windows-2026",
+    title: "Gerenciar permissões de aplicativo para uma câmera no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/privacy/manage-app-permissions-for-a-camera-in-windows",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "O Windows 11 separa acesso à câmera do dispositivo, acesso para aplicativos da Microsoft Store e acesso para aplicativos de área de trabalho.",
+      "Aplicativos de área de trabalho podem não aparecer com controle individual; o acesso deles é governado pela chave específica para apps de desktop.",
+      "Quando a configuração de acesso à câmera não pode ser alterada, um administrador do dispositivo pode precisar modificar a política.",
+    ],
+  },
+
+  "ms-camera-troubleshooting-windows": {
+    id: "ms-camera-troubleshooting-windows",
+    title: "Camera doesn't work in Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/en-us/windows/hardware/camera/camera-doesn-t-work-in-windows",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "Para webcam externa, a Microsoft orienta conferir conexão USB, testar outra porta e testar a câmera em outro dispositivo para separar falha da câmera de falha do computador.",
+      "O Gerenciador de Dispositivos é usado para localizar a câmera e verificar alterações de hardware quando ela não aparece.",
+      "Muitas webcams USB são compatíveis com UVC e podem usar o driver USB Video Device incluído no Windows, com a ressalva de que recursos específicos do fabricante podem não funcionar com o driver genérico.",
+    ],
+  },
+
   "ms-bcdboot": {
     id: "ms-bcdboot",
     title: "BCDBoot command-line options",
@@ -262,6 +425,19 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Após exposição de credenciais, deve-se registrar o incidente, trocar senhas reutilizadas, ativar autenticação multifator e avisar a instituição envolvida.",
     ],
   },
+  "ms-win11-pro-workstations-2026": {
+    id: "ms-win11-pro-workstations-2026",
+    title: "Windows 11 Pro para Estações de Trabalho",
+    publisher: "Microsoft",
+    url: "https://www.microsoft.com/pt-br/windows/business/windows-11-pro-workstations",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "A Microsoft posiciona o Windows 11 Pro para Estações de Trabalho para cargas de trabalho exigentes e recursos avançados de processamento.",
+      "A edição inclui recursos voltados a armazenamento resiliente e compartilhamento acelerado de arquivos em hardware compatível, sem transformar a edição do sistema operacional em substituto para dimensionamento de hardware.",
+    ],
+  },
+
   "ms-windows-security-overview": {
     id: "ms-windows-security-overview",
     title: "Windows Security app overview",
@@ -296,6 +472,19 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     supports: [
       "A proteção antimalware fornecida pelo sistema deve permanecer habilitada e atualizada.",
       "Atualizações, senhas fortes e autenticação multifator continuam necessárias além do antivírus.",
+    ],
+  },
+
+  "certbr-fasciculos-seguranca-2026": {
+    id: "certbr-fasciculos-seguranca-2026",
+    title: "Fascículos — Cartilha de Segurança para Internet",
+    publisher: "CERT.br / NIC.br",
+    url: "https://cartilha.cert.br/fasciculos/",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "O CERT.br publica orientações para autenticação forte, incluindo segunda etapa de verificação.",
+      "A Cartilha recomenda backups para reduzir o risco de perda de dados e reúne orientações sobre golpes e proteção de computadores.",
     ],
   },
 
@@ -376,6 +565,31 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Redes residenciais com múltiplos pontos (EasyMesh) para melhorar cobertura em ambientes maiores.",
     ],
   },
+  "anatel-ferramentas-medicao-2026": {
+    id: "anatel-ferramentas-medicao-2026",
+    title: "Ferramentas de medição",
+    publisher: "Agência Nacional de Telecomunicações (Anatel)",
+    url: "https://www.gov.br/anatel/pt-br/dados/qualidade/qualidade-dos-servicos/medicoes-da-banda-larga",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "A Anatel apresenta atualmente as ferramentas da ESAQ, incluindo Brasil Banda Larga e aplicativo ESAQ, para medir desempenho de banda larga fixa e móvel.",
+      "As ferramentas medem download, upload, latência bidirecional, jitter e perda de pacotes; a Anatel também destaca que terminal, conexão Wi-Fi e provedor influenciam a experiência.",
+    ],
+  },
+  "anatel-velocidade-conexao-2026": {
+    id: "anatel-velocidade-conexao-2026",
+    title: "Velocidade de conexão",
+    publisher: "Agência Nacional de Telecomunicações (Anatel)",
+    url: "https://www.gov.br/anatel/pt-br/consumidor/conheca-seus-direitos-2/banda-larga/velocidade-de-conexao",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "A Anatel orienta o consumidor a verificar a velocidade da banda larga por meio do Brasil Banda Larga e a comparar o desempenho com as condições informadas no contrato.",
+      "Uma medição deve ser interpretada no contexto do serviço e das condições do teste, e não como regra universal isolada.",
+    ],
+  },
+
   "fcc-home-network-tips": {
     id: "fcc-home-network-tips",
     title: "Home Network Tips",
@@ -433,6 +647,341 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "Limpar cache remove dados temporários; limpar dados remove configurações e dados do aplicativo.",
     ],
   },
+  "gnu-ddrescue-manual-2026": {
+    id: "gnu-ddrescue-manual-2026",
+    title: "GNU ddrescue Manual",
+    publisher: "GNU Project",
+    url: "https://www.gnu.org/software/ddrescue/manual/ddrescue_manual.html",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "O GNU ddrescue copia primeiro as partes legíveis de uma mídia com falhas e usa mapfile para registrar o progresso e retomar o resgate.",
+      "O manual orienta fazer uma cópia da unidade com falha e tentar reparar a cópia, não o original, e alerta para não reparar sistema de arquivos diretamente em uma unidade com erros de I/O.",
+    ],
+  },
+  "ms-audio-services-windows-2026": {
+    id: "ms-audio-services-windows-2026",
+    title: "Corrigir problemas de som ou áudio no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/audio/fix-sound-or-audio-problems-in-windows",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "O roteiro oficial da Microsoft inclui reiniciar Windows Audio, Windows Audio Endpoint Builder e Remote Procedure Call (RPC) quando a falha está na camada de serviços de áudio.",
+      "O reinício dos serviços é uma etapa de diagnóstico, não uma conclusão universal; se o áudio não volta, a investigação continua por dispositivo, saída, driver e outras camadas.",
+    ],
+  },
+
+  "ms-audio-output-undetected-2026": {
+    id: "ms-audio-output-undetected-2026",
+    title: "Corrigir dispositivo de saída de áudio ausente ou não detectado no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/audio/fix-missing-or-undetected-audio-output-device-in-windows",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A Microsoft diferencia dispositivo de saída ausente de problemas de reprodução e orienta verificar Gerenciador de Dispositivos, habilitação e alterações de hardware.",
+      "Quando o driver de áudio está ausente ou incompatível, a Microsoft recomenda usar o driver mais recente do fabricante do PC ou dispositivo.",
+    ],
+  },
+  "ms-audio-headphones-no-sound-2026": {
+    id: "ms-audio-headphones-no-sound-2026",
+    title: "Corrigir problemas de áudio quando nenhum som é reproduzido por alto-falantes ou fones de ouvido no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/audio/fix-audio-issues-when-no-sound-plays-from-speakers-or-headphones-in-windows",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "Quando o dispositivo existe mas não reproduz som, a Microsoft orienta confirmar a saída selecionada, volume e dispositivo padrão antes de etapas mais invasivas.",
+      "A página separa ausência de reprodução de ausência de detecção, sustentando a árvore de diagnóstico por camadas.",
+    ],
+  },
+  "ms-microphone-problems-2026": {
+    id: "ms-microphone-problems-2026",
+    title: "Corrigir problemas do microfone",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/drivers/fix-microphone-problems",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A Microsoft orienta confirmar o dispositivo de entrada e as permissões de microfone quando o áudio do headset funciona mas a captura não.",
+      "As permissões de microfone para aplicativos e aplicativos de desktop são camadas separadas da detecção física do headset.",
+    ],
+  },
+
+  "seagate-bios-sata-not-detected-2026": {
+    id: "seagate-bios-sata-not-detected-2026",
+    title: "O BIOS não detecta ou reconhece o disco rígido ATA/SATA",
+    publisher: "Seagate Support",
+    url: "https://www.seagate.com/pt/pt/support/kb/the-bios-does-not-detect-or-recognize-the-ata-sata-hard-drive-168595en/",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A ausência de um HD SATA no BIOS pode envolver porta desabilitada, cabo, alimentação e a própria unidade; o diagnóstico deve isolar essas camadas.",
+      "A Seagate orienta verificar habilitação da porta e conexões antes de concluir falha da unidade.",
+    ],
+  },
+  "seagate-bios-ssd-not-detected-2026": {
+    id: "seagate-bios-ssd-not-detected-2026",
+    title: "O BIOS não detecta ou reconhece a unidade de estado sólido",
+    publisher: "Seagate Support",
+    url: "https://www.seagate.com/pt/pt/support/kb/the-bios-does-not-detect-or-recognize-the-solid-state-drive-005707en/",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A ausência de um SSD SATA no BIOS pode envolver porta/configuração, conexão e falha da unidade.",
+      "Detecção no firmware deve ser resolvida antes de tratar estados de volume no sistema operacional.",
+    ],
+  },
+
+  "seagate-noisy-drive-2026": {
+    id: "seagate-noisy-drive-2026",
+    title: "O que eu devo fazer quando o disco rígido faz barulho?",
+    publisher: "Seagate Support",
+    url: "https://www.seagate.com/br/pt/support/kb/what-should-i-do-for-a-noisy-disk-drive-193731en/",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "Discos rígidos podem produzir vibrações e cliques durante leitura, gravação e verificações internas; som isolado não identifica uma falha mecânica específica.",
+      "A Seagate orienta usar ferramenta de diagnóstico quando há preocupação com ruído, em vez de classificar o tipo de defeito apenas pelo som.",
+    ],
+  },
+
+  "intel-processor-temperature-2026": {
+    id: "intel-processor-temperature-2026",
+    title: "Information about Temperature for Intel Processors",
+    publisher: "Intel Support",
+    url: "https://www.intel.com/content/www/us/en/support/articles/000005597/processors.html",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "Limites térmicos e mecanismos de proteção variam por processador e projeto; não existe uma faixa típica universal aplicável a todo notebook.",
+      "Processadores podem reduzir potência/frequência e desligar para proteção quando limites térmicos são atingidos.",
+    ],
+  },
+  "hp-notebook-overheating-2026": {
+    id: "hp-notebook-overheating-2026",
+    title: "Notebooks HP - Reduza o calor dentro do laptop para evitar superaquecimento no Windows",
+    publisher: "HP Support",
+    url: "https://support.hp.com/br-pt/document/ish_3936214-3919514-16",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "Superfícies macias podem bloquear entradas de ar; fabricantes orientam superfície plana e rígida e limpeza das aberturas externas.",
+      "Ventoinha alta, lentidão, reinícios e travamentos podem acompanhar superaquecimento, mas devem ser interpretados junto do fluxo de ar e da carga.",
+    ],
+  },
+  "dell-laptop-battery-swelling-2026": {
+    id: "dell-laptop-battery-swelling-2026",
+    title: "Dell Laptop Battery - Frequently Asked Questions",
+    publisher: "Dell Support",
+    url: "https://www.dell.com/support/kbdoc/en-us/000175212/dell-laptop-battery-frequently-asked-questions",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "Baterias de notebook podem inchar; sinais incluem carcaça separando, trackpad/teclado elevados e instabilidade sobre superfície plana.",
+      "Bateria inchada deve ser tratada como condição que exige ação, não como mero sintoma térmico a ser ignorado.",
+    ],
+  },
+
+  "intel-thermal-paste-2026": {
+    id: "intel-thermal-paste-2026",
+    title: "How to Apply Thermal Paste and How It Works",
+    publisher: "Intel",
+    url: "https://www.intel.com/content/www/us/en/gaming/resources/how-to-apply-thermal-paste.html",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "O material térmico preenche imperfeições microscópicas entre processador e solução de refrigeração para melhorar a transferência de calor.",
+      "A Intel orienta consultar as instruções do cooler e do material, evitar adicionar pasta sobre material pré-aplicado e reaplicar quando o cooler é removido.",
+    ],
+  },
+  "amd-thermal-interface-2026": {
+    id: "amd-thermal-interface-2026",
+    title: "Instruções para instalação e Informações de Garantia para processadores AMD",
+    publisher: "AMD",
+    url: "https://www.amd.com/pt/resources/support-articles/faqs/CPU-200.html",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A AMD exige solução térmica adequada e material de interface térmica compatível.",
+      "Quando a solução térmica é removida após a instalação, a AMD orienta limpar e aplicar novo material de interface antes da reinstalação.",
+    ],
+  },
+
+  "hp-computer-no-power-2026": {
+    id: "hp-computer-no-power-2026",
+    title: "HP PCs - Computer does not turn on, start, or boot",
+    publisher: "HP Support",
+    url: "https://support.hp.com/us-en/document/ish_3974055-3873564-16",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A HP separa problemas de ausência de energia, ausência de vídeo e falha de inicialização e orienta remover periféricos antes de aprofundar o diagnóstico.",
+      "A HP documenta um hard reset com energia externa removida em cenários compatíveis, reforçando que o procedimento depende do equipamento e deve seguir suporte oficial.",
+    ],
+  },
+  "dell-lcd-repair-options-2026": {
+    id: "dell-lcd-repair-options-2026",
+    title: "Opções de reparo para telas LCD rachadas e quebradas em notebooks, tablets e telefones Dell",
+    publisher: "Dell Support",
+    url: "https://www.dell.com/support/kbdoc/pt-br/000123759/op%C3%A7%C3%B5es-de-reparo-para-telas-lcd-rachadas-e-quebradas-em-notebooks-tablets-e-telefones-dell",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "A Dell orienta verificar a elegibilidade de componentes para substituição pelo cliente e consultar o suporte/manual do produto antes de reparos de tela.",
+      "Danos de tela podem exigir reparo específico do produto e cobertura/garantia deve ser verificada antes da abertura do equipamento.",
+    ],
+  },
+  "lenovo-lcd-panel-replacement-2026": {
+    id: "lenovo-lcd-panel-replacement-2026",
+    title: "Substituindo o painel do LCD",
+    publisher: "Lenovo",
+    url: "https://download.lenovo.com/pccbbs/pubs/v310z/pt-br/contents/fru_lcdpanel.html",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "A Lenovo documenta a substituição de painel como procedimento dependente de sequência específica do equipamento e orienta desligar e desconectar cabos antes do reparo.",
+      "O procedimento oficial mostra que acesso ao painel e ao cabo LCD depende da arquitetura do equipamento, reforçando que não existe uma desmontagem universal.",
+    ],
+  },
+
+  "dell-laptop-no-power-2026": {
+    id: "dell-laptop-no-power-2026",
+    title: "Solucionar problemas de energia em um notebook Dell",
+    publisher: "Dell Technologies Support",
+    url: "https://www.dell.com/support/kbdoc/pt-br/000124389/solucionar-problemas-de-energia-em-um-notebook-dell",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A Dell trata ausência de energia como cenário distinto de ausência de POST e de vídeo e usa diagnósticos específicos do fabricante quando suportados.",
+      "A Dell orienta consultar o manual do modelo e procedimentos oficiais antes de desmontagem ou substituição de componentes.",
+    ],
+  },
+  "ms-powercfg-batteryreport": {
+    id: "ms-powercfg-batteryreport",
+    title: "Opções de linha de comando powercfg",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows-hardware/design/device-experiences/powercfg-command-line-options",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "O comando powercfg /batteryreport gera um relatório HTML com características de uso da bateria ao longo do tempo de vida do sistema.",
+      "O relatório de bateria fornece contexto de uso quando o Windows ainda inicia; ele não é um teste elétrico do hardware.",
+    ],
+  },
+
+  "msi-front-panel-power-test-2026": {
+    id: "msi-front-panel-power-test-2026",
+    title: "O que fazer quando o PC não inicia ou não dá vídeo",
+    publisher: "MSI Support",
+    url: "https://br.msi.com/support/technical_details/MB_Boot_No_Display",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "A MSI orienta confirmar o Power Switch no header frontal e, quando o cabo frontal é suspeito, remover esse cabo e acionar diretamente o par Power Switch como teste de diagnóstico.",
+      "O teste de painel frontal é apenas uma etapa de uma sequência maior que também verifica compatibilidade e hardware, portanto não valida sozinho todos os componentes.",
+    ],
+  },
+  "msi-jfp1-front-panel-manual": {
+    id: "msi-jfp1-front-panel-manual",
+    title: "JFP1: Front Panel Connectors",
+    publisher: "MSI",
+    url: "https://download-2.msi.com/archive/mnu_exe/mb/H610TI-S03_H610TI-S01.pdf",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "O header JFP1 do manual separa Power Switch, Reset Switch, Power LED e HDD LED.",
+      "O manual marca polaridade para LEDs e mostra Power Switch/Reset Switch como pares de chave, reforçando que o pinout deve ser consultado no modelo específico.",
+    ],
+  },
+
+  "ms-bug-check-code-reference": {
+    id: "ms-bug-check-code-reference",
+    title: "Bug check code reference",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-code-reference2",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "A referência da Microsoft lista os códigos de bug check e orienta usar o WinDbg/!analyze para obter informações e parâmetros do stop code.",
+      "Um arquivo de despejo pode conter mais contexto sobre o estado da memória no momento da falha do que o texto exibido na tela.",
+    ],
+  },
+  "ms-blue-screen-data": {
+    id: "ms-blue-screen-data",
+    title: "Analyze bug check (stop code error) data",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/blue-screen-data",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "Cada bug check possui quatro parâmetros associados que podem acrescentar contexto específico ao código.",
+      "Os parâmetros podem ser obtidos no log do sistema ou a partir do arquivo de despejo e analisados com ferramentas de depuração.",
+    ],
+  },
+  "ms-memory-manager-performance-2026": {
+    id: "ms-memory-manager-performance-2026",
+    title: "Performance Tuning for Cache and Memory Manager Subsystems",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-server/administration/performance-tuning/subsystem/cache-memory-management/",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "O Windows usa memória para cache de arquivos e páginas em standby podem continuar disponíveis para reutilização, portanto cache alto não equivale automaticamente a falta de RAM.",
+      "A investigação de pressão de memória deve considerar memória disponível e consumo real, não apenas a porcentagem total ocupada.",
+    ],
+  },
+  "ms-page-file-introduction-2026": {
+    id: "ms-page-file-introduction-2026",
+    title: "Introduction to the page file",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/introduction-to-the-page-file",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "A carga de memória confirmada (commit charge) é comparada ao limite de confirmação do sistema; ao atingir o limite, processos podem deixar de obter memória e ocorrer travamentos ou outras falhas.",
+      "Arquivos de paginação gerenciados pelo sistema podem crescer quando necessário e quando há espaço disponível, sustentando a recomendação de não desativar o pagefile por regra genérica.",
+    ],
+  },
+  "ms-computer-memory-overview-2026": {
+    id: "ms-computer-memory-overview-2026",
+    title: "Tudo sobre memória de computador",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/experience/compatibility/all-about-computer-memory",
+    accessedAt: "2026-09-30",
+    sourceType: "official",
+    supports: [
+      "RAM mantém dados ativos acessíveis mais rapidamente que o armazenamento e maior capacidade permite manter mais trabalho simultâneo sem a mesma pressão de desempenho.",
+      "A necessidade de RAM depende do tipo de uso; valores mínimos ou recomendações gerais não substituem a medição da carga real e a compatibilidade do equipamento.",
+    ],
+  },
+
+  "ms-small-memory-dump": {
+    id: "ms-small-memory-dump",
+    title: "Small Memory Dump",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/small-memory-dump",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "Pequenos despejos podem incluir a mensagem de bug check, parâmetros, pilha do kernel e lista de drivers carregados.",
+      "Quando esse tipo de dump é gerado, os arquivos são mantidos no diretório %SystemRoot%\\Minidump.",
+    ],
+  },
+  "ms-whea-hardware-errors": {
+    id: "ms-whea-hardware-errors",
+    title: "Hardware Errors and Error Sources",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/whea/hardware-errors-and-error-sources",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "A WHEA recebe e representa condições de erro de hardware reportadas por diferentes fontes da plataforma.",
+      "As fontes podem incluir processador, cache/memória, chipset, barramentos de E/S e dispositivos, portanto um erro WHEA não identifica sozinho uma peça específica.",
+    ],
+  },
+
   "memtest86plus-readme": {
     id: "memtest86plus-readme",
     title: "Memtest86+ — README and troubleshooting",
@@ -573,6 +1122,31 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "O arquivo de configuração concentra a maior parte do estado necessário para reconstrução do firewall.",
     ],
   },
+  "ms-ad-ds-install-2026": {
+    id: "ms-ad-ds-install-2026",
+    title: "Instalar o Active Directory Domain Services no Windows Server",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "A Microsoft documenta instalação do AD DS pelo Server Manager ou PowerShell e diferencia nova floresta, domínio adicional e controlador adicional em domínio existente.",
+      "A documentação atual se aplica a Windows Server 2025, 2022, 2019 e 2016 e inclui validação de pré-requisitos e credenciais conforme o cenário.",
+    ],
+  },
+  "ms-ad-ds-system-state-backup-2026": {
+    id: "ms-ad-ds-system-state-backup-2026",
+    title: "Active Directory Forest Recovery - Back up the System State data",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-backing-up-system-state",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "A Microsoft documenta backup de estado do sistema como parte do processo de recuperação de controladores de domínio.",
+      "O guia de recuperação de floresta trata backup e restauração do AD como procedimentos próprios, não como simples cópia de arquivos ou snapshot genérico.",
+    ],
+  },
+
   "ms-ad-ds-overview": {
     id: "ms-ad-ds-overview",
     title: "Active Directory Domain Services overview",
@@ -748,6 +1322,20 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "O Histórico de Arquivos mantém cópias de arquivos pessoais e permite restaurar versões anteriores quando previamente configurado.",
     ],
   },
+  "ms-windows-update-cache-2026": {
+    id: "ms-windows-update-cache-2026",
+    title: "Solucionar problemas de atualização do Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/deployment/updates-lifecycle/troubleshoot-problems-updating-windows",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "A Microsoft orienta começar por diagnóstico básico e pelo solucionador do Windows Update antes de avançar para procedimentos manuais.",
+      "O guia oficial inclui limpeza do cache do Windows Update como etapa específica quando arquivos temporários corrompidos podem estar causando erros.",
+      "A limpeza do cache não substitui investigação de conectividade, espaço, hardware externo ou outros fatores que impedem a atualização.",
+    ],
+  },
+
   "ms-windows-update-troubleshoot": {
     id: "ms-windows-update-troubleshoot",
     title: "Solução de problemas do Windows Update",
@@ -796,6 +1384,80 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
       "O disco de redefinição é uma medida preventiva para contas locais e precisa ser criado enquanto a conta está acessível.",
     ],
   },
+  "ms-diskpart-attributes-disk-2026": {
+    id: "ms-diskpart-attributes-disk-2026",
+    title: "attributes disk",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/attributes-disk",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "O DiskPart pode exibir, definir e limpar o atributo readonly do disco selecionado.",
+      "O disco precisa ser selecionado antes de executar attributes disk, por isso a identificação correta do alvo faz parte do procedimento seguro.",
+    ],
+  },
+  "ms-diskpart-attributes-volume-2026": {
+    id: "ms-diskpart-attributes-volume-2026",
+    title: "attributes volume",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/attributes-volume",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "O DiskPart também expõe e altera atributos do volume selecionado, incluindo readonly.",
+      "Atributos de disco e de volume são escopos diferentes e não devem ser tratados como prova de falha física.",
+    ],
+  },
+  "ms-chkdsk-2026": {
+    id: "ms-chkdsk-2026",
+    title: "chkdsk",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/chkdsk",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "O CHKDSK verifica o sistema de arquivos e metadados do volume; parâmetros como /f e /r fazem reparos específicos.",
+      "CHKDSK atua sobre a estrutura lógica do volume e não substitui diagnóstico de trava física, política ou falha do controlador da mídia.",
+    ],
+  },
+
+  "ms-usb-not-recognized-2026": {
+    id: "ms-usb-not-recognized-2026",
+    title: "Corrigir problemas com a USB-C no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/usb/fix-usb-c-problems-in-windows",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "A Microsoft relaciona a mensagem de dispositivo USB não reconhecido a problema reportado pelo dispositivo ou a falha de driver e orienta consultar o código no Gerenciador de Dispositivos.",
+      "O estado e o código do dispositivo ajudam a distinguir reconhecimento/driver de outras falhas do caminho USB.",
+    ],
+  },
+  "ms-device-manager-error-codes-2026": {
+    id: "ms-device-manager-error-codes-2026",
+    title: "Códigos de erro no Gerenciador de Dispositivos no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/drivers/error-codes-in-device-manager-in-windows",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "O Gerenciador de Dispositivos expõe códigos de erro no status do dispositivo e diferentes códigos possuem causas e resoluções distintas.",
+      "Atualização ou reinstalação de driver é apropriada para códigos específicos, não como explicação universal para qualquer falha USB.",
+    ],
+  },
+  "ms-usb-enumeration-unknown-device-2026": {
+    id: "ms-usb-enumeration-unknown-device-2026",
+    title: "Case Study - Troubleshooting an Unknown USB Device",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/case-study--troubleshooting-an-unknown-usb-device-by-using-etw-and-netmon",
+    accessedAt: "2026-10-01",
+    sourceType: "official",
+    supports: [
+      "Falhas durante a enumeração USB podem fazer o hub reportar a chegada do dispositivo, mas o Windows marcá-lo como desconhecido.",
+      "Falhas de reset de porta, atribuição de endereço ou leitura/validação de descritores podem impedir a enumeração antes da identificação normal do dispositivo.",
+    ],
+  },
+
   "ms-file-explorer-windows": {
     id: "ms-file-explorer-windows",
     title: "Explorador de Arquivos no Windows",
@@ -839,6 +1501,43 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     sourceType: "official",
     supports: [
       "Roteadores devem usar senhas fortes e exclusivas e manter imagens de software/firmware atualizadas.",
+    ],
+  },
+
+  "ms-msinfo32-2026": {
+    id: "ms-msinfo32-2026",
+    title: "msinfo32",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/msinfo32",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "O msinfo32 abre Informações do Sistema e reúne informações de hardware, componentes e ambiente de software do computador.",
+      "A ferramenta pode ser usada como ponto de verificação do modo em que o Windows foi inicializado.",
+    ],
+  },
+  "ms-boot-uefi-legacy-2026": {
+    id: "ms-boot-uefi-legacy-2026",
+    title: "Inicializar no modo UEFI ou no modo BIOS herdado",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode?view=windows-11",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "Depois que o Windows é instalado, o dispositivo normalmente continua inicializando no mesmo modo usado durante a instalação.",
+      "Para instalações novas e suportadas, a documentação recomenda o modo UEFI mais recente.",
+    ],
+  },
+  "ms-mbr2gpt-2026": {
+    id: "ms-mbr2gpt-2026",
+    title: "MBR2GPT",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows/deployment/mbr-to-gpt",
+    accessedAt: "2026-09-29",
+    sourceType: "official",
+    supports: [
+      "O MBR2GPT valida o layout e pode converter o disco do sistema de MBR para GPT em cenários suportados sem usar a reformatação como etapa obrigatória.",
+      "Depois da conversão para GPT, o firmware precisa ser configurado para inicializar em UEFI.",
     ],
   },
 
@@ -1083,6 +1782,21 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
       "Reescrita material concluída: rsync é tratado como cópia/sincronização e não como backup por si só; barra final, --dry-run e --delete seguem a manpage oficial; automação só entra após validação manual e o texto exige retenção independente e teste de restauração. Promovido em 2026-09-27 após capa licenciada/proveniência, ownership e gates editoriais.",
   },
 
+  "informatica-basica": {
+    slug: "informatica-basica",
+    sources: [
+      "ms-file-explorer-windows",
+      "ms-find-files-windows",
+      "ms-onedrive-folder-backup",
+      "certbr-fasciculos-seguranca-2026",
+    ],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-30",
+    notes:
+      "Revisão material em 2026-09-30 guiada pelo GSC: 55 impressões, 0 cliques e posição média ~49,36 entre 2026-04-01 e 2026-09-27. Queries reais incluem 'conhecimento basico informatica' (17 impressões), 'informatica basica', 'informatica basica conteudo', 'informatica basica resumo', 'noções básicas de informática' e variações. A versão suplementar substitui editorialmente o texto monolítico antigo com mapa de competências, checklist prático, separação entre básico e avançado, organização de arquivos, produtividade, nuvem/backup e segurança. Fontes Microsoft e CERT.br ficam visíveis.",
+  },
+
   "pc-nao-liga-o-que-fazer": {
     slug: "pc-nao-liga-o-que-fazer",
     sources: [],
@@ -1143,25 +1857,63 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     notes:
       "Revisão aprofundada em 2026-09-12: resposta proporcional a mensagem, clique, credencial, acesso remoto e fraude financeira; preservação de evidências e canais oficiais priorizados. Fontes primárias visíveis, sem aplicativo de terceiros, estatística ou promessa de recuperação de valores.",
   },
-  "como-configurar-roteador-wifi-iniciantes": {
-    slug: "como-configurar-roteador-wifi-iniciantes",
-    sources: ["wifi-alliance-security", "wifi-alliance-home"],
+  "o-que-e-informatica": {
+    slug: "o-que-e-informatica",
+    sources: [
+      "acm-computing-curricula-2020",
+      "acm-computing-subdisciplines-2026",
+      "acm-cs2023-vision-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Reescrito na Onda 5B. Sem velocidade prometida, sem marca de equipamento recomendada e sem passo dependente de painel específico de fabricante. Recomendações de canal (1/6/11 em 2,4 GHz) e de padrão de segurança (WPA3/WPA2-AES, WPS desligado) são conhecimento técnico estável.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 78 impressões, 0 cliques e posição média ~64,68 entre 2026-04-01 e 2026-09-27; as consultas expostas incluem 'informatica', 'informática', 'o que e informatica', 'o que significa informatica', 'o que estuda a informática', 'area de informatica' e variações ortográficas. A versão suplementar transforma o pilar em definição ampla e estruturada, separando informática do uso cotidiano, TI, Ciência da Computação, Engenharia de Computação, Sistemas de Informação e Engenharia de Software, com exemplos, áreas e aplicações. Nenhuma equivalência disciplinar foi inventada; a taxonomia é ancorada em ACM/IEEE.",
+  },
+
+  "como-aprender-informatica": {
+    slug: "como-aprender-informatica",
+    sources: [
+      "ms-file-explorer-windows",
+      "ms-find-files-windows",
+      "ms-onedrive-folder-backup",
+      "ms-windows-security-overview",
+      "cisa-backup",
+    ],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-30",
+    notes:
+      "Revisão material em 2026-09-30 guiada pelo GSC: 21 impressões, 0 cliques e posição média ~49,10 entre 2026-04-01 e 2026-09-27. Queries reais incluem 'aprender informática passo a passo', 'como aprender informática', 'como aprender informática do zero', 'como aprender informática sozinho', 'informática para iniciantes' e consultas de dicas. A versão suplementar substitui a abordagem genérica por uma trilha baseada em competências e projetos: arquivos/pastas, Windows, internet/e-mail, documentos, planilhas, nuvem/backup, segurança, hardware, rede e diagnóstico. Fontes Microsoft e CISA sustentam arquivos, pesquisa, sincronização/backup e proteção; nenhum prazo universal ou promessa de profissionalização foi inventado.",
+  },
+
+  "como-configurar-roteador-wifi-iniciantes": {
+    slug: "como-configurar-roteador-wifi-iniciantes",
+    sources: [
+      "wifi-alliance-security",
+      "wifi-alliance-home",
+      "cisa-secure-wifi-networks",
+      "nsa-router-hygiene-2026",
+      "fcc-home-network-tips",
+    ],
+    technicalReview: "reviewed",
+    factChecked: true,
+    factCheckedAt: "2026-09-30",
+    notes:
+      "Revisão material em 2026-09-30 guiada pelo GSC: 14 impressões, 0 cliques e posição média ~34,43 entre 2026-04-01 e 2026-09-27. Queries reais incluem 'como configurar o wi fi', 'como criar uma rede wi fi com roteador', variações de 'como usar roteador', 'configuração de wi-fi', 'configuração do modem' e 'roteador wifi como configurar'. A versão suplementar organiza configuração por camadas (provedor/WAN, LAN/DHCP, Wi‑Fi e administração), separa gateway/roteador/ponto de acesso, evita IPs e painéis universais, reduz risco de duplo NAT e ancora segurança/firmware/cobertura em Wi‑Fi Alliance, CISA, NSA e FCC.",
   },
   "como-saber-quem-esta-usando-meu-wifi": {
     slug: "como-saber-quem-esta-usando-meu-wifi",
-    sources: ["wifi-alliance-security"],
+    sources: [
+      "wifi-alliance-security",
+      "nsa-router-hygiene-2026",
+      "cisa-secure-wifi-networks",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Reescrito na Onda 5B. Explicita que endereço MAC aleatório por rede torna nomes desconhecidos inconclusivos e que filtro de MAC não é medida de segurança. Sem indicação de aplicativo de terceiros e sem promessa de detecção de invasão.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 105 impressões, 1 clique e posição média ~10,96 entre 2026-04-01 e 2026-09-28. As queries individuais expostas foram 'como ver quantas pessoas estão conectadas no wifi' e 'como ver quem está usando meu wifi'. A versão suplementar transforma a owner em inventário seguro de clientes do roteador, explica hostname/IP/MAC/fabricante, MAC privado/aleatório, estado online/offline, rede de convidados e resposta proporcional a dispositivo realmente desconhecido. Reforça WPA2/WPA3, senha administrativa forte e firmware atualizado; filtro MAC não é tratado como proteção principal e nenhum app de terceiros é recomendado.",
   },
   "como-fazer-upgrade-ssd-nvme": {
     slug: "como-fazer-upgrade-ssd-nvme",
@@ -1173,39 +1925,51 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-07",
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisado em 2026-09-07 com fontes primárias visíveis. Sem promessa de ganho percentual, sem número instável de fabricante e sem indicação de modelo comercial. Compatibilidade tratada como verificação de formato, interface, dimensões e suporte do equipamento; preservação dos dados e chave BitLocker antecedem a intervenção.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: separa formato M.2 de protocolo/interface, substitui promessas subjetivas por uma matriz de decisão, remove alegações internas de bancada, explicita clonagem versus instalação limpa, preservação de dados, BitLocker, validação pós-instalação e critérios de parada. Mantém as fontes primárias NVM Express e Microsoft já verificadas.",
   },
   "como-recuperar-dados-hd-com-defeito": {
     slug: "como-recuperar-dados-hd-com-defeito",
-    sources: [],
+    sources: [
+      "ms-windows-file-recovery",
+      "gnu-ddrescue-manual-2026",
+      "seagate-noisy-drive-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Reescrito na Onda 5A: removido o texto-modelo herdado e a marca de origem. Declara explicitamente que recuperação de dados não tem garantia de sucesso; separa falha lógica de falha física; encaminha casos mecânicos a laboratório especializado. Sem taxa de sucesso, sem prazo e sem preço prometido.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 6 impressões, 0 cliques e posição média 17 entre 2026-04-01 e 2026-09-27. A query exposta 'conserto de hd' foi tratada distinguindo recuperar dados de voltar a confiar na unidade. A versão suplementar substitui editorialmente o texto monolítico antigo, remove diagnóstico de falha mecânica apenas por clique/ruído, separa exclusão lógica de erros de I/O e falha física, prioriza origem/destino separados e imagem antes de reparo quando a mídia está instável, e reforça que recuperação não tem garantia de sucesso.",
   },
+
   "notebook-nao-liga-o-que-fazer": {
     slug: "notebook-nao-liga-o-que-fazer",
-    sources: [],
+    sources: [
+      "hp-computer-no-power-2026",
+      "dell-laptop-no-power-2026",
+      "ms-powercfg-batteryreport",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-07-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Desalinhamento resolvido: title/H1/introdução/estrutura focados exclusivamente em notebook; desktop aparece só como menção contextual curta, fora de title e H1. Conteúdo baseado em conhecimento técnico estável de triagem segura, sem afirmação específica de fabricante, sem número instável e sem procedimento perigoso. Não afirma causa única sem diagnóstico. Sem fonte visível por depender de conhecimento estável.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 11 impressões, 0 cliques e posição média ~10,91 entre 2026-04-01 e 2026-09-27. A versão suplementar substitui editorialmente o texto monolítico antigo, preservando a mesma URL. A triagem passa a separar sem energia, sem POST, sem vídeo e sem boot; remove carregador/bateria/placa como conclusões automáticas; condiciona reset elétrico e códigos de diagnóstico ao fabricante/modelo; adiciona batteryreport apenas quando o Windows ainda inicia e reforça critérios de parada para líquido, bateria deformada, cheiro e calor anormal. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
+
   "computador-lento-causas-solucoes": {
     slug: "computador-lento-causas-solucoes",
-    sources: [],
+    sources: [
+      "ms-pc-performance",
+      "ms-startup-apps",
+      "ms-windows-security-overview",
+      "ms-optimize-drives",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-07-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Fact-check concluído: formatação não é solução universal, SSD não resolve todo gargalo, memória sem número mínimo universal e malware tratado como possibilidade (não diagnóstico). Sem percentuais de ganho e sem métrica do Gerenciador de Tarefas como diagnóstico definitivo. Conhecimento técnico estável, sem afirmação instável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 1 impressão, 0 cliques e posição média 9 entre 2026-04-01 e 2026-09-27. A versão suplementar passa a sobrepor editorialmente o conteúdo-base, preservando a mesma URL. O diagnóstico separa lentidão de inicialização, carga, aplicativo e armazenamento; trata Gerenciador de Tarefas como sinal e não diagnóstico; remove formatação, SSD, RAM e malware como respostas automáticas; inclui matriz de decisão, critérios de parada e fontes oficiais Microsoft. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
   "como-instalar-windows-11-do-zero": {
     slug: "como-instalar-windows-11-do-zero",
@@ -1217,9 +1981,9 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-07-12",
+    factCheckedAt: "2026-10-01",
     notes:
-      "Desalinhamento resolvido: title/H1/introdução/estrutura realinhados à instalação limpa do Windows 11 (guia de preparação e decisão segura). Afirmações materiais (requisitos, mídia oficial, ativação/licença, BitLocker/chave de recuperação) sustentadas por fontes oficiais Microsoft. Sem ativador, crack, bypass de requisitos, imagem modificada ou download de terceiros. Publisher: Microsoft.",
+      "Revisão material em 2026-10-01 guiada por sinal real de página no GSC: 2 impressões, 0 cliques e posição média 9 entre 2026-04-01 e 2026-09-28. Nenhuma query individual foi exposta e nenhuma foi inventada. A versão suplementar aprofunda decisão de instalação limpa, requisitos, backup validado, BitLocker, mídia oficial, seleção segura de disco/partições, ativação, drivers oficiais, validação pós-instalação e critérios de parada. Sem ativador, crack, bypass de requisitos ou ISO modificada.",
   },
   "quando-trocar-hd-por-ssd": {
     slug: "quando-trocar-hd-por-ssd",
@@ -1233,13 +1997,16 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "notebook-superaquecendo-o-que-fazer": {
     slug: "notebook-superaquecendo-o-que-fazer",
-    sources: [],
+    sources: [
+      "intel-processor-temperature-2026",
+      "hp-notebook-overheating-2026",
+      "dell-laptop-battery-swelling-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-07-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Fact-check concluído: sem temperatura universal de risco e sem intervalo universal para pasta térmica; alertas de segurança presentes (bateria estufada, cheiro, desligamentos) com orientação de parar o uso; foco em notebook. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 4 impressões, 0 cliques e posição média ~50,75 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'notebook superaquecendo' (4 impressões), tratada diretamente sem inventar variações. A versão suplementar separa carga normal, ventilação bloqueada, throttling, ventoinha, poeira, interface térmica e sinais de segurança como desligamentos e bateria estufada; evita temperatura e intervalo de pasta universais. Fontes Intel, HP e Dell ficam visíveis.",
   },
   "backup-como-proteger-seus-arquivos": {
     slug: "backup-como-proteger-seus-arquivos",
@@ -1252,60 +2019,71 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-saber-se-pc-tem-virus-malware": {
     slug: "como-saber-se-pc-tem-virus-malware",
-    sources: ["certbr-golpes", "cisa-stop-ransomware", "ms-tech-support-scams"],
+    sources: [
+      "ms-windows-security-overview",
+      "ms-controlled-folder-access",
+      "certbr-golpes",
+      "cisa-stop-ransomware",
+      "ms-tech-support-scams",
+      "ms-phishing-protection",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-07-12",
+    factCheckedAt: "2026-09-30",
     notes:
-      "Fact-check concluído: sintomas não confirmam infecção, contenção segura (desconectar da rede, não pagar resgate), troca de senha em dispositivo confiável, sem ferramenta desconhecida e sem prometer remoção ou preservação integral. Golpe de falso suporte tratado. Fontes CERT.br/CISA/Microsoft.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 7 impressões, 0 cliques e posição média ~24,43 entre 2026-04-01 e 2026-09-27. A única query individual exposta foi 'como saber se o notebook esta com virus' (1 impressão, posição 40), tratada diretamente sem inventar variações. A versão suplementar separa sintoma de evidência, navegador de sistema, malware de comprometimento de conta e golpe de falso suporte, confirma a proteção ativa antes de recomendar qualquer ferramenta, prioriza contenção em ransomware/acesso remoto e evita promessas de detecção ou remoção total. Fontes oficiais Microsoft, CISA e CERT.br ficam visíveis.",
   },
   "como-melhorar-sinal-wifi-em-casa": {
     slug: "como-melhorar-sinal-wifi-em-casa",
-    sources: ["wifi-alliance-home"],
+    sources: ["wifi-alliance-home", "fcc-home-network-tips"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-07-12",
+    factCheckedAt: "2026-10-01",
     notes:
-      "Fact-check concluído: diferencia sinal e internet, dispositivo e rede, operadora e Wi-Fi local; sem canal/frequência/potência universais; foco residencial. Cobertura com múltiplos pontos (mesh) sustentada pela Wi-Fi Alliance.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição média 77 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'sinal de wifi fraco'. A versão suplementar preserva a URL e separa cobertura de internet lenta, cliente de rede, posicionamento, bandas, interferência, capacidade, repetidor/mesh e backhaul, sem canal universal, potência universal ou promessa de cobertura. Fontes oficiais Wi-Fi Alliance e FCC permanecem visíveis; nenhuma query adicional foi inventada.",
   },
   "organizacao-de-ti-para-pequenos-escritorios": {
     slug: "organizacao-de-ti-para-pequenos-escritorios",
-    sources: ["cisa-backup", "nist-sp-800-34"],
+    sources: ["cisa-backup", "nist-sp-800-34", "cisa-upskill-checklist"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-06",
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Rodada 3O): conteúdo organizacional, sem consultoria de conformidade, sem SLA, sem promessa de continuidade e sem orientação para armazenar senhas junto ao inventário. Limite entre camada de máquina e sistemas de terceiros explicitado. Estratégia de cópias apresentada como referência, com teste de restauração obrigatório — sustentada por CISA/NIST.",
+      "Revisão material em 2026-10-01 guiada por sinal real de página no GSC: 1 impressão, 0 cliques e posição média 2 entre 2026-04-01 e 2026-09-28. Nenhuma query individual foi exposta e nenhuma foi inventada. A versão suplementar aprofunda inventário, responsáveis, privilégios administrativos, MFA, backup com restauração testada, rede, dispositivos compartilhados, entrada/saída de usuários e documentação mínima, sem inventar SLA, conformidade ou garantia de continuidade.",
   },
   "como-escolher-uma-workstation": {
     slug: "como-escolher-uma-workstation",
-    sources: [],
+    sources: [
+      "ms-win11-pro-workstations-2026",
+      "nvme-official-faq",
+      "ms-computer-memory-overview-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-06",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Rodada 3O): critérios de levantamento de requisitos, sem configuração universal, sem benchmark, sem promessa de desempenho, sem nome de software no slug/H1/title e sem selo de homologação não publicado pelo fabricante. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média ~30,5 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'o que é workstation' (1 impressão, posição 57). A versão suplementar define workstation sem reduzir o conceito a 'PC caro', organiza seleção por carga real, software, CPU, GPU, RAM, armazenamento, rede, expansão, suporte e continuidade, sem configuração universal, benchmark inventado ou recomendação comercial. Fontes oficiais Microsoft/NVM Express e documentação de memória já registrada ficam visíveis; nenhuma query adicional foi inventada.",
   },
   "como-resolver-tela-azul-windows": {
     slug: "como-resolver-tela-azul-windows",
-    sources: [],
+    sources: ["ms-bug-check-code-reference", "ms-blue-screen-data", "ms-windows-recovery-environment"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Rodada 4Y): interpretação do código de parada como pista e não como diagnóstico fechado, ordem segura de verificação (alterações recentes, memória, disco, energia), aviso explícito de risco de perda de dados quando o disco está envolvido e nenhuma promessa de correção definitiva. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição média 63 entre 2026-04-01 e 2026-09-28; a única query individual exposta foi 'tela azul'. A versão suplementar trata bug check/stop code como pista, registra contexto e alterações recentes, separa software de hardware, orienta backup, Windows RE e dumps, e inclui critérios de parada sem prometer diagnóstico pelo código nem recomendar formatação por tentativa. Fontes oficiais Microsoft ficam visíveis; nenhuma query adicional foi inventada.",
   },
   "como-trocar-tela-notebook-passo-a-passo": {
     slug: "como-trocar-tela-notebook-passo-a-passo",
-    sources: [],
+    sources: [
+      "dell-lcd-repair-options-2026",
+      "lenovo-lcd-panel-replacement-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Rodada 4Y): identificação da tela pelo código do painel, distinção entre defeito de painel e de cabo/placa de vídeo, alerta de risco em telas coladas e touch, sem indicação de peça específica, sem preço de peça e sem promessa de compatibilidade universal. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 23 impressões, 0 cliques e posição média ~25,35 entre 2026-04-01 e 2026-09-28. Queries reais incluem 'como trocar a tela do notebook', 'como trocar tela de notebook', 'troca de tela de notebook', 'troca tela notebook', 'trocar tela do notebook' e variações. A versão suplementar aprofunda diagnóstico antes da compra, compatibilidade por painel/conector/resolução/fixação/touch, desenergização e isolamento de bateria, cabo/dobradiça, teste antes do fechamento e critérios de parada. Fontes oficiais Dell e Lenovo ficam visíveis; nenhuma query adicional foi inventada.",
   },
   "como-limpar-notebook-por-dentro": {
     slug: "como-limpar-notebook-por-dentro",
@@ -1319,34 +2097,41 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-trocar-pasta-termica-notebook": {
     slug: "como-trocar-pasta-termica-notebook",
-    sources: [],
+    sources: [
+      "intel-thermal-paste-2026",
+      "amd-thermal-interface-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 5D): critério para separar interface térmica de obstrução, ordem alternada de soltura/aperto do dissipador, preservação de almofadas térmicas, preferência por composto não condutivo, sem marca, sem quantidade em medida absoluta e sem promessa de resultado. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 24 impressões, 0 cliques e posição média ~17,33 entre 2026-04-01 e 2026-09-27. Queries reais incluem 'como trocar a pasta termica do notebook', 'como trocar pasta termica', 'troca da pasta termica', 'troca de pasta térmica' e variações. A versão suplementar substitui editorialmente o texto monolítico antigo e reforça diagnóstico antes da desmontagem, manual do modelo, isolamento de bateria, preservação de thermal pads, reaplicação após remoção do dissipador, ausência de quantidade universal para notebook, validação antes/depois sob a mesma carga e critérios de parada.",
   },
+
   "como-clonar-hd-para-ssd": {
     slug: "como-clonar-hd-para-ssd",
-    sources: [],
+    sources: ["ms-bitlocker-backup-key", "ms-bcdboot"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 5E): critério entre clonar e reinstalar, alerta de leitura integral em disco com setores defeituosos, exigência de backup independente, cópia de todas as partições e primeiro boot com disco único. Sem indicação de marca de software e sem promessa de ganho numérico. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 52 impressões, 0 cliques e posição média ~7,92 entre 2026-04-01 e 2026-09-27. O conteúdo passa a separar clonar, reinstalar e primeiro preservar dados; corrige a simplificação de SSD menor, trata partições de boot e BitLocker, valida o primeiro boot antes de apagar a origem e adiciona critérios de parada para HD instável. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada. BitLocker e BCDBoot são ancorados em documentação oficial Microsoft.",
   },
   "como-instalar-segundo-ssd-notebook": {
     slug: "como-instalar-segundo-ssd-notebook",
-    sources: [],
+    sources: [
+      "ms-initialize-new-disks",
+      "nvme-official-faq",
+      "kingston-ssd-faq",
+      "ms-bitlocker-backup-key",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 5E): verificação de slot M.2 livre, comprimento e chaveamento antes da compra; limites reais do caddy no lugar do leitor óptico; desconexão da bateria interna; inicialização do disco após a montagem. Sem marca e sem promessa de ganho de desempenho. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 7 impressões, 0 cliques e posição média ~8,43 entre 2026-04-01 e 2026-09-27. A versão suplementar substitui editorialmente a versão monolítica antiga, preservando a mesma URL. O artigo separa formato M.2 de protocolo SATA/NVMe, exige confirmação do segundo slot no modelo exato, orienta montagem reversível, diferencia disco de dados de migração do Windows, explica inicialização segura no Gerenciamento de Disco e adiciona critérios de parada. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada. Compatibilidade M.2/NVMe, inicialização de disco e BitLocker são ancorados em fontes oficiais/primárias.",
   },
+
   "ransomware-como-proteger-empresa": {
     slug: "ransomware-como-proteger-empresa",
     sources: [],
@@ -1379,103 +2164,133 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-conectar-wifi-tv-nao-conecta": {
     slug: "como-conectar-wifi-tv-nao-conecta",
-    sources: [],
+    sources: ["fcc-home-network-tips"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 5G): teste comparativo com celular no mesmo ponto, limitação de 2,4 GHz em TVs, isolamento de clientes/rede de visitantes, congestionamento de canal em prédio e critério para suspeitar do módulo Wi-Fi do aparelho. Sem estatística inventada e sem promessa de reparo. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 257 impressões, 0 cliques e posição média ~9,22 na janela assentada até 2026-09-27. O texto deixa de tratar banda, cabo ou reset como respostas automáticas; separa descoberta, autenticação, acesso à internet, quedas e descoberta local. Comparação no mesmo ponto e influência da rede doméstica são ancoradas na orientação oficial da FCC. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
   "como-testar-fonte-de-alimentacao-pc": {
     slug: "como-testar-fonte-de-alimentacao-pc",
-    sources: [],
+    sources: ["intel-atx3-dc-regulation", "intel-atx3-short-circuit-protection"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 5H): modos de falha da fonte (não liga, tensão fora de faixa, queda sob carga, ruído), segurança com capacitores carregados, limite do teste de acionamento, medição em repouso × sob carga e substituição controlada como cruzamento. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: remove o teste energizado como checklist doméstico, separa sintoma de diagnóstico, explica os limites do acionamento e da leitura em repouso, prioriza substituição controlada e critérios de parada e ancora regulação/proteção em documentação oficial do guia ATX da Intel.",
   },
   "como-diagnosticar-placa-mae-defeituosa": {
     slug: "como-diagnosticar-placa-mae-defeituosa",
-    sources: [],
+    sources: [
+      "intel-atx3-dc-regulation",
+      "intel-atx3-short-circuit-protection",
+      "memtest86plus-readme",
+      "memtest86plus-official",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 5H): inspeção visual, montagem mínima, isolamento de módulo × slot, descarte prévio da fonte, leitura de códigos de estágio pelo manual do modelo e critério econômico entre reparo eletrônico e substituição de plataforma. Sem tabela genérica de bips e sem promessa de reparo. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 58 impressões, 0 cliques e posição média ~9,88 entre 2026-04-01 e 2026-09-27. O artigo agora trata placa-mãe como diagnóstico por exclusão documentada, separa alimentação, POST, memória, vídeo, firmware e falhas parciais, explicita os limites de configuração mínima, LEDs/códigos e testes de memória e inclui critérios claros de parada. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada. Regulação/proteção da fonte é ancorada no guia ATX da Intel e os limites diagnósticos dos testes de memória na documentação oficial do Memtest86+.",
   },
+
   "windows-11-lento-como-resolver": {
     slug: "windows-11-lento-como-resolver",
-    sources: [],
+    sources: ["ms-pc-performance", "ms-startup-apps"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 5I): classificação da lentidão por sintoma, leitura de saturação de disco/memória/CPU, limite de hardware (armazenamento mecânico e pouca RAM), throttling térmico, ajustes de software com efeito real e critério para reinstalação com backup verificado. Sem marca comercial e sem promessa de ganho percentual. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: remove limiares arbitrários de RAM e disco, separa saturação observada de causa diagnosticada, trata temperatura como hipótese verificável, elimina alegações internas de bancada e inclui critérios de parada. Diagnóstico de desempenho e aplicativos de inicialização ancorados em documentação oficial Microsoft.",
   },
   "como-remover-virus-windows-iniciantes": {
     slug: "como-remover-virus-windows-iniciantes",
-    sources: [],
+    sources: ["ms-windows-security-overview", "cisa-stop-ransomware", "cisa-upskill-checklist"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-12",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Onda 5I): distinção entre adware/sequestro de navegador e malware, contenção antes da limpeza, ordem de remoção em camadas, causas de reinfecção (persistência, sincronização de perfil, origem ativa), proibição de pagamento de resgate e critério de reinstalação. Sem indicação de marca de ferramenta. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada por sinal real de página no GSC: 2 impressões, 0 cliques e posição média 28 entre 2026-04-01 e 2026-09-28. Nenhuma query individual foi exposta e nenhuma foi inventada. A versão suplementar aprofunda contenção, Windows Security/Defender, revisão de extensões e inicialização, credenciais, backup seletivo, ransomware, reinfecção e critérios de reinstalação. Fontes oficiais Microsoft e CISA ficam visíveis.",
   },
   "como-formatar-pc-sem-perder-arquivos": {
     slug: "como-formatar-pc-sem-perder-arquivos",
-    sources: [],
+    sources: [
+      "ms-recovery-options-windows",
+      "ms-bitlocker-backup-key",
+      "ms-win11-installation-media",
+      "ms-win11-activation",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-14",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 8E): critério de quando reinstalar resolve e quando não resolve, backup verificado (abrir o arquivo no destino) como pré-requisito, chave de criptografia antes de qualquer formatação, diferença entre redefinir, reinstalar por cima e instalação limpa, vínculo de licença e ordem de drivers. Sem promessa de prazo, sem marca comercial e sem passo comercial disfarçado de tutorial. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 109 impressões, 1 clique e posição média ~9,53 entre 2026-04-01 e 2026-09-27. A versão suplementar substitui editorialmente o texto monolítico antigo e esclarece que formatar/apagar uma partição não preserva os dados nela: preservação depende de backup verificado ou de opções específicas de recuperação. Separa Redefinir este PC > Manter meus arquivos, reparo/reinstalação e instalação limpa; reforça BitLocker, ativação, mídia oficial, identificação do disco e parada diante de falha física. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
+
   "quanto-custa-formatar-um-computador": {
     slug: "quanto-custa-formatar-um-computador",
-    sources: [],
+    sources: [
+      "ms-win11-installation-media",
+      "ms-win11-activation",
+      "ms-bitlocker-recovery",
+      "ms-onedrive-folder-backup",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-14",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 8E): todos os valores citados vêm da fonte única src/lib/precosConfig.ts (visita avulsa a partir de R$ 99,99 a cada 30 minutos, pacote de 2 horas R$ 279,99 e mínimo pré-aprovado de R$ 299,99 com coleta e entrega). Peças e licenças declaradas como não inclusas. Nenhum valor estimado, nenhuma média de mercado inventada e nenhuma comparação com concorrente.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 1 impressão, 0 cliques e posição média 11 entre 2026-04-01 e 2026-09-27. A nova owner suplementar preserva a fonte única de preços em src/lib/precosConfig.ts e importa MODALIDADES diretamente, sem duplicar valores em conteúdo. Diferencia mão de obra, backup, BitLocker, licença, peças e instalação por mídia oficial; remove comparação com média de mercado e trata formatação como decisão de escopo, não solução universal. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
   "computador-entra-direto-na-bios": {
     slug: "computador-entra-direto-na-bios",
-    sources: [],
+    sources: [
+      "ms-boot-uefi-legacy-2026",
+      "ms-bcdboot",
+      "ms-bitlocker-backup-key",
+      "ms-secure-boot-windows11-2026",
+      "nvme-official-faq",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-25",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 9C): papel do POST, ordem de verificação entre detecção do disco, modo de boot (UEFI/CSM), bateria CMOS e Fast Boot; comportamento de slots M.2 compartilhados com portas SATA; critério de parada quando há suspeita de falha física. Sem marca comercial, sem preço e sem promessa de resultado. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 12 impressões, 0 cliques e posição média ~13,08 entre 2026-04-01 e 2026-09-27. A versão suplementar substitui editorialmente o texto monolítico antigo, preservando a mesma URL. Remove absolutos como 'entrou na BIOS = não encontrou sistema', lista fechada de quatro causas, regras universais de GPT/MBR, Secure Boot/Fast Boot e vida útil de CMOS; reorganiza a investigação em detecção física do disco, entrada de boot, UEFI/Legacy, estrutura do carregador, retenção de configuração e preservação de dados. A única query individual exposta foi 'como entrar na bios com o pc ligado', tratada em seção própria via Inicialização Avançada sem desviar a intenção principal. Fontes Microsoft/NVM Express sustentam firmware, BCDBoot, BitLocker, Secure Boot e M.2/NVMe.",
   },
+
   "erro-no-bootable-device-como-resolver": {
     slug: "erro-no-bootable-device-como-resolver",
-    sources: ["ms-bcdboot", "ms-bitlocker-recovery"],
+    sources: [
+      "ms-bcdboot",
+      "ms-bitlocker-recovery",
+      "ms-bitlocker-backup-key",
+      "ms-windows-recovery-environment",
+      "ms-recovery-options-windows",
+      "ms-boot-uefi-legacy-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-02",
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão material em 2026-09-02: removeu conclusões absolutas sobre saúde do disco e integridade da EFI, inseriu a verificação do BitLocker antes do prompt, explicou o limite de /scanos e retirou o bloco copiável de criação/formatação de partição EFI. BCDBoot e recuperação do BitLocker sustentados por fontes oficiais Microsoft visíveis.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 5 impressões, 0 cliques e posição média ~38,8 entre 2026-04-01 e 2026-09-28. Queries reais expostas: 'no boot device found', 'no bootable device como resolver', 'no bootable device found' e 'no bootable device please restart'. A versão suplementar organiza o diagnóstico em detecção física do disco, Windows Boot Manager, UEFI/Legacy, WinRE e BCDBoot, reforça BitLocker antes de alterações e evita formatar/recriar EFI por tentativa. Fontes Microsoft visíveis; nenhuma query inventada.",
   },
   "troquei-o-ssd-e-o-pc-so-abre-a-bios": {
     slug: "troquei-o-ssd-e-o-pc-so-abre-a-bios",
-    sources: [],
+    sources: [
+      "nvme-official-faq",
+      "ms-initialize-new-disks",
+      "ms-boot-uefi-legacy-2026",
+      "ms-bcdboot",
+      "ms-bitlocker-backup-key",
+      "ms-win11-installation-media",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-25",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 9C): disco novo sem tabela de partições, compatibilidade de chave/slot M.2 (SATA × NVMe), conflito de linhas PCIe e portas SATA, controlador em AHCI, instalação com apenas o disco novo conectado e critério entre instalar do zero e clonar. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 89 impressões, 1 clique e posição média ~9,20 entre 2026-04-01 e 2026-09-27. A versão suplementar substitui editorialmente o texto monolítico antigo e reorganiza o diagnóstico em detecção física do SSD, tipo de cenário (novo/clonado/reaproveitado/segundo disco), Windows Boot Manager, UEFI/Legacy, controlador e estrutura de boot. Remove a ideia de que SSD novo precisa ser preparado manualmente antes da instalação, evita toggles de AHCI/RAID/VMD/CSM por tentativa, reforça BitLocker e preservação do disco antigo e usa fontes oficiais NVM Express/Microsoft visíveis. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
+
   "limpar-arquivos-temporarios-windows": {
     slug: "limpar-arquivos-temporarios-windows",
     sources: [],
@@ -1488,62 +2303,80 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "memoria-ram-insuficiente-sintomas": {
     slug: "memoria-ram-insuficiente-sintomas",
-    sources: [],
+    sources: [
+      "ms-memory-manager-performance-2026",
+      "ms-page-file-introduction-2026",
+      "ms-computer-memory-overview-2026",
+      "memtest86plus-official",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-25",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 10C): leitura correta dos campos Em uso, Confirmado e Em cache no Gerenciador de Tarefas, distinção entre falta de memória e gargalo de disco, critérios de compatibilidade (tipo, formato, slots, limite da placa, memória soldada) e ganho de dual channel. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 4 impressões, 0 cliques e posição média ~24 entre 2026-04-01 e 2026-09-27. A única query individual exposta foi 'memoria insuficiente' (2 impressões, posição média 40,5); nenhuma variação foi inventada. A versão suplementar separa uso alto, cache, memória disponível, commit/pagefile, vazamento de processo, paginação, gargalo de disco e defeito físico; remove regras universais de quantidade de RAM e exige compatibilidade antes de upgrade. Fontes Microsoft e Memtest86+ ficam visíveis.",
   },
   "codigos-de-erro-tela-azul-windows": {
     slug: "codigos-de-erro-tela-azul-windows",
-    sources: [],
+    sources: [
+      "ms-bug-check-code-reference",
+      "ms-blue-screen-data",
+      "ms-small-memory-dump",
+      "ms-whea-hardware-errors",
+      "memtest86plus-readme",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-25",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 10C): significado das categorias MEMORY_MANAGEMENT, IRQL_NOT_LESS_OR_EQUAL, PAGE_FAULT_IN_NONPAGED_AREA, CRITICAL_PROCESS_DIED, DPC_WATCHDOG_VIOLATION, SYSTEM_SERVICE_EXCEPTION, INACCESSIBLE_BOOT_DEVICE e WHEA_UNCORRECTABLE_ERROR; localização dos registros em Visualizador de Eventos e minidumps. Sem promessa de resultado. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 6 impressões, 0 cliques e posição média ~7,17 entre 2026-04-01 e 2026-09-27. A versão suplementar substitui editorialmente o texto monolítico antigo e remove inferências determinísticas como stop code = peça, arquivo .sys = culpado e códigos variáveis = RAM/fonte/temperatura. Passa a usar stop code, parâmetros, contexto, dumps e recorrência como evidências complementares; WHEA é tratado como arquitetura de erro de hardware, não diagnóstico de uma peça específica. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada. Fontes Microsoft visíveis sustentam bug checks, parâmetros, minidumps e WHEA.",
   },
+
   "testar-memoria-ram-memtest86": {
     slug: "testar-memoria-ram-memtest86",
     sources: ["memtest86plus-readme", "memtest86plus-official"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-13",
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão aprofundada em 2026-09-13: separação entre detecção de erro e identificação da peça, linha de base sem XMP/EXPO, isolamento controlado entre módulo e slot, limites de um resultado sem erros e fontes oficiais visíveis do Memtest86+.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 3 impressões, 0 cliques e posição média ~23,67 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'teste de memoria ram' (1 impressão, posição 57). A versão suplementar aprofunda execução e interpretação do Memtest86+, reforça linha de base sem XMP/EXPO, isolamento cruzado módulo/slot, diferença entre detectar instabilidade e identificar a peça, limites de um teste sem erros e distinção entre RAM insuficiente e RAM defeituosa. Fontes oficiais Memtest86+ mantidas visíveis; nenhuma query adicional foi inventada.",
   },
   "botao-power-nao-funciona-jump-start-placa-mae": {
     slug: "botao-power-nao-funciona-jump-start-placa-mae",
-    sources: [],
+    sources: [
+      "msi-front-panel-power-test-2026",
+      "msi-jfp1-front-panel-manual",
+      "intel-atx3-dc-regulation",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 10D): função do bloco F_PANEL/JFP1, ausência de polaridade no par PWR_SW, procedimento de encosto momentâneo entre os pinos, uso do par de reset como contorno e limites do teste em notebooks e all-in-one. Alertas de segurança sobre não abrir a fonte e sobre garantia. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 8 impressões, 0 cliques e posição média ~10,88 entre 2026-04-01 e 2026-09-27. A versão suplementar substitui editorialmente o texto monolítico antigo, preservando a mesma URL. O acionamento direto do PWR_SW passa a ser tratado como teste de isolamento de botão/cabo, não como prova de fonte ou placa saudáveis; o pinout depende do manual do modelo, laptops/all-in-one são excluídos do procedimento genérico e foram adicionados critérios de parada. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada. O teste do header e o papel do JFP1 são ancorados em documentação oficial MSI; limites de validação da fonte são coerentes com o guia ATX da Intel.",
   },
+
   "curto-circuito-placa-mae-como-identificar": {
     slug: "curto-circuito-placa-mae-como-identificar",
     sources: [],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
+    factCheckedAt: "2026-09-29",
     stableKnowledge: true,
     notes:
-      "Revisão concluída (Onda 10D): atuação da proteção OCP/SCP da fonte no padrão de partida abortada, teste de bancada mínima fora do gabinete, isolamento incremental de periféricos, espaçadores metálicos como causa frequente e inviabilidade econômica do reparo em nível de componente. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29: o desligamento imediato passa a ser tratado como sintoma, não prova de curto; o roteiro separa fonte, cabeamento, montagem, periféricos e placa por comparação controlada, inclui segurança de cabos modulares, limites do teste de continuidade, critérios de parada e remove generalizações de frequência e custo. Conhecimento técnico estável — sem fonte visível.",
   },
   "bios-corrompida-reset-cmos-atualizacao": {
     slug: "bios-corrompida-reset-cmos-atualizacao",
-    sources: [],
+    sources: [
+      "dell-bios-recovery-2026",
+      "hp-bios-recovery-2026",
+      "ms-bitlocker-backup-key",
+      "ms-bitlocker-recovery",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 10D): distinção entre memória CMOS e firmware gravado em chip, vida útil típica da bateria CR2032, procedimento por jumper CLR_CMOS e por remoção de bateria, recursos de recuperação por USB e chip duplo e risco de chave de recuperação em disco criptografado. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 11 impressões, 0 cliques e posição média 27 entre 2026-04-01 e 2026-09-27. As únicas queries individuais expostas foram 'bios corrompida' (3 impressões) e 'reparar bios' (2); o restante ficou suprimido pelo GSC e nenhuma query foi inventada. A versão suplementar separa configuração/CMOS, atualização e recuperação de firmware; trata ausência de POST como sintoma, exige procedimento do fabricante/modelo e alimentação estável, e reforça a chave BitLocker antes de alterações de firmware. Fontes oficiais Dell, HP e Microsoft ficam visíveis.",
   },
   // ── Onda 10C — Lote 2 (internet/Wi-Fi e impressoras).
   "internet-lenta-provedor-ou-roteador": {
@@ -1561,34 +2394,46 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "impressora-offline-como-resolver": {
     slug: "impressora-offline-como-resolver",
-    sources: [],
+    sources: [
+      "ms-printer-connection-printing-2026",
+      "ms-print-job-stuck-queue-2026",
+      "ms-print-spooler-service-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Onda 10C, Lote 2): significado real do status offline, empréstimo de endereço com prazo, conferência entre página de configuração do aparelho e porta cadastrada, reserva no roteador, isolamento de clientes/rede de visitantes e distinção frente a falha mecânica. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 5 impressões, 0 cliques e posição média ~47,8 entre 2026-04-01 e 2026-09-28. Queries reais expostas: 'como tirar impressora do offline' e 'porque a impressora fica offline'. A versão suplementar separa energia/USB/rede de fila/spooler, compara IP real com porta cadastrada, trata DHCP/reserva, isolamento de clientes, filas duplicadas, driver e impressora padrão sem canibalizar o guia específico de spooler. Fontes Microsoft visíveis; nenhuma query inventada.",
   },
   "fila-de-impressao-travada-spooler-windows": {
     slug: "fila-de-impressao-travada-spooler-windows",
-    sources: [],
+    sources: [
+      "ms-print-spooler-service-2026",
+      "ms-print-job-stuck-queue-2026",
+      "ms-printer-connection-printing-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 10C, Lote 2): papel do serviço de spooler, causa dos trabalhos corrompidos, procedimento de parada do serviço e limpeza da pasta de trabalhos, ressalva de ambiente gerenciado e critério para suspeitar do driver. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 9 impressões, 0 cliques e posição média ~45,56 entre 2026-04-01 e 2026-09-27. Queries reais incluem 'enviando dados para o spool', 'reiniciar spooler de impressão', 'reiniciar spooler de impressão cmd', 'spooler de impressão não inicia' e 'spooler de impressão parando sozinho'. A versão suplementar separa trabalho preso, serviço parado, falha recorrente de driver/componente, status offline e conectividade; limita a limpeza manual à pasta PRINTERS com o serviço parado e não recomenda DLL/driver de terceiros. Fontes Microsoft visíveis.",
   },
   "hd-nao-e-reconhecido-na-bios-o-que-fazer": {
     slug: "hd-nao-e-reconhecido-na-bios-o-que-fazer",
-    sources: [],
+    sources: [
+      "seagate-bios-sata-not-detected-2026",
+      "seagate-bios-ssd-not-detected-2026",
+      "ms-initialize-new-disks",
+      "nvme-official-faq",
+      "seagate-noisy-drive-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 10C, Lote 3): separação entre alimentação, enlace de dados e defeito da mídia; reassentamento, troca de cabo e porta, compartilhamento de faixas entre M.2 e SATA e ressalva explícita de não escrever em disco com ruído ou dados sem cópia. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 68 impressões, 0 cliques e posição média ~25,94 entre 2026-04-01 e 2026-09-27. Queries reais incluem 'computador nao reconhece hd' (17 impressões), 'pc não reconhece hd' (14), 'ssd nao reconhecido', 'bios não reconhece ssd' e variações. A versão suplementar substitui editorialmente o texto monolítico antigo, separa BIOS/UEFI de Windows, SATA de M.2/NVMe, detecção de boot de estado do volume e reforça preservação de dados antes de inicialização/formatação. Fontes Seagate, Microsoft e NVM Express ficam visíveis.",
   },
+
   "ssd-nvme-nao-aparece-no-gerenciador-de-discos": {
     slug: "ssd-nvme-nao-aparece-no-gerenciador-de-discos",
     sources: [],
@@ -1611,33 +2456,43 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "computador-sem-som-o-que-verificar": {
     slug: "computador-sem-som-o-que-verificar",
-    sources: [],
+    sources: [
+      "ms-audio-services-windows-2026",
+      "ms-audio-output-undetected-2026",
+      "ms-audio-headphones-no-sound-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 10C, Lote 3): ordem de verificação de saída padrão, mixer por aplicativo, conector físico, serviço de áudio e driver; distinção entre falha de software e hardware. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 4 impressões, 0 cliques e posição média 49 entre 2026-04-01 e 2026-09-28. As queries expostas foram 'sem som' (3 impressões) e 'testar som pc' (1). A versão suplementar organiza diagnóstico por saída, mixer, detecção, conexão física, driver e serviço; separa P2/USB/Bluetooth/HDMI e interliga os guias específicos de fone e Windows Audio. Fontes Microsoft visíveis.",
   },
   "fone-de-ouvido-nao-e-reconhecido-no-pc": {
     slug: "fone-de-ouvido-nao-e-reconhecido-no-pc",
-    sources: [],
+    sources: [
+      "ms-audio-output-undetected-2026",
+      "ms-audio-headphones-no-sound-2026",
+      "ms-microphone-problems-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 10C, Lote 3): detecção de conector, cabo interno do painel frontal, diferença entre plugue combinado e entradas separadas, perfis Bluetooth estéreo e de comunicação e permissões de microfone. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 40 impressões, 0 cliques e posição média ~25,08 entre 2026-04-01 e 2026-09-27. Queries reais incluem 'fone de ouvido não funciona no notebook', 'meu fone de ouvido não funciona no pc', 'pc não reconhece fone', 'entrada frontal fone de ouvido não funciona' e 'como saber se a entrada p2 esta funcionando'. A versão suplementar substitui editorialmente o texto monolítico antigo, separando P2, USB e Bluetooth, ausência de detecção de ausência de som, painel frontal de driver e áudio de microfone/permissões. Fontes Microsoft ficam visíveis.",
   },
+
   "servico-de-audio-do-windows-nao-esta-em-execucao": {
     slug: "servico-de-audio-do-windows-nao-esta-em-execucao",
-    sources: [],
+    sources: [
+      "ms-audio-services-windows-2026",
+      "ms-audio-output-undetected-2026",
+      "ms-audio-headphones-no-sound-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 10C, Lote 3): cadeia Windows Audio e Construtor de Ponto de Extremidade, ordem de reinício, dependências de RPC e agendador multimídia, ressalva de máquina gerenciada por política e critério para reinstalar driver oficial. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 5 impressões, 0 cliques e posição média ~22,4 entre 2026-04-01 e 2026-09-27. As únicas queries individuais expostas foram 'audio.exe', 'o windows não pode encontrar audio.exe' e 'windows não pode encontrar audio.exe'. A versão suplementar separa serviço Windows Audio parado de dispositivo/driver ausente, dispositivo detectado sem reprodução e referência quebrada a um executável chamado audio.exe; não recomenda baixar EXE ou DLL avulso. Fontes oficiais Microsoft ficam visíveis e sustentam serviços, detecção e reprodução.",
   },
   "webcam-nao-funciona-o-que-verificar": {
     slug: "webcam-nao-funciona-o-que-verificar",
@@ -1651,73 +2506,91 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "permissoes-de-camera-no-windows": {
     slug: "permissoes-de-camera-no-windows",
-    sources: [],
+    sources: [
+      "ms-camera-privacy-windows-2026",
+      "ms-camera-troubleshooting-windows",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 10C, Lote 4): quatro camadas independentes de permissão (dispositivo, aplicativos, aplicativo individual e aplicativos de área de trabalho), permissão por site no navegador, impacto de privacidade explicado e ressalva de máquina gerenciada por política. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 4 impressões, 0 cliques e posição média ~8,75 entre 2026-04-01 e 2026-09-27. A versão suplementar substitui editorialmente o texto monolítico antigo, preservando a mesma URL. A investigação passa a separar acesso do dispositivo, apps da Microsoft Store, apps de desktop, permissão do navegador/site e seleção da câmera no app. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada. Fontes Microsoft visíveis sustentam a hierarquia de permissões, exceções de apps desktop, política administrativa e retorno para detecção/driver quando a câmera também falha no app Câmera.",
   },
+
   "webcam-usb-nao-e-detectada": {
     slug: "webcam-usb-nao-e-detectada",
-    sources: [],
+    sources: ["ms-camera-troubleshooting-windows"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 10C, Lote 4): eliminação por porta/hub/cabo, consumo e banda em USB 2 e 3, leitura do Gerenciador de Dispositivos, teste cruzado em outro computador e recusa explícita de agregadores de driver. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: separa ausência de enumeração de falha de captura/permissão, elimina conclusões determinísticas sobre porta, hub e USB 2/3, adiciona teste cruzado, critérios de parada e uso condicional do driver UVC. Fonte oficial Microsoft visível.",
   },
   "windows-update-nao-funciona-o-que-verificar": {
     slug: "windows-update-nao-funciona-o-que-verificar",
-    sources: [],
+    sources: [
+      "ms-windows-update-troubleshoot",
+      "ms-windows-update-cache-2026",
+      "ms-windows-recovery-environment",
+      "ms-recovery-options-windows",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Onda 10C, Lote 4): estágios de verificação, download, preparação, instalação e reversão; triagem antes de comandos; diferença entre verificação de arquivos do sistema e reparo da imagem de componentes; proibição de desabilitar serviços do Update. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada por sinal real de página no GSC: 2 impressões, 0 cliques e posição média 51,5 entre 2026-04-01 e 2026-09-28. A query individual exposta ('estagio da correção c') foi tratada como ruidosa e não virou pauta. A versão suplementar organiza a falha por estágios, prioriza código/KB, espaço, rede, solucionador oficial, cache apenas quando pertinente e Windows RE quando o sistema não inicia; sem desativação permanente de serviços ou formatação por tentativa.",
   },
   "limpar-cache-do-windows-update-softwaredistribution": {
     slug: "limpar-cache-do-windows-update-softwaredistribution",
-    sources: [],
+    sources: [
+      "ms-windows-update-cache-2026",
+      "ms-windows-update-troubleshoot",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Onda 10C, Lote 4): função da pasta, procedimento reversível por renomeação, custo real (histórico e novo download), casos em que o tratamento não ajuda e recusa de scripts de reset de terceiros. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 6 impressões, 0 cliques e posição média ~54,33 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'software distribution' (1 impressão, posição 46). A versão suplementar explica função e limites da pasta, prioriza solucionador/triagem antes do reset, prefere renomeação reversível em vez de exclusão, separa cache de DISM/SFC/driver/espaço e recusa scripts genéricos de reset. Fontes Microsoft visíveis; nenhuma query adicional foi inventada.",
   },
   "windows-update-travado-desfazendo-alteracoes": {
     slug: "windows-update-travado-desfazendo-alteracoes",
-    sources: [],
+    sources: [
+      "ms-windows-update-troubleshoot",
+      "ms-windows-recovery-environment",
+      "ms-recovery-options-windows",
+      "ms-bitlocker-recovery",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-26",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-30",
     notes:
-      "Revisão concluída (Onda 10C, Lote 4): distinção entre interface parada e processo parado, reversão como mecanismo de proteção, causas comuns, códigos de erro sem causa única e critério de parada com criptografia de disco. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 8 impressões, 0 cliques e posição média 12 entre 2026-04-01 e 2026-09-27. A query exposta 'desfazendo alterações feitas no computador' foi incorporada diretamente ao título/resposta. A versão suplementar substitui editorialmente o texto monolítico antigo, removendo tempo/LED/ventoinha como critérios determinísticos, priorizando backup, histórico/KB/código, solucionador oficial do Windows Update, hardware externo não essencial e, quando o Windows não inicia, Windows RE/Desinstalar Atualizações com chave BitLocker. Limpeza de cache deixa de ser primeira reação e formatação fica como opção posterior, não automática.",
   },
+
   "boot-uefi-ou-legacy-como-identificar": {
     slug: "boot-uefi-ou-legacy-como-identificar",
-    sources: [],
+    sources: [
+      "ms-msinfo32-2026",
+      "ms-boot-uefi-legacy-2026",
+      "ms-mbr2gpt-2026",
+      "ms-secure-boot-windows11-2026",
+      "ms-bitlocker-backup-key",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-31",
-    stableKnowledge: true,
+    factCheckedAt: "2026-09-29",
     notes:
-      "Revisão concluída (Onda 11A, Lote 4): identificação do modo de inicialização por msinfo32, diskpart e Gerenciamento de Disco; relação entre GPT/UEFI e MBR/Legacy; ressalva de que trocar o modo sem converter a partição impede o boot. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 49 impressões, 0 cliques e posição média ~9,49 entre 2026-04-01 e 2026-09-27. O conteúdo responde diretamente a boot mode UEFI/Legacy, separa firmware, CSM, GPT/MBR e Secure Boot, explica os riscos de alternar o modo após a instalação e trata MBR2GPT e BitLocker com critérios de parada. Queries expostas incluem variações de 'boot mode uefi ou legacy'; nenhuma consulta além das retornadas pelo GSC foi inventada. Fontes Microsoft visíveis sustentam identificação, boot mode, conversão e segurança.",
   },
+
   "ordem-de-boot-na-bios-como-configurar": {
     slug: "ordem-de-boot-na-bios-como-configurar",
-    sources: [],
+    sources: ["ms-boot-uefi-legacy-2026", "ms-secure-boot-windows11-2026", "ms-bitlocker-recovery"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-08-31",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Onda 11A, Lote 4): diferença entre menu temporário de boot e alteração permanente da prioridade, efeito de Secure Boot e CSM, e recomendação explícita de anotar a configuração original antes de alterar. Sem marca comercial e sem promessa. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada por sinal real de página no GSC: 1 impressão, 0 cliques e posição média 5 entre 2026-04-01 e 2026-09-28. Nenhuma query individual foi exposta e nenhuma foi inventada. A versão suplementar diferencia menu de boot temporário de prioridade permanente, explica Windows Boot Manager, UEFI/Legacy, Secure Boot, BitLocker, validação de mídia e critérios de parada. Fontes oficiais Microsoft ficam visíveis.",
   },
   "windows-reparo-automatico-em-loop": {
     slug: "windows-reparo-automatico-em-loop",
@@ -1745,13 +2618,16 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "dispositivo-usb-nao-reconhecido-o-que-fazer": {
     slug: "dispositivo-usb-nao-reconhecido-o-que-fazer",
-    sources: [],
+    sources: [
+      "ms-usb-not-recognized-2026",
+      "ms-device-manager-error-codes-2026",
+      "ms-usb-enumeration-unknown-device-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-03",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Onda 11C): sequência de isolamento porta/cabo/dispositivo/alimentação, explicação da enumeração USB, alerta contra desinstalar controladores em série e parada obrigatória em disco externo com dados sem cópia. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média ~44,5 entre 2026-04-01 e 2026-09-28. Queries reais expostas: 'dispositivo usb não reconhecido' e 'usb não reconhecido'. A versão suplementar aprofunda isolamento por porta/cabo/dispositivo/alimentação, enumeração USB, códigos do Gerenciador de Dispositivos, limites de reinstalação de driver e proteção de dados em armazenamento externo. Fontes Microsoft visíveis; nenhuma query inventada.",
   },
   "como-testar-restauracao-de-backup": {
     slug: "como-testar-restauracao-de-backup",
@@ -1774,23 +2650,30 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "pendrive-somente-leitura-protegido-contra-gravacao": {
     slug: "pendrive-somente-leitura-protegido-contra-gravacao",
-    sources: [],
+    sources: [
+      "ms-diskpart-attributes-disk-2026",
+      "ms-diskpart-attributes-volume-2026",
+      "ms-chkdsk-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-03",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Onda 11D): quatro origens do estado somente leitura, sequência de isolamento com cópia dos dados antes de qualquer correção, limite real da formatação e parada obrigatória diante de sinais de falha de controlador. Sem indicar utilitário de terceiros. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média ~24,5 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'usb protegido contra gravação' (1 impressão, posição 34). A versão suplementar separa trava física, atributo readonly de disco/volume, política, corrupção lógica e possível falha de controlador; prioriza cópia dos dados, usa DiskPart apenas no alvo identificado e limita CHKDSK ao sistema de arquivos. Fontes Microsoft visíveis; nenhuma query adicional foi inventada.",
   },
   "historico-de-arquivos-windows-como-configurar": {
     slug: "historico-de-arquivos-windows-como-configurar",
-    sources: [],
+    sources: [
+      "ms-file-history",
+      "ms-onedrive-folder-backup",
+      "cisa-backup",
+      "nist-sp-800-34",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-03",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Onda 11D): escopo real do versionamento nativo (pastas de usuário, não sistema), destino em disco físico separado, dimensionamento e retenção, diferença entre versionar e sincronizar e teste de restauração como etapa final. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição 10 entre 2026-04-01 e 2026-09-28. O GSC não expôs queries individuais para a URL e nenhuma consulta foi inventada. A versão suplementar aprofunda configuração, destino separado, escopo, capacidade, retenção, restauração de teste, diferença entre Histórico de Arquivos e sincronização, papel complementar do OneDrive e limites do recurso como única estratégia de backup. Fontes Microsoft, CISA e NIST ficam visíveis.",
   },
   "monitor-sem-sinal-o-que-verificar": {
     slug: "monitor-sem-sinal-o-que-verificar",
@@ -1873,13 +2756,17 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "arquivo-corrompido-nao-abre-o-que-fazer": {
     slug: "arquivo-corrompido-nao-abre-o-que-fazer",
-    sources: [],
+    sources: [
+      "ms-file-history",
+      "ms-windows-file-recovery",
+      "ms-onedrive-folder-backup",
+      "ms-chkdsk-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-03",
-    stableKnowledge: true,
+    factCheckedAt: "2026-10-01",
     notes:
-      "Revisão concluída (Onda 11G): trabalho sempre sobre cópia, distinção entre arquivo corrompido e programa incompatível, leitura de sinais de mídia em falha, recuperação por versões anteriores e limite claro para tentativa em disco com defeito. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição 38 entre 2026-04-01 e 2026-09-28 para a query real 'arquivo corrompido'. A versão suplementar preserva o original, diferencia corrupção de incompatibilidade/download incompleto, prioriza versões anteriores/backup, limita CHKDSK ao sistema de arquivos, separa recuperação de arquivo apagado de reparo de documento e define quando vários arquivos falhando indicam problema de armazenamento. Fontes Microsoft visíveis; nenhuma query adicional foi inventada.",
   },
   "como-configurar-2fa-em-tudo": {
     slug: "como-configurar-2fa-em-tudo",
@@ -1910,12 +2797,18 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-configurar-active-directory": {
     slug: "como-configurar-active-directory",
-    sources: ["ms-ad-ds-overview", "ms-ad-ds-dns", "ms-ad-ds-security"],
+    sources: [
+      "ms-ad-ds-overview",
+      "ms-ad-ds-dns",
+      "ms-ad-ds-security",
+      "ms-ad-ds-install-2026",
+      "ms-ad-ds-system-state-backup-2026",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-25",
+    factCheckedAt: "2026-10-01",
     notes:
-      "Reescrita material completa em 2026-09-25 com documentação Microsoft atual para Windows Server: AD DS, dependência de DNS, segurança, redundância, GPO, backup e critérios de parada.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição 44 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'servidor ad'. A versão suplementar organiza a implantação por arquitetura: nova floresta versus DC adicional, namespace/DNS, IP estável, promoção, DSRM, validação de SYSVOL/NETLOGON, OUs/GPOs, redundância/replicação, horário, contas privilegiadas e backup de estado do sistema. Fontes Microsoft Learn atuais para Windows Server ficam visíveis; nenhuma query adicional foi inventada.",
   },
 
   "como-configurar-repetidor-wifi": {
@@ -1938,12 +2831,20 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "erros-comuns-upgrade-computador": {
     slug: "erros-comuns-upgrade-computador",
-    sources: ["kingston-memory-support", "kingston-ssd-faq", "nvme-official-faq", "ms-win11-requirements", "ms-bitlocker-backup-key"],
+    sources: [
+      "kingston-memory-support",
+      "kingston-ssd-faq",
+      "nvme-official-faq",
+      "nvme-base-specification-overview",
+      "ms-win11-requirements",
+      "ms-bitlocker-backup-key",
+      "intel-atx3-dc-regulation",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-25",
+    factCheckedAt: "2026-10-01",
     notes:
-      "Reescrita completa em 2026-09-25: corrige erros textuais e a recomendação absoluta de instalação limpa; adiciona compatibilidade real de RAM, M.2/SATA/NVMe, BIOS, GPU/fonte, backup e validação pós-upgrade.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição 3 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'compatibilidade pc'. A versão suplementar transforma a owner em matriz prática de compatibilidade para RAM, SSD M.2/SATA/NVMe, GPU, fonte, CPU, BIOS/UEFI e Windows 11; reforça BitLocker, atualização de firmware por necessidade, validação uma peça por vez e plano de rollback. Fontes Kingston, NVM Express, Microsoft e Intel visíveis; nenhuma query adicional foi inventada.",
   },
   "como-configurar-vpn-empresarial": {
     slug: "como-configurar-vpn-empresarial",
@@ -2002,12 +2903,17 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-fazer-teste-velocidade-internet": {
     slug: "como-fazer-teste-velocidade-internet",
-    sources: ["fcc-home-network-tips", "fcc-speed-test-app-faq"],
+    sources: [
+      "anatel-ferramentas-medicao-2026",
+      "anatel-velocidade-conexao-2026",
+      "fcc-home-network-tips",
+      "fcc-speed-test-app-faq",
+    ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-25",
+    factCheckedAt: "2026-10-01",
     notes:
-      "Reescrita material: remove regra falsa de que Wi-Fi é sempre mais lento e percentuais regulatórios antigos; ensina referência cabeada, repetição de medições, latência, jitter e perda.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição média 5 entre 2026-04-01 e 2026-09-28. A única query exposta foi 'eaq teste velocidade' (1 impressão, posição 5). A versão suplementar esclarece que EAQ é referência histórica e que a Anatel atualmente apresenta as ferramentas da ESAQ/Brasil Banda Larga; aprofunda método comparável, referência cabeada, controle de tráfego, download/upload/latência/jitter/perda, influência de terminal/Wi-Fi/provedor e limites de uma medição isolada. Fontes oficiais Anatel e FCC ficam visíveis; nenhuma query adicional foi inventada.",
   },
 
   "como-resetar-senha-windows": {
@@ -2024,9 +2930,9 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: ["ms-file-explorer-windows", "ms-find-files-windows", "ms-onedrive-folder-backup"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-25",
+    factCheckedAt: "2026-10-01",
     notes:
-      "Onda 11K: reescrita material com estrutura de pastas, nomenclatura, pesquisa, Acesso Rápido, sincronização, backup e critérios de parada diante de falha de disco.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média 59,5 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'como organizar arquivos no computador'. A versão suplementar aprofunda estrutura de pastas, nomenclatura, datas, busca, Acesso Rápido, Downloads, OneDrive, duplicatas, backup e movimentação segura, sem inventar consultas ou transformar sincronização em backup. Fontes Microsoft permanecem visíveis.",
   },
   "como-trocar-senha-wifi": {
     slug: "como-trocar-senha-wifi",
@@ -2040,11 +2946,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
 
   "como-configurar-bios-uefi-corretamente": {
     slug: "como-configurar-bios-uefi-corretamente",
-    sources: ["ms-secure-boot-windows11-2026", "ms-enable-tpm2-2026", "ms-bitlocker-backup-key"],
+    sources: ["ms-boot-uefi-legacy-2026", "ms-secure-boot-windows11-2026", "ms-enable-tpm2-2026", "ms-bitlocker-backup-key"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-25",
-    notes: "Onda 11L: removidos absolutos sobre UEFI/AHCI/XMP e chaves de fabricante; adicionados baseline, BitLocker, Secure Boot, TPM, armazenamento, critérios de parada e decisão por objetivo.",
+    factCheckedAt: "2026-10-01",
+    notes:
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média 58,5 entre 2026-04-01 e 2026-09-28; a query individual exposta foi 'uefi' (1 impressão, posição 112). A versão suplementar aprofunda baseline, UEFI/Legacy, Secure Boot, TPM, BitLocker, armazenamento, perfis de memória, virtualização, firmware, rollback e critérios de parada, sem receita universal ou alteração por tentativa.",
   },
   "como-configurar-servidor-de-arquivos": {
     slug: "como-configurar-servidor-de-arquivos",

@@ -243,8 +243,8 @@ const BASE_ROUTES = [
   },
   {
     "path": "/seguranca-dos-dados",
-    "title": "Segurança dos Dados na Assistência Técnica | Curitiba",
-    "description": "Como arquivos, senhas e acessos são tratados durante a assistência técnica em Curitiba: autorização, acesso mínimo, backup prévio, cópias temporárias.",
+    "title": "Segurança dos dados na assistência técnica: senhas e backup",
+    "description": "Entenda como arquivos, senhas e acessos devem ser tratados na assistência técnica: autorização, acesso mínimo, backup, cópias temporárias e limites reais de segurança.",
     "blocos": [
       {
         "titulo": "Compromisso de acesso mínimo",
