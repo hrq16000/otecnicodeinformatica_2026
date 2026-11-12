@@ -25,6 +25,7 @@ import { BlogPostFAQ } from "@/components/BlogPostFAQ";
 import { EnriquecimentoFase2 } from "@/components/editorial/EnriquecimentoFase2";
 import { AtlasPonteArtigo } from "@/components/editorial/AtlasPonteArtigo";
 import { EditorialCta, EditorialRelatedLinks } from "@/components/editorial/EditorialCta";
+import { EditorialPillarLink } from "@/components/editorial/EditorialPillarLink";
 import {
   isEditorialApproved,
   getEditorialApproval,
@@ -407,6 +408,7 @@ const BlogPost = () => {
                 slug={slug ?? ""}
                 titles={Object.fromEntries(Object.entries(posts).map(([k, v]) => [k, v.title]))}
               />
+              <EditorialPillarLink slug={slug ?? ""} />
               <EditorialCta slug={slug ?? ""} titulo={post.title} />
 
 
