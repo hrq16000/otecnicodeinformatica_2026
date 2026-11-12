@@ -31,6 +31,9 @@ jobs:
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
 
       - name: Install dependencies
         run: bun install --frozen-lockfile
@@ -127,8 +130,8 @@ jobs:
 
 
       # 6) Guard against SEO regressions on the landing shell (title / desc / unique H1).
-      - name: Verify SEO basics on index.html
-        run: bun scripts/check-seo-basics.ts index.html
+      - name: Verify SEO basics on the SSR homepage
+        run: node scripts/with-ssr-server.mjs bun scripts/check-seo-basics.ts --ssr
 
       # 7) Runtime data-exposure gate — proves anon cannot read private surfaces.
       #    Runs on every PR/push and BLOCKS the merge on any regression.
