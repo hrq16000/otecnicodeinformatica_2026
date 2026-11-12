@@ -16,6 +16,7 @@
 import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { EDITORIAL_WAVE } from "./lib/editorial-wave.mjs";
+import { getBlogPosts } from "./prerender-cities.mjs";
 
 const ROOT = process.cwd();
 const read = (p) => (existsSync(join(ROOT, p)) ? readFileSync(join(ROOT, p), "utf8") : "");
@@ -58,20 +59,13 @@ function jaccard(a, b) {
   return inter / (a.size + b.size - inter);
 }
 
-function extrairArtigos(fonte) {
-  const src = read(fonte);
-  const marcas = [...src.matchAll(/^ {2}"([a-z0-9-]+)":\s*\{$/gm)];
-  return marcas.map((m, i) => ({
-    slug: m[1],
-    raw: src.slice(m.index, i + 1 < marcas.length ? marcas[i + 1].index : src.length),
-  }));
+const { posts, duplicates } = await getBlogPosts();
+if (duplicates.length) {
+  console.error(`[check:promocao-index] colisões editoriais inesperadas: ${duplicates.join(", ")}`);
+  process.exit(1);
 }
 
-const artigos = new Map(
-  [...extrairArtigos("src/data/blogPostsContent.tsx"), ...extrairArtigos("src/data/blogProgrammaticPosts.tsx")].map(
-    (a) => [a.slug, a.raw],
-  ),
-);
+const artigos = new Map(posts.map((post) => [post.slug, post.raw]));
 
 const textoVisivel = (raw) =>
   raw.replace(/<[^>]*>/g, " ").replace(/\{[^{}]{0,120}\}/g, " ").replace(/[{}]/g, " ").replace(/\s+/g, " ").trim();

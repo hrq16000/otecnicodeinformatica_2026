@@ -442,6 +442,7 @@ export async function getBlogPosts(rootDir = ".") {
       headings: extractHeadings(block),
       sections: extractSections(block),
       wordCount: countWords(block),
+      raw: block,
     });
   }
 
@@ -470,6 +471,7 @@ export async function getBlogPosts(rootDir = ".") {
       headings: extractHeadings(block),
       sections: extractSections(block),
       wordCount: countWords(block),
+      raw: block,
     });
   }
 
@@ -495,6 +497,7 @@ export async function getBlogPosts(rootDir = ".") {
       slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE,
       category: category ?? "", origin: "programmatic",
       bodySignals: (block.match(/\b(?:lead|sections|whenToCall)\s*:/g) || []).length,
+      raw: block,
     });
   }
 
