@@ -60,7 +60,7 @@ export default defineConfig({
     trace: "on-first-retry",
     screenshot: "only-on-failure",
     video: "off",
-    launchOptions: { args: ["--no-sandbox", "--disable-dev-shm-usage"] },
+
   },
   projects: [
     { name: "chromium", use: { ...devices["Desktop Chrome"] } },
