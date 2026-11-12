@@ -70,7 +70,7 @@ jobs:
           fi
           exit 0
       # A governança editorial dentro de verify exige dist/ e sitemap gerados;
-      # construir primeiro mantém todos os 35 gates bloqueantes, sem skip.
+      # construir primeiro mantém os gates editoriais bloqueantes.
       - name: Build
         run: npm run build
       # Comando oficial: gates essenciais de código e conteúdo.
@@ -136,9 +136,12 @@ jobs:
     needs: build
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Install Playwright browsers
@@ -200,9 +203,12 @@ jobs:
         totalShards: [4]
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: npm
       - name: Install deps
         run: npm ci --no-audit --no-fund
@@ -341,9 +347,12 @@ jobs:
     if: github.event_name == 'pull_request'
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Install Lighthouse CI

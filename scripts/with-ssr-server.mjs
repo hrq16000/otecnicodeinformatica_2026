@@ -8,6 +8,7 @@
  * Uso: node scripts/with-ssr-server.mjs npm run check:local-regression
  */
 import { spawn } from "node:child_process";
+import { fileURLToPath } from "node:url";
 
 const PORTA = Number(process.env["SSR_PORT"] ?? 8080);
 const BASE = `http://127.0.0.1:${PORTA}`;
@@ -22,6 +23,7 @@ if (comando.length === 0) {
 async function esperarPronto() {
   const limite = Date.now() + TIMEOUT_MS;
   while (Date.now() < limite) {
+    if (servidor.exitCode !== null || erroServidor) return false;
     try {
       const r = await fetch(`${BASE}/`, { redirect: "manual" });
       if (r.status < 500) return true;
@@ -33,10 +35,13 @@ async function esperarPronto() {
   return false;
 }
 
-const servidor = spawn("npx", ["vite", "dev", "--port", String(PORTA), "--host", "127.0.0.1"], {
+const vite = fileURLToPath(new URL("../node_modules/vite/bin/vite.js", import.meta.url));
+const servidor = spawn(process.execPath, [vite, "dev", "--port", String(PORTA), "--strictPort", "--host", "127.0.0.1"], {
   stdio: ["ignore", "inherit", "inherit"],
   env: { ...process.env },
 });
+let erroServidor = null;
+servidor.on("error", (error) => { erroServidor = error; });
 
 let encerrado = false;
 const derrubar = () => {
@@ -56,7 +61,7 @@ process.on("SIGINT", () => {
 
 const pronto = await esperarPronto();
 if (!pronto) {
-  console.error(`[with-ssr-server] servidor SSR não respondeu em ${BASE} dentro do timeout.`);
+  console.error(`[with-ssr-server] servidor SSR indisponível em ${BASE}.`, erroServidor?.message ?? "");
   derrubar();
   process.exit(1);
 }
