@@ -50,9 +50,16 @@ jobs:
           set -euo pipefail
           npm update body-parser compression fast-uri js-yaml source-map-js undici vite brace-expansion launch-editor --package-lock-only --ignore-scripts --no-audit --no-fund
           bun update body-parser compression fast-uri js-yaml source-map-js undici vite brace-expansion launch-editor --lockfile-only --ignore-scripts
-          test -z "$(git diff --name-only -- package.json)"
+          npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+          node <<'NODE'
+          const assert=require('node:assert/strict'), cp=require('node:child_process');
+          const baseline=JSON.parse(cp.execFileSync('git',['show','HEAD:package.json'],{encoding:'utf8'}));
+          const current=require('./package.json');
+          if(baseline.devDependencies?.vite!=='^8.2.0' || !/^\^8\.3\.\d+$/.test(current.devDependencies?.vite||'')) throw Error('Vite semver bump out of approved ^8 range');
+          assert.deepStrictEqual({...current,devDependencies:{...current.devDependencies,vite:baseline.devDependencies.vite}},baseline,'Only Vite semver-compatible direct range may change');
+          NODE
           git diff --check
-          test "$(git diff --name-only -- bun.lock package-lock.json | sort | paste -sd, -)" = 'bun.lock,package-lock.json'
+          test "$(git diff --name-only -- bun.lock package-lock.json package.json | sort | paste -sd, -)" = 'bun.lock,package-lock.json,package.json'
           node <<'NODE'
           const p=require('./package.json'), l=require('./package-lock.json'), fs=require('node:fs');
           if (p.dependencies['@tanstack/react-start']!=='1.169.5' || p.dependencies['@tanstack/react-router']!=='1.170.46') throw Error('TanStack changed');
@@ -82,15 +89,15 @@ jobs:
           console.log('npm audit high:',v.high??'unknown','critical:',v.critical??'unknown');
           if (v.critical !== 0 || typeof v.high !== 'number' || v.high>=23) throw Error('No safe improvement: do not commit');
           NODE
-      - name: Commit only generated lockfiles to isolated branch
+      - name: Commit only approved manifest and generated lockfiles to isolated branch
         shell: bash
         run: |
           set -euo pipefail
-          test -z "$(git diff --name-only -- package.json)"
+          test "$(git diff --name-only -- bun.lock package-lock.json package.json | sort | paste -sd, -)" = 'bun.lock,package-lock.json,package.json'
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add bun.lock package-lock.json
-          test "$(git diff --cached --name-only | sort | paste -sd, -)" = 'bun.lock,package-lock.json'
+          git add bun.lock package-lock.json package.json
+          test "$(git diff --cached --name-only | sort | paste -sd, -)" = 'bun.lock,package-lock.json,package.json'
           git diff --cached --check
           git commit -m 'fix(security): update compatible transitive patches via npm and Bun'
           git push origin HEAD:refs/heads/fix/security-dompurify-3417-20261031
