@@ -55,19 +55,8 @@ jobs:
           node-version: "20"
       - name: Install deps
         run: npm ci --no-audit --no-fund
-      # Etapa já observacional: prazo explícito para os gates bloqueantes terem vez.
-      - name: Lint (non-blocking warnings, bounded)
-        run: |
-          set +e
-          timeout --signal=TERM --kill-after=10s 120s npm run lint --silent > /tmp/lint-observacional.log 2>&1
-          code=$?
-          tail -n 40 /tmp/lint-observacional.log
-          if [ "$code" -eq 124 ] || [ "$code" -eq 137 ]; then
-            echo "::warning::Lint observacional interrompido em 120s; verifique o relatório de lint separadamente"
-          elif [ "$code" -ne 0 ]; then
-            echo "::warning::Lint registrou falhas (status $code); os gates de verify continuam bloqueantes"
-          fi
-          exit 0
+      - name: Lint (non-blocking warnings)
+        run: npm run lint --silent || echo "::warning::lint reported issues"
       # Comando oficial: gates essenciais de código e conteúdo.
       # Os testes já rodam no job `unit`, por isso ficam de fora aqui.
       - name: verify (gates essenciais — comando oficial)
