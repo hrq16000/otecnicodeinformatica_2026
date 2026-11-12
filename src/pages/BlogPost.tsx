@@ -35,6 +35,7 @@ import { SITE_BASE_URL, BRAND_NAME } from "@/lib/siteConfig";
 import { buildArticleToc, shouldRenderToc } from "@/lib/articleToc";
 import { ArticleToc } from "@/components/editorial/ArticleToc";
 import { getArticleSources, getTechnicalReviewStatus } from "@/lib/blogEditorialSources";
+import { extractEmbeddedFaq } from "@/lib/articleEmbeddedFaq";
 import NotFound from "./NotFound";
 import { encurtar, tituloComMarca, DESCRIPTION_MAX } from "@/lib/socialMeta";
 
@@ -116,6 +117,7 @@ const BlogPost = () => {
   }, [post]);
 
   const wordCount = post ? Math.round(parseInt(post.readTime) * 220) : 1500;
+  const embeddedFaqItems = useMemo(() => extractEmbeddedFaq(post?.content), [post]);
 
   // Structured data governado pelo registro editorial fail-closed.
   // - Artigo NÃO aprovado: WebPage + BreadcrumbList (sem BlogPosting/Article/
@@ -408,7 +410,7 @@ const BlogPost = () => {
               <EditorialCta slug={slug ?? ""} titulo={post.title} />
 
 
-              <BlogPostFAQ category={post.category} slug={slug ?? ""} />
+              <BlogPostFAQ category={post.category} slug={slug ?? ""} embeddedItems={embeddedFaqItems} />
             </article>
           </div>
         </section>

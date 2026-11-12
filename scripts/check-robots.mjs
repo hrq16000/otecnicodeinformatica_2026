@@ -40,7 +40,7 @@ if (!existsSync(robotsFile)) {
 const robots = readFileSync(robotsFile, "utf8");
 
 // 1. Sincronia com o gerador (robots.txt é artefato, não arquivo editável).
-if (robots.trim() !== buildRobots().trim()) {
+if (robots.replace(/\r\n/g, "\n").trim() !== buildRobots().trim()) {
   errors.push("robots.txt divergente do gerador — rode `npm run generate:robots` e refaça o build.");
 }
 
