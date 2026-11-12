@@ -33,15 +33,21 @@ const MS_BITLOCKER: FontePrimaria = {
   nota: "Criptografia e chave de recuperação antes de mover o disco.",
 };
 const NIST_88: FontePrimaria = {
-  titulo: "NIST SP 800-88 Rev. 1 — Media Sanitization",
-  url: "https://csrc.nist.gov/pubs/sp/800/88/r1/final",
-  nota: "Referência sobre o que realmente apaga dados em uma mídia.",
+  titulo: "NIST SP 800-88 Rev. 2 — Guidelines for Media Sanitization",
+  url: "https://csrc.nist.gov/pubs/sp/800/88/r2/final",
+  nota: "Referência atual do NIST para sanitização, descarte e proteção de dados em mídias.",
 };
 const NIST_34: FontePrimaria = {
   titulo: "NIST SP 800-34 Rev. 1 — Contingency Planning",
   url: "https://csrc.nist.gov/pubs/sp/800/34/r1/final",
   nota: "Base para política de cópia e restauração testada.",
 };
+const MS_WIFI: FontePrimaria = {
+  titulo: "Corrigir problemas de conexão Wi-Fi no Windows (Microsoft Support)",
+  url: "https://support.microsoft.com/pt-br/windows/experience/connectivity-networking/fix-wi-fi-connection-issues-in-windows",
+  nota: "Fluxo oficial para separar falhas do dispositivo, Wi-Fi, roteador e acesso à internet.",
+};
+
 const CARTILHA: FontePrimaria = {
   titulo: "Cartilha de Segurança para Internet (CERT.br)",
   url: "https://cartilha.cert.br/",
@@ -62,7 +68,7 @@ export const FONTES_PROBLEMA: Record<string, FontePrimaria[]> = {
   "hd-fazendo-barulho": [NIST_88, MS_BITLOCKER],
   "computador-lento": [MS_TROUBLESHOOT, MS_SUPORTE],
   "computador-esquentando": [MS_TROUBLESHOOT],
-  "wifi-instavel": [CARTILHA],
+  "wifi-instavel": [MS_WIFI, CARTILHA],
 };
 
 export const getFontesProblema = (slug?: string | null): FontePrimaria[] =>

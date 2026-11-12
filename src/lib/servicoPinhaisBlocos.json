@@ -1,0 +1,389 @@
+{
+  "_doc": "MICRO-LOTE GSC PINHAIS 1–4 — conteúdo local autoral fail-closed. Seleção baseada no GSC real de 2026-09-03 a 2026-09-30 (settled through 2026-09-29), excluindo combinações já promovidas e rotas literais conflitantes. A existência deste conteúdo NÃO liga indexação; src/lib/localIndexPolicy.json continua sendo a fonte de verdade.",
+  "paginas": {
+    "conserto-tv": {
+      "path": "/servicos/conserto-tv/pinhais",
+      "parent": "/servicos/conserto-tv",
+      "nome": "Conserto de TV",
+      "intentGlobal": "entender diagnóstico de televisão: alimentação, imagem, iluminação, placa principal, painel, áudio, entradas e sistema",
+      "intentLocal": "solicitar conserto de TV em Pinhais com triagem por modelo, tamanho e sintoma, orientação de transporte e definição de coleta ou entrega antes de movimentar o aparelho",
+      "title": "Conserto de TV em Pinhais | Triagem, transporte e diagnóstico",
+      "description": "Conserto de TV em Pinhais com triagem por modelo, tamanho e sintoma, orientação de transporte e diagnóstico antes de indicar peça ou reparo.",
+      "h1": "Conserto de TV em Pinhais",
+      "subtitulo": "Triagem técnica antes de transportar a televisão para separar falha de energia, imagem, iluminação, placa, sistema e painel.",
+      "intro": [
+        "Uma TV que mantém o som com a tela escura pede uma investigação diferente de outra que reinicia, perde uma entrada HDMI ou não acende o indicador de energia. Antes de falar em peça, a triagem registra marca, modelo, polegadas, sintoma e quando a falha aparece. Esse cuidado evita tratar comportamentos diferentes como se fossem o mesmo defeito e reduz deslocamentos desnecessários com um equipamento frágil.",
+        "Para quem solicita atendimento em Pinhais, a localização entra no planejamento de retirada ou entrega somente depois dessa triagem. Televisores não recebem visita técnica de reparo a domicílio nesta operação: o aparelho precisa seguir para avaliação em bancada ou ter a coleta combinada. A orientação é definir responsabilidade pelo transporte antes de mover a TV, sem presumir oficina, equipe fixa ou disponibilidade imediata no município."
+      ],
+      "blocos": [
+        {
+          "titulo": "Modelo, polegadas e comportamento vêm antes da hipótese de peça",
+          "paragrafos": [
+            "A etiqueta traseira identifica a variante exata do aparelho, informação importante porque televisores visualmente parecidos podem usar placas, fontes e painéis diferentes. Um vídeo curto do defeito também pode ajudar quando a falha é intermitente, principalmente se ela surge depois de aquecer, ao abrir um aplicativo ou ao trocar a fonte de sinal.",
+            "Som sem imagem pode levantar a hipótese de iluminação, mas não confirma sozinho a causa. Fonte, placa principal, circuito de imagem e conexões internas ainda precisam ser avaliados. Da mesma forma, reinício repetido pode envolver alimentação, software ou outro estágio eletrônico, por isso o diagnóstico deve seguir evidências do comportamento real.",
+            "Antes do transporte, vale testar apenas verificações externas seguras, como outra tomada, cabo ou entrada conhecida quando isso fizer sentido. Abrir o aparelho ou insistir em ligar uma TV com cheiro de queimado, estalo ou aquecimento anormal não faz parte da triagem doméstica."
+          ]
+        },
+        {
+          "titulo": "Transportar uma tela grande também faz parte do risco técnico",
+          "paragrafos": [
+            "Uma televisão instalada em suporte de parede não tem a mesma condição de retirada de outra apoiada em rack. Tamanho, acesso ao imóvel, escadas, elevador e possibilidade de manter a tela protegida na posição correta precisam ser informados antes de combinar qualquer movimentação.",
+            "O objetivo é evitar que um defeito eletrônico seja acompanhado por dano físico criado durante o transporte. Painel pressionado, moldura torcida ou aparelho apoiado de forma inadequada pode transformar uma avaliação simples em um problema maior. Por isso coleta e entrega precisam ser combinadas com antecedência, sem improviso.",
+            "Se o cliente pretende levar a TV por conta própria, a triagem pode orientar quais informações registrar antes da saída, mas não substitui o cuidado físico no trajeto. O diagnóstico eletrônico começa com o aparelho preservado nas mesmas condições em que o sintoma foi observado."
+          ]
+        },
+        {
+          "titulo": "Falha intermitente precisa ser descrita no contexto em que aparece",
+          "paragrafos": [
+            "Quando a imagem some somente depois de vinte ou trinta minutos, quando um aplicativo específico trava ou quando determinada entrada perde sinal, o tempo e a condição de uso são dados relevantes. Eles ajudam a reproduzir o defeito sem trocar componentes por tentativa.",
+            "Também é útil informar se houve oscilação elétrica, atualização, impacto, contato com líquido ou mudança recente de cabo ou dispositivo conectado. Esses eventos não provam a causa, mas podem alterar a ordem dos testes e impedir conclusões apressadas.",
+            "Se a televisão volta a funcionar depois de esfriar ou de ficar desligada, registre esse comportamento. Um defeito que desaparece na chegada à bancada continua exigindo método; a ausência momentânea do sintoma não deve ser tratada como prova de que o aparelho está normal."
+          ]
+        },
+        {
+          "titulo": "Viabilidade econômica faz parte da decisão de reparo",
+          "paragrafos": [
+            "Nem todo defeito deve terminar em troca de peça. Falha de fonte, iluminação ou placa pode ter cenário de custo diferente de painel fisicamente danificado ou componente indisponível. O orçamento precisa vir depois do diagnóstico e explicar o que será feito, quais limitações foram encontradas e o que depende de peça.",
+            "Quando o custo se aproxima do valor de substituição do aparelho, essa comparação deve ser apresentada sem forçar a execução. O objetivo é permitir que o cliente decida com informação técnica suficiente, inclusive quando a conclusão correta é não seguir com o reparo.",
+            "Também é importante separar tela quebrada de falha eletrônica que apenas afeta a imagem. As duas situações podem parecer iguais à primeira vista, mas têm impactos muito diferentes em disponibilidade de componentes, risco e custo."
+          ]
+        },
+        {
+          "titulo": "A janela de 2 a 72 horas úteis organiza o início do atendimento",
+          "paragrafos": [
+            "A operação trabalha com uma janela variável de 2 a 72 horas úteis conforme urgência e disponibilidade. Em Pinhais, essa faixa serve para organizar o início da triagem, coleta ou encaminhamento e não representa promessa de televisão pronta dentro desse intervalo.",
+            "Diagnóstico de falha intermitente, necessidade de bancada, disponibilidade de componente e testes posteriores podem acrescentar tempo depois do primeiro atendimento. A previsão final só pode ser construída quando o defeito e a necessidade de peça forem conhecidos.",
+            "Informar modelo, tamanho, sintoma e condição de transporte logo na abertura ajuda a encontrar a modalidade adequada. Prioridade pode mudar conforme impacto e segurança, mas não transforma a agenda em prazo garantido."
+          ]
+        },
+        {
+          "titulo": "Rede nacional não significa quantidade fixa de técnicos em Pinhais",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Esse número é nacional e não deve ser interpretado como quantidade de técnicos de TV disponíveis em Pinhais ou em qualquer outro município.",
+            "A disponibilidade é verificada para cada chamado e depende do tipo de equipamento, da logística e da agenda. Da mesma forma, não se publica filial, oficina local ou prazo instantâneo sem confirmação específica para o caso.",
+            "O compromisso com uma tarifa mínima justa para o prestador reconhece o tempo de triagem, manuseio, diagnóstico e teste. Em televisão, remunerar corretamente essas etapas ajuda a evitar a prática de indicar uma peça cara sem antes demonstrar por que ela realmente precisa ser substituída."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Vocês consertam TV na casa do cliente em Pinhais?",
+          "resposta": "Não fazemos reparo de TV a domicílio. A triagem define se o aparelho será levado para avaliação ou se uma coleta pode ser combinada conforme a disponibilidade."
+        },
+        {
+          "pergunta": "Som sem imagem significa que o LED queimou?",
+          "resposta": "Pode ser uma hipótese, mas o sintoma também pode envolver alimentação, placa ou outros circuitos. O teste é necessário antes de concluir."
+        },
+        {
+          "pergunta": "Preciso transportar a TV antes de falar com o atendimento?",
+          "resposta": "Não. Informe modelo, polegadas, sintoma e localização primeiro para definir a forma mais segura de encaminhamento."
+        },
+        {
+          "pergunta": "A TV fica pronta em até 72 horas úteis?",
+          "resposta": "Não necessariamente. A faixa de 2 a 72 horas úteis organiza o início do atendimento; diagnóstico, peça e testes podem exigir tempo adicional."
+        },
+        {
+          "pergunta": "Quantos técnicos de TV atendem Pinhais?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. O dado institucional é de mais de 6 mil prestadores credenciados na rede nacional."
+        }
+      ],
+      "interlinks": [
+        "/servicos/conserto-tv",
+        "/tecnico-informatica-pinhais",
+        "/precos-e-politicas",
+        "/areas-atendidas",
+        "/conserto-tv-curitiba"
+      ],
+      "cidadeSlug": "pinhais",
+      "cidadeNome": "Pinhais"
+    },
+    "suporte-tecnico-empresarial": {
+      "path": "/servicos/suporte-tecnico-empresarial/pinhais",
+      "parent": "/servicos/suporte-tecnico-empresarial",
+      "nome": "Suporte Técnico Empresarial",
+      "intentGlobal": "entender suporte de TI para empresas: estações, usuários, rede, software, segurança, continuidade e rotina preventiva",
+      "intentLocal": "contratar suporte técnico empresarial em Pinhais com triagem por impacto, definição entre remoto e presencial, registro do chamado e planejamento da continuidade da operação",
+      "title": "Suporte Técnico Empresarial em Pinhais | TI por impacto e prioridade",
+      "description": "Suporte técnico empresarial em Pinhais com triagem por impacto, atendimento remoto ou presencial e diagnóstico antes de alterar estações, rede ou sistemas.",
+      "h1": "Suporte técnico empresarial em Pinhais",
+      "subtitulo": "Atendimento orientado pelo impacto real no trabalho, separando falha de estação, usuário, rede, aplicativo e infraestrutura antes de executar mudanças.",
+      "intro": [
+        "Quando uma empresa fica com uma estação parada, um compartilhamento inacessível ou uma rede instável, o primeiro passo não é trocar equipamentos: é descobrir quem foi afetado, desde quando e o que ainda funciona. Uma falha restrita a um usuário exige investigação diferente de uma indisponibilidade que alcança várias máquinas, impressoras ou serviços internos.",
+        "Para empresas em Pinhais, a triagem pode começar remotamente quando existe conectividade suficiente e seguir para atendimento presencial quando o problema depende do ambiente, de cabeamento, energia ou hardware. O endereço entra como referência de deslocamento depois que o escopo inicial é entendido. Isso não cria promessa de equipe fixa, filial ou resposta imediata no município."
+      ],
+      "blocos": [
+        {
+          "titulo": "Impacto no negócio define a ordem de investigação",
+          "paragrafos": [
+            "Um computador isolado com problema de impressão não tem o mesmo impacto de várias pessoas sem acesso ao sistema ou à internet. A abertura do chamado precisa registrar quantidade de usuários afetados, atividade interrompida e existência de alternativa temporária para que a prioridade seja definida com contexto.",
+            "Esse registro também ajuda a comparar reincidências. Se a mesma falha aparece toda semana, apenas restaurar o funcionamento pode esconder uma causa estrutural. Histórico de eventos, horários e equipamentos envolvidos permite procurar o padrão em vez de tratar cada ocorrência como um caso independente.",
+            "Prioridade não é sinônimo de promessa de atendimento instantâneo. Ela organiza a fila conforme impacto e risco dentro da disponibilidade real de agenda e do perfil técnico necessário para cada ocorrência."
+          ]
+        },
+        {
+          "titulo": "Remoto e presencial resolvem tipos diferentes de problema",
+          "paragrafos": [
+            "Permissões, configurações, aplicativos, parte dos erros de Windows e várias rotinas de usuário podem ser analisadas remotamente com autorização. Quando o defeito está em cabo, ponto de rede, energia, roteador, equipamento sem inicialização ou outro elemento físico, a investigação precisa migrar para presença no local ou bancada.",
+            "Definir a modalidade antes do deslocamento evita enviar alguém sem as informações ou recursos necessários. Modelo dos equipamentos, fotos do cenário, mensagens de erro e alterações recentes podem preparar melhor a visita quando ela realmente for necessária.",
+            "Em ambiente corporativo, qualquer acesso remoto deve respeitar credenciais, políticas internas e limites autorizados pela empresa. O atendimento não deve contornar controles de administrador apenas para acelerar uma correção."
+          ]
+        },
+        {
+          "titulo": "Mudança técnica precisa preservar possibilidade de retorno",
+          "paragrafos": [
+            "Alterar configuração de rede, política de usuário, software ou driver sem registrar o estado anterior aumenta o risco de transformar uma falha localizada em uma interrupção maior. Sempre que possível, a intervenção precisa ser reversível e documentada em nível compatível com a criticidade da mudança.",
+            "Também é importante saber quem administra serviços externos, provedor, domínio, e-mail ou aplicações de terceiros. Nem todo problema observado no computador pertence à infraestrutura local, e atribuir a causa errada pode consumir tempo sem produzir melhora.",
+            "Quando a solução depende de outro fornecedor ou do TI interno, o diagnóstico ainda pode entregar valor ao registrar testes executados, evidências encontradas e a dependência identificada para que o repasse seja objetivo."
+          ]
+        },
+        {
+          "titulo": "Continuidade inclui dados, atualização e prevenção",
+          "paragrafos": [
+            "Suporte empresarial não deve existir apenas quando algo quebra. Estado de backup, atualizações críticas, armazenamento perto do limite, equipamentos com falhas repetidas e pontos únicos de dependência merecem ser registrados para reduzir interrupções previsíveis.",
+            "Isso não significa aplicar manutenção genérica em todas as máquinas. A rotina preventiva deve priorizar riscos observáveis e ações que possam ser verificadas, como teste de restauração, conferência de espaço, atualização planejada e identificação de equipamento com histórico de instabilidade.",
+            "Em pequenas empresas, uma mudança simples pode afetar toda a equipe se todos dependem do mesmo roteador, arquivo compartilhado ou computador. Mapear essas dependências ajuda a decidir onde uma prevenção tem mais valor."
+          ]
+        },
+        {
+          "titulo": "A janela operacional varia de 2 a 72 horas úteis",
+          "paragrafos": [
+            "A referência institucional para início do atendimento varia de 2 a 72 horas úteis conforme urgência e disponibilidade. Uma empresa com operação totalmente parada pode receber prioridade maior que uma melhoria programada, mas o encaixe continua dependendo da agenda e do profissional adequado.",
+            "Essa janela não é prazo de solução. Falha intermitente, necessidade de peça, indisponibilidade de fornecedor, dependência do provedor ou autorização de administrador podem estender a resolução depois do diagnóstico inicial.",
+            "Informar impacto, quantidade de usuários, endereço, horário disponível e o que mudou antes da falha torna a triagem mais útil. Quanto melhor o contexto, menor a chance de a primeira interação ser consumida apenas para reconstruir informações básicas."
+          ]
+        },
+        {
+          "titulo": "Rede nacional e remuneração responsável do diagnóstico",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. O número se refere à rede como um todo e não representa uma contagem de técnicos empresariais em Pinhais.",
+            "A disponibilidade local é confirmada chamado a chamado. Não se deve inferir filial, equipe permanente ou quantidade municipal a partir do alcance nacional da rede.",
+            "O compromisso com uma tarifa mínima justa para o prestador valoriza triagem, documentação e diagnóstico, inclusive quando a solução é remota. Em ambiente empresarial, descobrir com segurança o que não deve ser alterado pode ser tão importante quanto executar uma correção."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "O suporte empresarial em Pinhais pode começar remotamente?",
+          "resposta": "Sim, quando existe conectividade e o problema pode ser analisado à distância. Falhas físicas, de cabeamento, energia ou ambiente podem exigir atendimento presencial."
+        },
+        {
+          "pergunta": "Uma empresa parada tem atendimento garantido imediatamente?",
+          "resposta": "Não. O impacto influencia a prioridade, mas a janela operacional continua dependendo da urgência, disponibilidade e perfil técnico necessário."
+        },
+        {
+          "pergunta": "Vocês alteram senha ou política de administrador sem o TI interno?",
+          "resposta": "Não como regra. O atendimento deve respeitar permissões, responsáveis e políticas da empresa."
+        },
+        {
+          "pergunta": "A janela de 2 a 72 horas úteis é prazo para resolver tudo?",
+          "resposta": "Não. Ela se refere ao início do atendimento; peça, terceiros, testes ou autorizações podem ampliar o tempo de resolução."
+        },
+        {
+          "pergunta": "Quantos técnicos empresariais existem em Pinhais?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. A rede nacional possui mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/suporte-tecnico-empresarial",
+        "/tecnico-informatica-pinhais",
+        "/servicos/manutencao-preventiva-empresas",
+        "/servicos/backup-para-empresas",
+        "/precos-e-politicas"
+      ],
+      "cidadeSlug": "pinhais",
+      "cidadeNome": "Pinhais"
+    },
+    "backup-recuperacao": {
+      "path": "/servicos/backup-recuperacao/pinhais",
+      "parent": "/servicos/recuperacao-de-dados",
+      "nome": "Backup e Recuperação de Dados",
+      "intentGlobal": "entender recuperação de dados e backup: preservar a mídia, distinguir falha lógica e física, priorizar arquivos e validar restauração",
+      "intentLocal": "solicitar recuperação de dados em Pinhais com preservação da mídia, triagem do sintoma, prioridade pelos arquivos essenciais e definição segura de coleta ou encaminhamento",
+      "title": "Recuperação de Dados em Pinhais | Preservar antes de tentar",
+      "description": "Recuperação de dados em Pinhais com triagem do sintoma, preservação da mídia, prioridade pelos arquivos importantes e encaminhamento seguro para diagnóstico.",
+      "h1": "Backup e recuperação de dados em Pinhais",
+      "subtitulo": "Preservar a mídia vem antes da tentativa: identificar o tipo de falha, reduzir novas gravações e definir quais arquivos realmente precisam ser recuperados.",
+      "intro": [
+        "Quando arquivos desaparecem, um disco deixa de montar ou um computador começa a apresentar ruídos e travamentos, continuar tentando pode reduzir as chances de recuperação. O primeiro objetivo é preservar o estado da mídia e registrar o que aconteceu antes da falha: queda, formatação, exclusão, atualização, impacto físico, contato com líquido ou perda progressiva de desempenho.",
+        "Para solicitações em Pinhais, a triagem define se a análise pode começar por orientação remota ou se a mídia precisa ser encaminhada. A localização serve para organizar retirada ou entrega conforme a agenda, sem presumir laboratório, filial ou profissional fixo no município. Nenhuma recuperação deve ser prometida antes de conhecer a condição real do dispositivo."
+      ],
+      "blocos": [
+        {
+          "titulo": "Parar novas gravações pode ser mais importante que tentar outra ferramenta",
+          "paragrafos": [
+            "Em exclusão acidental ou formatação, instalar programas, baixar arquivos ou continuar usando o mesmo disco pode sobrescrever dados que ainda poderiam ser recuperáveis. Quando a informação é importante, a recomendação inicial é reduzir o uso até entender o cenário.",
+            "Se o dispositivo apresenta estalos, desconexões, lentidão extrema ou falha para ser reconhecido, repetidas tentativas de inicialização também podem ser inadequadas. Sintoma físico exige cautela diferente de um arquivo simplesmente apagado.",
+            "A triagem não deve mandar executar comandos destrutivos sem saber onde os dados estão e qual cópia de segurança existe. Antes de qualquer intervenção, é preciso identificar a mídia correta e o valor dos arquivos envolvidos."
+          ]
+        },
+        {
+          "titulo": "Falha lógica e falha física pedem caminhos diferentes",
+          "paragrafos": [
+            "Partição corrompida, sistema de arquivos danificado, exclusão ou formatação são exemplos de cenários lógicos possíveis. Já ruído mecânico, dano elétrico, conector quebrado ou mídia que desaparece repetidamente podem indicar necessidade de uma abordagem física. O sintoma não fecha o diagnóstico sozinho.",
+            "Por isso ferramentas de recuperação não devem ser usadas automaticamente em qualquer situação. Uma mídia instável pode precisar primeiro de uma estratégia para preservar leitura e evitar desgaste adicional antes de procurar arquivos.",
+            "Também é importante distinguir o dispositivo de origem do local de destino. Recuperar dados para a mesma mídia defeituosa ou suspeita pode recriar o risco que motivou o atendimento."
+          ]
+        },
+        {
+          "titulo": "Priorizar arquivos torna a recuperação verificável",
+          "paragrafos": [
+            "Antes de procurar tudo indiscriminadamente, o cliente deve indicar quais pastas, documentos, fotos, projetos ou bases são realmente essenciais. Essa lista ajuda a medir resultado e evita declarar sucesso apenas porque alguns arquivos genéricos foram encontrados.",
+            "Nome, extensão, período aproximado e localização anterior podem ajudar a validar se o material recuperado corresponde ao que se buscava. Quando existe outra cópia parcial, ela também pode servir para comparar o que está faltando.",
+            "A validação precisa verificar abertura e integridade, não apenas presença de nomes em uma lista. Um arquivo recuperado que não abre ou está incompleto não deve ser contado como resultado equivalente ao original."
+          ]
+        },
+        {
+          "titulo": "Privacidade e manuseio precisam ter escopo claro",
+          "paragrafos": [
+            "Mídias podem conter documentos pessoais, credenciais, fotos, dados de clientes e informações de trabalho. O atendimento deve limitar o acesso ao necessário para diagnóstico e validação, evitando explorar conteúdo sem relação com os arquivos solicitados.",
+            "Quando o dispositivo precisa ser transportado, registrar identificação e condição externa ajuda a manter rastreabilidade. Se o cliente possui criptografia ou credencial necessária para acessar a mídia, isso precisa ser tratado de forma explícita e proporcional ao serviço.",
+            "O destino dos dados recuperados também deve ser combinado. Capacidade disponível, propriedade do dispositivo de destino e forma de devolução fazem parte do planejamento e evitam improviso depois que o processo já começou."
+          ]
+        },
+        {
+          "titulo": "A janela de 2 a 72 horas úteis não é garantia de recuperação",
+          "paragrafos": [
+            "A janela operacional de 2 a 72 horas úteis varia conforme urgência e disponibilidade e se refere ao início do atendimento. Em Pinhais, ela pode organizar triagem e encaminhamento, mas não determina quanto tempo uma análise de mídia levará nem garante que os dados serão recuperáveis.",
+            "Volume de informação, condição do dispositivo, leitura instável, criptografia e necessidade de etapas adicionais podem ampliar o processo. O prazo só fica mais claro depois de conhecer a mídia e o tipo de falha.",
+            "Urgência deve ser informada junto com a lista de arquivos prioritários. Isso ajuda a orientar o esforço para o que realmente importa sem criar promessa técnica impossível antes dos testes."
+          ]
+        },
+        {
+          "titulo": "Rede nacional não substitui diagnóstico da mídia",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Esse dado nacional não representa a quantidade de profissionais de recuperação de dados disponíveis em Pinhais.",
+            "A disponibilidade é verificada conforme o chamado e o tipo de caso. Não se presume laboratório local, estrutura especializada ou taxa de sucesso apenas a partir do tamanho da rede.",
+            "O compromisso com uma tarifa mínima justa para o prestador reconhece tempo de análise, preservação e validação. Em recuperação de dados, uma avaliação responsável também precisa saber quando interromper uma tentativa para não piorar o estado da mídia."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Apaguei arquivos. Devo instalar um programa de recuperação no mesmo disco?",
+          "resposta": "Se os dados são importantes, novas gravações podem sobrescrever conteúdo. É melhor interromper o uso e avaliar o cenário antes de instalar algo na mesma mídia."
+        },
+        {
+          "pergunta": "HD fazendo barulho deve continuar sendo ligado para testar?",
+          "resposta": "Ruído anormal pode indicar risco físico. Repetir tentativas sem diagnóstico pode piorar a condição; interrompa o uso e peça orientação."
+        },
+        {
+          "pergunta": "Vocês garantem que todos os arquivos serão recuperados?",
+          "resposta": "Não. A possibilidade depende do estado da mídia e só pode ser estimada depois da avaliação."
+        },
+        {
+          "pergunta": "A recuperação termina em até 72 horas úteis?",
+          "resposta": "Não necessariamente. A faixa de 2 a 72 horas úteis organiza o início do atendimento, não a conclusão da recuperação."
+        },
+        {
+          "pergunta": "Quantos especialistas atendem Pinhais?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. O dado institucional é de mais de 6 mil prestadores credenciados na rede nacional."
+        }
+      ],
+      "interlinks": [
+        "/servicos/recuperacao-de-dados",
+        "/tecnico-informatica-pinhais",
+        "/seguranca-dos-dados",
+        "/servicos/backup-para-empresas",
+        "/precos-e-politicas"
+      ],
+      "cidadeSlug": "pinhais",
+      "cidadeNome": "Pinhais"
+    },
+    "pc-gamer": {
+      "path": "/servicos/pc-gamer/pinhais",
+      "parent": "/servicos/pc-gamer",
+      "nome": "PC Gamer",
+      "intentGlobal": "entender diagnóstico e desempenho de PC gamer: carga, temperatura, energia, memória, armazenamento, GPU, CPU e drivers",
+      "intentLocal": "solicitar diagnóstico de PC gamer em Pinhais reproduzindo a falha sob carga, conferindo energia e temperatura e identificando gargalo antes de recomendar reparo ou upgrade",
+      "title": "PC Gamer em Pinhais | Travamentos, temperatura e gargalo",
+      "description": "Diagnóstico de PC gamer em Pinhais para travamentos, reinícios, temperatura, fonte, memória, SSD e GPU, com testes antes de recomendar troca ou upgrade.",
+      "h1": "Diagnóstico de PC gamer em Pinhais",
+      "subtitulo": "Reproduzir a falha sob carga para separar defeito, temperatura, energia, memória, armazenamento, driver e gargalo antes de investir em peça.",
+      "intro": [
+        "Um computador gamer pode navegar normalmente e falhar apenas quando CPU e GPU entram em carga ao mesmo tempo. Reinício seco, tela preta, artefato, queda brusca de desempenho e jogo fechando sozinho não apontam automaticamente para a mesma peça. O diagnóstico precisa registrar em qual aplicativo a falha aparece, quanto tempo leva e o que mudou recentemente na configuração.",
+        "Para quem solicita diagnóstico em Pinhais, tamanho e condição do gabinete entram na decisão entre avaliação no endereço e bancada. A localização é usada para planejar deslocamento quando a presença física é necessária, sem presumir técnico fixo no município. Antes de transportar a máquina, vale informar componentes principais, peso aproximado, refrigeração e se houve upgrade recente."
+      ],
+      "blocos": [
+        {
+          "titulo": "Reproduzir o problema sob carga vale mais que trocar por suspeita",
+          "paragrafos": [
+            "O diagnóstico observa quando a instabilidade surge e tenta relacionar o evento com temperatura, consumo, memória, armazenamento e driver. Se o computador não apresenta a falha durante os testes, a recomendação precisa ser conservadora em vez de escolher a peça mais cara como culpada.",
+            "Informar jogo, resolução, taxa de atualização, tempo até o defeito e mensagem de erro ajuda a reconstruir o cenário. Um problema que ocorre em um único título pode ter relação com driver, arquivo, configuração ou software e não necessariamente com falha física.",
+            "Quando a máquina reinicia sem tela azul ou aviso, a investigação também precisa considerar alimentação e proteção térmica. O comportamento observado é ponto de partida, não diagnóstico final."
+          ]
+        },
+        {
+          "titulo": "Temperatura deve ser analisada junto com frequência e estabilidade",
+          "paragrafos": [
+            "Uma leitura alta isolada não explica sozinha queda de desempenho. É necessário observar se CPU ou GPU reduzem frequência, se ventoinhas respondem, se o dissipador está montado corretamente e se o fluxo de ar do gabinete consegue retirar calor durante carga prolongada.",
+            "Limpeza e troca de pasta térmica só fazem sentido quando o estado físico e as medições apontam para essa necessidade. Aplicar manutenção genérica sem medir antes pode mascarar outro gargalo ou criar a impressão de que qualquer aquecimento se resolve com o mesmo procedimento.",
+            "Posição do gabinete também interfere. Equipamento instalado em nicho fechado ou muito próximo de uma superfície pode recircular ar quente e apresentar comportamento diferente daquele observado em bancada aberta."
+          ]
+        },
+        {
+          "titulo": "Fonte e cabos precisam ser avaliados com a configuração real",
+          "paragrafos": [
+            "Potência indicada no rótulo não é suficiente para julgar estabilidade. Modelo da fonte, idade, conectores, cabos, adaptadores e mudanças recentes de GPU ou CPU precisam entrar no contexto, principalmente quando a falha aparece apenas em carga combinada.",
+            "Conector aquecido, cabo improvisado, desligamento repentino ou instabilidade depois de um upgrade merece investigação antes de insistir em novos testes pesados. Segurança elétrica tem prioridade sobre a tentativa de reproduzir a falha a qualquer custo.",
+            "Se a configuração foi alterada recentemente, registrar quais peças saíram e quais entraram ajuda a localizar quando o problema começou. Uma mudança aparentemente simples pode revelar incompatibilidade, configuração de firmware ou alimentação inadequada."
+          ]
+        },
+        {
+          "titulo": "Upgrade deve atacar o gargalo medido, não a novidade do mercado",
+          "paragrafos": [
+            "Quando o objetivo é ganhar desempenho, uso de CPU, GPU, memória e armazenamento ajuda a identificar qual recurso limita a experiência. Resolução, tipo de jogo e meta de quadros por segundo também mudam a prioridade do investimento.",
+            "Adicionar uma placa de vídeo mais forte pode entregar pouco ganho quando processador, memória ou plataforma já limitam o conjunto. Da mesma forma, aumentar memória não corrige fonte instável ou temperatura fora de controle. O upgrade precisa respeitar compatibilidade e objetivo real.",
+            "Antes de comprar, também é útil verificar espaço físico, conectores, capacidade do gabinete e versão de firmware quando relevante. Compatibilidade existe no conjunto, não apenas na ficha de uma única peça."
+          ]
+        },
+        {
+          "titulo": "A janela de 2 a 72 horas úteis organiza o começo do diagnóstico",
+          "paragrafos": [
+            "A operação utiliza uma janela de 2 a 72 horas úteis conforme urgência e disponibilidade. Uma máquina completamente parada pode receber prioridade diferente de um pedido de otimização, mas o início do atendimento continua condicionado à agenda e ao profissional adequado.",
+            "A faixa não significa equipamento reparado ou otimizado dentro desse período. Teste prolongado, falha intermitente, necessidade de peça, atualização de firmware ou validação depois de uma intervenção podem ampliar o tempo total.",
+            "Em Pinhais, informar localização, tamanho do gabinete e possibilidade de transporte junto com o sintoma ajuda a decidir a modalidade. Isso melhora o planejamento sem transformar a referência operacional em ETA garantido."
+          ]
+        },
+        {
+          "titulo": "Rede nacional não é contagem local de técnicos gamer",
+          "paragrafos": [
+            "A operação começou em Curitiba em 2006 e hoje integra uma rede nacional com mais de 6 mil prestadores credenciados. Esse número se refere à rede nacional e não à quantidade de técnicos de PC gamer em Pinhais.",
+            "A disponibilidade para cada chamado é consultada conforme agenda e perfil técnico. Não se presume especialista permanente, bancada dedicada ou filial local a partir do alcance nacional da operação.",
+            "O compromisso com uma tarifa mínima justa para o prestador valoriza justamente medição, teste e diagnóstico. Em PC gamer, identificar qual componente não precisa ser trocado pode evitar um gasto maior que o próprio serviço técnico."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "pergunta": "Travamento em jogo significa placa de vídeo com defeito?",
+          "resposta": "Não. Fonte, memória, temperatura, driver, armazenamento e o próprio software também podem causar falhas sob carga."
+        },
+        {
+          "pergunta": "Pasta térmica resolve qualquer problema de temperatura?",
+          "resposta": "Não. Fluxo de ar, dissipador, ventoinha, montagem e configuração também precisam ser avaliados."
+        },
+        {
+          "pergunta": "Vocês fazem upgrade de PC gamer em Pinhais?",
+          "resposta": "O upgrade pode ser avaliado quando o gargalo e a compatibilidade do conjunto são conhecidos. A recomendação deve partir de medições, não de troca por tentativa."
+        },
+        {
+          "pergunta": "O computador fica pronto em até 72 horas úteis?",
+          "resposta": "Não necessariamente. A faixa de 2 a 72 horas úteis organiza o início do atendimento; testes e peças podem exigir tempo adicional."
+        },
+        {
+          "pergunta": "Quantos técnicos gamer atendem Pinhais?",
+          "resposta": "Não publicamos contagem municipal sem fonte confirmada. A rede nacional possui mais de 6 mil prestadores credenciados."
+        }
+      ],
+      "interlinks": [
+        "/servicos/pc-gamer",
+        "/tecnico-informatica-pinhais",
+        "/problemas/computador-esquentando",
+        "/servicos/montagem-de-pc",
+        "/servicos/upgrade-ssd-ram"
+      ],
+      "cidadeSlug": "pinhais",
+      "cidadeNome": "Pinhais"
+    }
+  }
+}

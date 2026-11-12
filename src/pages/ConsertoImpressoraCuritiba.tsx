@@ -8,17 +8,19 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { Printer, MessageCircle, CalendarCheck, CheckCircle, Clock, Shield, ArrowRight } from "lucide-react";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
 import { WHATSAPP_NUMBER as WA_NUMBER } from "@/lib/siteConfig";
+import { MODALIDADES, VALOR_VISITA_LABEL } from "@/lib/precosConfig";
 
 const WHATSAPP = WA_NUMBER;
 const PATH = "/conserto-impressora-curitiba";
 
-const TITLE = "Conserto de Impressora em Curitiba | Assistência Técnica";
+const TITLE = "Assistência Técnica e Conserto de Impressora em Curitiba";
 const DESC =
-  "Conserto e diagnóstico de impressoras em Curitiba: falha de impressão, papel, Wi-Fi, driver e multifuncionais. Atendimento conforme a agenda, com valor informado antes do reparo.";
+  "Assistência técnica e conserto de impressora em Curitiba: HP, Epson, Brother, Canon e outras marcas, com diagnóstico de impressão, papel, Wi-Fi e driver." ;
 
 const FAQS = [
-  { question: "Quanto custa consertar uma impressora em Curitiba?", answer: "O atendimento começa em R$ 99,99 para diagnóstico + limpeza. Trocas de cabeça de impressão, fusor ou rolo de tração variam por modelo — valor sempre fechado antes do conserto, sem surpresa." },
-  { question: "Vocês trabalham com qual marca de impressora?", answer: "HP, Epson, Brother, Canon, Samsung, Lexmark, Ricoh, Xerox e Pantum. Fazemos jato de tinta, tanque de tinta (EcoTank, Smart Tank, MegaTank), laser mono/colorida e multifuncionais." },
+  { question: "Vocês são assistência autorizada HP, Epson, Brother ou Canon?", answer: "Não declaramos vínculo de assistência autorizada com fabricantes. O atendimento é assistência técnica independente e depende do modelo, do defeito e da disponibilidade de peças ou suprimentos compatíveis." },
+  { question: "Quanto custa consertar uma impressora em Curitiba?", answer: `A visita técnica de inspeção parte de ${VALOR_VISITA_LABEL} quando essa modalidade é compatível. Serviços de bancada, coleta, peças e materiais seguem a política comercial vigente e o orçamento é apresentado antes da execução.` },
+  { question: "Vocês trabalham com qual marca de impressora?", answer: "Avaliamos impressoras HP, Epson, Brother, Canon, Samsung, Lexmark, Ricoh, Xerox, Pantum e outras, conforme modelo, disponibilidade de peça e tipo de defeito. O atendimento é assistência técnica independente; não afirmamos ser assistência autorizada do fabricante." },
   { question: "Minha impressora não puxa papel. O que pode ser?", answer: "Rolo de tração gasto, sujeira no caminho do papel, sensor ou peça mecânica podem causar o sintoma. O diagnóstico precisa separar essas hipóteses antes de indicar troca de peça." },
   { question: "Atendem em domicílio ou só na bancada?", answer: "O atendimento pode ser feito no endereço quando o diagnóstico permite. Casos que exigem desmontagem, teste prolongado ou peça específica podem seguir para bancada, conforme a triagem e a agenda." },
   { question: "Vale a pena consertar minha impressora ou comprar outra?", answer: "Depende do defeito, do estado geral, da disponibilidade de peças e do custo de uma equivalente. O orçamento deve ser comparado com o valor e a vida útil esperada do equipamento antes da decisão." },
@@ -69,12 +71,12 @@ const ConsertoImpressoraCuritiba = () => {
             <Printer className="w-5 h-5" /> <span className="font-medium">Atendimento conforme a agenda</span>
           </div>
           <h1 className="text-3xl md:text-5xl font-heading font-bold mb-4">
-            Conserto de Impressora em Curitiba
+            Assistência Técnica e Conserto de Impressora em Curitiba
           </h1>
           <p className="tldr text-xl text-white/90 max-w-3xl mx-auto mb-8" data-speakable="true">
-            Assistência técnica para impressoras em Curitiba, com diagnóstico de falhas de
-            impressão, alimentação de papel, conexão, driver e rede. Atendimento conforme a
-            agenda e <strong>valor informado antes do reparo</strong>.
+            Assistência técnica independente para impressoras em Curitiba, com diagnóstico de falhas de
+            impressão, alimentação de papel, conexão, driver, Wi-Fi e multifuncionais. A triagem separa
+            configuração de defeito físico antes de indicar peça ou reparo.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button size="lg" onClick={waClick} className="bg-[#25D366] hover:bg-[#128C7E] text-white">
@@ -90,9 +92,11 @@ const ConsertoImpressoraCuritiba = () => {
       <section className="py-8 bg-accent/10 border-y border-accent/20">
         <div className="container mx-auto px-4 text-center">
           <p className="text-2xl font-bold text-primary">
-            Diagnóstico + limpeza a partir de <span className="text-accent">R$ 99,99</span>
+            Visita técnica de inspeção a partir de <span className="text-accent">{VALOR_VISITA_LABEL}</span>
           </p>
-          <p className="text-muted-foreground mt-2">Triagem por sintoma · orçamento antes do reparo · atendimento conforme a agenda</p>
+          <p className="text-muted-foreground mt-2">
+            Quando a visita é compatível · peças não inclusas · bancada e coleta seguem a política comercial vigente
+          </p>
         </div>
       </section>
 
@@ -105,7 +109,7 @@ const ConsertoImpressoraCuritiba = () => {
             {[
               { t: "Impressora não puxa papel", d: "Troca do rolo de tração e limpeza do mecanismo." },
               { t: "Imprime borrado ou com falhas", d: "Limpeza profunda da cabeça de impressão ou troca quando necessário." },
-              { t: "Erro de driver / não conecta no Wi-Fi", d: "Reinstalação e configuração de IP fixo na rede." },
+              { t: "Erro de driver / não conecta no Wi-Fi", d: "Verificação de driver, porta, endereço de rede e comunicação antes de alterar o roteador ou fixar IP." },
               { t: "Cartucho ou toner não reconhecido", d: "Verificação de encaixe, suprimento, chip e compatibilidade antes de indicar substituição." },
               { t: "Atolamento constante de papel", d: "Limpeza dos sensores e troca de roletes desgastados." },
               { t: "Sistema de tinta / tanque", d: "Diagnóstico de alimentação, ar no circuito, reconhecimento e fluxo antes de alterar o sistema." },
@@ -157,32 +161,28 @@ const ConsertoImpressoraCuritiba = () => {
 
       <section className="py-14 bg-secondary">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-heading font-bold text-center mb-8">
-            Tabela de preços orientativa
-          </h2>
-          <div className="max-w-3xl mx-auto overflow-x-auto rounded-xl border bg-card">
-            <table className="w-full text-sm" data-speakable="true">
-              <thead className="bg-muted">
-                <tr><th className="text-left p-3">Serviço</th><th className="text-right p-3">A partir de</th></tr>
-              </thead>
-              <tbody>
-                {[
-                  ["Diagnóstico + limpeza geral", "R$ 99,99"],
-                  ["Troca de rolo de tração", "R$ 129,99"],
-                  ["Limpeza/troca de cabeça de impressão", "R$ 189,99"],
-                  ["Recarga de cartucho (par)", "R$ 89,99"],
-                  ["Instalação de bulk ink (tanque externo)", "R$ 249,99"],
-                  ["Conserto de fusor (laser)", "R$ 299,99"],
-                  ["Configuração de impressão Wi-Fi / em rede", "R$ 99,99"],
-                ].map(([s, p]) => (
-                  <tr key={s} className="border-t"><td className="p-3">{s}</td><td className="p-3 text-right font-semibold text-primary">{p}</td></tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-heading font-bold text-center mb-4">
+              Como funciona o valor do atendimento
+            </h2>
+            <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
+              O preço depende da modalidade e da causa confirmada. Os valores abaixo vêm da fonte
+              central de preços do portal; peça, suprimento e material não estão inclusos salvo indicação expressa.
+            </p>
+            <div className="grid gap-4 md:grid-cols-3">
+              {MODALIDADES.map((m) => (
+                <div key={m.id} className="rounded-xl border bg-card p-5">
+                  <h3 className="font-bold text-primary">{m.titulo}</h3>
+                  <p className="mt-2 text-lg font-semibold text-accent">{m.valorLabel}</p>
+                  <p className="mt-1 text-sm text-muted-foreground">{m.unidade}</p>
+                  <p className="mt-3 text-sm text-muted-foreground">{m.resumo}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-5 text-center text-sm text-muted-foreground">
+              O orçamento do reparo é informado depois do diagnóstico e depende da sua aprovação.
+            </p>
           </div>
-          <p className="text-xs text-muted-foreground text-center mt-3">
-            Valores orientativos para Curitiba e região; o orçamento final depende do modelo, da causa confirmada e das peças necessárias.
-          </p>
         </div>
       </section>
 
@@ -193,7 +193,7 @@ const ConsertoImpressoraCuritiba = () => {
             {[
               { i: <Clock className="w-7 h-7 text-accent" />, t: "Atendimento conforme a agenda", d: "A modalidade e o horário são definidos na triagem conforme o tipo de falha." },
               { i: <Shield className="w-7 h-7 text-accent" />, t: "Diagnóstico antes da troca", d: "A causa é isolada antes de indicar peça, suprimento ou intervenção." },
-              { i: <CheckCircle className="w-7 h-7 text-accent" />, t: "Valor antes", d: "Você só paga se aprovar. Sem taxa surpresa." },
+              { i: <CheckCircle className="w-7 h-7 text-accent" />, t: "Escopo antes da execução", d: "O diagnóstico define modalidade, reparo e eventual peça antes da execução." },
             ].map((b) => (
               <div key={b.t} className="text-center p-6 rounded-xl border bg-card">
                 <div className="mx-auto mb-3 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">{b.i}</div>

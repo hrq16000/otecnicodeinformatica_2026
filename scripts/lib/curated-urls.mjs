@@ -174,6 +174,7 @@ export const SERVICOS = [
   "/servicos/conserto-placa",
   "/servicos/conserto-monitor",
   "/servicos/conserto-impressora-3d",
+  "/conserto-impressora-curitiba",
 
 ].map((path) => ({ path, changefreq: "weekly", priority: "0.85" }));
 

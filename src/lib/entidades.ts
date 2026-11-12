@@ -18,7 +18,7 @@ import type { FontePrimaria } from "@/lib/enriquecimento";
  *    diagnóstico fica em /problemas, execução comercial em /servicos.
  */
 
-export const ENTIDADES_REVISADO_EM = "2026-09-25";
+export const ENTIDADES_REVISADO_EM = "2026-09-28";
 
 export type LinkEntidade = {
   rotulo: string;
@@ -324,10 +324,10 @@ export const ENTIDADES: Entidade[] = [
     tipo: "Componente",
     tambemChamada: ["disco de estado sólido", "NVMe", "M.2", "SATA SSD"],
     resumo:
-      "Armazenamento em memória flash, sem partes móveis. É o componente com maior impacto perceptível em máquinas que ainda usam HD mecânico.",
+      "Armazenamento em memória flash, sem partes móveis. Em máquinas limitadas por HD mecânico, a migração para SSD costuma reduzir bastante o tempo de acesso ao sistema e aos programas.",
     definicao: [
       "SSD é o dispositivo de armazenamento que grava dados em chips de memória flash. Sem cabeçote nem disco girando, o tempo de acesso cai de milissegundos para microssegundos — é isso que faz o sistema abrir, salvar e alternar entre programas sem a espera típica do HD.",
-      "Existem dois formatos que costumam ser confundidos: o SSD SATA, que usa o mesmo cabo do HD antigo, e o SSD NVMe, encaixado direto na placa-mãe via PCIe. O ganho entre HD e SSD SATA é sempre grande; entre SATA e NVMe, só aparece em cargas pesadas de leitura e escrita.",
+      "Existem interfaces e formatos que costumam ser confundidos: SSD SATA pode usar o mesmo barramento do HD antigo, enquanto SSD NVMe normalmente usa PCIe em formato M.2. A diferença percebida depende do gargalo e da carga de trabalho; compatibilidade deve ser confirmada antes da compra.",
       "Como entidade, SSD concentra as decisões de upgrade, clonagem, reconhecimento do disco pelo sistema e substituição de HD com desgaste — sem se confundir com a entidade Backup, que trata da cópia dos dados, não do meio onde eles ficam.",
     ],
     problemas: [
@@ -506,10 +506,10 @@ export const ENTIDADES: Entidade[] = [
     tipo: "Rede",
     tambemChamada: ["rede sem fio", "wireless", "roteador"],
     resumo:
-      "Rede local sem fio entre o equipamento e o roteador. Instabilidade quase sempre é de meio físico, canal ou configuração — e não do provedor de internet.",
+      "Rede local sem fio entre o dispositivo e o ponto de acesso. Instabilidade pode vir do próprio aparelho, cobertura, interferência, roteador ou do link de internet, e cada camada exige um teste diferente.",
     definicao: [
-      "Wi-Fi é o trecho sem fio da rede: do dispositivo até o roteador. O que a maioria chama de \"internet caindo\" costuma ser esse trecho, e não o link contratado — a diferença aparece quando o cabo funciona e o sem fio não.",
-      "Três variáveis explicam a maior parte dos casos: distância e obstáculos entre dispositivo e roteador, disputa de canal com redes vizinhas, e configuração do próprio roteador (banda, potência, DHCP e DNS). Cada uma tem verificação própria e nenhuma exige troca imediata de equipamento.",
+      "Wi-Fi é o trecho sem fio entre o dispositivo e o ponto de acesso. Quando alguém relata \"internet caindo\", o sintoma ainda não identifica a causa: comparar cabo, outros dispositivos, distância e comportamento do roteador ajuda a separar rede local de falha no link do provedor.",
+      "Distância e obstáculos, interferência, banda utilizada, configuração do roteador, adaptador do dispositivo e qualidade do link podem produzir sintomas parecidos. O diagnóstico compara essas camadas antes de recomendar reposicionamento, cabeamento, mesh, repetidor ou troca de equipamento.",
       "Como entidade, Wi-Fi conecta o diagnóstico doméstico ao ambiente empresarial, onde o mesmo sintoma tem causas de projeto de rede — cobertura, número de pontos e segmentação.",
     ],
     problemas: [

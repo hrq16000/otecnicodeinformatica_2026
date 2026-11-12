@@ -119,6 +119,20 @@ const CadastroParceiro = () => {
           <ShieldCheck className="h-4 w-4" aria-hidden="true" />
           Nenhum perfil é publicado sem análise. Não usamos perfis fictícios.
         </p>
+        <section
+          aria-labelledby="escopo-perfil-heading"
+          className="mt-8 max-w-3xl rounded-2xl border border-border bg-card p-6"
+        >
+          <h2 id="escopo-perfil-heading" className="font-heading text-xl font-bold text-foreground">
+            O que significa ter um perfil neste portal
+          </h2>
+          <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
+            <li>O envio entra em análise; não publica o perfil automaticamente. A listagem pública é destinada a perfis ativos.</li>
+            <li>O perfil apresenta seu trabalho e os meios de contato informados. Orçamento, escopo, agenda e contratação são tratados diretamente entre você e o cliente.</li>
+            <li>Você atua como profissional independente. A inclusão do perfil não garante quantidade de contatos, pedidos de orçamento ou serviços.</li>
+            <li>Este formulário é para o programa de perfis do O Técnico de Informática; ele não confirma inclusão automática em grupos ou programas de outros canais e portais.</li>
+          </ul>
+        </section>
 
         {config && !config.aceitando_cadastros ? (
           <div className="mt-10 rounded-2xl border border-border bg-card p-8">

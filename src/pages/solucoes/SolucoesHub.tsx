@@ -9,9 +9,9 @@ import { CLUSTER_SOLUCOES } from "@/lib/clusterSolucoes";
 import { trackPageView } from "@/lib/analytics";
 
 const PATH = "/solucoes";
-const TITLE = "Soluções técnicas: diagnóstico, formatação, SSD, backup e dados | O Técnico de Informática";
+const TITLE = "Soluções de informática: diagnóstico, SSD, backup e recuperação";
 const DESCRIPTION =
-  "Entre pelo procedimento: diagnóstico, formatação, troca por SSD, backup e recuperação de dados. Cada página mostra etapas reais, o que evitar e a modalidade indicada.";
+  "Veja quando faz sentido diagnosticar, formatar, trocar por SSD, fazer backup ou recuperar dados, com etapas, riscos e modalidade de atendimento indicada.";
 
 /** Hub do cluster SOLUÇÕES: entrada pelo procedimento técnico. */
 const SolucoesHub = () => {

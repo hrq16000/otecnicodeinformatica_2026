@@ -143,14 +143,14 @@ const WAVE_4Y: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC0 1.0",
     imageAttribution:
       "Foto: Gregory Karastergios (Wikimedia Commons), CC0 1.0 — https://commons.wikimedia.org/w/index.php?curid=113932150",
     notes:
-      "Revisão técnica concluída e fact-check registrado em blogEditorialSources.ts; capa é fotografia real de domínio público (CC0), sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 23 impressões, 0 cliques e posição média ~25,35 entre 2026-04-01 e 2026-09-28. Queries reais cobrem 'como trocar a tela do notebook', 'como trocar tela de notebook', 'troca de tela de notebook', 'troca tela notebook' e variações. A versão suplementar preserva a URL e aprofunda compatibilidade do painel, conector/resolução/fixação/touch, desenergização, cabo/dobradiça, validação antes do fechamento e critérios de parada, com fontes oficiais Dell e Lenovo.",
   },
 ];
 
@@ -163,28 +163,28 @@ const WAVE_4Z: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY 3.0",
     imageAttribution:
       "Foto: Rider Adil (Wikimedia Commons), CC BY 3.0 — https://commons.wikimedia.org/wiki/File:Laptop_hardware.jpg",
     notes:
-      "Revisão técnica concluída e fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 11 impressões, 0 cliques e posição média ~10,91 entre 2026-04-01 e 2026-09-27. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, preservando a mesma URL. Triagem separada em sem energia, sem POST, sem vídeo e sem boot, com carregador/bateria/placa tratados como hipóteses, procedimentos de reset condicionados ao fabricante, batteryreport apenas quando o Windows inicia e critérios de parada explícitos. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
   {
     slug: "computador-lento-causas-solucoes",
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY 4.0",
     imageAttribution:
       "Foto: Mk2010 (Wikimedia Commons), CC BY 4.0 — https://commons.wikimedia.org/wiki/File:Actuator_arm_assembly_of_a_hard_disk_drive.jpg",
     notes:
-      "Revisão técnica concluída e fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 1 impressão, 0 cliques e posição média 9 entre 2026-04-01 e 2026-09-27. URL Inspection: PASS, Submitted and indexed, ALLOWED, INDEXING_ALLOWED, SUCCESSFUL e rastreada como MOBILE. A nova owner suplementar organiza a lentidão por contexto e evidência, evita formatar ou trocar hardware por palpite e registra fontes oficiais Microsoft. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
 ];
 
@@ -198,21 +198,21 @@ const WAVE_5A: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 2.0",
     imageAttribution:
       "Foto: Brian Wong (Wikimedia Commons), CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Toshiba_Laptop_Hard_Drive.jpg",
     notes:
-      "Reescrita integral na Onda 5A; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 6 impressões, 0 cliques e posição média 17 entre 2026-04-01 e 2026-09-27. A query real “conserto de hd” foi tratada separando recuperação de dados de reutilização do hardware. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, remove diagnóstico mecânico só por ruído, separa exclusão lógica/erros de I/O/falha física e prioriza imagem/cópia antes de reparo quando a unidade está instável.",
   },
   {
     slug: "como-fazer-upgrade-ssd-nvme",
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-07",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-09-07",
     imageOrigin: "licensed",
     imageLicense: "CC0 1.0",
@@ -233,28 +233,28 @@ const WAVE_5B: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY 4.0",
     imageAttribution:
       "Foto: Hayden Schiff (Wikimedia Commons), CC BY 4.0 — https://commons.wikimedia.org/wiki/File:TP-Link_TL-WR740N_router_HS5.jpg",
     notes:
-      "Reescrita integral na Onda 5B; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 14 impressões, 0 cliques e posição média ~34,43 entre 2026-04-01 e 2026-09-27. O conteúdo suplementar preserva a URL e responde às queries reais de configurar/usar roteador e Wi‑Fi, organizando WAN, LAN/DHCP, SSID/segurança, administração e validação sem depender de painel ou IP universal.",
   },
   {
     slug: "como-saber-quem-esta-usando-meu-wifi",
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: Mrbeastmodeallday (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Home_wifi.jpg",
     notes:
-      "Reescrita integral na Onda 5B; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 105 impressões, 1 clique e posição média ~10,96 entre 2026-04-01 e 2026-09-28. Queries reais: 'como ver quantas pessoas estão conectadas no wifi' e 'como ver quem está usando meu wifi'. A versão suplementar preserva a URL e aprofunda inventário de clientes, MAC privado/aleatório, identificação por comparação controlada e resposta segura a dispositivo realmente desconhecido.",
   },
 ];
 
@@ -316,14 +316,14 @@ const WAVE_5D: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 3.0",
     imageAttribution:
       "Foto: Jyothis (Wikimedia Commons), CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Thermal_compound_Applied.JPG",
     notes:
-      "Reescrita integral na Onda 5D; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 24 impressões, 0 cliques e posição média ~17,33 entre 2026-04-01 e 2026-09-27. Queries reais de troca de pasta térmica foram incorporadas. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, com diagnóstico antes da desmontagem, manual/OEM, isolamento da bateria, preservação de pads, reaplicação após remoção do dissipador, sem quantidade universal para notebook, validação antes/depois e critérios de parada.",
   },
 ];
 
@@ -336,28 +336,28 @@ const WAVE_5E: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 3.0",
     imageAttribution:
       "Foto: Wikimedia Commons, licença livre — https://commons.wikimedia.org/wiki/File:Maxtor_HDD_and_Intel_SSD_20100117.jpg",
     notes:
-      "Reescrita integral na Onda 5E; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-29 guiada pelo GSC; aprofunda decisão entre clonar/reinstalar/preservar dados, SSD menor, partições de boot, BitLocker, validação pós-clone e critérios de parada. Fact-check registrado em blogEditorialSources.ts; capa real licenciada, sem IA.",
   },
   {
     slug: "como-instalar-segundo-ssd-notebook",
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 2.0",
     imageAttribution:
       "Foto: Deviantart (Wikimedia Commons), CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:WesterDigital-Black-NVMe-SSD.jpg",
     notes:
-      "Reescrita integral na Onda 5E; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 7 impressões, 0 cliques e posição média ~8,43 entre 2026-04-01 e 2026-09-27. A versão suplementar passa a sobrepor editorialmente a versão monolítica antiga, preservando a mesma URL. Conteúdo novo cobre compatibilidade real de segundo slot, M.2 SATA × NVMe, montagem segura, inicialização no Windows, uso como dados versus migração, falhas de detecção, BitLocker, validação e critérios de parada. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
 ];
 
@@ -414,13 +414,13 @@ const WAVE_5G: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution: "Foto: Suyash Dwivedi (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:LG_Smart_TV_WIFI_%2B_IR_Remote_04.jpg",
     notes:
-      "Reescrita integral na Onda 5G; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-29 guiada pelo GSC; diagnóstico reorganizado por sintoma, comparações controladas, compatibilidade do modelo, cabo como teste não conclusivo, reset por último e FAQ de decisão. Fact-check registrado em blogEditorialSources.ts; capa real licenciada, sem IA.",
   },
 ];
 
@@ -430,7 +430,7 @@ const WAVE_5H: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "Public domain",
@@ -443,13 +443,13 @@ const WAVE_5H: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 2.5",
     imageAttribution: "Foto: Darkone (Wikimedia Commons), CC BY-SA 2.5 — https://commons.wikimedia.org/wiki/File:ASRock_K7VT4A_Pro_Mainboard.jpg",
     notes:
-      "Reescrita integral na Onda 5H; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 58 impressões, 0 cliques e posição média ~9,88 entre 2026-04-01 e 2026-09-27. Conteúdo expandido para separar alimentação, POST, memória, vídeo, firmware e falhas parciais; inclui matriz de sintomas, configuração mínima com limites, validação pós-reparo, critérios de parada e fontes técnicas visíveis. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
 ];
 
@@ -459,7 +459,7 @@ const WAVE_5I: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-12",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
@@ -495,28 +495,28 @@ const WAVE_8E: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-14",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-14",
     imageOrigin: "licensed",
     imageLicense: "CC BY 2.0",
     imageAttribution:
       "Foto: Hamed Saber (Wikimedia Commons), CC BY 2.0 — https://commons.wikimedia.org/wiki/File:VAIO_TZ_laptop_hard_disk.jpg",
     notes:
-      "Reescrita integral na Onda 8E (o rascunho programático homônimo foi removido); intenção informacional declarada em contentIntentMap.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 109 impressões, 1 clique e posição média ~9,53 entre 2026-04-01 e 2026-09-27. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, preservando a mesma URL. Esclarece formatação versus preservação, separa backup, Redefinir este PC, reparo/reinstalação e instalação limpa, e reforça BitLocker, ativação, mídia oficial, identificação do disco e critérios de parada. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
   {
     slug: "quanto-custa-formatar-um-computador",
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-14",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-14",
     imageOrigin: "licensed",
     imageLicense: "Domínio público (obra do governo federal dos EUA)",
     imageAttribution:
       "Foto: Airman 1st Class Jordyn Fetter, U.S. Air Force (Wikimedia Commons), domínio público — https://commons.wikimedia.org/wiki/File:Replacing_hardware_160210-F-KR223-021.jpg",
     notes:
-      "URL nova da Onda 8E com intenção comercial de avaliação de custo; todos os valores vêm de src/lib/precosConfig.ts; capa é fotografia real de domínio público, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 1 impressão, 0 cliques e posição média 11 entre 2026-04-01 e 2026-09-27. URL Inspection: PASS, Submitted and indexed, ALLOWED, INDEXING_ALLOWED, SUCCESSFUL e rastreada como MOBILE. A owner suplementar usa diretamente MODALIDADES de src/lib/precosConfig.ts para manter os valores sincronizados, amplia escopo/backup/licença/BitLocker e registra fontes oficiais Microsoft. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
 ];
 
@@ -531,42 +531,42 @@ const WAVE_9B: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-15",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-15",
     imageOrigin: "licensed",
     imageLicense: "CC BY 2.0",
     imageAttribution:
       "Foto: 褒忠國中 雲端網 (Wikimedia Commons), CC BY 2.0 — https://commons.wikimedia.org/wiki/File:Acer_desktop_computers_in_computer_classroom_of_Baozhong_Junior_High_School_20121009.jpg",
     notes:
-      "Pilar nacional DEFINITION escrito do zero na Rodada 9B; capa é fotografia real licenciada (CC BY 2.0), sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 78 impressões, 0 cliques e posição média ~64,68 entre 2026-04-01 e 2026-09-27. Queries reais incluem 'informatica', 'informática', 'o que e informatica', 'o que significa informatica', 'o que estuda a informática' e 'area de informatica'. A versão suplementar preserva a URL e transforma o pilar em definição ampla e estruturada, separando informática, TI e as principais disciplinas de computing conforme ACM/IEEE.",
   },
   {
     slug: "informatica-basica",
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-15",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-15",
     imageOrigin: "licensed",
     imageLicense: "CC BY 2.0",
     imageAttribution:
       "Foto: woodleywonderworks (Wikimedia Commons), CC BY 2.0 — https://commons.wikimedia.org/wiki/File:Student_on_computer.jpg",
     notes:
-      "Pilar nacional DEFINITION/LEARNING escrito do zero na Rodada 9B; capa é fotografia real licenciada (CC BY 2.0), sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 55 impressões, 0 cliques e posição média ~49,36 entre 2026-04-01 e 2026-09-27. Queries reais como “conhecimento basico informatica”, “informatica basica”, “informatica basica conteúdo”, “informatica basica resumo” e “noções básicas de informática” foram incorporadas. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, com mapa de competências, checklist prático, arquivos/pastas, produtividade, nuvem/backup, segurança e separação explícita entre básico e avançado.",
   },
   {
     slug: "como-aprender-informatica",
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-15",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-15",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 2.0",
     imageAttribution:
       "Foto: Michael Surran (Wikimedia Commons), CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Students_working_on_class_assignment_in_computer_lab.jpg",
     notes:
-      "Pilar nacional LEARNING/COURSE escrito do zero na Rodada 9B; capa é fotografia real licenciada (CC BY-SA 2.0), sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 21 impressões, 0 cliques e posição média ~49,10 entre 2026-04-01 e 2026-09-27. Queries reais incluem aprender informática passo a passo/do zero/sozinho e informática para iniciantes. A versão suplementar preserva a URL e transforma o pilar em roteiro por competências e projetos, com arquivos, Windows, internet, produtividade, nuvem/backup, segurança, hardware, redes e diagnóstico.",
   },
 ];
 
@@ -582,42 +582,42 @@ const WAVE_9C: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-25",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-25",
     imageOrigin: "licensed",
     imageLicense: "CC BY 2.0",
     imageAttribution:
       "Foto: Paul Schultz (Wikimedia Commons), CC BY 2.0 — https://commons.wikimedia.org/wiki/File:BIOS_Setup_First_Time.jpg",
     notes:
-      "Pilar diagnóstico escrito do zero na Onda 9C; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 12 impressões, 0 cliques e posição média ~13,08 entre 2026-04-01 e 2026-09-27. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, preservando a mesma URL. Diagnóstico reorganizado em detecção do disco, entrada Windows Boot Manager, UEFI/Legacy, estrutura de boot, retenção de configurações, BitLocker e critérios de parada; a única query individual exposta pelo GSC foi tratada sem desviar a intenção principal.",
   },
   {
     slug: "erro-no-bootable-device-como-resolver",
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-02",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-08-25",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 2.5",
     imageAttribution:
       "Foto: Thomas Rosenau (Wikimedia Commons), CC BY-SA 2.5 — https://commons.wikimedia.org/wiki/File:Serial_ATA_hard_disk_connected.jpg",
     notes:
-      "Satélite de erro específico escrito do zero na Onda 9C; revisão material de segurança e fontes oficiais concluída em 2026-09-02; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 5 impressões, 0 cliques e posição média ~38,8 entre 2026-04-01 e 2026-09-28. Queries reais cobrem 'no boot device found', 'no bootable device como resolver' e 'no bootable device please restart'. A versão suplementar preserva a URL e reorganiza o diagnóstico em detecção do disco, entrada de boot, UEFI/Legacy, WinRE, BCDBoot e proteção BitLocker, sem formatação destrutiva por tentativa.",
   },
   {
     slug: "troquei-o-ssd-e-o-pc-so-abre-a-bios",
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-25",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-25",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: Ilya Plekhanov (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Samsung_960_EVO_in_M.2_slot_02.jpg",
     notes:
-      "Satélite de cenário de upgrade escrito do zero na Onda 9C; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 89 impressões, 1 clique e posição média ~9,20 entre 2026-04-01 e 2026-09-27. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, preservando a mesma URL. Diagnóstico reorganizado em detecção física, cenário do SSD, Windows Boot Manager, UEFI/Legacy, controlador e estrutura de boot, com BitLocker, preservação do disco antigo e fontes oficiais visíveis. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
 ];
 
@@ -641,42 +641,42 @@ const WAVE_10C: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-25",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-25",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: D-Kuru (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:DDR_4_SO-DIMM_RAM_slot_PNr%C2%B00837.jpg",
     notes:
-      "Satélite escrito do zero na Onda 10C; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 4 impressões, 0 cliques e posição média ~24 entre 2026-04-01 e 2026-09-27. A única query individual exposta foi 'memoria insuficiente' (2 impressões, posição média 40,5). A versão suplementar passa a sobrepor editorialmente o texto anterior, preservando a URL; diferencia uso alto/cache de pressão real, commit/pagefile, vazamento, paginação, gargalo de disco e defeito físico, sem impor quantidade universal de RAM.",
   },
   {
     slug: "codigos-de-erro-tela-azul-windows",
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-25",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-25",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: JIP (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Blue_Screen_Of_Death_at_Urheilupuisto_metro_station.jpg",
     notes:
-      "Satélite escrito do zero na Onda 10C; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 6 impressões, 0 cliques e posição média ~7,17 entre 2026-04-01 e 2026-09-27. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, preservando a mesma URL. Stop codes deixam de ser tratados como diagnóstico determinístico; entram parâmetros, dump, contexto, recorrência, WHEA, critérios de parada e fontes Microsoft visíveis. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
   {
     slug: "testar-memoria-ram-memtest86",
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-13",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-09-13",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: Fastily (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Memtest86%2B_2019-08-09.jpg",
     notes:
-      "Revisão aprofundada em 2026-09-13 com protocolo de isolamento, limites diagnósticos, FAQ técnica e fontes primárias visíveis; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 3 impressões, 0 cliques e posição média ~23,67 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'teste de memoria ram'. A versão suplementar preserva a URL e aprofunda execução, interpretação, linha de base sem XMP/EXPO, isolamento módulo/slot, limites de teste sem erros e distinção entre capacidade insuficiente e defeito de memória.",
   },
 ];
 
@@ -686,21 +686,21 @@ const WAVE_10D: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: Hans Haase (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:JPANEL_MB_IMG_1121.JPG",
     notes:
-      "Satélite escrito do zero na Onda 10D; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 8 impressões, 0 cliques e posição média ~10,88 entre 2026-04-01 e 2026-09-27. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, preservando a mesma URL. O teste PWR_SW foi reenquadrado como isolamento do circuito do botão, com pinout pelo manual, interpretação não determinística, separação entre sem energia e sem POST, exclusão de notebooks/all-in-one e critérios de parada. Queries individuais não foram expostas pelo GSC e nenhuma foi inventada.",
   },
   {
     slug: "curto-circuito-placa-mae-como-identificar",
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 3.0",
@@ -714,14 +714,14 @@ const WAVE_10D: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 2.0",
     imageAttribution:
       "Foto: Kent Madsen (Wikimedia Commons), CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:CMOS_Battery,_Motherboard.jpg",
     notes:
-      "Satélite escrito do zero na Onda 10D; fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 11 impressões, 0 cliques e posição média 27 entre 2026-04-01 e 2026-09-27. As únicas queries individuais expostas foram 'bios corrompida' e 'reparar bios'. A versão suplementar preserva a mesma URL e separa reset de CMOS/configuração, atualização e recuperação real de firmware; exige procedimento específico do fabricante/modelo, alimentação estável e preparação da chave BitLocker.",
   },
 ];
 
@@ -745,28 +745,28 @@ const WAVE_10E: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 2.0",
     imageAttribution:
       "Foto: Cheon Fong Liew (Wikimedia Commons), CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Dell_Color_Laser_Network_Printer_1320cn_ports.jpg",
     notes:
-      "Satélite escrito do zero na Onda 10C (Lote 2); fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 5 impressões, 0 cliques e posição média ~47,8 entre 2026-04-01 e 2026-09-28. Queries reais: 'como tirar impressora do offline' e 'porque a impressora fica offline'. A versão suplementar preserva a URL e aprofunda energia, USB/rede, IP/porta, fila, driver e seleção da impressora correta sem duplicar o guia de spooler.",
   },
   {
     slug: "fila-de-impressao-travada-spooler-windows",
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: Solomon203 (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Sharp_MX-M465_of_Aurora_Office_Equipment_20161029.jpg",
     notes:
-      "Satélite escrito do zero na Onda 10C (Lote 2); fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 9 impressões, 0 cliques e posição média ~45,56 entre 2026-04-01 e 2026-09-27. Queries reais incluem reinício por CMD, spooler que não inicia/parando sozinho e trabalhos presos. A versão suplementar preserva a mesma URL e separa fila, serviço, driver, offline e conectividade, com limpeza manual limitada à pasta de trabalhos e fontes Microsoft visíveis.",
   },
 ];
 
@@ -776,14 +776,14 @@ const WAVE_10F: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 3.0",
     imageAttribution:
       "Foto: Dsimic (Wikimedia Commons), CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:2.5-inch_SATA_drive_on_top_of_a_3.5-inch_SATA_drive,_close-up_of_data_and_power_connectors.jpg",
     notes:
-      "Satélite escrito do zero na Onda 10C (Lote 3); fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 68 impressões, 0 cliques e posição média ~25,94 entre 2026-04-01 e 2026-09-27. Queries reais como “computador nao reconhece hd”, “pc não reconhece hd”, “ssd nao reconhecido” e “bios não reconhece ssd” foram incorporadas. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, separando BIOS/UEFI de Windows, SATA de M.2/NVMe, boot de estado do volume e preservação de dados antes de operações destrutivas.",
   },
   {
     slug: "ssd-nvme-nao-aparece-no-gerenciador-de-discos",
@@ -818,42 +818,42 @@ const WAVE_10F: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "Public Domain",
     imageAttribution:
       "Foto: Shaddack (Wikimedia Commons), domínio público — https://commons.wikimedia.org/wiki/File:Photo-audiojacks.jpg",
     notes:
-      "Satélite escrito do zero na Onda 10C (Lote 3); fact-check registrado em blogEditorialSources.ts; capa é fotografia real em domínio público, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 4 impressões, 0 cliques e posição média 49 entre 2026-04-01 e 2026-09-28. Queries reais 'sem som' e 'testar som pc' orientam a versão suplementar, que preserva a URL e separa saída, mixer, detecção, conexão física, driver e serviço de áudio, com interlinks para fone e Windows Audio.",
   },
   {
     slug: "fone-de-ouvido-nao-e-reconhecido-no-pc",
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC0",
     imageAttribution:
       "Foto: Em3rgent0rdr (Wikimedia Commons), CC0 — https://commons.wikimedia.org/wiki/File:Phone-connectors-labeled.jpg",
     notes:
-      "Satélite escrito do zero na Onda 10C (Lote 3); fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 40 impressões, 0 cliques e posição média ~25,08 entre 2026-04-01 e 2026-09-27. Queries reais de P2, entrada frontal, notebook e PC não reconhecendo fone foram incorporadas. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, separando P2/USB/Bluetooth, detecção/reprodução, painel frontal/driver e áudio/microfone-permissões.",
   },
   {
     slug: "servico-de-audio-do-windows-nao-esta-em-execucao",
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC BY 2.0",
     imageAttribution:
       "Foto: bengt-re (Wikimedia Commons), CC BY 2.0 — https://commons.wikimedia.org/wiki/File:GIGABYTE_GS-GC330UD_(8357750354).jpg",
     notes:
-      "Satélite escrito do zero na Onda 10C (Lote 3); fact-check registrado em blogEditorialSources.ts; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 5 impressões, 0 cliques e posição média ~22,4 entre 2026-04-01 e 2026-09-27. As únicas queries expostas foram 'audio.exe', 'o windows não pode encontrar audio.exe' e 'windows não pode encontrar audio.exe'. A versão suplementar passa a sobrepor editorialmente o texto anterior, preservando a mesma URL; separa Windows Audio, detecção/driver, reprodução e referência quebrada a executável, com fontes Microsoft e sem recomendar EXE/DLL avulso.",
   },
 ];
 
@@ -877,21 +877,21 @@ const WAVE_10G: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: Santeri Viinamäki (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Tape_over_laptop_webcam.jpg",
     notes:
-      "Satélite de permissões, escrito do zero na Onda 10C (Lote 4); fact-check registrado em blogEditorialSources.ts; capa é imagem real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 4 impressões, 0 cliques e posição média ~8,75 entre 2026-04-01 e 2026-09-27. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, preservando a mesma URL. A investigação separa acesso do dispositivo, apps da Store, apps desktop, navegador/site e seleção da câmera no aplicativo, com fonte Microsoft visível e sem inventar queries individuais.",
   },
   {
     slug: "webcam-usb-nao-e-detectada",
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "CC0",
@@ -919,28 +919,28 @@ const WAVE_10G: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "Public Domain",
     imageAttribution:
       "Foto: Wikipedian5122024 (Wikimedia Commons), domínio público — https://commons.wikimedia.org/wiki/File:Windows_10-11_update_screen_notice.png",
     notes:
-      "Satélite de cache do Update, escrito do zero na Onda 10C (Lote 4); procedimento publicado é reversível (renomear, nunca apagar como primeiro passo); fact-check registrado em blogEditorialSources.ts; capa é imagem real licenciada, sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 6 impressões, 0 cliques e posição média ~54,33 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'software distribution'. A versão suplementar preserva a URL e aprofunda função do cache, triagem prévia, renomeação reversível, serviços, limites de formatação/reset e separação entre cache, DISM/SFC e falhas específicas do Windows Update.",
   },
   {
     slug: "windows-update-travado-desfazendo-alteracoes",
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-26",
+    reviewedAt: "2026-09-30",
     approvedAt: "2026-08-26",
     imageOrigin: "licensed",
     imageLicense: "Public Domain",
     imageAttribution:
       "Foto: PantheraLeo1359531 (Wikimedia Commons), domínio público — https://commons.wikimedia.org/wiki/File:Windows_Update_%E2%80%93_VirtualBox_Windows_11_24H2_(Version_10.0.26100.1742)_04_02_2025_18_22_13crop.png",
     notes:
-      "Satélite de reversão de atualização, escrito do zero na Onda 10C (Lote 4); desligamento forçado tratado com ressalva explícita; fact-check registrado em blogEditorialSources.ts; capa é imagem real licenciada, sem IA.",
+      "Revisão material em 2026-09-30 guiada pelo GSC: 8 impressões, 0 cliques e posição média 12 entre 2026-04-01 e 2026-09-27. A query real “desfazendo alterações feitas no computador” foi incorporada à resposta. A versão suplementar passa a sobrepor editorialmente o texto monolítico antigo, preservando a mesma URL; remove heurísticas determinísticas de tempo/LED/ventoinha, prioriza histórico/KB/código e solucionador oficial, e usa Windows RE/BitLocker quando o sistema não volta a iniciar.",
   },
 ];
 
@@ -956,14 +956,14 @@ const WAVE_11A: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-08-31",
+    reviewedAt: "2026-09-29",
     approvedAt: "2026-08-31",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Captura: Paowee (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Lenovo_ThinkPad_T470_UEFI_BIOS_1.75_setup_-_boot_menu_selection.JPG",
     notes:
-      "Pilar do cluster de BIOS/UEFI, escrito do zero na Onda 11A (Lote 4); fact-check registrado em blogEditorialSources.ts; capa é imagem real licenciada, sem IA.",
+      "Revisão material em 2026-09-29 guiada pelo GSC: 49 impressões, 0 cliques e posição média ~9,49; resposta direta para boot mode UEFI/Legacy, matriz UEFI/Legacy/CSM/Secure Boot, migração MBR→GPT com limites, BitLocker, critérios de parada e fontes Microsoft visíveis. Queries reais expostas pelo GSC foram incorporadas sem extrapolar demanda.",
   },
   {
     slug: "ordem-de-boot-na-bios-como-configurar",
@@ -1015,14 +1015,14 @@ const WAVE_11C: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-03",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-09-03",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 3.0",
     imageAttribution:
       "Foto: Zephyris (Wikimedia Commons), CC BY-SA 3.0 — https://commons.wikimedia.org/wiki/File:Male_and_Female_USB_Connectors.jpg",
     notes:
-      "Guia de diagnóstico de periférico USB, escrito do zero na Onda 11C; isola porta, cabo, alimentação e driver sem canibalizar o roteiro específico de webcam; capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média ~44,5 entre 2026-04-01 e 2026-09-28. Queries reais: 'dispositivo usb não reconhecido' e 'usb não reconhecido'. A versão suplementar preserva a URL e aprofunda porta, cabo, alimentação, enumeração, códigos do Gerenciador de Dispositivos e driver sem canibalizar webcam ou proteção contra gravação.",
   },
   {
     slug: "como-testar-restauracao-de-backup",
@@ -1061,28 +1061,28 @@ const WAVE_11D: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-03",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-09-03",
     imageOrigin: "licensed",
     imageLicense: "Free Art License 1.3",
     imageAttribution:
       "Foto: smial (Wikimedia Commons), Free Art License 1.3 — https://commons.wikimedia.org/wiki/File:USB_stick_with_write_protection_IMGP7832_wp.jpg",
     notes:
-      "Diagnóstico de mídia removível em somente leitura, escrito do zero na Onda 11D: separa trava física, política do sistema, sistema de arquivos danificado e memória em fim de vida, com cópia obrigatória antes de qualquer correção. Não canibaliza o guia geral de USB não reconhecido. Capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média ~24,5 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'usb protegido contra gravação'. A versão suplementar preserva a URL e aprofunda trava física, atributos readonly, política, sistema de arquivos, falha de controlador, cópia prévia dos dados e critérios de parada, com fontes Microsoft visíveis.",
   },
   {
     slug: "historico-de-arquivos-windows-como-configurar",
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-03",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-09-03",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: Sam Frazier (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:External_portable_hard_drive.jpg",
     notes:
-      "Procedimento de versionamento nativo do Windows, escrito do zero na Onda 11D: escopo real do recurso, dimensionamento do destino, retenção e diferença entre versionar e sincronizar. O teste de restauração permanece no artigo próprio. Capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição 10 entre 2026-04-01 e 2026-09-28. O GSC não expôs consultas individuais e nenhuma foi inventada. A versão suplementar preserva a URL e aprofunda destino separado, escopo, retenção, restauração de teste, sincronização versus versionamento e limites do Histórico de Arquivos como única camada de backup.",
   },
 ];
 
@@ -1213,14 +1213,14 @@ const WAVE_11G: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-03",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-09-03",
     imageOrigin: "licensed",
     imageLicense: "CC BY 4.0",
     imageAttribution:
       "Foto: Mk2010 (Wikimedia Commons), CC BY 4.0 — https://commons.wikimedia.org/wiki/File:Hard_disk_drive_platter,_Samsung_MP0402H.jpg",
     notes:
-      "Procedimento para arquivo que não abre escrito do zero na Onda 11G: separa arquivo corrompido de programa incompatível, protege a cópia original e define quando o caso vira recuperação de dados. Não canibaliza os artigos de HD com defeito nem os de backup. Capa é fotografia real licenciada, sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: query real 'arquivo corrompido' com 1 impressão e posição 38 entre 2026-04-01 e 2026-09-28. A versão suplementar preserva a URL e aprofunda preservação da cópia original, incompatibilidade versus corrupção, versões anteriores/backup, limite do CHKDSK e critérios para migrar o caso para recuperação de dados.",
   },
 ];
 
@@ -1276,14 +1276,14 @@ const WAVE_11H: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25",
+    reviewedAt: "2026-10-01",
     approvedAt: "2026-09-25",
     imageOrigin: "owned",
     imageLicense: "Todos os direitos reservados",
     imageAttribution:
       "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-active-directory",
     notes:
-      "Reescrita completa com Microsoft Learn: AD DS, DNS, segurança, redundância, GPO, backup e critérios de parada. Capa vetorial própria, sem IA.",
+      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição 44 entre 2026-04-01 e 2026-09-28. A única query exposta foi 'servidor ad'. A versão suplementar preserva a URL e aprofunda nova floresta versus DC adicional, DNS/namespace, promoção, DSRM, validação, OUs/GPOs, redundância, replicação, contas privilegiadas e backup de estado do sistema com fontes Microsoft Learn atuais.",
   },
   {
     slug: "como-deixar-celular-android-mais-rapido",
@@ -1317,9 +1317,9 @@ const WAVE_11I: EditorialApproval[] = [
   },
   {
     slug: "erros-comuns-upgrade-computador", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
+    reviewedAt: "2026-10-01", approvedAt: "2026-09-25", imageOrigin: "owned", imageLicense: "Todos os direitos reservados",
     imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/erros-comuns-upgrade-computador",
-    notes: "Reescrita completa com documentação de memória, SSD/NVMe, requisitos do Windows e BitLocker; acrescenta compatibilidade, backup, firmware, energia e validação pós-upgrade.",
+    notes: "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição 3 entre 2026-04-01 e 2026-09-28. A única query exposta foi 'compatibilidade pc'. A versão suplementar preserva a URL e aprofunda RAM, SSD, GPU, fonte, CPU, BIOS/UEFI, Windows 11, BitLocker, validação uma peça por vez e rollback.",
   },
   {
     slug: "como-configurar-vpn-empresarial", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
@@ -1363,9 +1363,9 @@ const WAVE_11J: EditorialApproval[] = [
   },
   {
     slug: "como-fazer-teste-velocidade-internet", status: "approved", authorType: "organization", authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-25", approvedAt: "2026-09-25", imageOrigin: "licensed", imageLicense: "CC BY 4.0",
+    reviewedAt: "2026-10-01", approvedAt: "2026-09-25", imageOrigin: "licensed", imageLicense: "CC BY 4.0",
     imageAttribution: "Foto: VulcanSphere (Wikimedia Commons), CC BY 4.0 — https://commons.wikimedia.org/wiki/File:ARRIS_CM820B_DOCSIS_Cable_Modem.jpg",
-    notes: "Reescrita com FCC: referência cabeada, múltiplas medições, download/upload/latência/jitter/perda; remove regra absoluta sobre Wi‑Fi e percentuais regulatórios antigos.",
+    notes: "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição média 5 entre 2026-04-01 e 2026-09-28. A única query exposta foi 'eaq teste velocidade'. A versão suplementar preserva a URL, atualiza a referência histórica EAQ para o contexto atual ESAQ/Brasil Banda Larga da Anatel e aprofunda download, upload, latência, jitter, perda, controle de variáveis e interpretação por séries comparáveis.",
   },
 ];
 
@@ -1594,6 +1594,218 @@ const WAVE_11U: EditorialApproval[] = [
   },
 ];
 
+
+const WAVE_11V: EditorialApproval[] = [
+  {
+    slug: "como-saber-se-pc-tem-virus-malware",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-30",
+    approvedAt: FIRST_WAVE_APPROVED_AT,
+    imageOrigin: "generated",
+    imageLicense: "Ativo gerado sob encomenda para uso próprio da marca",
+    imageAttribution: "O Técnico de Informática",
+    notes:
+      "Revisão material em 2026-09-30 guiada pelo GSC: 7 impressões, 0 cliques e posição média ~24,43 entre 2026-04-01 e 2026-09-27. A única query individual exposta foi 'como saber se o notebook esta com virus' (1 impressão, posição 40). A versão suplementar passa a sobrepor editorialmente o conteúdo-base, preservando a mesma URL; separa sintoma de evidência, navegador de sistema, malware de comprometimento de conta e falso suporte, adiciona matriz de decisão, contenção para ransomware/acesso remoto e critérios de parada, sem inventar queries.",
+  },
+];
+
+
+
+const WAVE_11W: EditorialApproval[] = [
+  {
+    slug: "notebook-superaquecendo-o-que-fazer",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-09-30",
+    approvedAt: FIRST_WAVE_APPROVED_AT,
+    imageOrigin: "generated",
+    imageLicense: "Ativo gerado sob encomenda para uso próprio da marca",
+    imageAttribution: "O Técnico de Informática",
+    notes:
+      "Revisão material em 2026-09-30 guiada pelo GSC: 4 impressões, 0 cliques e posição média ~50,75 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'notebook superaquecendo' (4 impressões). A versão suplementar preserva a URL e mantém intenção específica de notebook, separando carga, ventilação, throttling, ventoinha, poeira, interface térmica e bateria estufada, sem temperatura ou prazo universal de pasta térmica.",
+  },
+];
+
+
+const WAVE_11X: EditorialApproval[] = [
+  {
+    slug: "como-escolher-uma-workstation",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: FIRST_WAVE_APPROVED_AT,
+    imageOrigin: "generated",
+    imageLicense: "Ativo gerado sob encomenda para uso próprio da marca",
+    imageAttribution: "O Técnico de Informática",
+    notes:
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média ~30,5 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'o que é workstation' (1 impressão, posição 57). A versão suplementar preserva a URL e redefine a owner como guia de decisão por carga real, software, CPU, GPU, RAM, armazenamento, rede, expansão, suporte e continuidade, sem benchmark inventado, configuração universal ou recomendação comercial.",
+  },
+];
+
+
+const WAVE_11Y: EditorialApproval[] = [
+  {
+    slug: "como-melhorar-sinal-wifi-em-casa",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: FIRST_WAVE_APPROVED_AT,
+    imageOrigin: "generated",
+    imageLicense: "Ativo gerado sob encomenda para uso próprio da marca",
+    imageAttribution: "O Técnico de Informática",
+    notes:
+      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição média 77 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'sinal de wifi fraco'. A versão suplementar preserva a URL e aprofunda diagnóstico de cobertura, cliente, interferência, bandas e desenho com múltiplos pontos, sem inventar queries ou regras universais.",
+  },
+];
+
+
+const WAVE_11Z: EditorialApproval[] = [
+  {
+    slug: "como-organizar-arquivos-windows-iniciantes",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: "2026-09-25",
+    imageOrigin: "owned",
+    imageLicense: "Todos os direitos reservados",
+    imageAttribution: "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-organizar-arquivos-windows-iniciantes",
+    notes:
+      "Revisão material em 2026-10-01 guiada pelo GSC: 2 impressões, 0 cliques e posição média 59,5 entre 2026-04-01 e 2026-09-28. A única query individual exposta foi 'como organizar arquivos no computador'. A versão suplementar preserva a URL e aprofunda organização, pesquisa, sincronização e backup com foco em segurança de dados.",
+  },
+];
+
+
+const WAVE_12A: EditorialApproval[] = [
+  {
+    slug: "como-resolver-tela-azul-windows",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: "2026-08-12",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY 4.0",
+    imageAttribution:
+      "Foto: QueenBarenziah (Wikimedia Commons), CC BY 4.0 — https://commons.wikimedia.org/w/index.php?curid=130534314",
+    notes:
+      "Revisão material em 2026-10-01 guiada pelo GSC: a query real 'tela azul' teve 1 impressão, 0 cliques e posição média 63 no período fechado até 2026-09-28. A versão suplementar preserva a URL e aprofunda bug checks, contexto, alterações recentes, Windows RE, dumps e critérios de parada.",
+  },
+];
+
+
+const WAVE_12B: EditorialApproval[] = [
+  {
+    slug: "como-instalar-windows-11-do-zero",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: "2026-08-12",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY 2.0",
+    imageAttribution:
+      "Foto: Shixart1985 (Wikimedia Commons), CC BY 2.0 — https://commons.wikimedia.org/w/index.php?curid=194512723",
+    notes:
+      "Revisão material em 2026-10-01 guiada por GSC real de página: 2 impressões, 0 cliques e posição média 9 no período fechado até 2026-09-28. Sem query individual exposta; nenhuma foi inventada. A versão suplementar preserva a URL e aprofunda requisitos, backup, BitLocker, mídia oficial, partições, ativação, drivers e critérios de parada.",
+  },
+];
+
+
+const WAVE_12C: EditorialApproval[] = [
+  {
+    slug: "como-remover-virus-windows-iniciantes",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: "2026-08-12",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY-SA 4.0",
+    imageAttribution:
+      "Foto: BrayLockBoy (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:MEMZ_Trojan_running_on_Samsung_N130,_13_December_2019.jpg",
+    notes:
+      "Revisão material em 2026-10-01 guiada por GSC real de página: 2 impressões, 0 cliques e posição média 28 no período fechado até 2026-09-28. Sem query individual exposta; nenhuma foi inventada. A versão suplementar preserva a URL e aprofunda contenção, Defender, credenciais, backup, ransomware, reinfecção e critérios de reinstalação.",
+  },
+];
+
+
+const WAVE_12D: EditorialApproval[] = [
+  {
+    slug: "organizacao-de-ti-para-pequenos-escritorios",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: "2026-08-12",
+    imageOrigin: "generated",
+    imageLicense: "custom-owned",
+    imageAttribution: "O Técnico de Informática",
+    notes:
+      "Revisão material em 2026-10-01 guiada por GSC real de página: 1 impressão, 0 cliques e posição média 2 no período fechado até 2026-09-28. Sem query individual exposta; nenhuma foi inventada. A versão suplementar preserva a URL e aprofunda inventário, contas, backup, rede, documentação e recuperação sem SLA ou promessa de continuidade.",
+  },
+];
+
+
+const WAVE_12E: EditorialApproval[] = [
+  {
+    slug: "ordem-de-boot-na-bios-como-configurar",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: "2026-08-31",
+    imageOrigin: "licensed",
+    imageLicense: "CC BY 2.0",
+    imageAttribution:
+      "Foto: Paul Schultz (Wikimedia Commons), CC BY 2.0 — https://commons.wikimedia.org/wiki/File:BIOS_Setup_First_Time.jpg",
+    notes:
+      "Revisão material em 2026-10-01 guiada por GSC real de página: 1 impressão, 0 cliques e posição média 5 no período fechado até 2026-09-28. Sem query individual exposta; nenhuma foi inventada. A versão suplementar preserva a URL e aprofunda boot temporário, prioridade permanente, Windows Boot Manager, UEFI, Secure Boot e BitLocker.",
+  },
+];
+
+
+const WAVE_12F: EditorialApproval[] = [
+  {
+    slug: "windows-update-nao-funciona-o-que-verificar",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: "2026-08-26",
+    imageOrigin: "licensed",
+    imageLicense: "Public Domain",
+    imageAttribution:
+      "Foto: Dion Dresschers (Wikimedia Commons), domínio público — https://commons.wikimedia.org/wiki/File:Cc0-windows-update_dion_dresschers.png",
+    notes:
+      "Revisão material em 2026-10-01 guiada por GSC real de página: 2 impressões, 0 cliques e posição média 51,5 no período fechado até 2026-09-28. A query individual exposta foi considerada ruidosa e não foi extrapolada. A versão suplementar preserva a URL e aprofunda estágios, código/KB, espaço, solucionador oficial, cache e recuperação.",
+  },
+];
+
+
+const WAVE_12G: EditorialApproval[] = [
+  {
+    slug: "como-configurar-bios-uefi-corretamente",
+    status: "approved",
+    authorType: "organization",
+    authorId: INSTITUTIONAL_AUTHOR.id,
+    reviewedAt: "2026-10-01",
+    approvedAt: "2026-09-25",
+    imageOrigin: "owned",
+    imageLicense: "Todos os direitos reservados",
+    imageAttribution:
+      "Arte editorial original: O Técnico de Informática — https://otecnicodeinformatica.com.br/blog/como-configurar-bios-uefi-corretamente",
+    notes:
+      "Revisão material em 2026-10-01 guiada por GSC real: 2 impressões, 0 cliques e posição média 58,5; query individual 'uefi' com 1 impressão. A versão suplementar preserva a URL e aprofunda baseline, Secure Boot, TPM, BitLocker, armazenamento, firmware e rollback.",
+  },
+];
+
+
 export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
 
   ...FIRST_WAVE_SLUGS.map((slug) => [
@@ -1663,6 +1875,18 @@ export const APPROVED_EDITORIAL_CONTENT = new Map<string, EditorialApproval>([
   ...WAVE_11S.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11T.map((a) => [a.slug, a] as [string, EditorialApproval]),
   ...WAVE_11U.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11V.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11W.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11X.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11Y.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_11Z.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_12A.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_12B.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_12C.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_12D.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_12E.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_12F.map((a) => [a.slug, a] as [string, EditorialApproval]),
+  ...WAVE_12G.map((a) => [a.slug, a] as [string, EditorialApproval]),
 
 ]);
 

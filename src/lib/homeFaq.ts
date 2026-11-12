@@ -28,7 +28,7 @@ export const HOME_FAQ: HomeFaqItem[] = [
   },
   {
     q: "Quanto tempo demora para o técnico chegar?",
-    a: "Depende da agenda, da sua localização e do trânsito. Em atendimentos próximos o deslocamento costuma ficar entre 30 e 60 minutos, mas o horário só é confirmado na triagem — não prometemos prazo antes de checar a disponibilidade real.",
+    a: "Depende da agenda, da sua localização, da modalidade e do trânsito. O horário só é confirmado na triagem depois de verificar a disponibilidade real; não usamos uma janela fixa de chegada para todos os atendimentos.",
   },
   {
     q: "Atendem empresas?",
