@@ -36,7 +36,8 @@ jobs:
       - name: Guard original PR HEAD
         shell: bash
         run: |
-          test "$(git rev-parse HEAD^)" = 'fce0728057249cdef26891e4251084792d001484'
+          test "$(git branch --show-current)" = 'fix/security-dompurify-3417-20261031'
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
           node -e 'const p=require("./package.json");if(p.dependencies["@tanstack/react-start"]!=="1.168.32")process.exit(1)'
       - name: Regenerate both lockfiles using package managers
         shell: bash
