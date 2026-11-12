@@ -13,7 +13,7 @@
  * Uso: node scripts/check-forbidden-copy.mjs
  */
 import { readFileSync, readdirSync, statSync } from "node:fs";
-import { join, extname } from "node:path";
+import { extname, posix } from "node:path";
 
 const ROOTS = ["src", "index.html", "scripts/curated-static-body.mjs", "scripts/curated-routes-meta.mjs"];
 const EXT = new Set([".ts", ".tsx", ".html", ".mjs"]);
@@ -61,7 +61,13 @@ const ALLOW = [
 const files = [];
 const walk = (p) => {
   const st = statSync(p);
-  if (st.isDirectory()) return readdirSync(p).forEach((f) => !SKIP.test(join(p, f)) && walk(join(p, f)));
+  if (st.isDirectory()) {
+    for (const entry of readdirSync(p)) {
+      const child = posix.join(p, entry);
+      if (!SKIP.test(child)) walk(child);
+    }
+    return;
+  }
   if (EXT.has(extname(p)) && !SKIP.test(p)) files.push(p);
 };
 for (const r of ROOTS) { try { walk(r); } catch { /* opcional */ } }
