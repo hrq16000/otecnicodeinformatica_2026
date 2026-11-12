@@ -67,7 +67,7 @@ jobs:
           timeout 4m docker run --rm \
             -v "$RUNNER_TEMP/gitleaks-head:/repo:ro" \
             ghcr.io/gitleaks/gitleaks:v8.30.1 \
-            dir /repo --redact --no-banner
+            dir /repo --redact --no-banner --verbose
 
       # 5b) Preservar integralmente a varredura Git existente: diffs e historico.
       # O job segue bloqueante para achados OU timeout (exit code 124).
