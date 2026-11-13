@@ -401,9 +401,22 @@ function countWords(block) {
 
 
 export async function getBlogPosts(rootDir = ".") {
-  const posts = [];
-  const seen = new Set();
+  const postsBySlug = new Map();
   const duplicates = [];
+  const overrides = [];
+
+  // Mesma precedência do runtime: base, suplementar, programático.
+  function addPost(post) {
+    const previous = postsBySlug.get(post.slug);
+    if (previous) {
+      if (previous.origin === "manual" && post.origin === "supplemental" && isWaveApproved(post.slug)) {
+        overrides.push(post.slug);
+      } else {
+        duplicates.push(post.slug);
+      }
+    }
+    postsBySlug.set(post.slug, post);
+  }
 
   // --- Base manual (blogPostsContentBase) ---
   const basePath = path.join(rootDir, "src/data/blogPostsContent.tsx");
@@ -421,9 +434,7 @@ export async function getBlogPosts(rootDir = ".") {
     const category = extractField(block, "category");
     const readTime = extractField(block, "readTime");
     if (!title) continue;
-    if (seen.has(slug)) { duplicates.push(slug); continue; }
-    seen.add(slug);
-    posts.push({
+    addPost({
       slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE,
       category: category ?? "", origin: "manual",
       readTime: readTime ?? "10 min",
@@ -431,6 +442,7 @@ export async function getBlogPosts(rootDir = ".") {
       headings: extractHeadings(block),
       sections: extractSections(block),
       wordCount: countWords(block),
+      raw: block,
     });
   }
 
@@ -451,9 +463,7 @@ export async function getBlogPosts(rootDir = ".") {
     const category = extractField(block, "category");
     const readTime = extractField(block, "readTime");
     if (!title) continue;
-    if (seen.has(slug)) { duplicates.push(slug); continue; }
-    seen.add(slug);
-    posts.push({
+    addPost({
       slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE,
       category: category ?? "", origin: "supplemental",
       readTime: readTime ?? "10 min",
@@ -461,6 +471,7 @@ export async function getBlogPosts(rootDir = ".") {
       headings: extractHeadings(block),
       sections: extractSections(block),
       wordCount: countWords(block),
+      raw: block,
     });
   }
 
@@ -482,16 +493,15 @@ export async function getBlogPosts(rootDir = ".") {
     const date = extractField(block, "date");
     const category = extractField(block, "category");
     if (!title) continue;
-    if (seen.has(slug)) { duplicates.push(slug); continue; }
-    seen.add(slug);
-    posts.push({
+    addPost({
       slug, title, excerpt: excerpt ?? "", date: date ?? HOWTO_DEFAULT_DATE,
       category: category ?? "", origin: "programmatic",
       bodySignals: (block.match(/\b(?:lead|sections|whenToCall)\s*:/g) || []).length,
+      raw: block,
     });
   }
 
-  return { posts, duplicates };
+  return { posts: [...postsBySlug.values()], duplicates, overrides };
 }
 
 // Corpo estático (dentro do <noscript> do #root) de um artigo aprovado.
@@ -833,7 +843,7 @@ export async function prerenderCities(distDir) {
   // de qualquer sitemap. Registro editorial vazio => nenhum indexável.
   const { posts: blogPosts, duplicates: blogDuplicates } = await getBlogPosts(".");
   if (blogDuplicates.length) {
-    console.warn(`[prerender-cities] blog: ${blogDuplicates.length} slug(s) duplicado(s) ignorado(s): ${blogDuplicates.join(", ")}`);
+    console.warn(`[prerender-cities] blog: ${blogDuplicates.length} colisão(ões) inesperada(s): ${blogDuplicates.join(", ")}`);
   }
 
   // Hub /blog — indexável somente quando há artigos aprovados na onda.

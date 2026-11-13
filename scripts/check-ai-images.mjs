@@ -22,7 +22,7 @@
  * Uso: node scripts/check-ai-images.mjs [--json]
  */
 import { readdirSync, statSync, readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
-import { join, extname, basename } from "node:path";
+import { join, extname, basename, sep } from "node:path";
 
 const DIRS = ["public", "src/assets"];
 const RASTER = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif", ".gif"]);
@@ -85,7 +85,7 @@ const legado = [];
 const semVariante = [];
 let analisadas = 0;
 
-const todos = DIRS.flatMap(walk);
+const todos = DIRS.flatMap(walk).map((file) => file.split(sep).join("/"));
 const porBase = new Set(todos.map((f) => f.replace(/\.[a-z0-9]+$/i, "") + extname(f).toLowerCase()));
 
 for (const file of todos) {

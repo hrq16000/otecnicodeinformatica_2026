@@ -70,17 +70,12 @@ export const HeroTriagem = () => {
         aria-hidden="true"
       />
 
-      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[46%] lg:block" aria-hidden="true">
-        <img
-          src="/fotos/estacao-trabalho.jpg"
-          alt=""
-          aria-hidden="true"
-          width={1024}
-          height={765}
-          fetchPriority="high"
-          decoding="async"
-          className="h-full w-full object-cover object-center"
-        />
+      {/* Fundo decorativo carregado apenas em viewport desktop. */}
+      <div
+        className="pointer-events-none absolute inset-y-0 right-0 hidden w-[46%] bg-cover bg-center lg:block"
+        style={{ backgroundImage: "url('/fotos/estacao-trabalho-desktop.webp')" }}
+        aria-hidden="true"
+      >
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/10" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/70" />
       </div>
@@ -102,16 +97,19 @@ export const HeroTriagem = () => {
             empresas. Conte o que aconteceu com suas palavras — a parte técnica fica com a gente.
           </p>
           <figure className="relative mt-6 overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-lg)] lg:hidden">
-            <img
-              src="/fotos/bancada-tecnica.jpg"
-              alt="Bancada de diagnóstico com notebook, SSD e ferramentas de precisão"
-              width={1024}
-              height={735}
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-              className="aspect-[16/9] w-full object-cover object-[65%_center]"
-            />
+            <picture>
+              <source srcSet="/fotos/bancada-tecnica-mobile.webp" type="image/webp" />
+              <img
+                src="/fotos/bancada-tecnica.jpg"
+                alt="Bancada de diagnóstico com notebook, SSD e ferramentas de precisão"
+                width={1024}
+                height={735}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+                className="aspect-[16/9] w-full object-cover object-[65%_center]"
+              />
+            </picture>
             <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm font-medium text-white">
               Diagnóstico técnico começa pela causa.
             </figcaption>

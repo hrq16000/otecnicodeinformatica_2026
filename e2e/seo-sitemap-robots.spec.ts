@@ -16,9 +16,11 @@ test.describe("SEO — sitemap & robots", () => {
     const res = await request.get(`${BASE}/sitemap-main.xml`);
     expect(res.ok()).toBeTruthy();
     const body = await res.text();
-    expect(body).toContain(`${SITE_URL}/assistencia-tecnica-curitiba`);
-    expect(body).toContain(`${SITE_URL}/termos-e-condicoes`);
-    expect(body).toContain(`${SITE_URL}/`);
+    const urls = [...body.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
+    expect(urls).toContain(`${SITE_URL}/precos-e-politicas`);
+    expect(urls).toContain(`${SITE_URL}/`);
+    expect(urls).not.toContain(`${SITE_URL}/assistencia-tecnica-curitiba`);
+    expect(urls).not.toContain(`${SITE_URL}/termos-e-condicoes`);
   });
 
   test("/assistencia-tecnica-curitiba canonical self-references", async ({ page }) => {

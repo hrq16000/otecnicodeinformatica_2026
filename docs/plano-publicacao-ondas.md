@@ -20,7 +20,7 @@ sem URL entrando no sitemap antes de estar realmente pronta.
 | Sentry | sourcemaps + release version | `npm run sentry:sourcemaps` |
 | Telemetria | rate limit + dedup em `wa_click`/`call_click`/`funnel_open` | `src/lib/clickDedup.ts` |
 | Web Vitals | relatório LCP/CLS/INP por rota de `/problemas` | `npm run report:problemas-vitals` |
-| Observabilidade | build falha em produção sem DSN/OTLP | `npm run check:observability-env` |
+| Observabilidade | envio externo opcional via Sentry ou OTLP | diagnóstico separado com `npm run check:observability-env` |
 
 ## Onda 28 — Parceiros prestadores (pendente, exige dado real)
 

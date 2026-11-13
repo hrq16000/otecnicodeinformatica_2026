@@ -22,7 +22,7 @@
  *   node scripts/audit-trust-claims.mjs --markdown docs/auditoria-trust-claims.md
  */
 import { readFileSync, readdirSync, statSync, existsSync, writeFileSync, mkdirSync } from "node:fs";
-import { join, relative, dirname } from "node:path";
+import { join, relative, dirname, sep } from "node:path";
 
 const ROOT = process.cwd();
 const SRC = join(ROOT, "src");
@@ -138,7 +138,7 @@ function classificar(familiaId, arquivo) {
 
 const ocorrencias = [];
 for (const file of walk(SRC)) {
-  const rel = relative(ROOT, file);
+  const rel = relative(ROOT, file).split(sep).join("/");
   const linhas = readFileSync(file, "utf8").split("\n");
   linhas.forEach((linha, i) => {
     if (/^\s*(\/\/|\*|\/\*)/.test(linha)) return; // comentários de governança

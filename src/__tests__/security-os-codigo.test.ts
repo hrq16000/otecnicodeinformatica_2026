@@ -61,8 +61,12 @@ describe("os_verification_codes — código nunca em texto puro", () => {
   });
 
   it("registra auditoria administrativa da emissão sem vazar o código", () => {
-    const src = ler(FONTE_EDGE);
-    const bloco = (src.replace(/os-codigo/g, "os-fn")).slice(src.indexOf('from("admin_audit_log")'), src.indexOf("return json({\n      ok: true,"));
+    const src = ler(FONTE_EDGE).replace(/\r\n/g, "\n");
+    const inicio = src.indexOf('from("admin_audit_log")');
+    const fim = src.indexOf("return json({\n      ok: true,", inicio);
+    expect(inicio).toBeGreaterThanOrEqual(0);
+    expect(fim).toBeGreaterThan(inicio);
+    const bloco = src.slice(inicio, fim).replace(/os-codigo/g, "os-fn");
     expect(bloco).toContain("actor_id: admin.id");
     expect(bloco).toContain("actor_email: admin.email");
     expect(bloco).toContain('action: "issue_code"');

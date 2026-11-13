@@ -151,7 +151,8 @@ for (const rota of rotasComLoading) {
         expect(esqueletoAnimando, "esqueleto animando sob reduced-motion").toBe(false);
       }
 
-      await page.unroute(/\/src\/pages\/|\/assets\/.*\.js|\/rest\/v1\//);
+      // Mantém o atraso até a carga terminar, inclusive nos chunks lazy.
+      // Remover rotas aqui pode encerrar requisições cujo handler ainda aguarda.
       await expect(page.locator("h1").first()).toBeVisible({ timeout: 20000 });
       await page.waitForLoadState("networkidle");
       await page.waitForTimeout(400);

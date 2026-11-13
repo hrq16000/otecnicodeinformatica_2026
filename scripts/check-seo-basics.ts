@@ -5,6 +5,7 @@
  *   - <title> presente, não-vazio e diferente do default "Lovable App"
  *   - <meta name="description"> presente e não-default
  *   - exatamente UM <h1> no shell renderizado
+ *   O modo --ssr valida o HTML servido em SSR_BASE_URL.
  *
  * Modo 2 (rotas curadas):  bun scripts/check-seo-basics.ts --curated [dist]
  *   Percorre a lista deduplicada de rotas curadas dentro do dist/ e falha se:
@@ -38,7 +39,10 @@ function checkSingleFile(target: string) {
     console.error(`[seo-check] arquivo não encontrado: ${path}`);
     process.exit(1);
   }
-  const html = readFileSync(path, "utf8");
+  checkSingleHtml(target, readFileSync(path, "utf8"));
+}
+
+function checkSingleHtml(target: string, html: string) {
   const errors: string[] = [];
 
   const titleMatch = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
@@ -190,4 +194,12 @@ function checkCurated(distDir: string) {
 
 const args = process.argv.slice(2);
 if (args[0] === "--curated") checkCurated(args[1] ?? "dist");
+else if (args[0] === "--ssr") {
+  const base = process.env.SSR_BASE_URL;
+  if (!base) throw new Error("[seo-check] SSR_BASE_URL ausente");
+  const url = new URL("/", base);
+  const response = await fetch(url, { redirect: "error", signal: AbortSignal.timeout(30_000) });
+  if (!response.ok) throw new Error(`[seo-check] SSR retornou HTTP ${response.status}`);
+  checkSingleHtml(url.href, await response.text());
+}
 else checkSingleFile(args[0] ?? "index.html");

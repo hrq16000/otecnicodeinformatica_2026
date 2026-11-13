@@ -1,0 +1,38 @@
+# Ocorrências históricas verificadas na ancestralidade de ca7c6fc7.
+# Cada fingerprint identifica um commit imutável, arquivo, regra e linha.
+# Novos commits continuam sujeitos a todas as regras de detecção.
+
+# JWT público com role anon
+33830c8e6edd8cfa67c548bbf22ecc395c4cf179:.stryker-tmp/sandbox-o0KicE/.github/workflows/security.yml:jwt:113
+33830c8e6edd8cfa67c548bbf22ecc395c4cf179:.stryker-tmp/sandbox-o0KicE/.github/workflows/security.yml:jwt:121
+33830c8e6edd8cfa67c548bbf22ecc395c4cf179:.stryker-tmp/sandbox-o0KicE/e2e/security-data-exposure.spec.ts:jwt:27
+42917e732c761668b457f791342eca1a8117b479:e2e/security-data-exposure.spec.ts:jwt:26
+51791cec1c0a8ab6d0d1847653854fca50287356:.github/workflows/security.yml:jwt:73
+51791cec1c0a8ab6d0d1847653854fca50287356:.github/workflows/security.yml:jwt:81
+5875eb9406fc5fc14235a884b0abe6019102093a:.env.local.example:jwt:12
+5875eb9406fc5fc14235a884b0abe6019102093a:.env.local.example:jwt:8
+697eba1b3df9ce7524bda550aab8181af6de65ee:.env:jwt:2
+ba7f1c90aae9403de8c0bea9a49066ab6bd170f7:.env:jwt:2
+d95c8f2573e476083f7bec48549aa7b07283e572:supabase/migrations/20260615004316_42360983-554a-455a-872e-3e92e2e81be9.sql:jwt:47
+
+# Chave Supabase com prefixo sb_publishable_
+33830c8e6edd8cfa67c548bbf22ecc395c4cf179:.stryker-tmp/sandbox-o0KicE/.env:generic-api-key:2
+a7d4a05cf42e5f40a2665e5668afc1374e1620b7:.env:generic-api-key:2
+fc06ad64aae844a996340093da34e4942ddc1d95:.env:generic-api-key:3
+
+# Identificador local de consentimento LGPD
+303544af23f57fd96dd5d802c19b1ab119816673:src/components/ConsentBanner.tsx:generic-api-key:3
+33830c8e6edd8cfa67c548bbf22ecc395c4cf179:.stryker-tmp/sandbox-o0KicE/e2e/consent-mode.spec.ts:generic-api-key:13
+33830c8e6edd8cfa67c548bbf22ecc395c4cf179:.stryker-tmp/sandbox-o0KicE/src/lib/consentStore.ts:generic-api-key:11
+33830c8e6edd8cfa67c548bbf22ecc395c4cf179:.stryker-tmp/sandbox-o0KicE/src/lib/consentStore.ts:generic-api-key:12
+4e50c83168c10fec6cfa77bb32e9f63f071db381:e2e/funnel-consent-dedup.spec.ts:generic-api-key:13
+7404dd2ed109ade1ca4712ddd81eafe2f99c22a5:src/lib/consentStore.ts:generic-api-key:10
+7404dd2ed109ade1ca4712ddd81eafe2f99c22a5:src/lib/consentStore.ts:generic-api-key:11
+c25f8c58a35184322bee654a5d2b9b620816de4e:e2e/consent-mode.spec.ts:generic-api-key:12
+
+# Token CSS de duração
+048933fa60b056b8de004cf1139a7c15c5fee509:.lovable/migrate-to-tanstack/theme-port.json:generic-api-key:176
+
+# Chave IndexNow com arquivo de verificação público no próprio commit
+33830c8e6edd8cfa67c548bbf22ecc395c4cf179:.stryker-tmp/sandbox-o0KicE/supabase/functions/indexnow-ping/index.ts:generic-api-key:8
+b5ddcc1b1fed4d2ec86bdc65e66bd1d3b3803f7b:supabase/functions/indexnow-ping/index.ts:generic-api-key:7

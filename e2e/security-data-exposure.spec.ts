@@ -15,17 +15,20 @@ import { test, expect, type APIRequestContext } from "@playwright/test";
  * Falha no CI em caso de regressão (surface privada torna-se acessível).
  */
 
-// URL + chave anon públicas (mesmo par já embarcado no frontend).
-const SUPABASE_URL =
-  process.env.E2E_SUPABASE_URL ||
-  process.env.VITE_SUPABASE_URL ||
-  "https://bwyskhzxvgyvyzshxkbf.supabase.co";
-const ANON_KEY =
-  process.env.E2E_SUPABASE_ANON_KEY ||
-  process.env.VITE_SUPABASE_PUBLISHABLE_KEY ||
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhpc2VwYWF5dXd4anJudW1icWVxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM2MTU3NzcsImV4cCI6MjA5OTE5MTc3N30.d3ygLv0kgEFiT4hXlp6opB9mvOPLQSwSEKXuLIle164";
+// Par público do MESMO projeto, injetado pela configuração real do ambiente.
+// Falhar explicitamente se ausente, em vez de usar URL e JWT hardcoded divergentes.
+const SUPABASE_URL = process.env.E2E_SUPABASE_URL || process.env.VITE_SUPABASE_URL;
+const ANON_KEY = process.env.E2E_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
-const REST = `${SUPABASE_URL.replace(/\/$/, "")}/rest/v1`;
+// A validação roda na execução, não no carregamento do arquivo: test:list
+// deve conseguir descobrir as specs sem precisar de variáveis de ambiente.
+function requirePublicConfig() {
+  if (!SUPABASE_URL || !ANON_KEY) {
+    throw new Error("E2E de segurança requer URL e chave pública reais do mesmo projeto Supabase via E2E_ ou VITE_.");
+  }
+}
+
+const REST = `${(SUPABASE_URL || "").replace(/\/$/, "")}/rest/v1`;
 const BLOCKED = [401, 403];
 
 // Credenciais opcionais de um usuário de teste NÃO-ADMIN (só via env).
@@ -33,6 +36,7 @@ const NONADMIN_EMAIL = process.env.E2E_NONADMIN_EMAIL;
 const NONADMIN_PASSWORD = process.env.E2E_NONADMIN_PASSWORD;
 
 async function anonGet(request: APIRequestContext, path: string) {
+  requirePublicConfig();
   return request.get(`${REST}/${path}`, { headers: { apikey: ANON_KEY } });
 }
 
@@ -61,6 +65,7 @@ test.describe("Segurança — exposição de dados (anon)", () => {
   });
 
   test("anon NÃO insere em og_validation_status (bloqueado)", async ({ request }) => {
+    requirePublicConfig();
     const res = await request.post(`${REST}/og_validation_status`, {
       headers: { apikey: ANON_KEY, "Content-Type": "application/json" },
       data: {},
@@ -78,6 +83,7 @@ test.describe("Segurança — usuário autenticado NÃO-admin", () => {
   let accessToken = "";
 
   test.beforeAll(async ({ request }) => {
+    requirePublicConfig();
     const res = await request.post(
       `${SUPABASE_URL.replace(/\/$/, "")}/auth/v1/token?grant_type=password`,
       {

@@ -23,15 +23,17 @@ jobs:
   regressao:
     name: Regressão dos achados corrigidos
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: "22"
       - run: bun install --frozen-lockfile
 
       # 1) Varredura estática dos internal_id corrigidos (fail-fast).
@@ -58,11 +60,9 @@ jobs:
 
       # 5) Segredos/credenciais vazados no diff.
       - name: Gitleaks secret scan
-        run: |
-          timeout 8m docker run --rm \
-            -v "${{ github.workspace }}:/repo" \
-            ghcr.io/gitleaks/gitleaks:v8.30.1 \
-            git /repo --redact --no-banner --verbose
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: bash scripts/run-gitleaks-ci.sh
 
       # 6) Notificação (Slack/e-mail) quando qualquer etapa acima falhar.
       - name: Notificar falha do pipeline de segurança

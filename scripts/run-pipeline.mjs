@@ -65,7 +65,9 @@ if (pipeline.requiresDist && !existsSync(path.resolve('dist'))) {
   process.exit(1);
 }
 
-const npmCmd = process.platform === 'win32' ? 'npm.cmd' : 'npm';
+const onWindows = process.platform === 'win32';
+const npmCmd = onWindows ? 'cmd.exe' : 'npm';
+const npmArgs = onWindows ? ['/d', '/c', 'npm.cmd'] : [];
 const results = [];
 let blockingFailure = false;
 
@@ -75,7 +77,8 @@ for (const [i, step] of steps.entries()) {
   const started = Date.now();
   console.log(`\n──── ${label} — ${step.name}${optional ? ' (opcional)' : ''}`);
 
-  const res = spawnSync(npmCmd, ['run', '--silent', step.script], { stdio: 'inherit', env: process.env });
+  const res = spawnSync(npmCmd, [...npmArgs, 'run', '--silent', step.script], { stdio: 'inherit' });
+  if (res.error) console.error(res.error.message);
   const ok = res.status === 0;
   const durationMs = Date.now() - started;
   results.push({ script: step.script, name: step.name, optional, ok, durationMs, status: res.status ?? null });

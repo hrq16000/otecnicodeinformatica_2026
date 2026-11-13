@@ -4,9 +4,9 @@
 //
 // Para CADA rota do sitemap curado + cada alias da matriz de redirects,
 // valida contra o servidor rodando (dev ou preview):
-//   1. status HTTP 200 (alias: 200 do SPA + canonical apontando ao destino)
+//   1. status HTTP 200 (alias: HTTP 301 direto ao destino declarado)
 //   2. content-type text/html
-//   3. exatamente 1 <link rel="canonical"> e self-referente
+//   3. exatamente 1 <link rel="canonical"> self-referente nas rotas do sitemap
 //   4. meta robots sem "noindex" em rota do sitemap
 //   5. JSON-LD presente e parseável, com os @type esperados
 //   6. consistência com robots.txt (nenhuma URL do sitemap bloqueada)
@@ -17,6 +17,7 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { readRedirectMatrix } from "./lib/route-manifest.mjs";
 import { BASE_URL } from "./lib/site-env.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -52,11 +53,7 @@ for (const f of sitemapFiles) {
 if (sitemapPaths.size === 0) fail("sitemap curado vazio — nenhuma URL para validar");
 
 // ── 2. Matriz de redirects (aliases) ────────────────────────────────
-const matrixSrc = readFileSync(resolve(root, "src/lib/redirectMatrix.ts"), "utf8");
-const rules = [...matrixSrc.matchAll(/from:\s*"([^"]+)",\s*to:\s*"([^"]+)"/g)].map((m) => ({
-  from: m[1],
-  to: m[2],
-}));
+const rules = await readRedirectMatrix(root);
 if (rules.length === 0) fail("redirectMatrix.ts: nenhuma regra encontrada");
 
 // Alias jamais pode estar no sitemap (duplicidade garantida).
@@ -85,7 +82,8 @@ const EXPECTED_JSONLD = {
 
 const head = (html, re) => (html.match(re) ?? [])[1];
 
-async function checkRoute(path, { alias = null } = {}) {
+async function checkRoute(path) {
+  const inSitemap = sitemapPaths.has(path);
   let res;
   try {
     res = await fetch(`${BASE}${path}`, { redirect: "follow" });
@@ -105,34 +103,25 @@ async function checkRoute(path, { alias = null } = {}) {
   const ct = res.headers.get("content-type") ?? "";
   if (!ct.includes("text/html")) fail(`${path}: content-type "${ct}" (esperado text/html)`);
   const xrobots = res.headers.get("x-robots-tag");
-  if (xrobots && /noindex/i.test(xrobots) && !alias) {
+  if (xrobots && /noindex/i.test(xrobots) && inSitemap) {
     fail(`${path}: header X-Robots-Tag bloqueia indexação ("${xrobots}")`);
   }
 
   const html = await res.text();
 
   const canonicals = [...html.matchAll(/<link[^>]+rel=["']canonical["'][^>]*>/gi)];
-  if (canonicals.length === 0) fail(`${path}: sem <link rel="canonical">`);
+  if (inSitemap && canonicals.length === 0) fail(`${path}: sem <link rel="canonical">`);
   if (canonicals.length > 1) fail(`${path}: ${canonicals.length} canonicals (esperado 1)`);
   const canonicalHref = head(canonicals[0]?.[0] ?? "", /href=["']([^"']+)["']/i);
   const norm = (u) => (u ?? "").replace(/\/$/, "");
-  if (alias) {
-    // Um alias jamais pode ter canonical self-referente: isso cria duplicidade
-    // com o destino. O canonical correto (destino) é aplicado na hidratação e
-    // é coberto por e2e/canonical-alias-seo.spec.ts.
-    if (norm(canonicalHref) === norm(`${CANONICAL_HOST}${path}`)) {
-      fail(`${path}: alias com canonical self-referente — deveria apontar para ${alias}`);
-    }
-  } else {
-    const expected = `${CANONICAL_HOST}${path}`;
-    if (canonicalHref && norm(canonicalHref) !== norm(expected)) {
-      const msg = `${path}: canonical "${canonicalHref}" ≠ esperado "${expected}"`;
-      STRICT ? fail(msg) : warn(`${msg} (dev sem prerender)`);
-    }
+  const expected = `${CANONICAL_HOST}${path}`;
+  if (inSitemap && canonicalHref && norm(canonicalHref) !== norm(expected)) {
+    const msg = `${path}: canonical "${canonicalHref}" ≠ esperado "${expected}"`;
+    STRICT ? fail(msg) : warn(`${msg} (dev sem prerender)`);
   }
 
   const robotsMeta = head(html, /<meta[^>]+name=["']robots["'][^>]+content=["']([^"']+)["']/i);
-  if (!alias && robotsMeta && /noindex/i.test(robotsMeta) && sitemapPaths.has(path)) {
+  if (robotsMeta && /noindex/i.test(robotsMeta) && inSitemap) {
     fail(`${path}: meta robots "${robotsMeta}" em rota presente no sitemap`);
   }
 
@@ -154,7 +143,7 @@ async function checkRoute(path, { alias = null } = {}) {
       fail(`${path}: JSON-LD inválido (não parseável)`);
     }
   }
-  if (!alias && blocks.length === 0) {
+  if (blocks.length === 0 && inSitemap) {
     const msg = `${path}: nenhum bloco JSON-LD`;
     STRICT ? fail(msg) : warn(msg);
   }
@@ -166,9 +155,29 @@ async function checkRoute(path, { alias = null } = {}) {
   }
 }
 
+async function checkAlias({ from, to }) {
+  try {
+    const res = await fetch(`${BASE}${from}`, { redirect: "manual" });
+    const location = res.headers.get("location");
+    await res.body?.cancel();
+    if (res.status !== 301) {
+      fail(`${from}: status ${res.status} (esperado 301 para ${to})`);
+      return;
+    }
+    if (!location || new URL(location, BASE).href !== new URL(to, BASE).href) {
+      fail(`${from}: Location "${location}" ≠ destino "${to}"`);
+    }
+  } catch (error) {
+    fail(`${from}: falha ao verificar redirect (${error.message})`);
+  }
+}
+
 const routes = [...sitemapPaths].sort();
 for (const p of routes) await checkRoute(p);
-for (const r of rules) await checkRoute(r.from, { alias: r.to });
+for (const r of rules) await checkAlias(r);
+for (const target of new Set(rules.map((r) => r.to))) {
+  if (!sitemapPaths.has(target)) await checkRoute(target);
+}
 
 // ── Relatório ───────────────────────────────────────────────────────
 console.log(`\nsaúde de indexação — base ${BASE}${STRICT ? " (strict)" : ""}`);

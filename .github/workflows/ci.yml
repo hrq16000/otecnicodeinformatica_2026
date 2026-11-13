@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Inventário de testes (isolamento de runners, fail-closed)
@@ -43,7 +43,7 @@ jobs:
   build:
     needs: unit
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
 
     steps:
       - uses: actions/checkout@v4
@@ -52,21 +52,47 @@ jobs:
           bun-version: latest
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          # Supabase Realtime SSR requires native WebSocket in Node 22+.
+          node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
+      # Advisory lint must not starve mandatory verify/build/deploy checks.
+      # Exit remains non-blocking exactly as before; timeout is surfaced as warning.
       - name: Lint (non-blocking warnings)
-        run: npm run lint --silent || echo "::warning::lint reported issues"
+        run: |
+          set +e
+          timeout --signal=TERM --kill-after=10s 120s npm run lint --silent
+          result=$?
+          if [ "$result" -eq 124 ] || [ "$result" -eq 137 ]; then
+            echo "::warning::Advisory lint exceeded 120s; mandatory verify/build/deploy gates remain blocking."
+          elif [ "$result" -ne 0 ]; then
+            echo "::warning::Advisory lint reported findings (exit $result)."
+          fi
+          exit 0
+      - name: Configuração opcional de observabilidade
+        continue-on-error: true
+        run: npm run check:observability-env
+        env:
+          VITE_SENTRY_DSN: ${{ secrets.VITE_SENTRY_DSN || vars.VITE_SENTRY_DSN }}
+          VITE_OTLP_ENDPOINT: ${{ secrets.VITE_OTLP_ENDPOINT || vars.VITE_OTLP_ENDPOINT }}
+      # A governança editorial dentro de verify exige dist/ e sitemap gerados;
+      # construir primeiro mantém os gates editoriais bloqueantes.
+      - name: Build
+        run: npm run build
+        env:
+          VITE_SENTRY_DSN: ${{ secrets.VITE_SENTRY_DSN || vars.VITE_SENTRY_DSN }}
+          VITE_OTLP_ENDPOINT: ${{ secrets.VITE_OTLP_ENDPOINT || vars.VITE_OTLP_ENDPOINT }}
       # Comando oficial: gates essenciais de código e conteúdo.
       # Os testes já rodam no job `unit`, por isso ficam de fora aqui.
       - name: verify (gates essenciais — comando oficial)
         run: npm run verify -- --skip=test
-      - name: Build
-        run: npm run build
       # Comando oficial: gates essenciais de publicação (exigem dist/).
       # Os passos opcionais (GSC/rede) não bloqueiam o CI.
       - name: deploy:check (gates de publicação — comando oficial)
         run: npm run deploy:check
+        env:
+          VITE_SENTRY_DSN: ${{ secrets.VITE_SENTRY_DSN || vars.VITE_SENTRY_DSN }}
+          VITE_OTLP_ENDPOINT: ${{ secrets.VITE_OTLP_ENDPOINT || vars.VITE_OTLP_ENDPOINT }}
       # Gates de SEO com resumo anexado ao build (bloqueantes).
       - name: Gates de SEO (auditoria, descoberta, sitemap, robots)
         run: |
@@ -93,9 +119,9 @@ jobs:
         run: node scripts/with-ssr-server.mjs npm run check:local-interlinking
       - name: Gate de saúde de indexação (rotas + aliases)
         run: |
-          npx vite preview --port 4321 --strictPort &
-          for i in $(seq 1 60); do curl -sf -o /dev/null http://localhost:4321/ && break; sleep 1; done
-          node scripts/check-index-health.mjs --base=http://localhost:4321 --strict
+          npm run preview -- --port 4321 &
+          npx wait-on http-get://127.0.0.1:4321/ --timeout 90000
+          node scripts/check-index-health.mjs --base=http://127.0.0.1:4321 --strict
       - name: Relatório HTML de auditoria local
         run: npm run report:local-audit
 
@@ -117,33 +143,38 @@ jobs:
           retention-days: 30
 
   e2e:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
-    needs: build
+    # O job compila o próprio candidato; o gate de publicação strict continua
+    # bloqueante no job build, sem impedir diagnóstico E2E independente.
+    needs: unit
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Install Playwright browsers
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install --with-deps chromium webkit
       - name: Build
         run: npm run build
       - name: Start preview
-        run: npx vite preview --port 8080 &
+        run: npm run preview -- --port 8080 &
         env:
           CI: "true"
       - name: Wait for server
-        run: npx wait-on http://localhost:8080 --timeout 60000
+        run: npx wait-on http-get://127.0.0.1:8080/ --timeout 90000
       - name: Run targeted E2E (whatsapp + termos + sitemap + como-funciona + segurança)
         run: npx playwright test e2e/whatsapp-funnel.spec.ts e2e/termos-e-condicoes.spec.ts e2e/seo-sitemap-robots.spec.ts e2e/como-funciona-mobile.spec.ts e2e/security-data-exposure.spec.ts
         env:
           E2E_BASE_URL: http://localhost:8080
           # Chaves públicas (anon) — o teste também tem fallback embutido.
-          E2E_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          E2E_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+          E2E_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          E2E_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
           # Opcional: credenciais de um usuário de teste NÃO-admin (segredos de CI).
           # Se ausentes, o bloco autenticado é pulado (o bloco anon sempre roda).
           E2E_NONADMIN_EMAIL: ${{ secrets.E2E_NONADMIN_EMAIL }}
@@ -174,9 +205,10 @@ jobs:
     # OBSERVACIONAL: registra o baseline de cada engine sem bloquear o merge —
     # o gate bloqueante continua sendo o job `e2e`.
     name: e2e ${{ matrix.browser }} shard ${{ matrix.shard }}/${{ matrix.totalShards }} (observacional)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 25
-    needs: build
+    # Só consome 12 shards quando o gate E2E menor estiver verde.
+    needs: [build, e2e]
     continue-on-error: true
     strategy:
       fail-fast: false
@@ -186,21 +218,24 @@ jobs:
         totalShards: [4]
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: npm
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Install Playwright browser (${{ matrix.browser }})
         # Instalação oficial com dependências de sistema — sem LD_LIBRARY_PATH custom.
-        run: npx playwright install --with-deps ${{ matrix.browser }}
+        run: npx playwright install --with-deps ${{ matrix.browser }} webkit
       - name: Build (uma única vez por job)
         run: npm run build
       - name: Start preview
-        run: npx vite preview --port 8080 &
+        run: npm run preview -- --port 8080 &
       - name: Wait for server (healthcheck HTTP)
-        run: npx wait-on http-get://localhost:8080/ --timeout 90000
+        run: npx wait-on http-get://127.0.0.1:8080/ --timeout 90000
       - name: Run shard ${{ matrix.shard }}/${{ matrix.totalShards }} (${{ matrix.browser }})
         run: npx playwright test --config=playwright.ci.config.ts --shard=${{ matrix.shard }}/${{ matrix.totalShards }}
         env:
@@ -208,8 +243,8 @@ jobs:
           PW_REPORT_MODE: blob
           PW_SHARD_TAG: ${{ matrix.shard }}
           E2E_BASE_URL: http://localhost:8080
-          E2E_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          E2E_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+          E2E_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          E2E_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
       - name: Rerun seletivo apenas das specs que falharam (evidência de flakiness)
         # Não substitui o resultado original: gera blob separado, claramente rotulado.
         if: failure()
@@ -220,8 +255,8 @@ jobs:
           PW_REPORT_MODE: blob
           PW_SHARD_TAG: ${{ matrix.shard }}-rerun
           E2E_BASE_URL: http://localhost:8080
-          E2E_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          E2E_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+          E2E_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          E2E_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
       - name: Upload blob report (${{ matrix.browser }}-${{ matrix.shard }})
         if: always()
         uses: actions/upload-artifact@v4
@@ -251,7 +286,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: npm
       - name: Install deps
         run: npm ci --no-audit --no-fund
@@ -261,16 +296,36 @@ jobs:
           pattern: playwright-blob-*
           merge-multiple: true
           path: all-blob-reports
+      - name: Preparar blobs para consolidação
+        id: blobs
+        run: |
+          mkdir -p merged-report playwright-blob-flat
+          count=0
+          if [[ -d all-blob-reports ]]; then
+            while IFS= read -r -d '' report; do
+              count=$((count + 1))
+              ln "$report" "playwright-blob-flat/report-$count.zip"
+            done < <(find all-blob-reports -type f -name '*.zip' -print0)
+          fi
+          if [[ $count -gt 0 ]]; then
+            echo 'available=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'available=false' >> "$GITHUB_OUTPUT"
+            printf '%s\n' '## Matriz E2E observacional' '' 'Nenhum relatório foi produzido. Confira os resultados dos jobs anteriores.' > merged-report/inventario-falhas.md
+          fi
       - name: Merge into HTML
-        run: npx playwright merge-reports --reporter html ./all-blob-reports
+        if: steps.blobs.outputs.available == 'true'
+        run: npx playwright merge-reports --reporter html ./playwright-blob-flat
         env:
           PLAYWRIGHT_HTML_OUTPUT_DIR: merged-report/html
       - name: Merge into JSON
-        run: mkdir -p merged-report && npx playwright merge-reports --reporter json ./all-blob-reports > merged-report/results.json
+        if: steps.blobs.outputs.available == 'true'
+        run: npx playwright merge-reports --reporter json ./playwright-blob-flat > merged-report/results.json
       - name: Consolidar, deduplicar e classificar falhas
+        if: steps.blobs.outputs.available == 'true'
         run: node scripts/consolidate-e2e-failures.mjs merged-report/results.json --out merged-report/inventario-falhas.md
       - name: Resumo por navegador
-        if: always()
+        if: always() && hashFiles('merged-report/inventario-falhas.md') != ''
         run: cat merged-report/inventario-falhas.md >> "$GITHUB_STEP_SUMMARY"
       - name: Upload relatório consolidado
         if: always()
@@ -308,7 +363,7 @@ jobs:
       - uses: actions/setup-node@v4
         if: steps.changes.outputs.ping == 'true'
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Ping IndexNow with sitemap URLs
         if: steps.changes.outputs.ping == 'true'
         env:
@@ -323,17 +378,22 @@ jobs:
 
   lighthouse:
     runs-on: ubuntu-latest
-    needs: build
+    # Executa seu próprio build; diagnóstico não depende do deploy:check,
+    # que permanece bloqueante na PR para segurança/publicação.
+    needs: unit
     if: github.event_name == 'pull_request'
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
-      - name: Install Lighthouse CI
-        run: npm i -g @lhci/cli@0.13.x
+      # Lighthouse CI is installed from the npm/Bun-validated project lockfiles.
+      # Do not install a fresh global release outside Bun's 24h age policy.
       - name: Build
         run: npm run build
       - name: Lighthouse desktop (bloqueante)
@@ -359,7 +419,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: lighthouse-reports
-          path: .lighthouseci
-          if-no-files-found: ignore
+          path: |
+            .lighthouseci/
+            .lighthouseci-mobile/
+          include-hidden-files: true
+          if-no-files-found: error
 
 

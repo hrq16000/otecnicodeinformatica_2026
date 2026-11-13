@@ -2,6 +2,7 @@ import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
+import { resolveRedirect } from "./lib/redirectMatrix";
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
@@ -63,11 +64,25 @@ export function canonicalHostRedirect(request: Request): Response | null {
   return Response.redirect(url.toString(), 308);
 }
 
+export function legacyAliasRedirect(request: Request): Response | null {
+  if (request.method !== "GET" && request.method !== "HEAD") return null;
+
+  const url = new URL(request.url);
+  const destination = resolveRedirect(url.pathname);
+  if (!destination) return null;
+
+  const target = new URL(destination, url);
+  target.search = url.search;
+  return Response.redirect(target, 301);
+}
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
       const canonicalRedirect = canonicalHostRedirect(request);
       if (canonicalRedirect) return canonicalRedirect;
+      const aliasRedirect = legacyAliasRedirect(request);
+      if (aliasRedirect) return aliasRedirect;
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
       return await normalizeCatastrophicSsrResponse(response);

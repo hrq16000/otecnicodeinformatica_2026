@@ -14,18 +14,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # Supabase SSR exige WebSocket nativo (disponível no Node 22+).
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: "22"
           cache: npm
+      # Prebuild executa validadores Bun; não aceitar build sem eles.
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
       - run: npm ci
+      - name: Build SSR e sitemaps antes de validar as rotas
+        run: npm run build
 
       - name: Revalidar rotas promovidas + gates (com alerta, contra SSR real)
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           ALERT_EMAIL_TO: ${{ secrets.ALERT_EMAIL_TO }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-        run: node scripts/with-ssr-server.mjs npm run check:local-regression:alert
+        # Comando oficial possui --strict: regressão de canonical/schema/robots reprova o job.
+        # --alert preserva notificação sem transformar um gate falho em warning.
+        run: node scripts/with-ssr-server.mjs npm run check:local-regression -- --alert
 
       - name: Guardar relatório
         if: always()

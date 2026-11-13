@@ -42,6 +42,13 @@ Bing, site publicado). Eles são marcados como `optional`: falham como **aviso**
 nunca sozinhos bloqueiam. Use `deploy:check:strict` quando o ambiente tiver as
 credenciais e você quiser tratá-los como gate real.
 
+## Observabilidade
+
+O diagnóstico de observabilidade roda separadamente com
+`npm run check:observability-env`. Sem destino configurado, o envio externo
+fica desligado. Para verificar que um ambiente de monitoramento tem um
+destino configurado, use `npm run check:observability-env -- --strict`.
+
 ## Relatórios
 
 Cada execução grava um resumo em `reports/pipeline-verify.json` e

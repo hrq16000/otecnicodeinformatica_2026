@@ -102,6 +102,30 @@ const defs: PostDef[] = [
           "Se a causa ainda estiver aberta, veja <a href=\"/diagnostico-tecnico\">como funciona o diagnóstico técnico</a> antes de autorizar troca de peça.",
         ],
       },
+      {
+        h: "6. Leia POST, LEDs e bipes como evidência, não como diagnóstico universal",
+        p:
+          "Placas-mãe podem sinalizar a etapa em que a inicialização parou por LEDs, display numérico ou bipes. O significado depende do fabricante e do modelo: registre a sequência exata e consulte o manual da placa ou do computador. Um LED de memória, por exemplo, direciona a investigação, mas não prova sozinho que o módulo está defeituoso; encaixe, slot, perfil de memória e controladora também podem estar envolvidos.",
+      },
+      {
+        h: "7. Se houver energia, confirme o caminho de vídeo antes de abrir o PC",
+        list: [
+          "Confirme se o monitor está ligado, se a entrada selecionada corresponde ao cabo e se o cabo está conectado à saída correta.",
+          "Em computador com placa de vídeo dedicada, compare a conexão usada com a configuração documentada do equipamento; uma saída da placa-mãe pode ficar inativa quando o processador não possui vídeo integrado.",
+          "Teste um cabo ou monitor conhecido como funcional somente para isolar o caminho de imagem. Não conclua que a placa de vídeo queimou com base em uma tela preta isolada.",
+          "Se o gabinete liga, mas reinicia em ciclo antes de mostrar imagem, registre a duração e os sinais da placa em vez de repetir dezenas de partidas.",
+        ],
+      },
+      {
+        h: "8. Mudanças internas exigem manual, energia removida e uma variável por vez",
+        p:
+          "A documentação da Intel para sistemas montados orienta conferir conexões de energia, cabo e entrada do monitor, encaixe da memória e indicações de POST, sempre respeitando o manual da placa. Esses passos não são autorização para desmontar equipamento em garantia ou manipular fonte internamente. Se uma inspeção for apropriada, desligue a fonte, retire o cabo da tomada, aguarde a descarga indicada pelo fabricante e altere apenas um item por tentativa. Fotografar o estado inicial evita criar um segundo defeito enquanto se procura o primeiro.",
+      },
+      {
+        h: "9. O ponto de parada protege pessoas, peças e dados",
+        p:
+          "Não energize novamente se houver cheiro, fumaça, líquido, cabo derretido ou conector escurecido. Também pare quando o computador for corporativo, estiver em garantia, usar montagem que você não consegue documentar ou guardar dados sem cópia. O objetivo do diagnóstico doméstico é separar energia, POST, vídeo e boot; medições elétricas, desmontagem de fonte e substituição de componentes ficam fora desse limite.",
+      },
     ],
     whenToCall:
       "Interrompa as tentativas e procure avaliação quando houver cheiro de queimado, estalo elétrico, líquido, componente visivelmente danificado, fonte que arma e desarma repetidamente ou quando o equipamento contiver dados importantes e o comportamento mudar a cada tentativa. Esses sinais pedem medição e inspeção controlada, não troca de peça por tentativa.",
@@ -219,6 +243,30 @@ const defs: PostDef[] = [
           "Roteiro passo a passo: <a href=\"/ferramentas/roteiro-wifi-instavel\">ferramenta de diagnóstico de Wi-Fi instável</a>.",
           "Cobertura, configuração e rede local: <a href=\"/servicos/redes-e-wifi\">serviço de redes e Wi-Fi</a>.",
         ],
+      },
+      {
+        h: "6. Registre horário, local e alcance da falha",
+        p:
+          "Uma queda isolada não revela tendência. Durante alguns dias, anote horário, cômodo, dispositivo, intensidade do sinal e se o cabo também perdeu acesso. Registre ainda se a rede sem fio desapareceu da lista, permaneceu conectada sem internet ou pediu a senha novamente. Esses sintomas apontam para camadas diferentes e permitem comparar o problema antes e depois de qualquer ajuste.",
+      },
+      {
+        h: "7. Diferencie cobertura ruim de instabilidade do equipamento",
+        list: [
+          "Se a conexão melhora de forma consistente perto do roteador, obstáculos e distância merecem atenção antes de trocar o plano de internet.",
+          "Se dispositivos próximos e distantes caem ao mesmo tempo, observe modem/ONT, roteador, energia e o estado do link do provedor.",
+          "Se somente um aparelho falha em todos os locais, atualize-o pelo canal oficial e compare economia de energia, driver e esquecimento/reconexão da rede.",
+          "Se a rede fica estável por cabo, mas o rádio reinicia ou desaparece, preserve a configuração e procure logs/firmware do modelo antes de restaurar tudo.",
+        ],
+      },
+      {
+        h: "8. Mesh e repetidor só ajudam quando recebem um enlace utilizável",
+        p:
+          "Adicionar um ponto não cria qualidade a partir de um sinal já degradado. Posicione o nó onde ainda exista comunicação consistente com o roteador principal ou use backhaul cabeado quando o projeto permitir. A Wi-Fi Alliance descreve redes com múltiplos pontos como forma de ampliar cobertura, mas a arquitetura precisa ser dimensionada para o ambiente; comprar um repetidor antes de medir a origem da queda pode apenas reproduzir a instabilidade em outra área.",
+      },
+      {
+        h: "9. Faça mudanças reversíveis e valide no mesmo cenário",
+        p:
+          "Antes de atualizar firmware, separar nomes de banda ou alterar canal, exporte a configuração quando o equipamento oferecer esse recurso e registre os valores atuais. Aplique uma mudança por vez e repita a comparação no mesmo local, dispositivo e faixa de horário. Se não houver melhora mensurável, reverta. Restaurar de fábrica apaga credenciais, regras e parâmetros do provedor e deve ficar para o fim, com os dados de reconfiguração disponíveis.",
       },
     ],
     whenToCall:
@@ -372,6 +420,30 @@ const defs: PostDef[] = [
           "Registre qual conta, dispositivo e método foram usados para restaurar; isso reduz improviso quando houver uma perda real.",
           "Use também o roteiro <a href=\"/blog/como-testar-restauracao-de-backup\">como testar a restauração de um backup</a>.",
         ],
+      },
+      {
+        h: "6. Defina retenção a partir do tipo de perda que precisa recuperar",
+        p:
+          "Lixeira por poucos dias pode ajudar em uma exclusão percebida imediatamente, mas não cobre corrupção descoberta meses depois. Antes de escolher a retenção, estime quanto tempo uma alteração errada pode permanecer sem ser notada e quantas versões você precisa reconstruir. Confirme esses limites na documentação atual do provedor, porque retenção, capacidade e condições do plano podem mudar.",
+      },
+      {
+        h: "7. Proteja a conta sem criar um ponto único de falha",
+        list: [
+          "Use senha exclusiva e autenticação multifator na conta que controla as cópias.",
+          "Guarde códigos de recuperação fora do computador e fora da própria conta protegida.",
+          "Revise dispositivos e aplicativos conectados; remova integrações antigas que ainda conseguem ler ou apagar arquivos.",
+          "Em empresa, evite que uma única conta pessoal seja a única administradora do acervo e documente quem pode autorizar restaurações.",
+        ],
+      },
+      {
+        h: "8. Uma cópia desconectada reduz o alcance de erro e ransomware",
+        p:
+          "A CISA recomenda backups protegidos e testes regulares de restauração. Para dados críticos, mantenha ao menos uma cópia que não permaneça gravável pela mesma sessão usada no dia a dia. Pode ser uma unidade conectada apenas durante a cópia, um repositório com imutabilidade ou uma conta separada, conforme volume e risco. A escolha precisa impedir que a mesma credencial ou processo apague todas as versões.",
+      },
+      {
+        h: "9. Documente um teste que outra pessoa consiga repetir",
+        p:
+          "Registre a data do último teste, arquivos escolhidos, versão restaurada, destino usado, tempo gasto e resultado de abertura. Para trabalho em equipe, inclua quem possui acesso e onde ficam os meios de recuperação. O NIST trata recuperação como parte do planejamento de contingência: uma cópia só sustenta continuidade quando o procedimento é conhecido, executável e validado.",
       },
     ],
     whenToCall:

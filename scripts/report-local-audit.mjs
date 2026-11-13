@@ -13,7 +13,7 @@
  *   node scripts/report-local-audit.mjs --snapshot # grava o snapshot atual como "antes"
  */
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
-import { WHATSAPP_NUMBER } from "./lib/site-env.mjs";
+import { BASE_URL, WHATSAPP_NUMBER } from "./lib/site-env.mjs";
 import { join } from "node:path";
 import { execFileSync } from "node:child_process";
 
@@ -98,12 +98,18 @@ const pages = audited.map((path) => {
 });
 
 // ── gates ─────────────────────────────────────────────────────────────────
+const onWindows = process.platform === "win32";
+const npmCmd = onWindows ? "cmd.exe" : "npm";
+const npmArgs = onWindows ? ["/d", "/c", "npm.cmd"] : [];
 const gateResults = GATES.map(([label, script]) => {
   try {
-    const out = execFileSync("npm", ["run", "--silent", script], { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] });
+    const out = execFileSync(npmCmd, [...npmArgs, "run", "--silent", script], {
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "pipe"],
+    });
     return { label, script, ok: true, output: out.trim().split("\n").slice(-6).join("\n") };
   } catch (e) {
-    const out = `${e.stdout ?? ""}${e.stderr ?? ""}`.trim();
+    const out = `${e.stdout ?? ""}${e.stderr ?? ""}`.trim() || e.message;
     return { label, script, ok: false, output: out.split("\n").slice(-12).join("\n") };
   }
 });

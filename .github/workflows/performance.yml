@@ -10,6 +10,8 @@ on:
       - "src/**"
       - "public/**"
       - "vite.config.ts"
+      - "package.json"
+      - "package-lock.json"
       - "lighthouserc.servicos.json"
       - ".github/workflows/performance.yml"
   workflow_dispatch:
@@ -29,7 +31,7 @@ jobs:
           bun-version: 1.4.2
       - uses: actions/setup-node@v4
         with:
-          node-version: "22.12.0"
+          node-version: "22"
           cache: npm
       - run: npm ci
       - run: npm run build
@@ -37,7 +39,7 @@ jobs:
           VITE_SITE_DOMAIN: otecnicodeinformatica.com.br
           VITE_SITE_INDEXING_ENABLED: "true"
       - name: Lighthouse CI — budgets por rota de serviço
-        run: SSR_PORT=4173 SSR_SERVER_MODE=build node scripts/with-ssr-server.mjs npx --yes @lhci/cli@0.14.x autorun --config=lighthouserc.servicos.json
+        run: npm run lh:servicos
       - name: Publicar relatórios
         if: always()
         uses: actions/upload-artifact@v4

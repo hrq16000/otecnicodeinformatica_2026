@@ -1,23 +1,16 @@
 #!/usr/bin/env node
 /**
- * GATE DE OBSERVABILIDADE EM PRODUÇÃO.
+ * Validação da configuração opcional de observabilidade.
  *
- * Em build de produção (CI, NODE_ENV=production ou --strict) exige pelo menos
- * um sink configurado e, quando configurado, exige valor válido:
+ * Valida apenas os destinos informados:
  *   VITE_SENTRY_DSN    → https://<key>@<host>/<projeto>
  *   VITE_OTLP_ENDPOINT → URL http(s) sem barra final obrigatória
  *
- * Em desenvolvimento apenas avisa: o sink é fail-closed por design e nada é
- * enviado sem env — o build local não pode quebrar por isso.
- *
- * Escape hatch consciente: OBSERVABILITY_OPTIONAL=true.
+ * Use --strict para exigir um destino ao validar uma instalação de telemetria.
  */
 import { existsSync, readFileSync } from "node:fs";
 
-const STRICT =
-  process.argv.includes("--strict") ||
-  process.env.CI === "true" ||
-  process.env.NODE_ENV === "production";
+const exigirDestino = process.argv.includes("--strict");
 
 /** Lê .env do projeto sem sobrescrever o que já veio do ambiente. */
 const fromEnvFile = (chave) => {
@@ -52,21 +45,15 @@ if (otlp && !/^https?:\/\/[^\s]+$/.test(otlp)) {
     "VITE_OTLP_ENDPOINT inválido — informe a URL base do coletor OTLP (ex.: https://otlp.seu-coletor.com), sem o sufixo /v1/logs.",
   );
 }
-if (!dsn && !otlp) {
-  const msg =
-    "Nenhum sink de observabilidade configurado: defina VITE_SENTRY_DSN (erros) e/ou VITE_OTLP_ENDPOINT (logs/traces). Sem eles, erros de produção ficam invisíveis.";
-  if (STRICT && process.env.OBSERVABILITY_OPTIONAL !== "true") erros.push(msg);
-  else console.warn(`⚠ ${msg}`);
+if (exigirDestino && !dsn && !otlp) {
+  erros.push("Defina VITE_SENTRY_DSN ou VITE_OTLP_ENDPOINT para ativar a observabilidade.");
 }
 
 if (erros.length) {
-  console.error("\n✖ Observabilidade não configurada para produção:");
+  console.error("\n✖ Configuração de observabilidade incompleta ou inválida:");
   for (const e of erros) console.error(`  · ${e}`);
-  console.error(
-    "\nDefina as variáveis no ambiente de build (ou OBSERVABILITY_OPTIONAL=true para liberar conscientemente).",
-  );
   process.exit(1);
 }
 console.log(
-  `✔ Observabilidade: ${[dsn && "Sentry", otlp && "OTLP"].filter(Boolean).join(" + ") || "desligada (dev)"}.`,
+  `✔ Observabilidade: ${[dsn && "Sentry", otlp && "OTLP"].filter(Boolean).join(" + ") || "desligada"}.`,
 );

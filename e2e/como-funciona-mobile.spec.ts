@@ -4,7 +4,7 @@ const BASE = process.env.E2E_BASE_URL || "http://localhost:8080";
 
 test.use({ ...devices["iPhone 13"] });
 
-test.describe("Como Funciona + modais — CTAs e CLS", () => {
+test.describe("Home mobile — triagem, WhatsApp e CLS", () => {
   test("CTAs WhatsApp permanecem clicáveis e sem links tel:", async ({ page }) => {
     // Coletor de CLS via PerformanceObserver
     await page.addInitScript(() => {
@@ -23,6 +23,7 @@ test.describe("Como Funciona + modais — CTAs e CLS", () => {
     });
 
     await page.goto(BASE + "/", { waitUntil: "domcontentloaded" });
+    await expect(page.locator("html")).toHaveAttribute("data-hydrated", "1");
 
     // Hidratação básica do hero antes do fallback
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
@@ -31,38 +32,28 @@ test.describe("Como Funciona + modais — CTAs e CLS", () => {
     const telCount = await page.locator('a[href^="tel:"]').count();
     expect(telCount).toBe(0);
 
-    // Abre o modal "Prefiro agendar"
-    await page.getByRole("button", { name: /prefiro agendar/i }).click();
-    const modal = page.getByRole("dialog");
+    // O redesign usa triagem na home e o botão flutuante abre o funil.
+    await expect(page.getByRole("search")).toBeVisible();
+    await expect(page.getByRole("button", { name: /diagnosticar meu problema/i })).toBeEnabled();
+    const floating = page.getByTestId("whatsapp-float");
+    await expect(floating).toBeVisible();
+    await floating.click();
+    const modal = page.getByRole("dialog").filter({ hasText: /Triagem antes do atendimento/i });
     await expect(modal).toBeVisible();
 
-    // CTA WhatsApp dentro do modal continua clicável
-    const modalCta = modal.getByRole("link", { name: /continuar no whatsapp/i });
-    await expect(modalCta).toBeVisible();
-    await expect(modalCta).toBeEnabled();
-    expect(await modalCta.getAttribute("href")).toContain("wa.me");
+    await expect(modal.getByText(/Triagem antes do atendimento/i)).toBeVisible();
+    await modal.getByRole("radio", { name: /Para mim ou minha residência/i }).click();
+    await expect(modal.getByText(/Qual o equipamento/i)).toBeVisible();
 
     // Fecha modal
-    await modal.getByRole("button", { name: /fechar/i }).click();
+    await modal.getByRole("button", { name: /fechar|close/i }).click();
     await expect(modal).toBeHidden();
 
-    // Scroll até "Como funciona" e verifica CTAs por etapa
-    await page.evaluate(() => {
-      const el = document.getElementById("como-funciona-fluxo");
-      el?.scrollIntoView({ behavior: "instant" as ScrollBehavior, block: "start" });
-    });
-    for (let i = 1; i <= 4; i++) {
-      const cta = page.getByTestId(`como-funciona-cta-${i}`);
-      await expect(cta).toBeVisible();
-      await expect(cta).toBeEnabled();
-      const href = await cta.getAttribute("href");
-      expect(href).toContain("wa.me");
-    }
-
-    // Sticky WhatsApp mobile permanece visível e clicável
-    const sticky = page.locator('[data-cta-location="hero_sticky_mobile"]');
-    await expect(sticky).toBeVisible();
-    await expect(sticky).toBeEnabled();
+    const policies = page.getByRole("link", { name: "Ver preços e políticas", exact: true });
+    await policies.scrollIntoViewIfNeeded();
+    await expect(policies).toHaveAttribute("href", "/precos-e-politicas");
+    await expect(floating).toBeVisible();
+    await expect(floating).toBeEnabled();
 
     // CLS abaixo do limite aceitável após interações
     await page.waitForTimeout(800);

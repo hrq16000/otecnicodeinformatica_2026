@@ -16,8 +16,9 @@
         "http://localhost:4173/servicos/upgrade-ssd-memoria",
         "http://localhost:4173/areas-atendidas"
       ],
-      "startServerCommand": "bun run preview -- --port 4173",
-      "startServerReadyPattern": "Local:",
+      "startServerCommand": "npm run preview -- --port 4173",
+      "startServerReadyPattern": "Ready on",
+      "startServerReadyTimeout": 90000,
       "numberOfRuns": 2,
       "settings": {
         "preset": "desktop",

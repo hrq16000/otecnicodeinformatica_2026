@@ -47,6 +47,7 @@ export const verifySteps = [
   { name: 'Tendência de órfãs', script: 'check:orphan-trend' },
   { name: 'Intenção conversacional', script: 'check:conversational-intent' },
   { name: 'Interlinks do Lote 1 (/problemas)', script: 'check:problem-interlinks' },
+  { name: 'Inventário de intenção em /problemas', script: 'report:problem-intent' },
   { name: 'Decisões de /problemas', script: 'check:problem-decisions' },
   { name: 'Payload de realtime sem PII', script: 'check:realtime-payload' },
   { name: 'Hierarquia local (bairros/cidades)', script: 'check:local-hierarchy' },
@@ -57,9 +58,11 @@ export const verifySteps = [
 
 /** @type {PipelineStep[]} */
 export const deployCheckSteps = [
+  // Telemetria externa é opcional; quando presente, o destino ainda é validado.
+  { name: 'Configuração de observabilidade (se presente)', script: 'check:observability-env' },
   // O TanStack Start não emite um HTML por rota: os gates leem os snapshots SSR.
   { name: 'Snapshots SSR em dist/', script: 'snapshot:dist' },
-  { name: 'Env de observabilidade', script: 'check:observability-env' },
+  { name: 'Governança editorial pós-build', script: 'check:editorial-governance:dist' },
   { name: 'Sitemap editorial sincronizado', script: 'check:editorial-sitemap' },
   { name: 'Sitemap dinâmico (curado, fail-closed)', script: 'sitemap:dynamic:check' },
   { name: 'robots.txt e X-Robots-Tag', script: 'check:robots' },
