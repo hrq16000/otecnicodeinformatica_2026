@@ -91,7 +91,11 @@ for (const { nome, viewport } of VIEWPORTS) {
         ad_personalization: "denied",
         analytics_storage: "denied",
       });
-      expect(await page.locator('script[data-adsense="1"]').count()).toBe(0);
+      // Não basta verificar o injetor com data-adsense: o head SSR
+      // também não pode carregar adsbygoogle antes do aceite explícito.
+      await expect(
+        page.locator('script[src*="pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"]'),
+      ).toHaveCount(0);
     });
 
     test("consentimento persistido oculta o banner após recarregar", async ({ page }) => {

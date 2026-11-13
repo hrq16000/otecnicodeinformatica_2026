@@ -152,12 +152,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { children: WA_PREHYDRATION_SCRIPT },
       { children: OS_PREHYDRATION_SCRIPT },
 
-
-      {
-        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762170279587706",
-        async: true,
-        crossOrigin: "anonymous",
-      },
+      // AdSense injetado por consentStore somente após opt-in de anúncios.
     ],
   }),
   shellComponent: RootShell,
