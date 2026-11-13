@@ -59,6 +59,9 @@ export const BairroFotos = ({
 
   const foto = fotoTecnicaDoBairro(servicosPrioritarios);
   if (!foto) return null;
+  const srcSetOtimizado = foto.src === "/fotos/bancada-tecnica.jpg"
+    ? "/fotos/bancada-tecnica-mobile.webp 768w, /fotos/bancada-tecnica.jpg 1024w"
+    : undefined;
 
   return (
     <section className="container mx-auto py-10 md:py-14" aria-labelledby="foto-tecnica">
@@ -66,6 +69,7 @@ export const BairroFotos = ({
         <figure className="overflow-hidden rounded-xl border border-border/60 bg-card">
           <SmartImage
             src={foto.src}
+            srcSet={srcSetOtimizado}
             alt={foto.alt}
             width={foto.width}
             height={foto.height}

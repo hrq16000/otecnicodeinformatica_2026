@@ -171,8 +171,8 @@ jobs:
         env:
           E2E_BASE_URL: http://localhost:8080
           # Chaves públicas (anon) — o teste também tem fallback embutido.
-          E2E_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          E2E_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+          E2E_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          E2E_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
           # Opcional: credenciais de um usuário de teste NÃO-admin (segredos de CI).
           # Se ausentes, o bloco autenticado é pulado (o bloco anon sempre roda).
           E2E_NONADMIN_EMAIL: ${{ secrets.E2E_NONADMIN_EMAIL }}
@@ -240,8 +240,8 @@ jobs:
           PW_REPORT_MODE: blob
           PW_SHARD_TAG: ${{ matrix.shard }}
           E2E_BASE_URL: http://localhost:8080
-          E2E_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          E2E_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+          E2E_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          E2E_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
       - name: Rerun seletivo apenas das specs que falharam (evidência de flakiness)
         # Não substitui o resultado original: gera blob separado, claramente rotulado.
         if: failure()
@@ -252,8 +252,8 @@ jobs:
           PW_REPORT_MODE: blob
           PW_SHARD_TAG: ${{ matrix.shard }}-rerun
           E2E_BASE_URL: http://localhost:8080
-          E2E_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          E2E_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+          E2E_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          E2E_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
       - name: Upload blob report (${{ matrix.browser }}-${{ matrix.shard }})
         if: always()
         uses: actions/upload-artifact@v4
