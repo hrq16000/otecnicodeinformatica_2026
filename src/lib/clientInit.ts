@@ -7,12 +7,19 @@ export function runClientInit() {
   if (started || typeof window === "undefined") return;
   started = true;
 
+  // A hidratação terminou quando este efeito raiz executa. O sinal não pode
+  // depender do download assíncrono do módulo de relatório de erros, pois os
+  // CTAs pré-hidratação usam este atributo para decidir entre enfileirar e
+  // tratar o clique imediatamente.
+  try {
+    document.documentElement.dataset.hydrated = "1";
+  } catch { /* noop */ }
+
   void import("@/lib/errorReporter").then(({ initErrorReporter, APP_BUILD_INFO }) => {
     initErrorReporter();
 
     // Sinaliza hidratação + versão do build (o meta vem do head() da rota raiz).
     try {
-      document.documentElement.dataset.hydrated = "1";
       const meta = document.querySelector('meta[name="app-version"]');
       if (meta) meta.setAttribute("content", `${APP_BUILD_INFO.version} @ ${APP_BUILD_INFO.buildTime}`);
       // Cache-bust automático: 1 reload se a versão mudou nesta sessão (sem loop).

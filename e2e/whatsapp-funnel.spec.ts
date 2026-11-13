@@ -186,7 +186,9 @@ test.describe("Triagem V5 — funil ramificado por equipamento", () => {
     const hidratado = await page.evaluate(() => document.documentElement.dataset.hydrated === "1");
     await float.click({ force: true });
 
-    await expect(page.getByRole("dialog")).toBeVisible({ timeout: 15000 });
+    // Há também um diálogo de consentimento no HTML inicial. O sinal correto
+    // para a drenagem da fila é o diálogo da triagem, não qualquer dialog.
+    await expect(page.locator('[role="dialog"][data-triage="1"]')).toBeVisible({ timeout: 15000 });
 
     const nomes = await page.evaluate(() =>
       (window as unknown as { __gtagCalls: unknown[][] }).__gtagCalls
