@@ -15,8 +15,6 @@ concurrency:
 
 jobs:
   gates-locais:
-    # O despacho manual na branch strict executa somente a prova negativa.
-    if: ${{ github.event_name != 'workflow_dispatch' || github.ref != 'refs/heads/fix/restore-strict-observability-after-426-20261113' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     env:
@@ -70,49 +68,3 @@ jobs:
           path: |
             reports/
             public/gsc-local-status.json
-
-  # QA temporário: executar SOMENTE via Run workflow na branch strict.
-  strict-observability-negative-qa:
-    if: ${{ github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/fix/restore-strict-observability-after-426-20261113' }}
-    runs-on: ubuntu-24.04
-    timeout-minutes: 5
-    permissions:
-      contents: read
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: 2e75bf0480e2fcaecde326be2a54d1c9b48b8498
-          persist-credentials: false
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-      - name: Confirmar contrato strict original
-        run: |
-          node --input-type=module <<'NODE'
-          import { readFileSync } from 'node:fs';
-          import { deployCheckSteps } from './scripts/pipelines.config.mjs';
-          const scripts = JSON.parse(readFileSync('package.json', 'utf8')).scripts;
-          if (scripts['check:observability-env:strict'] !== 'node scripts/check-observability-env.mjs --strict') process.exit(1);
-          if (!deployCheckSteps.some((step) => step.script === 'check:observability-env:strict' && !step.optional)) process.exit(1);
-          NODE
-      - name: Provar bloqueio sem Sentry ou OTLP
-        shell: bash
-        run: |
-          set -euo pipefail
-          # Diretório vazio impede leitura acidental de .env e .env.production.
-          isolated_dir="$(mktemp -d)"
-          cd "$isolated_dir"
-          set +e
-          result="$(env -u VITE_SENTRY_DSN -u VITE_OTLP_ENDPOINT node "$GITHUB_WORKSPACE/scripts/check-observability-env.mjs" --strict 2>&1)"
-          code=$?
-          set -e
-          printf '%s\n' "$result"
-          if [ "$code" -ne 1 ]; then
-            echo "ERRO: strict deveria recusar sem destino (exit 1); recebido: $code"
-            exit 1
-          fi
-          if ! printf '%s\n' "$result" | grep -Fq 'Defina VITE_SENTRY_DSN ou VITE_OTLP_ENDPOINT'; then
-            echo "ERRO: falha não corresponde à ausência de destino real"
-            exit 1
-          fi
-          echo "OK: strict falhou fechado, pelo motivo esperado."
