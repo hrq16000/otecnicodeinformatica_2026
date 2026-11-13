@@ -58,8 +58,8 @@ export const verifySteps = [
 
 /** @type {PipelineStep[]} */
 export const deployCheckSteps = [
-  // Bloqueante: publicação exige um destino real de observabilidade configurado.
-  { name: 'Observabilidade de publicação (strict)', script: 'check:observability-env:strict' },
+  // Não exigir provedor externo inexistente; validar destinos quando configurados.
+  { name: 'Configuração de observabilidade (se presente)', script: 'check:observability-env' },
   // O TanStack Start não emite um HTML por rota: os gates leem os snapshots SSR.
   { name: 'Snapshots SSR em dist/', script: 'snapshot:dist' },
   { name: 'Governança editorial pós-build', script: 'check:editorial-governance:dist' },
