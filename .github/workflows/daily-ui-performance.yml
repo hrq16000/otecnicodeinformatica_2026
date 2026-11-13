@@ -96,7 +96,7 @@ jobs:
           npm run build
           gzip -c dist/client/assets/index-*.js | wc -c > reports/icons-qa/before-index-gzip-bytes.txt
           npx lhci collect --config=reports/icons-qa/lighthouserc.json
-          mv .lighthouseci reports/icons-qa/before
+          mv .lighthouseci-mobile reports/icons-qa/before
       - name: Aplicar somente o mapeamento dos sete ícones no checkout descartável
         run: |
           node <<'NODE'
@@ -131,7 +131,7 @@ jobs:
           npm run build
           gzip -c dist/client/assets/index-*.js | wc -c > reports/icons-qa/after-index-gzip-bytes.txt
           npx lhci collect --config=reports/icons-qa/lighthouserc.json
-          mv .lighthouseci reports/icons-qa/after
+          mv .lighthouseci-mobile reports/icons-qa/after
       - name: Comparação bloqueante de LCP e CLS, sem tolerância nova
         run: |
           node <<'NODE'
