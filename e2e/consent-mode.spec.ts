@@ -94,6 +94,21 @@ for (const { nome, viewport } of VIEWPORTS) {
       expect(await page.locator('script[data-adsense="1"]').count()).toBe(0);
     });
 
+    test("consentimento persistido oculta o banner após recarregar", async ({ page }) => {
+      await page.goto("/");
+
+      const banner = page.getByRole("dialog", { name: /privacidade e cookies/i });
+      await expect(banner).toBeVisible();
+      await banner.getByRole("button", { name: "Recusar" }).click();
+      await expect(banner).toBeHidden();
+
+      // Detecta regressão da versão SSR: inicialmente aberto, mas precisa
+      // respeitar localStorage antes da primeira pintura do cliente.
+      await page.reload();
+      await expect(banner).toBeHidden();
+      expect(await readStored(page)).toMatchObject({ analytics: false, ads: false });
+    });
+
     test('o link "Saiba mais" abre a política de privacidade', async ({ page }) => {
       await page.goto("/");
       const banner = page.getByRole("dialog", { name: /privacidade e cookies/i });

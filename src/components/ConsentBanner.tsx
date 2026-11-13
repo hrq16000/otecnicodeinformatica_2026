@@ -17,6 +17,9 @@ export const ConsentBanner = () => {
     if (!saved) {
       setOpen(true);
     } else {
+      // SSR renderiza o aviso, mas a escolha já salva deve ocultá-lo
+      // antes do paint; nunca pedir novo consentimento a cada visita.
+      setOpen(false);
       applyConsent(saved);
       if (saved.ads) loadAdsScript();
     }
