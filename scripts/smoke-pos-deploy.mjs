@@ -8,6 +8,8 @@
  *   3. as URLs críticas respondem 200 com o conteúdo esperado em SSR;
  *   4. headers de borda (cf-cache-status / age) são registrados para
  *      distinguir resposta de origem, de CDN e de cache antigo.
+ *   5. rotas públicas mantêm meta robots e canonical indexáveis no SSR;
+ *   6. robots.txt e sitemaps publicados permitem descoberta efetiva.
  *
  * Fail-closed: qualquer divergência ou 4xx/5xx encerra com exit 1.
  */
@@ -67,6 +69,27 @@ for (const { path, precisa } of URLS) {
     const faltando = precisa.filter((t) => !body.includes(t));
     if (faltando.length) falhas.push(`FAIL_CONTENT ${path}: ausente ${faltando.join(", ")}`);
 
+    // Protege o HTML realmente publicado, não apenas a configuração do build.
+    // As sete rotas desta lista são públicas e previamente curadas.
+    const xRobots = res.headers.get("x-robots-tag") ?? "";
+    if (/\bnoindex\b/i.test(xRobots)) {
+      falhas.push(`FAIL_X_ROBOTS_NOINDEX ${path}: ${xRobots}`);
+    }
+    const robotsTags = [...body.matchAll(/<meta\b[^>]*>/gi)]
+      .map(([tag]) => tag)
+      .filter((tag) => /\bname\s*=\s*["']robots["']/i.test(tag));
+    if (robotsTags.length !== 1 ||
+        !/\bcontent\s*=\s*["']index\s*,\s*follow["']/i.test(robotsTags[0])) {
+      falhas.push(`FAIL_META_ROBOTS ${path}: esperado um index, follow (encontrados ${robotsTags.length})`);
+    }
+    const canonicalTags = [...body.matchAll(/<link\b[^>]*>/gi)]
+      .map(([tag]) => tag)
+      .filter((tag) => /\brel\s*=\s*["']canonical["']/i.test(tag));
+    const canonical = canonicalTags[0]?.match(/\bhref\s*=\s*["']([^"']+)["']/i)?.[1];
+    if (canonicalTags.length !== 1 || canonical !== `${BASE}${path}`) {
+      falhas.push(`FAIL_CANONICAL ${path}: esperado ${BASE}${path}; recebido ${canonical ?? "(ausente)"}`);
+    }
+
     if (path === "/" && versaoManifesto) {
       const m = body.match(/__APP_VERSION__\s*=\s*"([^"]+)"/);
       if (!m) falhas.push("FAIL_VERSION_TAG: __APP_VERSION__ não encontrado no HTML SSR");
@@ -78,6 +101,69 @@ for (const { path, precisa } of URLS) {
     falhas.push(`FAIL_FETCH ${path}: ${e.message}`);
   }
 }
+
+// O smoke pós-deploy também falha se o domínio publicar fallback HTML em vez
+// dos arquivos XML, omitir sitemaps essenciais ou bloquear o crawler global.
+async function verificarDescoberta() {
+  let robots = "";
+  try {
+    const { res, body } = await buscar(`${BASE}/robots.txt`);
+    if (res.status !== 200) falhas.push(`FAIL_ROBOTS_HTTP ${res.status}`);
+    else robots = body;
+  } catch (e) {
+    falhas.push(`FAIL_ROBOTS_FETCH ${e.message}`);
+  }
+  const geral = robots.match(/(?:^|\n)User-agent:\s*\*\s*\r?\n([\s\S]*?)(?=\r?\nUser-agent:|$)/i)?.[1] ?? "";
+  if (!geral || /^\s*Disallow:\s*\/\s*$/im.test(geral)) {
+    falhas.push("FAIL_ROBOTS_CRAWL: User-agent * ausente ou bloqueio global");
+  }
+  if (!robots.includes(`Sitemap: ${BASE}/sitemap-index.xml`)) {
+    falhas.push("FAIL_ROBOTS_DISCOVERY: sitemap-index não anunciado");
+  }
+
+  let xml = "";
+  try {
+    const { res, body } = await buscar(`${BASE}/sitemap-index.xml`);
+    if (res.status !== 200) falhas.push(`FAIL_INDEX_HTTP ${res.status}`);
+    else xml = body;
+  } catch (e) {
+    falhas.push(`FAIL_INDEX_FETCH ${e.message}`);
+  }
+  if (!/<sitemapindex\b/i.test(xml)) {
+    falhas.push("FAIL_INDEX_XML: sitemap ausente ou substituído por HTML");
+    return;
+  }
+  const subs = [...xml.matchAll(/<loc>\s*(https?:\/\/[^<]+)\s*<\/loc>/gi)].map((m) => m[1].trim());
+  if (!subs.includes(`${BASE}/sitemap-main.xml`) || !subs.includes(`${BASE}/sitemap-servicos.xml`)) {
+    falhas.push("FAIL_INDEX_CORE: sitemaps main/servicos ausentes");
+  }
+  if (subs.length === 0 || new Set(subs).size !== subs.length) {
+    falhas.push("FAIL_INDEX_EMPTY_OR_DUPLICATE");
+  }
+  for (const url of subs) {
+    let parsed;
+    try { parsed = new URL(url); } catch {
+      falhas.push(`FAIL_SITEMAP_URL ${url}`);
+      continue;
+    }
+    if (parsed.origin !== BASE || !/^\/sitemap-[a-z-]+\.xml$/.test(parsed.pathname)) {
+      falhas.push(`FAIL_SITEMAP_HOST ${url}`);
+      continue;
+    }
+    try {
+      const { res, body } = await buscar(url);
+      if (res.status !== 200 || !/<urlset\b/i.test(body) || !body.includes(`<loc>${BASE}/`)) {
+        falhas.push(`FAIL_SITEMAP_CHILD ${parsed.pathname}: HTTP ${res.status}`);
+      } else {
+        linhas.push(`200 ${parsed.pathname} [XML]`);
+      }
+    } catch (e) {
+      falhas.push(`FAIL_SITEMAP_FETCH ${parsed.pathname}: ${e.message}`);
+    }
+  }
+  if (robots && xml) linhas.push("200 /robots.txt + /sitemap-index.xml");
+}
+await verificarDescoberta();
 
 console.log(`SMOKE PÓS-DEPLOY — base=${BASE}`);
 for (const l of linhas) console.log(`  ✓ ${l}`);
