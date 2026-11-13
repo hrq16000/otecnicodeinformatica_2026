@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import {
   CONSENT_EVENT,
   loadAdsScript,
@@ -8,9 +8,11 @@ import {
 } from "@/lib/consentStore";
 
 export const ConsentBanner = () => {
-  const [open, setOpen] = useState(false);
+  // SSR: mostrar o aviso sem aguardar a hidratação; preferências existentes
+  // são aplicadas pelo layout effect antes da primeira pintura no cliente.
+  const [open, setOpen] = useState(true);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const saved = readConsent();
     if (!saved) {
       setOpen(true);
