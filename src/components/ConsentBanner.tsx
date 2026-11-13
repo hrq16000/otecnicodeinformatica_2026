@@ -79,6 +79,7 @@ export const ConsentBanner = () => {
     // principal nem o botão flutuante de WhatsApp (canto inferior direito).
     <div
       ref={ref}
+      data-cookie-banner="true"
       role="dialog"
       aria-label="Aviso de privacidade e cookies"
       style={{
