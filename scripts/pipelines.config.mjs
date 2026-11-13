@@ -58,8 +58,8 @@ export const verifySteps = [
 
 /** @type {PipelineStep[]} */
 export const deployCheckSteps = [
-  // Telemetria externa é opcional; quando presente, o destino ainda é validado.
-  { name: 'Configuração de observabilidade (se presente)', script: 'check:observability-env' },
+  // Publicação exige destino real de observabilidade; falhar quando ausente.
+  { name: 'Observabilidade de publicação (strict)', script: 'check:observability-env:strict' },
   // O TanStack Start não emite um HTML por rota: os gates leem os snapshots SSR.
   { name: 'Snapshots SSR em dist/', script: 'snapshot:dist' },
   { name: 'Governança editorial pós-build', script: 'check:editorial-governance:dist' },
