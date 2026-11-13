@@ -10,9 +10,16 @@ on:
   schedule:
     - cron: "0 9 * * *" # 06:00 America/Sao_Paulo
   workflow_dispatch:
+    inputs:
+      icons_lcp_qa:
+        description: "QA isolado dos sete ícones — somente branch da PR #427"
+        type: boolean
+        required: false
+        default: false
 
 jobs:
   relatorio:
+    if: ${{ github.event_name != 'workflow_dispatch' || inputs.icons_lcp_qa != true }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -54,3 +61,115 @@ jobs:
         with:
           name: daily-ui-performance
           path: reports/daily-ui-performance.*
+
+  icons-lcp-qa:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.icons_lcp_qa == true && github.ref == 'refs/heads/fix/lcp-visual-qa-after-426-20261113' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
+      - run: npm ci --no-audit --no-fund
+      - name: Preparar configuração Lighthouse idêntica, limitada a Home/Batel
+        run: |
+          mkdir -p reports/icons-qa
+          node <<'NODE'
+          const fs = require('node:fs');
+          const cfg = JSON.parse(fs.readFileSync('lighthouserc.mobile.json', 'utf8'));
+          cfg.ci.collect.url = ['http://localhost:4173/', 'http://localhost:4173/bairros/batel'];
+          if (cfg.ci.collect.numberOfRuns !== 3 ||
+              cfg.ci.assert.assertions['largest-contentful-paint'][1].maxNumericValue !== 3500) {
+            throw new Error('Configuração mobile ou limite LCP inesperados');
+          }
+          fs.writeFileSync('reports/icons-qa/lighthouserc.json', JSON.stringify(cfg));
+          NODE
+      - name: Baseline — build SSR e Lighthouse mobile
+        run: |
+          npm run build
+          gzip -c dist/client/assets/index-*.js | wc -c > reports/icons-qa/before-index-gzip-bytes.txt
+          npx lhci collect --config=reports/icons-qa/lighthouserc.json
+          mv .lighthouseci reports/icons-qa/before
+      - name: Aplicar somente o mapeamento dos sete ícones no checkout descartável
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const file = 'src/components/WhatsAppFunnel.tsx';
+          let source = fs.readFileSync(file, 'utf8');
+          const replaceOnce = (before, after) => {
+            if (source.split(before).length !== 2) throw new Error('Origem do funil mudou; abortando');
+            source = source.replace(before, after);
+          };
+          replaceOnce('import * as Icons from "lucide-react";\n', '');
+          replaceOnce(
+            'import { ArrowRight, ArrowLeft, CheckCircle2, Lock, MessageCircle, Copy, ExternalLink } from "lucide-react";',
+            'import { ArrowRight, ArrowLeft, CheckCircle2, Lock, MessageCircle, Copy, ExternalLink, Laptop, Tv, Smartphone, TabletSmartphone, Speaker, Gamepad2, HelpCircle } from "lucide-react";'
+          );
+          replaceOnce(
+            'const WA_HOSTS = ["wa.me", "api.whatsapp.com"];',
+            'const WA_HOSTS = ["wa.me", "api.whatsapp.com"];\nconst EQUIPMENT_ICONS = { Laptop, Tv, Smartphone, TabletSmartphone, Speaker, Gamepad2, HelpCircle };'
+          );
+          replaceOnce(
+            '(Icons[eq.icon as keyof typeof Icons] || Icons.HelpCircle) as React.ComponentType<{ className?: string }>',
+            'EQUIPMENT_ICONS[eq.icon as keyof typeof EQUIPMENT_ICONS] || HelpCircle'
+          );
+          fs.writeFileSync(file, source);
+          NODE
+          git diff --check
+          git diff -- src/components/WhatsAppFunnel.tsx > reports/icons-qa/experiment.patch
+      - name: Testes afetados do funil
+        run: npx vitest run src/components/WhatsAppFunnel.integration.test.tsx src/components/funnel/equipmentBranches.test.ts
+      - name: Experimento — build SSR e Lighthouse mobile
+        run: |
+          npm run build
+          gzip -c dist/client/assets/index-*.js | wc -c > reports/icons-qa/after-index-gzip-bytes.txt
+          npx lhci collect --config=reports/icons-qa/lighthouserc.json
+          mv .lighthouseci reports/icons-qa/after
+      - name: Comparação bloqueante de LCP e CLS, sem tolerância nova
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const median = (a) => [...a].sort((x, y) => x - y)[1];
+          const read = (phase, route) => {
+            const dir = path.join('reports/icons-qa', phase);
+            const rows = fs.readdirSync(dir).filter((f) => f.endsWith('.report.json'))
+              .map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')))
+              .filter((r) => new URL(r.finalUrl).pathname === route);
+            if (rows.length !== 3) throw new Error(`Esperadas 3 amostras de ${phase} ${route}, recebidas ${rows.length}`);
+            return {
+              lcp: median(rows.map((r) => r.audits['largest-contentful-paint'].numericValue)),
+              cls: median(rows.map((r) => r.audits['cumulative-layout-shift'].numericValue))
+            };
+          };
+          let failed = false;
+          const summary = {};
+          for (const route of ['/', '/bairros/batel']) {
+            const before = read('before', route);
+            const after = read('after', route);
+            summary[route] = { before, after };
+            if (after.lcp > before.lcp || after.lcp > 3500 || after.cls > before.cls || after.cls > 0.1) failed = true;
+          }
+          console.log(JSON.stringify(summary, null, 2));
+          fs.writeFileSync('reports/icons-qa/comparison.json', JSON.stringify(summary, null, 2));
+          if (failed) throw new Error('Regressão ou LCP/CLS acima dos limites — não integrar a otimização');
+          NODE
+      - name: Publicar evidências isoladas
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: icons-lcp-qa
+          path: |
+            reports/icons-qa/*.json
+            reports/icons-qa/*.txt
+            reports/icons-qa/*.patch
+            reports/icons-qa/before/*.report.json
+            reports/icons-qa/after/*.report.json
+          if-no-files-found: warn
