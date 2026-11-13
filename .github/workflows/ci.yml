@@ -40,6 +40,25 @@ jobs:
           path: reports/test-inventory.json
           if-no-files-found: warn
 
+  # Gate de LIBERAÇÃO separado dos testes de diagnóstico: mesmo quando
+  # observabilidade externa é opcional para desenvolvimento, não publicar
+  # sem um destino legítimo Sentry ou OTLP. Nunca aceitar endpoint fictício.
+  release-observability:
+    name: Observabilidade real obrigatória (strict)
+    needs: unit
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Gate Sentry/OTLP estrito
+        env:
+          VITE_SENTRY_DSN: ${{ secrets.VITE_SENTRY_DSN || vars.VITE_SENTRY_DSN }}
+          VITE_OTLP_ENDPOINT: ${{ secrets.VITE_OTLP_ENDPOINT || vars.VITE_OTLP_ENDPOINT }}
+        run: npm run check:observability-env:strict
+
   build:
     needs: unit
     runs-on: ubuntu-latest
@@ -207,7 +226,8 @@ jobs:
     name: e2e ${{ matrix.browser }} shard ${{ matrix.shard }}/${{ matrix.totalShards }} (observacional)
     runs-on: ubuntu-24.04
     timeout-minutes: 25
-    needs: build
+    # Só consome 12 shards quando o gate E2E menor estiver verde.
+    needs: [build, e2e]
     continue-on-error: true
     strategy:
       fail-fast: false
