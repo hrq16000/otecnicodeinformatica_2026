@@ -27,6 +27,15 @@ printf '%s  %s\n' "$archive_sha256" "$tmpdir/gitleaks.tar.gz" | sha256sum --chec
 tar -xzf "$tmpdir/gitleaks.tar.gz" -C "$tmpdir" gitleaks
 chmod 500 "$tmpdir/gitleaks"
 
+# Varredura rápida da árvore versionada atual antes do histórico completo.
+# Usa o mesmo binário oficial e as mesmas regras do gate histórico abaixo.
+# Em caso de achados ou timeout, falha imediatamente (sem bypass de scan).
+mkdir -p "$tmpdir/head"
+git archive --format=tar HEAD | tar -xf - -C "$tmpdir/head"
+timeout 4m "$tmpdir/gitleaks" dir "$tmpdir/head" \
+  --gitleaks-ignore-path "$PWD/.gitleaksignore" \
+  --redact --no-banner --verbose
+
 timeout 18m "$tmpdir/gitleaks" git "$PWD" \
   "--log-opts=$history" --gitleaks-ignore-path "$PWD/.gitleaksignore" \
   --redact --no-banner --verbose
