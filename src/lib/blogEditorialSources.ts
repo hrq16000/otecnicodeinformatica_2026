@@ -119,6 +119,16 @@ export const ALLOWED_SOURCE_HOSTS = [
 // FONTES CONSULTADAS (URLs confirmadas em 2026-07-12).
 // ─────────────────────────────────────────────────────────────
 export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
+  "ms-office-open-repair-20261113": {
+    id: "ms-office-open-repair-20261113", title: "Abrir um documento após um erro de corrupção", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/word/open-a-document-after-a-file-corruption-error", accessedAt: "2026-11-13", sourceType: "official",
+    supports: ["Procedimento Abrir e Reparar no Office para desktop."],
+  },
+  "ms-onedrive-version-restore-20261113": {
+    id: "ms-onedrive-version-restore-20261113", title: "Restaurar uma versão anterior no OneDrive ou SharePoint", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/onedrive/restore-a-previous-version-of-a-file-stored-in-onedrive", accessedAt: "2026-11-13", sourceType: "official",
+    supports: ["Histórico de versões e efeito de tornar a versão restaurada a versão atual."],
+  },
   "ms-windows-apipa-20261112": {
     id: "ms-windows-apipa-20261112", title: "Endereçamento TCP/IP automático sem servidor DHCP", publisher: "Microsoft Learn",
     url: "https://learn.microsoft.com/pt-br/windows-server/troubleshoot/how-to-use-automatic-tcpip-addressing-without-a-dh", accessedAt: "2026-11-12", sourceType: "official",
@@ -2989,14 +2999,15 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: [
       "ms-file-history",
       "ms-windows-file-recovery",
-      "ms-onedrive-folder-backup",
+      "ms-onedrive-version-restore-20261113",
+      "ms-office-open-repair-20261113",
       "ms-chkdsk-2026",
     ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-10-01",
+    factCheckedAt: "2026-11-13",
     notes:
-      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição 38 entre 2026-04-01 e 2026-09-28 para a query real 'arquivo corrompido'. A versão suplementar preserva o original, diferencia corrupção de incompatibilidade/download incompleto, prioriza versões anteriores/backup, limita CHKDSK ao sistema de arquivos, separa recuperação de arquivo apagado de reparo de documento e define quando vários arquivos falhando indicam problema de armazenamento. Fontes Microsoft visíveis; nenhuma query adicional foi inventada.",
+      "Revisão material em 2026-11-13 na versão suplementar: primeiro avaliar a mídia, depois preservar original, cópia e resultado; detalha Histórico de Versões e Abrir e Reparar, com verificação do conteúdo recuperado e FAQ única.",
   },
   "como-configurar-2fa-em-tudo": {
     slug: "como-configurar-2fa-em-tudo",

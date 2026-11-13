@@ -26,6 +26,7 @@ const cases = [
   { slug: "como-remover-virus-windows-iniciantes", approved: true, date: "2026-10-01", reviewedAt: "2026-11-10" },
   { slug: "teclado-de-notebook-nao-funciona-o-que-verificar", approved: true, date: "2026-09-03", reviewedAt: "2026-11-11" },
   { slug: "computador-nao-conecta-na-internet-por-cabo", approved: true, date: "2026-09-14", reviewedAt: "2026-11-12" },
+  { slug: "arquivo-corrompido-nao-abre-o-que-fazer", approved: true, date: "2026-10-01", reviewedAt: "2026-11-13" },
 ];
 
 await mkdir(out, { recursive: true });

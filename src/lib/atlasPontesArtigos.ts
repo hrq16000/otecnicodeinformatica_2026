@@ -240,7 +240,7 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
   "arquivo-corrompido-nao-abre-o-que-fazer": {
     temaId: "dados-backup",
     porQue:
-      "Arquivo que não abre é um teste prático da estratégia de dados: quem tem versões guardadas resolve em minutos; quem não tem depende de tentativa. A trilha mostra por que a cópia vem antes da tentativa.",
+      "Uma versão íntegra pode evitar o reparo. A trilha mostra como preservar o original e quando parar se a unidade apresentar erros de leitura.",
     proximoPasso: {
       rotulo: "Backup antes da manutenção",
       to: "/decisoes/backup-antes-da-manutencao",

@@ -1177,23 +1177,23 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
   "arquivo-corrompido-nao-abre-o-que-fazer": [
     {
       q: "Qual é o primeiro passo com um arquivo que não abre?",
-      a: "Copiar o arquivo para outra unidade e trabalhar apenas sobre a cópia. Tentativas de reparo podem reescrever o conteúdo, e o original preservado mantém disponíveis as alternativas que uma segunda tentativa eliminaria.",
+      a: "Se a unidade está estável, preserve o original e trabalhe em uma cópia. Se houver erros de leitura, desconexões ou ruído anormal no HD, interrompa as tentativas e procure uma versão íntegra em outro local.",
     },
     {
       q: "Como saber se o arquivo está corrompido ou se é o programa?",
-      a: "Tente abrir a cópia em outro programa capaz de ler o formato e em outro computador. Se abrir em algum deles, o conteúdo está íntegro e o problema é da instalação local. Se falhar em todos, o dano é no arquivo.",
+      a: "Compare com outro arquivo íntegro do mesmo formato e tente abrir a cópia no aplicativo compatível. Abrir em outro programa é uma pista de compatibilidade, mas não prova que todo o conteúdo foi preservado.",
     },
     {
       q: "Arquivo com tamanho zero tem recuperação?",
       a: "Não pelo próprio arquivo: sem bytes gravados, não há conteúdo a reconstruir. O caminho passa a ser versão anterior, backup, arquivo temporário do programa ou tentativa de recuperação na mídia onde ele estava.",
     },
     {
-      q: "Vários arquivos da mesma pasta pararam de abrir. O que mudou?",
-      a: "O escopo. Falha simultânea em muitos arquivos aponta para a mídia de armazenamento, não para os documentos. A conduta correta é parar de gravar naquela unidade e verificar a saúde do disco antes de novas tentativas.",
+      q: "Posso restaurar uma versão anterior sem sobrescrever o arquivo atual?",
+      a: "No Histórico de Arquivos do Windows, escolha Restaurar para e use outra pasta. No OneDrive ou SharePoint, preserve a versão atual antes de restaurar, pois a versão escolhida passa a ser a atual.",
     },
     {
-      q: "Programas de reparo automático funcionam?",
-      a: "Às vezes recuperam parte do conteúdo, sempre dependendo de quanto foi gravado corretamente. Devem ser apontados para a cópia, nunca para o original, e nenhuma ferramenta reconstrói dado que jamais chegou a ser escrito na mídia.",
+      q: "Como sei se Abrir e Reparar recuperou tudo?",
+      a: "Não basta o arquivo abrir. Salve o resultado com outro nome, feche e reabra. Confira páginas, imagens, abas, fórmulas ou totais relevantes antes de usar a cópia recuperada.",
     },
   ],
   "ssd-nao-aparece-no-instalador-do-windows": [
