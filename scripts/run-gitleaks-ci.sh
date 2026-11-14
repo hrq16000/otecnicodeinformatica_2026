@@ -28,11 +28,14 @@ tar -xzf "$tmpdir/gitleaks.tar.gz" -C "$tmpdir" gitleaks
 chmod 500 "$tmpdir/gitleaks"
 
 # Varredura rápida da árvore versionada atual antes do histórico completo.
-# Usa o mesmo binário oficial e as mesmas regras do gate histórico abaixo.
+# Usa o mesmo binário oficial e as regras default, com exceções estreitas
+# somente para falsos positivos públicos já comprovados na árvore ancestral.
+# O scan histórico abaixo permanece integral, sem essa configuração.
 # Em caso de achados ou timeout, falha imediatamente (sem bypass de scan).
 mkdir -p "$tmpdir/head"
 git archive --format=tar HEAD | tar -xf - -C "$tmpdir/head"
 timeout 4m "$tmpdir/gitleaks" dir "$tmpdir/head" \
+  --config "$PWD/.gitleaks.toml" \
   --gitleaks-ignore-path "$PWD/.gitleaksignore" \
   --redact --no-banner --verbose
 
