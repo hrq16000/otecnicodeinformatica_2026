@@ -1,4 +1,13 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, HardDrive, Laptop, MonitorCog, Router, Building2 } from "lucide-react";
+
+const VISUAIS = {
+  computadores: { Icon: Laptop, foto: "/fotos/bancada-tecnica-mobile.webp", alt: "Bancada técnica com notebook e ferramentas" },
+  sistemas: { Icon: MonitorCog, foto: null, alt: "" },
+  dados: { Icon: HardDrive, foto: null, alt: "" },
+  redes: { Icon: Router, foto: null, alt: "" },
+  empresas: { Icon: Building2, foto: "/fotos/estacao-trabalho-desktop.webp", alt: "Estação de trabalho para atendimento empresarial" },
+} as const;
+
 import { ALEM_DA_INFORMATICA, CONTEXTOS } from "@/lib/homeContextos";
 
 const track = (loc: string) => {
@@ -40,7 +49,10 @@ export const ContextosBento = () => (
       </header>
 
       <div className="mt-8 grid gap-4 md:auto-rows-[minmax(0,1fr)] md:grid-cols-6">
-        {CONTEXTOS.map((c) => (
+        {CONTEXTOS.map((c) => {
+          const visual = VISUAIS[c.id as keyof typeof VISUAIS];
+          const Icon = visual?.Icon ?? Laptop;
+          return (
           <a
             key={c.id}
             href={c.href}
@@ -50,6 +62,24 @@ export const ContextosBento = () => (
             }`}
           >
             <div>
+              <div className="relative mb-5 flex h-28 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-primary/10 via-background to-accent/15 md:h-32">
+                {visual?.foto ? (
+                  <img
+                    src={visual.foto}
+                    alt={visual.alt}
+                    width={640}
+                    height={256}
+                    loading="lazy"
+                    decoding="async"
+                    className="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-300 motion-reduce:transition-none group-hover:scale-[1.03] motion-reduce:group-hover:scale-100"
+                  />
+                ) : (
+                  <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,hsl(var(--accent)/0.13),transparent_58%)]" />
+                )}
+                <span className="relative flex h-14 w-14 items-center justify-center rounded-2xl border border-border/70 bg-background/90 shadow-sm backdrop-blur-sm">
+                  <Icon className="h-7 w-7 text-primary" aria-hidden="true" strokeWidth={1.7} />
+                </span>
+              </div>
               <span className="font-heading text-[11px] font-bold uppercase tracking-[0.14em] text-[hsl(var(--categoria))]">
                 {c.rotulo}
               </span>
@@ -76,7 +106,8 @@ export const ContextosBento = () => (
               />
             </span>
           </a>
-        ))}
+          );
+        })}
       </div>
 
       <div className="mt-8 rounded-2xl border border-dashed border-border p-5">
