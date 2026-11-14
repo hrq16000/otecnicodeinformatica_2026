@@ -71,7 +71,7 @@ export const ContextosBento = () => (
                     height={256}
                     loading="lazy"
                     decoding="async"
-                    className="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-300 motion-reduce:transition-none group-hover:scale-[1.03] motion-reduce:group-hover:scale-100"
+                    className="absolute inset-0 h-full w-full object-cover opacity-80"
                   />
                 ) : (
                   <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,hsl(var(--accent)/0.13),transparent_58%)]" />
