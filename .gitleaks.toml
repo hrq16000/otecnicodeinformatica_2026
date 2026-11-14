@@ -10,9 +10,9 @@ useDefault = true
 description = "Duas chaves Supabase publicas explicitamente identificadas"
 targetRules = ["generic-api-key"]
 condition = "AND"
-regexTarget = "line"
+regexTarget = "match"
 paths = ['''(?:^|/)\.env$''']
-regexes = ['''^(?:SUPABASE_PUBLISHABLE_KEY|VITE_SUPABASE_PUBLISHABLE_KEY)=["']sb_publishable_[A-Za-z0-9_-]+["']\s*$''']
+regexes = ['''sb_publishable_[A-Za-z0-9_-]+''']
 
 # Os quatro exemplos JWT contêm role=anon (nunca service_role).
 # O marcador abaixo e o trecho base64 da propriedade JSON role:"anon".
