@@ -1,5 +1,5 @@
 import { Link } from "@/lib/router-compat";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BookOpen } from "lucide-react";
 import { getEditorialInboundLinks } from "@/lib/editorialInboundLinks";
 
 /**
@@ -18,7 +18,7 @@ export const EditorialContentLinks = ({ path }: { path: string }) => {
           aria-label="Conteúdo relacionado"
           className="mx-auto max-w-3xl rounded-2xl border border-border/60 bg-muted/30 p-6"
         >
-          <h2 className="mb-3 font-heading text-base font-bold text-foreground">Conteúdo relacionado</h2>
+          <h2 className="mb-3 font-heading text-base font-bold text-foreground"><BookOpen aria-hidden="true" focusable="false" className="mr-2 inline size-4 align-[-0.1em] text-accent" />Conteúdo relacionado</h2>
           <ul className="space-y-3">
             {itens.map((i) => (
               <li key={i.slug}>

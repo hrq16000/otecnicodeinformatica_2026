@@ -1,5 +1,5 @@
 import { Link } from "@/lib/router-compat";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Compass } from "lucide-react";
 import { articlesForPilar } from "@/lib/editorialClusters";
 import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
 
@@ -23,7 +23,7 @@ export function PilarEditorialLinks({
 
   return (
     <section aria-label={titulo} className="container mx-auto py-10">
-      <h2 className="font-heading font-bold text-primary text-xl mb-4">{titulo}</h2>
+      <h2 className="font-heading font-bold text-primary text-xl mb-4"><Compass aria-hidden="true" focusable="false" className="mr-2 inline size-5 align-[-0.1em] text-accent" />{titulo}</h2>
       <ul className="grid gap-3 sm:grid-cols-2">
         {items.map((e) => (
           <li key={e.slug}>
