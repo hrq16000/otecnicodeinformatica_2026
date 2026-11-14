@@ -2,6 +2,16 @@ import { lazy, Suspense, useEffect, useState } from "react";
 import { JsonLdSsrSink } from "@/lib/jsonLdSsr";
 import IndexPage from "./pages/Index";
 
+// Importações eager apenas no bundle SSR: evitam que os textos LCP destas
+// duas páginas dependam da revelação de uma fronteira React.lazy em isolate frio.
+// No cliente, os mesmos módulos continuam divididos por rota.
+const [termosCondicoesSsr, clusterProblemaPageSsr] = import.meta.env.SSR
+  ? await Promise.all([
+      import("./pages/TermosCondicoes"),
+      import("./pages/problemas/ClusterProblemaPage"),
+    ])
+  : [null, null];
+
 /**
  * ─────────────────────────────────────────────────────────────
  * P0 SSR_JSONLD_INTERMITENTE — sink DENTRO do módulo da página
@@ -81,7 +91,9 @@ const AssistenciaTecnicaCuritiba = lazyPagina(() => import("./pages/AssistenciaT
 const ArrumarPC = lazyPagina(() => import("./pages/ArrumarPC"));
 const ArrumarPCCity = lazyPagina(() => import("./pages/arrumar-pc/ArrumarPCCity"));
 const ArrumarPCServicoCidade = lazyPagina(() => import("./pages/arrumar-pc/ArrumarPCServicoCidade"));
-const TermosCondicoes = lazyPagina(() => import("./pages/TermosCondicoes"));
+const TermosCondicoes = termosCondicoesSsr
+  ? comSinkDeJsonLd(termosCondicoesSsr.default)
+  : lazyPagina(() => import("./pages/TermosCondicoes"));
 const PoliticaPrivacidade = lazyPagina(() => import("./pages/PoliticaPrivacidade"));
 const PoliticaCookiesAnuncios = lazyPagina(() => import("./pages/PoliticaCookiesAnuncios"));
 const StatusAnuncios = lazyPagina(() => import("./pages/StatusAnuncios"));
@@ -515,7 +527,9 @@ const ProblemaPage = lazyPagina(() => import("./pages/ProblemaPage"));
 const NotebookNaoLiga = lazyPagina(() => import("./pages/problemas/NotebookNaoLiga"));
 const ProblemaComputadorLento = lazyPagina(() => import("./pages/problemas/ComputadorLento"));
 const ProblemasHub = lazyPagina(() => import("./pages/problemas/ProblemasHub"));
-const ClusterProblemaPage = lazyPagina(() => import("./pages/problemas/ClusterProblemaPage"));
+const ClusterProblemaPage = clusterProblemaPageSsr
+  ? comSinkDeJsonLd(clusterProblemaPageSsr.default)
+  : lazyPagina(() => import("./pages/problemas/ClusterProblemaPage"));
 const EquipamentosHub = lazyPagina(() => import("./pages/equipamentos/EquipamentosHub"));
 const ClusterEquipamentoPage = lazyPagina(() => import("./pages/equipamentos/ClusterEquipamentoPage"));
 const SolucoesHub = lazyPagina(() => import("./pages/solucoes/SolucoesHub"));
