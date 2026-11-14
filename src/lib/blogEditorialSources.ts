@@ -111,6 +111,31 @@ export const ALLOWED_SOURCE_HOSTS = [
 // FONTES CONSULTADAS (URLs confirmadas em 2026-07-12).
 // ─────────────────────────────────────────────────────────────
 export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
+  "google-chrome-unwanted-20261110": {
+    id: "google-chrome-unwanted-20261110", title: "Remover anúncios e software indesejado no Chrome", publisher: "Google Chrome Help",
+    url: "https://support.google.com/chrome/answer/2765944?co=GENIE.Platform%3DDesktop&hl=en-en", accessedAt: "2026-11-10", sourceType: "official",
+    supports: ["Notificações de sites e sintomas de extensões ou redirecionamentos indesejados."],
+  },
+  "google-chrome-managed-20261110": {
+    id: "google-chrome-managed-20261110", title: "Verificar se o Chrome é gerenciado", publisher: "Google Chrome Help",
+    url: "https://support.google.com/chrome/answer/9281740?hl=pt-BR", accessedAt: "2026-11-10", sourceType: "official",
+    supports: ["Extensões e configurações podem ser impostas pela organização; políticas podem ser inspecionadas."],
+  },
+  "google-chrome-sync-20261110": {
+    id: "google-chrome-sync-20261110", title: "Dados do Chrome na Conta do Google", publisher: "Google Chrome Help",
+    url: "https://support.google.com/chrome/answer/165139?hl=pt-BR", accessedAt: "2026-11-10", sourceType: "official",
+    supports: ["Extensões podem ser vinculadas à conta conforme as configurações de dados."],
+  },
+  "ms-edge-extension-policy-20261110": {
+    id: "ms-edge-extension-policy-20261110", title: "Política de instalação de extensões no Edge", publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-policies/extensioninstallforcelist", accessedAt: "2026-11-10", sourceType: "official",
+    supports: ["Extensões exigidas por política não podem ser removidas normalmente pelo usuário."],
+  },
+  "ms-defender-scan-20261110": {
+    id: "ms-defender-scan-20261110", title: "Verificações na Segurança do Windows", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/security/threat-malware-protection/virus-and-threat-protection-in-the-windows-security-app", accessedAt: "2026-11-10", sourceType: "official",
+    supports: ["Verificação completa, reinício do Defender Offline e consulta ao Histórico de proteção."],
+  },
   "ms-diskpart-list-20261109": {
     id: "ms-diskpart-list-20261109",
     title: "DiskPart: listar discos e volumes",
@@ -2246,12 +2271,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-remover-virus-windows-iniciantes": {
     slug: "como-remover-virus-windows-iniciantes",
-    sources: ["ms-windows-security-overview", "cisa-stop-ransomware", "cisa-upskill-checklist"],
+    sources: ["ms-windows-security-overview", "cisa-stop-ransomware", "cisa-upskill-checklist", "google-chrome-unwanted-20261110", "google-chrome-managed-20261110", "google-chrome-sync-20261110", "ms-edge-extension-policy-20261110", "ms-defender-scan-20261110"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-10-01",
+    factCheckedAt: "2026-11-10",
     notes:
-      "Revisão material em 2026-10-01 guiada por sinal real de página no GSC: 2 impressões, 0 cliques e posição média 28 entre 2026-04-01 e 2026-09-28. Nenhuma query individual foi exposta e nenhuma foi inventada. A versão suplementar aprofunda contenção, Windows Security/Defender, revisão de extensões e inicialização, credenciais, backup seletivo, ransomware, reinfecção e critérios de reinstalação. Fontes oficiais Microsoft e CISA ficam visíveis.",
+      "Revisão material em 2026-11-10 na versão suplementar efetiva: diferencia notificação de site, perfil, sincronização, política e sintoma no sistema; reforça contenção, histórico do Defender, sessões e limites da reinstalação. Fila anterior baseada em GSC histórico, sem nova medição nesta rodada.",
   },
   "como-formatar-pc-sem-perder-arquivos": {
     slug: "como-formatar-pc-sem-perder-arquivos",

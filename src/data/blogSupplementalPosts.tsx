@@ -662,14 +662,15 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
     content: (
       <>
         <p className="lead">
-          Se você suspeita de <strong>vírus ou malware no Windows</strong>, comece reduzindo o risco: desconecte contas sensíveis
-          quando necessário, evite novos logins em sites importantes e preserve seus arquivos antes de partir para limpeza.
+          Se você suspeita de <strong>vírus ou malware no Windows</strong>, evite novos logins em sites importantes
+          e preserve seus arquivos antes de partir para limpeza. Uma notificação de site, uma extensão que voltou
+          e um sistema que envia mensagens sozinho pedem verificações diferentes.
           A remoção deve ser feita em camadas, com uma mudança por vez.
         </p>
 
         <h2>Resposta direta: como remover vírus do Windows</h2>
         <ol>
-          <li>Desconecte o computador de serviços sensíveis se houver sinais de comprometimento ativo.</li>
+          <li>Se houver sinais de comprometimento ativo, isole o computador da rede e use outro aparelho confiável para proteger as contas. Em equipamento gerenciado, acione a TI.</li>
           <li>Atualize o Windows e as definições de segurança quando isso for possível com segurança.</li>
           <li>Execute uma verificação completa pelo Windows Security.</li>
           <li>Revise programas instalados, extensões do navegador e itens de inicialização suspeitos.</li>
@@ -690,12 +691,14 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           Se há comportamento ativo de fraude, ransomware, envio de mensagens sem autorização ou roubo de sessão, reduza a
           exposição antes de investigar. Evite acessar banco, e-mail principal ou painéis administrativos no computador suspeito.
         </p>
+        <p>Se houver criptografia em andamento, movimentação financeira desconhecida ou sinais de sessão roubada, não tente reproduzir o problema voltando a conectar o equipamento. Registre o horário e o sintoma sem compartilhar senhas ou códigos; use os canais oficiais do serviço ou da organização.</p>
 
         <h2>3. Use o Windows Security como primeira camada</h2>
         <p>
           O Windows 10 e o Windows 11 incluem o Microsoft Defender Antivirus dentro do Windows Security. Em um computador
           doméstico comum, essa é a primeira camada coerente antes de instalar múltiplas ferramentas concorrentes.
         </p>
+        <p>Se o Defender for a proteção ativa, confira as atualizações e a opção de verificação completa. A verificação offline é uma alternativa para suspeita persistente: reinicia o PC e roda no ambiente de recuperação. Salve o trabalho, confirme que tem a chave do BitLocker se o disco for protegido e consulte o Histórico de proteção ao voltar. Uma verificação sem detecção não é prova de que o sistema está limpo.</p>
 
         <h2>4. Não execute vários antivírus em tempo real ao mesmo tempo</h2>
         <p>
@@ -712,15 +715,27 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
 
         <h2>6. Revise extensões e permissões do navegador</h2>
         <p>
-          Se o problema aparece apenas no navegador, verifique extensões, mecanismo de busca, página inicial e permissões
-          de notificações. Sincronização de perfil pode reintroduzir uma extensão problemática em outro dispositivo.
+          Se a extensão, o anúncio ou o redirecionamento voltou, anote o momento: ao abrir um site, ao iniciar o navegador,
+          depois de entrar na conta ou após reiniciar o Windows. Essa diferença ajuda a escolher o próximo teste.
         </p>
+        <table>
+          <thead><tr><th>O que você observa</th><th>Verificação segura</th><th>Limite da conclusão</th></tr></thead>
+          <tbody>
+            <tr><td>Alerta com nome de um site</td><td>Revise as permissões de notificações e revogue a do site desconhecido, sem clicar no alerta</td><td>Permissão de site não prova infecção do Windows</td></tr>
+            <tr><td>Redirecionamento só em um perfil</td><td>Se não houver sinais de incidente ativo, compare com um perfil temporário sem login, sem abrir a página suspeita</td><td>Diferença aponta para o perfil, não certifica que o sistema está limpo</td></tr>
+            <tr><td>Extensão volta após entrar na conta</td><td>Confira os dados sincronizados e os dispositivos vinculados antes de reativar a sincronização</td><td>Sincronização é hipótese, não prova de invasão</td></tr>
+            <tr><td>Extensão não pode ser removida ou navegador diz “gerenciado”</td><td>Consulte <code>chrome://policy</code> ou <code>edge://policy</code> apenas para identificar a política; em PC de trabalho, confirme com a TI</td><td>Uma política pode ser legítima; em PC pessoal, investigue a origem em vez de apagar o registro</td></tr>
+            <tr><td>Sintoma aparece também fora do navegador</td><td>Confira programas instalados, inicialização e Histórico de proteção; preserve evidências se houver comprometimento ativo</td><td>Alterar a página inicial não resolve uma causa no sistema</td></tr>
+          </tbody>
+        </table>
+        <p>Faça uma mudança por vez e anote o resultado. Não reinstale extensões em massa para testar e não apague seu perfil sem confirmar que consegue recuperar os dados necessários. Se a conta também apresentar atividade desconhecida, trate a conta antes de voltar a sincronizar.</p>
 
         <h2>7. Senhas devem ser trocadas em dispositivo confiável quando houver risco de roubo</h2>
         <p>
           Se você suspeita de captura de credenciais, não use a própria máquina comprometida para redefinir as contas mais
           importantes. Priorize e-mail principal, banco, redes sociais, armazenamento em nuvem e contas administrativas.
         </p>
+        <p>Em outro aparelho confiável, revise sessões abertas e métodos de recuperação; siga o fluxo oficial para revogar acessos desconhecidos. Trocar a senha não substitui conferir sessões. Veja como <a href="/blog/como-configurar-2fa-em-tudo">preservar ou recuperar o segundo fator</a> antes de remover o único método de acesso funcional.</p>
 
         <h2>8. Backup precisa evitar carregar a ameaça junto</h2>
         <p>
@@ -766,25 +781,6 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           <li>A ameaça retorna após limpeza e reinicialização.</li>
           <li>Há indícios de comprometimento de contas fora do computador.</li>
         </ul>
-
-        <h2>Perguntas frequentes</h2>
-        <h3>O Windows Defender é suficiente?</h3>
-        <p>
-          Ele é a proteção integrada do Windows e serve como primeira camada coerente. A necessidade de outras ferramentas
-          depende do contexto, do risco e do tipo de incidente; instalar vários antivírus ao mesmo tempo não melhora automaticamente a proteção.
-        </p>
-
-        <h3>Formatar o computador remove vírus?</h3>
-        <p>
-          Uma reinstalação limpa pode eliminar malware presente na instalação anterior, mas não corrige credenciais roubadas,
-          arquivos maliciosos restaurados depois ou uma origem externa que continua ativa.
-        </p>
-
-        <h3>Posso continuar usando o computador enquanto removo o vírus?</h3>
-        <p>
-          Se há suspeita de comprometimento ativo, evite tarefas sensíveis até concluir a investigação. O risco principal é
-          continuar fornecendo novas credenciais ou dados para uma ameaça ainda presente.
-        </p>
 
         <h2>Resumo prático</h2>
         <p>
