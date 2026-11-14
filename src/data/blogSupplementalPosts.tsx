@@ -1,8 +1,8 @@
 import React from "react";
+import { Copy, FileSearch, TriangleAlert } from "lucide-react";
 import type { BlogPostContent } from "@/data/blogPostsContent";
 import { EditorialReferences } from "@/components/BlogPostFAQ";
 import { MODALIDADES } from "@/lib/precosConfig";
-
 /**
  * Conteúdos editoriais suplementares.
  *
@@ -662,14 +662,15 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
     content: (
       <>
         <p className="lead">
-          Se você suspeita de <strong>vírus ou malware no Windows</strong>, comece reduzindo o risco: desconecte contas sensíveis
-          quando necessário, evite novos logins em sites importantes e preserve seus arquivos antes de partir para limpeza.
+          Se você suspeita de <strong>vírus ou malware no Windows</strong>, evite novos logins em sites importantes
+          e preserve seus arquivos antes de partir para limpeza. Uma notificação de site, uma extensão que voltou
+          e um sistema que envia mensagens sozinho pedem verificações diferentes.
           A remoção deve ser feita em camadas, com uma mudança por vez.
         </p>
 
         <h2>Resposta direta: como remover vírus do Windows</h2>
         <ol>
-          <li>Desconecte o computador de serviços sensíveis se houver sinais de comprometimento ativo.</li>
+          <li>Se houver sinais de comprometimento ativo, isole o computador da rede e use outro aparelho confiável para proteger as contas. Em equipamento gerenciado, acione a TI.</li>
           <li>Atualize o Windows e as definições de segurança quando isso for possível com segurança.</li>
           <li>Execute uma verificação completa pelo Windows Security.</li>
           <li>Revise programas instalados, extensões do navegador e itens de inicialização suspeitos.</li>
@@ -690,12 +691,14 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           Se há comportamento ativo de fraude, ransomware, envio de mensagens sem autorização ou roubo de sessão, reduza a
           exposição antes de investigar. Evite acessar banco, e-mail principal ou painéis administrativos no computador suspeito.
         </p>
+        <p>Se houver criptografia em andamento, movimentação financeira desconhecida ou sinais de sessão roubada, não tente reproduzir o problema voltando a conectar o equipamento. Registre o horário e o sintoma sem compartilhar senhas ou códigos; use os canais oficiais do serviço ou da organização.</p>
 
         <h2>3. Use o Windows Security como primeira camada</h2>
         <p>
           O Windows 10 e o Windows 11 incluem o Microsoft Defender Antivirus dentro do Windows Security. Em um computador
           doméstico comum, essa é a primeira camada coerente antes de instalar múltiplas ferramentas concorrentes.
         </p>
+        <p>Se o Defender for a proteção ativa, confira as atualizações e a opção de verificação completa. A verificação offline é uma alternativa para suspeita persistente: reinicia o PC e roda no ambiente de recuperação. Salve o trabalho, confirme que tem a chave do BitLocker se o disco for protegido e consulte o Histórico de proteção ao voltar. Uma verificação sem detecção não é prova de que o sistema está limpo.</p>
 
         <h2>4. Não execute vários antivírus em tempo real ao mesmo tempo</h2>
         <p>
@@ -712,15 +715,27 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
 
         <h2>6. Revise extensões e permissões do navegador</h2>
         <p>
-          Se o problema aparece apenas no navegador, verifique extensões, mecanismo de busca, página inicial e permissões
-          de notificações. Sincronização de perfil pode reintroduzir uma extensão problemática em outro dispositivo.
+          Se a extensão, o anúncio ou o redirecionamento voltou, anote o momento: ao abrir um site, ao iniciar o navegador,
+          depois de entrar na conta ou após reiniciar o Windows. Essa diferença ajuda a escolher o próximo teste.
         </p>
+        <table>
+          <thead><tr><th>O que você observa</th><th>Verificação segura</th><th>Limite da conclusão</th></tr></thead>
+          <tbody>
+            <tr><td>Alerta com nome de um site</td><td>Revise as permissões de notificações e revogue a do site desconhecido, sem clicar no alerta</td><td>Permissão de site não prova infecção do Windows</td></tr>
+            <tr><td>Redirecionamento só em um perfil</td><td>Se não houver sinais de incidente ativo, compare com um perfil temporário sem login, sem abrir a página suspeita</td><td>Diferença aponta para o perfil, não certifica que o sistema está limpo</td></tr>
+            <tr><td>Extensão volta após entrar na conta</td><td>Confira os dados sincronizados e os dispositivos vinculados antes de reativar a sincronização</td><td>Sincronização é hipótese, não prova de invasão</td></tr>
+            <tr><td>Extensão não pode ser removida ou navegador diz “gerenciado”</td><td>Consulte <code>chrome://policy</code> ou <code>edge://policy</code> apenas para identificar a política; em PC de trabalho, confirme com a TI</td><td>Uma política pode ser legítima; em PC pessoal, investigue a origem em vez de apagar o registro</td></tr>
+            <tr><td>Sintoma aparece também fora do navegador</td><td>Confira programas instalados, inicialização e Histórico de proteção; preserve evidências se houver comprometimento ativo</td><td>Alterar a página inicial não resolve uma causa no sistema</td></tr>
+          </tbody>
+        </table>
+        <p>Faça uma mudança por vez e anote o resultado. Não reinstale extensões em massa para testar e não apague seu perfil sem confirmar que consegue recuperar os dados necessários. Se a conta também apresentar atividade desconhecida, trate a conta antes de voltar a sincronizar.</p>
 
         <h2>7. Senhas devem ser trocadas em dispositivo confiável quando houver risco de roubo</h2>
         <p>
           Se você suspeita de captura de credenciais, não use a própria máquina comprometida para redefinir as contas mais
           importantes. Priorize e-mail principal, banco, redes sociais, armazenamento em nuvem e contas administrativas.
         </p>
+        <p>Em outro aparelho confiável, revise sessões abertas e métodos de recuperação; siga o fluxo oficial para revogar acessos desconhecidos. Trocar a senha não substitui conferir sessões. Veja como <a href="/blog/como-configurar-2fa-em-tudo">preservar ou recuperar o segundo fator</a> antes de remover o único método de acesso funcional.</p>
 
         <h2>8. Backup precisa evitar carregar a ameaça junto</h2>
         <p>
@@ -766,25 +781,6 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           <li>A ameaça retorna após limpeza e reinicialização.</li>
           <li>Há indícios de comprometimento de contas fora do computador.</li>
         </ul>
-
-        <h2>Perguntas frequentes</h2>
-        <h3>O Windows Defender é suficiente?</h3>
-        <p>
-          Ele é a proteção integrada do Windows e serve como primeira camada coerente. A necessidade de outras ferramentas
-          depende do contexto, do risco e do tipo de incidente; instalar vários antivírus ao mesmo tempo não melhora automaticamente a proteção.
-        </p>
-
-        <h3>Formatar o computador remove vírus?</h3>
-        <p>
-          Uma reinstalação limpa pode eliminar malware presente na instalação anterior, mas não corrige credenciais roubadas,
-          arquivos maliciosos restaurados depois ou uma origem externa que continua ativa.
-        </p>
-
-        <h3>Posso continuar usando o computador enquanto removo o vírus?</h3>
-        <p>
-          Se há suspeita de comprometimento ativo, evite tarefas sensíveis até concluir a investigação. O risco principal é
-          continuar fornecendo novas credenciais ou dados para uma ameaça ainda presente.
-        </p>
 
         <h2>Resumo prático</h2>
         <p>
@@ -3059,7 +3055,8 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
 
         <h2>Resposta direta: o que fazer quando um arquivo não abre</h2>
         <ol>
-          <li>Faça uma cópia do arquivo em outro local antes de testar qualquer reparo.</li>
+          <li>Se a unidade desconecta, dá erros de leitura ou o HD faz ruídos novos, interrompa os testes. Procure uma versão íntegra fora dessa unidade.</li>
+          <li>Se a unidade está estável, preserve o original e faça uma cópia de trabalho em outro local.</li>
           <li>Confirme extensão, tamanho e aplicativo correto para abrir o formato.</li>
           <li>Tente outra cópia conhecida do mesmo arquivo, quando existir.</li>
           <li>Procure versões anteriores, histórico de arquivos, nuvem ou backup.</li>
@@ -3067,7 +3064,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           <li>Se vários arquivos falham no mesmo disco, pare de tratar como problema de um único arquivo e investigue o armazenamento.</li>
         </ol>
 
-        <h2>Arquivo corrompido ou aplicativo incompatível?</h2>
+        <h2 className="flex items-start gap-2"><FileSearch aria-hidden="true" focusable="false" data-editorial-icon="arquivo-verificar" className="mt-0.5 size-5 shrink-0 text-accent" /><span>Arquivo corrompido ou aplicativo incompatível?</span></h2>
         <table>
           <thead>
             <tr><th>Sinal</th><th>Hipótese</th><th>Teste útil</th></tr>
@@ -3075,17 +3072,18 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           <tbody>
             <tr><td>Só um aplicativo não abre</td><td>associação ou compatibilidade</td><td>abrir em outro aplicativo compatível</td></tr>
             <tr><td>Arquivo tem 0 KB ou tamanho anormal</td><td>cópia/download incompleto</td><td>obter novamente da origem</td></tr>
-            <tr><td>Várias cópias do mesmo arquivo falham</td><td>arquivo realmente danificado</td><td>versão anterior/backup</td></tr>
+            <tr><td>Várias cópias feitas a partir do mesmo arquivo falham</td><td>o erro pode ter sido copiado junto</td><td>buscar uma versão independente ou testar o formato no aplicativo oficial</td></tr>
             <tr><td>Vários arquivos do mesmo disco começam a falhar</td><td>armazenamento/sistema de arquivos</td><td>parar escrita e diagnosticar mídia</td></tr>
             <tr><td>Arquivo abre parcialmente</td><td>estrutura interna danificada</td><td>exportar o que ainda é legível para nova cópia</td></tr>
           </tbody>
         </table>
 
-        <h2>1. Preserve a cópia original antes de qualquer tentativa</h2>
+        <h2 className="flex items-start gap-2"><Copy aria-hidden="true" focusable="false" data-editorial-icon="arquivo-preservar" className="mt-0.5 size-5 shrink-0 text-accent" /><span>1. Preserve a cópia original antes de qualquer tentativa</span></h2>
         <p>
           Ferramentas de reparo podem modificar o arquivo. Por isso, crie uma cópia e mantenha o original intacto.
-          Se o arquivo está em um disco com sinais de falha, copie primeiro para outro armazenamento quando isso for
-          possível sem forçar leituras repetidas.
+          Se a unidade está estável, guarde o original sem editar e use uma cópia com outro nome, como
+          <code>relatorio-teste.docx</code>. Salve o resultado em um terceiro arquivo. Se a unidade desconectar
+          ou retornar erro de leitura, não force novas cópias nem rode reparos no volume.
         </p>
 
         <h2>2. Confira extensão, tamanho e origem</h2>
@@ -3099,7 +3097,8 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
         <p>
           Um documento pode não abrir em um programa específico e ainda estar íntegro. Se houver outro aplicativo
           confiável e compatível com o formato, teste a cópia nele. Isso ajuda a separar corrupção real de problema
-          de associação, versão ou compatibilidade.
+          de associação, versão ou compatibilidade. Se abrir em outro programa, isso não confirma que todas
+          as páginas, fórmulas, anexos ou imagens foram preservados.
         </p>
         <p>
           Evite enviar documentos confidenciais para “reparadores online” desconhecidos. Além do risco de privacidade,
@@ -3118,21 +3117,25 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           Uma versão íntegra é melhor do que uma reconstrução parcial.
         </p>
         <p>
-          Para arquivos protegidos pelo OneDrive, verifique o histórico/estado de sincronização e a lixeira do serviço.
-          Para backup local, confirme a data da versão antes de sobrescrever o arquivo atual.
+          No OneDrive ou SharePoint, confira a data no Histórico de Versões e preserve a versão atual antes
+          de restaurar: a versão selecionada passa a ser a atual e a mudança pode aparecer para outros usuários.
+          Se o serviço permitir, baixe a versão desejada como cópia separada antes de decidir. No Histórico de
+          Arquivos do Windows, use “Restaurar para...” e escolha outra pasta.
         </p>
 
         <h2>6. Se o arquivo abre parcialmente, salve o conteúdo recuperável em outro arquivo</h2>
         <p>
           Alguns formatos permitem abrir parte do conteúdo. Se isso acontecer, não continue salvando sobre o mesmo
-          arquivo. Exporte ou copie o conteúdo legível para um novo documento.
+          arquivo. Exporte ou copie o conteúdo legível para um novo documento. Feche e reabra o resultado:
+          em texto, confira início, meio, fim e anexos; em planilha, verifique abas, fórmulas e totais
+          que você conhece. Um arquivo que abre pode estar apenas parcialmente recuperado.
         </p>
 
         <h2>7. CHKDSK não “conserta o conteúdo” de um documento</h2>
         <p>
           O CHKDSK verifica estruturas do sistema de arquivos e pode corrigir erros do volume. Ele não reconstrói o
-          conteúdo lógico de um DOCX, XLSX, PDF, foto ou banco de dados. Use-o apenas quando há motivo para investigar
-          o sistema de arquivos, e não como reparador universal de documentos.
+          conteúdo lógico de um DOCX, XLSX, PDF, foto ou banco de dados. Não execute modos de correção do CHKDSK
+          sobre uma unidade instável com dados únicos como tentativa inicial de recuperar um documento.
         </p>
 
         <h2>8. Vários arquivos corrompendo mudam o diagnóstico</h2>
@@ -3154,8 +3157,10 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
 
         <h2>10. Reparadores do próprio aplicativo podem ajudar</h2>
         <p>
-          Alguns aplicativos oferecem “Abrir e reparar”, importação parcial ou recuperação automática. Use esses
-          recursos em uma cópia do arquivo e preserve o original. O resultado pode ser parcial.
+          No Word, Excel ou PowerPoint para desktop, quando a opção estiver disponível, vá a Arquivo → Abrir →
+          Procurar, selecione a cópia e use a seta ao lado de Abrir para escolher “Abrir e Reparar”. Salve com
+          outro nome e confira o resultado. Para PDF, priorize uma cópia válida ou uma nova exportação do
+          documento de origem. Não habilite macros nem ignore alertas para abrir anexos de procedência incerta.
         </p>
 
         <h2>11. Quando usar recuperação de arquivos</h2>
@@ -3168,7 +3173,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           Quanto mais você escreve na unidade após uma exclusão, maior o risco de sobrescrever dados recuperáveis.
         </p>
 
-        <h2>12. Quando parar de tentar sozinho</h2>
+        <h2 className="flex items-start gap-2"><TriangleAlert aria-hidden="true" focusable="false" data-editorial-icon="arquivo-parar" className="mt-0.5 size-5 shrink-0 text-amber-600 dark:text-amber-400" /><span>12. Quando parar de tentar sozinho</span></h2>
         <ul>
           <li>O disco faz ruídos anormais ou desconecta durante leitura.</li>
           <li>O mesmo armazenamento está corrompendo vários arquivos.</li>
@@ -3176,35 +3181,6 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           <li>O arquivo pertence a banco de dados, projeto profissional ou formato proprietário crítico.</li>
           <li>As tentativas exigiriam sobrescrever a única cópia existente.</li>
         </ul>
-
-        <h2>Perguntas frequentes</h2>
-        <h3>Arquivo corrompido tem conserto?</h3>
-        <p>
-          Às vezes. Depende do formato, do tipo de dano e de existir conteúdo interno ainda legível. Versão anterior
-          íntegra é sempre preferível a reconstrução.
-        </p>
-
-        <h3>Posso usar CHKDSK para reparar um arquivo?</h3>
-        <p>
-          CHKDSK trabalha no sistema de arquivos do volume. Ele não repara a estrutura interna de um documento
-          específico.
-        </p>
-
-        <h3>Se o arquivo não abre, significa que está corrompido?</h3>
-        <p>
-          Não. Pode ser aplicativo incompatível, extensão incorreta, download incompleto ou falta de suporte ao formato.
-        </p>
-
-        <h3>Renomear a extensão resolve?</h3>
-        <p>
-          Não como regra. Renomear não converte o formato nem recria conteúdo perdido.
-        </p>
-
-        <h3>Devo usar um reparador online?</h3>
-        <p>
-          Só com muita cautela. Arquivos podem conter dados privados, e a taxa de recuperação varia. Prefira primeiro
-          versões anteriores, backup e ferramentas do próprio aplicativo.
-        </p>
 
         <h2>Resumo prático</h2>
         <p>
@@ -4181,6 +4157,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           Se o volume está criptografado e você não tem a chave, não continue com operações destrutivas. O objetivo é
           recuperar a inicialização sem transformar um problema de boot em perda de acesso aos dados.
         </p>
+        <p>Se o WinRE pedir a chave, compare o identificador exibido com o da chave de recuperação guardada. O identificador não é a chave de 48 dígitos, e senha ou PIN do Windows não a substituem. Em equipamento corporativo, procure o administrador. Não limpe o TPM nem desative o Secure Boot para tentar contornar a proteção.</p>
 
         <h2>5. Use o Ambiente de Recuperação do Windows antes do Prompt</h2>
         <p>
@@ -4192,6 +4169,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           Se o WinRE não abre pelo próprio disco, use mídia oficial do Windows para acessar as opções de reparo. Isso
           não exige iniciar uma instalação limpa.
         </p>
+        <p>Se a unidade some, apresenta erros de leitura ou contém dados importantes sem cópia, não insista em reparos que escrevam no disco. Consulte primeiro o roteiro de <a href="/blog/disco-com-setores-defeituosos-smart-o-que-fazer">preservação de dados diante de alertas de armazenamento</a>. A opção automática também pode alterar arquivos de inicialização.</p>
 
         <h2>6. BCDBoot: útil quando a estrutura existe, mas o boot precisa ser recriado</h2>
         <p>
@@ -4203,6 +4181,11 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           Antes de usar BCDBoot, identifique corretamente a instalação do Windows, o volume de sistema e o modo de
           firmware. Letras de unidade no WinRE podem ser diferentes das letras vistas no Windows normal.
         </p>
+        <h3>Faça um inventário antes de escolher origem e destino</h3>
+        <p>Em unidade estável, o prompt pode ajudar a listar discos e volumes sem alterá-los:</p>
+        <pre><code>{"diskpart\nlist disk\nlist volume\nexit"}</code></pre>
+        <p>O asterisco na coluna GPT informa o estilo do disco; não identifica o modo em que o pendrive foi iniciado. Um volume pequeno em FAT32 é apenas um indício, não prova de que ele seja a EFI daquela instalação. Com dois discos, clone ou dual boot, não escolha a partição pela letra, pelo tamanho ou por um número copiado de outro tutorial.</p>
+        <p>Copiar arquivos para a partição de sistema e cadastrar uma entrada no firmware são ações diferentes. Em UEFI, usar a opção <code>/s</code> do BCDBoot indica o destino, mas não cria a entrada de boot na NVRAM. Se o objetivo é recuperar a entrada Windows Boot Manager, não copie uma linha com <code>/s</code> como receita universal. Pare se não conseguir confirmar a instalação e a partição de destino.</p>
 
         <h2>7. Por que não recomendamos formatar a partição EFI por tentativa</h2>
         <p>
@@ -4268,37 +4251,6 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           <li>O erro começou após impacto, líquido ou falha elétrica.</li>
           <li>Você não consegue identificar com segurança qual volume contém o Windows e qual é a partição de sistema.</li>
         </ul>
-
-        <h2>Perguntas frequentes</h2>
-        <h3>No bootable device significa HD queimado?</h3>
-        <p>
-          Não. O erro significa que o firmware não encontrou uma opção inicializável válida. O disco pode estar
-          ausente, ou pode estar presente com problema de configuração/boot.
-        </p>
-
-        <h3>Devo mudar de UEFI para Legacy?</h3>
-        <p>
-          Não por tentativa. Use o modo compatível com a instalação existente. Trocar o modo pode esconder a entrada
-          correta e criar um novo problema.
-        </p>
-
-        <h3>Posso formatar a partição EFI e recriar?</h3>
-        <p>
-          Não como primeira reação. Primeiro inventarie a estrutura e tente recuperação suportada. Formatação é
-          destrutiva e pode remover uma estrutura ainda recuperável.
-        </p>
-
-        <h3>BCDBoot resolve sempre?</h3>
-        <p>
-          Não. Ele é apropriado quando existe uma instalação do Windows e a estrutura de boot precisa ser configurada
-          ou reparada. Não corrige disco não detectado nem falha física.
-        </p>
-
-        <h3>Se o disco aparece na BIOS, ele está saudável?</h3>
-        <p>
-          Não. Detecção física é apenas uma evidência. Um disco pode ser detectado e ainda apresentar erros de leitura
-          ou falhas intermitentes.
-        </p>
 
         <h2>Resumo prático</h2>
         <p>

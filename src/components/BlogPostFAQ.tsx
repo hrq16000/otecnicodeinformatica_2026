@@ -62,6 +62,28 @@ const CATEGORY_EXTRA: Record<string, FAQItem[]> = {
 // categoria (que contêm valores comerciais).
 // ─────────────────────────────────────────────────────────────
 const PILOT_FAQ: Record<string, FAQItem[]> = {
+  "como-remover-virus-windows-iniciantes": [
+    {
+      q: "Uma extensão que volta prova que o Windows está infectado?",
+      a: "Não. Compare o momento em que volta com o perfil, o login e a sincronização. Extensões exigidas por política são outro cenário. Investigue também o sistema se os sintomas aparecerem fora do navegador.",
+    },
+    {
+      q: "O navegador diz que é gerenciado. Devo apagar as políticas?",
+      a: "Não por tentativa. Consulte as políticas sem alterá-las. Em computador de trabalho, confirme com a TI. Em aparelho pessoal, investigue contas, programas e origem da política antes de remover configurações.",
+    },
+    {
+      q: "Uma verificação do Defender basta para confirmar a limpeza?",
+      a: "Não. O Defender é uma primeira camada quando está ativo. Confira o Histórico de proteção e considere a verificação offline para suspeita persistente, planejando o reinício. Não instale vários antivírus residentes por tentativa.",
+    },
+    {
+      q: "Posso acessar banco e e-mail enquanto investigo?",
+      a: "Se houver indícios de comprometimento ativo, isole o aparelho da rede. Use outro dispositivo confiável para proteger as contas, conferir sessões e procurar os canais oficiais. Não aprove pedidos de autenticação inesperados.",
+    },
+    {
+      q: "Reinstalar o Windows impede que o adware volte?",
+      a: "Não necessariamente. Uma instalação limpa pode remover malware daquela instalação, mas não recupera credenciais roubadas nem corrige uma extensão sincronizada ou um instalador adulterado restaurado depois.",
+    },
+  ],
   "windows-reparo-automatico-em-loop": [
     {
       q: "O Reparo Automático do Windows apaga meus arquivos?",
@@ -627,24 +649,24 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
   ],
   "erro-no-bootable-device-como-resolver": [
     {
-      q: "O que significa a mensagem No bootable device?",
-      a: "Significa que o firmware procurou um carregador de inicialização e não encontrou nenhum válido. As variações Boot device not found, Operating system not found e Reboot and select proper boot device indicam a mesma condição.",
+      q: "No bootable device significa que o SSD ou HD queimou?",
+      a: "Não. O firmware não encontrou uma opção de inicialização utilizável. Confira se o disco aparece na BIOS ou UEFI. Mesmo detectado, ele pode apresentar falha intermitente; detecção não comprova saúde.",
     },
     {
-      q: "Preciso formatar para resolver esse erro?",
-      a: "Não na maioria dos casos. Quando o disco é reconhecido, o reparo do carregador com o ambiente de recuperação do Windows costuma resolver preservando os arquivos. Formatar só deve ser considerado depois de confirmada a cópia dos dados.",
+      q: "Devo formatar a EFI ou mudar para Legacy por tentativa?",
+      a: "Não. Registre a configuração anterior e confirme o modo compatível com a instalação. Formatar a EFI pode remover arquivos necessários ao Windows e a outros sistemas. Preserve os dados antes de qualquer reparo que escreva no disco.",
     },
     {
-      q: "Por que o comando bootrec /fixboot devolve acesso negado?",
-      a: "Porque esse comando pertence ao modelo antigo de inicialização, baseado em MBR. Em discos GPT com UEFI, a ferramenta correta é o bcdboot, que recria os arquivos de inicialização dentro da partição de sistema EFI.",
+      q: "O que fazer se o reparo pedir a chave BitLocker?",
+      a: "Compare o identificador exibido com o da chave de recuperação guardada. Senha e PIN não substituem a chave de 48 dígitos. Sem a chave correspondente, pare antes de operações destrutivas e consulte o administrador se o equipamento for gerenciado.",
     },
     {
-      q: "Como sei se meu disco é GPT ou MBR?",
-      a: "No prompt de comando do ambiente de recuperação, execute diskpart e depois list disk. Um asterisco na coluna GPT indica disco GPT. A presença de um volume pequeno em FAT32, de cerca de 100 MB, confirma a partição de sistema EFI.",
+      q: "Um volume FAT32 pequeno confirma qual é a partição EFI?",
+      a: "Não. Tamanho e formato são indícios. Confirme a estrutura e a qual disco pertence a partição antes de escolher o destino. Não use letras ou números de volume de outro computador.",
     },
     {
-      q: "O reparo funcionou e o erro voltou no dia seguinte. O que houve?",
-      a: "Reparo que se desfaz costuma indicar setores defeituosos na área de inicialização, disco em degradação ou divergência entre o modo usado no reparo e o modo configurado no Setup. Nesse cenário, o passo seguinte é avaliar a saúde do disco antes de repetir o procedimento.",
+      q: "BCDBoot com a opção /s sempre recria Windows Boot Manager no firmware?",
+      a: "Não. Em UEFI, a opção /s aponta a partição de destino, mas não cria a entrada na NVRAM. BCDBoot também não corrige falha física. Não execute um comando de escrita se origem ou destino forem incertos.",
     },
   ],
   "troquei-o-ssd-e-o-pc-so-abre-a-bios": [
@@ -1058,24 +1080,24 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
   // ── Onda 11F — teclado de notebook, desligamento espontâneo e link cabeado.
   "teclado-de-notebook-nao-funciona-o-que-verificar": [
     {
-      q: "Como saber se o problema é do teclado ou do sistema?",
-      a: "Conecte um teclado USB externo. Se ele digita normalmente, o sistema e o campo de digitação estão íntegros e a suspeita fica no teclado interno ou no cabo flat dele. Se nem o externo digita, o caminho passa a ser sistema, perfil de usuário ou driver.",
+      q: "Se o teclado USB funciona, preciso trocar o interno?",
+      a: "Não necessariamente. O teste mostra que o Windows recebeu a digitação do USB naquele campo, mas não identifica se a falha está no teclado interno, no cabo, no conector ou em outra parte do notebook.",
     },
     {
       q: "Só algumas teclas falham. Isso muda o diagnóstico?",
-      a: "Muda. Falha em teclas isoladas e vizinhas costuma indicar sujeira, resíduo de líquido ou trilha rompida na membrana. Falha em bloco inteiro, especialmente uma linha ou uma coluna completa, aponta para a matriz do teclado ou para o contato do cabo flat.",
+      a: "Sim. Anote as teclas e compare o mesmo texto em dois programas. Se toques breves não entram, confira as Teclas de Filtro. Se o mesmo grupo falhar repetidamente só no teclado interno, vale investigar sem concluir qual peça falhou.",
     },
     {
-      q: "O teclado numérico parou. É defeito?",
-      a: "Nem sempre. Em muitos notebooks o bloco numérico depende da tecla Num Lock ou da combinação com Fn. Vale confirmar esse estado antes de considerar defeito físico.",
+      q: "Por que as teclas digitam símbolos diferentes ou números?",
+      a: "Para símbolos trocados, compare o layout de entrada do Windows com as teclas físicas. Se letras específicas viraram números, confira no manual se o modelo tem bloco numérico ativado por Num Lock ou Fn.",
     },
     {
       q: "Caiu líquido no teclado. O que fazer primeiro?",
-      a: "Desligue imediatamente pelo botão de ligar, desconecte a fonte e não tente ligar de novo para testar. Manter a máquina energizada com líquido dentro é o que costuma transformar um teclado danificado em placa danificada.",
+      a: "Se for seguro tocar no notebook, desligue-o e desconecte o carregador. Não ligue nem carregue para testar e não abra o gabinete para retirar a bateria interna. Siga a orientação do fabricante para o modelo.",
     },
     {
-      q: "Trocar o teclado interno resolve sempre?",
-      a: "Não. A troca resolve quando o defeito está na peça. Quando o problema é o conector do cabo flat na placa ou o controlador, o teclado novo apresenta o mesmo comportamento — por isso o teste com teclado externo e a inspeção do encaixe vêm antes da compra da peça.",
+      q: "O teclado funcionar no menu de inicialização descarta defeito físico?",
+      a: "Não. O resultado vale apenas para as teclas que o menu aceita e que você conseguiu testar naquele momento. Ele não exclui falhas intermitentes e não exige alterar configurações de firmware.",
     },
   ],
   "computador-desliga-sozinho-o-que-verificar": [
@@ -1107,19 +1129,19 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
     },
     {
       q: "Como testar o cabo sem equipamento próprio?",
-      a: "Por substituição e por troca de ponta. Use outro cabo comprovadamente bom no mesmo par de portas e, depois, o cabo original em outra porta do roteador. Se o enlace aparece com o outro cabo, o cabo original é o suspeito.",
+      a: "Compare com um cabo conhecido no mesmo par de portas. Se precisar testar outra porta, mantenha o cabo conhecido. Se o problema só aparece no ponto de parede, teste uma ligação direta ao roteador antes de atribuir a falha ao cabeamento embutido.",
     },
     {
-      q: "O cabo conecta mas aparece 'sem acesso à internet'. O que muda?",
-      a: "Muda a camada do teste. Com enlace ativo, registre IPv4, gateway e DNS com ipconfig /all. Depois verifique o gateway e a resolução de nomes; DHCP, DNS, rota externa, VPN, proxy ou política local ainda podem falhar.",
+      q: "O que significa IPv4 169.254 no adaptador Ethernet?",
+      a: "Se a rede usa DHCP e não há gateway IPv4, um endereço 169.254 de autoconfiguração sugere que o Windows não obteve configuração IPv4 pelo DHCP. Isso não diagnostica a conexão IPv6 nem prova falha no provedor.",
     },
     {
       q: "Wi-Fi funciona e o cabo não. Isso descarta o provedor?",
-      a: "Não de forma absoluta. É uma evidência forte de que a saída do roteador funciona e desloca o foco para a Ethernet, mas cabo e Wi-Fi podem receber DNS, endereço, VLAN, regras ou rotas diferentes. Confirme as outras camadas antes de concluir.",
+      a: "Não. Confirme primeiro que o outro aparelho está no Wi-Fi do mesmo roteador e não usando dados móveis. Se ele navega, vale investigar a Ethernet antes de acionar o provedor, mas as duas interfaces podem seguir configurações ou rotas diferentes.",
     },
     {
       q: "Quando usar a Redefinição de Rede do Windows?",
-      a: "Perto do fim, depois de documentar cabo, porta, endereço, gateway, DNS e driver. A redefinição remove e reinstala adaptadores e restaura padrões; VPNs, adaptadores virtuais e parâmetros empresariais podem precisar de nova configuração.",
+      a: "Como último recurso do Windows, com acesso presencial e configuração anotada. A redefinição pode exigir reinstalar ou reconfigurar VPNs e adaptadores virtuais. Em equipamento gerenciado, encaminhe o caso à TI.",
     },
   ],
   // ── Onda 11G — ruído de ventoinha, rede Wi-Fi invisível e arquivo corrompido.
@@ -1170,23 +1192,23 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
   "arquivo-corrompido-nao-abre-o-que-fazer": [
     {
       q: "Qual é o primeiro passo com um arquivo que não abre?",
-      a: "Copiar o arquivo para outra unidade e trabalhar apenas sobre a cópia. Tentativas de reparo podem reescrever o conteúdo, e o original preservado mantém disponíveis as alternativas que uma segunda tentativa eliminaria.",
+      a: "Se a unidade está estável, preserve o original e trabalhe em uma cópia. Se houver erros de leitura, desconexões ou ruído anormal no HD, interrompa as tentativas e procure uma versão íntegra em outro local.",
     },
     {
       q: "Como saber se o arquivo está corrompido ou se é o programa?",
-      a: "Tente abrir a cópia em outro programa capaz de ler o formato e em outro computador. Se abrir em algum deles, o conteúdo está íntegro e o problema é da instalação local. Se falhar em todos, o dano é no arquivo.",
+      a: "Compare com outro arquivo íntegro do mesmo formato e tente abrir a cópia no aplicativo compatível. Abrir em outro programa é uma pista de compatibilidade, mas não prova que todo o conteúdo foi preservado.",
     },
     {
       q: "Arquivo com tamanho zero tem recuperação?",
       a: "Não pelo próprio arquivo: sem bytes gravados, não há conteúdo a reconstruir. O caminho passa a ser versão anterior, backup, arquivo temporário do programa ou tentativa de recuperação na mídia onde ele estava.",
     },
     {
-      q: "Vários arquivos da mesma pasta pararam de abrir. O que mudou?",
-      a: "O escopo. Falha simultânea em muitos arquivos aponta para a mídia de armazenamento, não para os documentos. A conduta correta é parar de gravar naquela unidade e verificar a saúde do disco antes de novas tentativas.",
+      q: "Posso restaurar uma versão anterior sem sobrescrever o arquivo atual?",
+      a: "No Histórico de Arquivos do Windows, escolha Restaurar para e use outra pasta. No OneDrive ou SharePoint, preserve a versão atual antes de restaurar, pois a versão escolhida passa a ser a atual.",
     },
     {
-      q: "Programas de reparo automático funcionam?",
-      a: "Às vezes recuperam parte do conteúdo, sempre dependendo de quanto foi gravado corretamente. Devem ser apontados para a cópia, nunca para o original, e nenhuma ferramenta reconstrói dado que jamais chegou a ser escrito na mídia.",
+      q: "Como sei se Abrir e Reparar recuperou tudo?",
+      a: "Não basta o arquivo abrir. Salve o resultado com outro nome, feche e reabra. Confira páginas, imagens, abas, fórmulas ou totais relevantes antes de usar a cópia recuperada.",
     },
   ],
   "ssd-nao-aparece-no-instalador-do-windows": [

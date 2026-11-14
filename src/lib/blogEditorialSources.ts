@@ -99,6 +99,7 @@ export const ALLOWED_SOURCE_HOSTS = [
   "www.nsa.gov",
   "www.dell.com",
   "support.hp.com",
+  "www.asus.com",
   "www.gov.br",
   "download.lenovo.com",
   "acm.org",
@@ -111,6 +112,94 @@ export const ALLOWED_SOURCE_HOSTS = [
 // FONTES CONSULTADAS (URLs confirmadas em 2026-07-12).
 // ─────────────────────────────────────────────────────────────
 export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
+  "ms-windows-apipa-20261112": {
+    id: "ms-windows-apipa-20261112", title: "Endereçamento TCP/IP automático sem servidor DHCP", publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows-server/troubleshoot/how-to-use-automatic-tcpip-addressing-without-a-dh", accessedAt: "2026-11-12", sourceType: "official",
+    supports: ["Endereçamento automático IPv4 169.254 e limite de comunicação fora do segmento local."],
+  },
+  "ms-keyboard-usb-20261111": {
+    id: "ms-keyboard-usb-20261111", title: "Problemas com mouse e teclado no Windows", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/input-devices/mouse-and-keyboard-problems-in-windows", accessedAt: "2026-11-11", sourceType: "official",
+    supports: ["Teste direto sem hub, outra porta USB e verificação do periférico."],
+  },
+  "ms-keyboard-layout-20261111": {
+    id: "ms-keyboard-layout-20261111", title: "Configurações de idioma e layout de teclado", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/hardware/input-devices/manage-the-language-and-keyboard-input-layout-settings-in-windows", accessedAt: "2026-11-11", sourceType: "official",
+    supports: ["Layout de entrada e diferença em relação ao idioma de exibição."],
+  },
+  "ms-keyboard-osk-20261111": {
+    id: "ms-keyboard-osk-20261111", title: "Usar o teclado na tela para digitar", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/accessibility/windows/use-the-on-screen-keyboard-osk-to-type", accessedAt: "2026-11-11", sourceType: "official",
+    supports: ["Teclado Virtual e acesso pelo menu Acessibilidade na tela de entrada."],
+  },
+  "ms-keyboard-filter-20261111": {
+    id: "ms-keyboard-filter-20261111", title: "Recursos de acessibilidade para dispositivos de entrada", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/en-gb/accessibility/windows/make-your-mouse-keyboard-and-other-input-devices-easier-to-use", accessedAt: "2026-11-11", sourceType: "official",
+    supports: ["Teclas de Filtro podem ignorar toques breves ou repetidos."],
+  },
+  "dell-laptop-keyboard-20261111": {
+    id: "dell-laptop-keyboard-20261111", title: "Diagnóstico de teclado de notebook Dell", publisher: "Dell Support",
+    url: "https://www.dell.com/support/contents/en-us/article/product-support/self-support-knowledgebase/mouse-keyboard-touchpad/laptop-keyboard-not-working", accessedAt: "2026-11-11", sourceType: "official",
+    supports: ["Exemplo de teste funcional oferecido pelo fabricante para seus equipamentos."],
+  },
+  "asus-laptop-spill-20261111": {
+    id: "asus-laptop-spill-20261111", title: "Limpeza do notebook e orientação para derramamentos", publisher: "ASUS Brasil",
+    url: "https://www.asus.com/br/support/faq/1003050/", accessedAt: "2026-11-11", sourceType: "official",
+    supports: ["Desligar e desconectar o carregador após líquido, evitar secador e procurar avaliação conforme o modelo."],
+  },
+  "google-chrome-unwanted-20261110": {
+    id: "google-chrome-unwanted-20261110", title: "Remover anúncios e software indesejado no Chrome", publisher: "Google Chrome Help",
+    url: "https://support.google.com/chrome/answer/2765944?co=GENIE.Platform%3DDesktop&hl=en-en", accessedAt: "2026-11-10", sourceType: "official",
+    supports: ["Notificações de sites e sintomas de extensões ou redirecionamentos indesejados."],
+  },
+  "google-chrome-managed-20261110": {
+    id: "google-chrome-managed-20261110", title: "Verificar se o Chrome é gerenciado", publisher: "Google Chrome Help",
+    url: "https://support.google.com/chrome/answer/9281740?hl=pt-BR", accessedAt: "2026-11-10", sourceType: "official",
+    supports: ["Extensões e configurações podem ser impostas pela organização; políticas podem ser inspecionadas."],
+  },
+  "google-chrome-sync-20261110": {
+    id: "google-chrome-sync-20261110", title: "Dados do Chrome na Conta do Google", publisher: "Google Chrome Help",
+    url: "https://support.google.com/chrome/answer/165139?hl=pt-BR", accessedAt: "2026-11-10", sourceType: "official",
+    supports: ["Extensões podem ser vinculadas à conta conforme as configurações de dados."],
+  },
+  "ms-edge-extension-policy-20261110": {
+    id: "ms-edge-extension-policy-20261110", title: "Política de instalação de extensões no Edge", publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-policies/extensioninstallforcelist", accessedAt: "2026-11-10", sourceType: "official",
+    supports: ["Extensões exigidas por política não podem ser removidas normalmente pelo usuário."],
+  },
+  "ms-defender-scan-20261110": {
+    id: "ms-defender-scan-20261110", title: "Verificações na Segurança do Windows", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/security/threat-malware-protection/virus-and-threat-protection-in-the-windows-security-app", accessedAt: "2026-11-10", sourceType: "official",
+    supports: ["Verificação completa, reinício do Defender Offline e consulta ao Histórico de proteção."],
+  },
+  "ms-diskpart-list-20261109": {
+    id: "ms-diskpart-list-20261109",
+    title: "DiskPart: listar discos e volumes",
+    publisher: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/list",
+    accessedAt: "2026-11-09",
+    sourceType: "official",
+    supports: ["List disk e list volume são comandos de inventário; não identificam por si sós a EFI da instalação correta."],
+  },
+  "ms-startup-repair-20261109": {
+    id: "ms-startup-repair-20261109",
+    title: "Reparo de Inicialização no Windows",
+    publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/windows/experience/startup-boot/startup-repair",
+    accessedAt: "2026-11-09",
+    sourceType: "official",
+    supports: ["Reparo de Inicialização tenta corrigir falhas de boot e pode exigir a chave BitLocker."],
+  },
+  "ms-office-open-repair-20261113": {
+    id: "ms-office-open-repair-20261113", title: "Abrir um documento após um erro de corrupção", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/word/open-a-document-after-a-file-corruption-error", accessedAt: "2026-11-13", sourceType: "official",
+    supports: ["Procedimento Abrir e Reparar no Office para desktop."],
+  },
+  "ms-onedrive-version-restore-20261113": {
+    id: "ms-onedrive-version-restore-20261113", title: "Restaurar uma versão anterior no OneDrive ou SharePoint", publisher: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/onedrive/restore-a-previous-version-of-a-file-stored-in-onedrive", accessedAt: "2026-11-13", sourceType: "official",
+    supports: ["Histórico de versões e efeito de tornar a versão restaurada a versão atual."],
+  },
   "acm-computing-curricula-2020": {
     id: "acm-computing-curricula-2020",
     title: "Computing Curricula 2020 (CC2020)",
@@ -369,11 +458,12 @@ export const EDITORIAL_SOURCES: Record<string, EditorialSource> = {
     title: "BCDBoot command-line options",
     publisher: "Microsoft Learn",
     url: "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di",
-    accessedAt: "2026-09-02",
+    accessedAt: "2026-11-09",
     sourceType: "official",
     supports: [
       "O BCDBoot configura ou repara o ambiente de inicialização copiando arquivos de boot da instalação do Windows para a partição de sistema.",
       "Os parâmetros de origem, destino e tipo de firmware precisam corresponder à instalação que será reparada.",
+      "Em UEFI, a opção /s indica a partição de destino e não cria entrada de boot na NVRAM.",
     ],
   },
   "ms-windows-recovery-environment": {
@@ -2217,12 +2307,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "como-remover-virus-windows-iniciantes": {
     slug: "como-remover-virus-windows-iniciantes",
-    sources: ["ms-windows-security-overview", "cisa-stop-ransomware", "cisa-upskill-checklist"],
+    sources: ["ms-windows-security-overview", "cisa-stop-ransomware", "cisa-upskill-checklist", "google-chrome-unwanted-20261110", "google-chrome-managed-20261110", "google-chrome-sync-20261110", "ms-edge-extension-policy-20261110", "ms-defender-scan-20261110"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-10-01",
+    factCheckedAt: "2026-11-10",
     notes:
-      "Revisão material em 2026-10-01 guiada por sinal real de página no GSC: 2 impressões, 0 cliques e posição média 28 entre 2026-04-01 e 2026-09-28. Nenhuma query individual foi exposta e nenhuma foi inventada. A versão suplementar aprofunda contenção, Windows Security/Defender, revisão de extensões e inicialização, credenciais, backup seletivo, ransomware, reinfecção e critérios de reinstalação. Fontes oficiais Microsoft e CISA ficam visíveis.",
+      "Revisão material em 2026-11-10 na versão suplementar efetiva: diferencia notificação de site, perfil, sincronização, política e sintoma no sistema; reforça contenção, histórico do Defender, sessões e limites da reinstalação. Fila anterior baseada em GSC histórico, sem nova medição nesta rodada.",
   },
   "como-formatar-pc-sem-perder-arquivos": {
     slug: "como-formatar-pc-sem-perder-arquivos",
@@ -2273,6 +2363,8 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     slug: "erro-no-bootable-device-como-resolver",
     sources: [
       "ms-bcdboot",
+      "ms-diskpart-list-20261109",
+      "ms-startup-repair-20261109",
       "ms-bitlocker-recovery",
       "ms-bitlocker-backup-key",
       "ms-windows-recovery-environment",
@@ -2281,9 +2373,9 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-10-01",
+    factCheckedAt: "2026-11-09",
     notes:
-      "Revisão material em 2026-10-01 guiada pelo GSC: 5 impressões, 0 cliques e posição média ~38,8 entre 2026-04-01 e 2026-09-28. Queries reais expostas: 'no boot device found', 'no bootable device como resolver', 'no bootable device found' e 'no bootable device please restart'. A versão suplementar organiza o diagnóstico em detecção física do disco, Windows Boot Manager, UEFI/Legacy, WinRE e BCDBoot, reforça BitLocker antes de alterações e evita formatar/recriar EFI por tentativa. Fontes Microsoft visíveis; nenhuma query inventada.",
+      "Revisão material em 2026-11-09 na versão suplementar efetiva: inventário sem escrita, identificação BitLocker, distinção entre destino EFI e entrada na NVRAM, e uma única FAQ em paridade com o corpo. A seleção original foi guiada pelo GSC de abril a setembro de 2026; não representa demanda medida nesta rodada.",
   },
   "troquei-o-ssd-e-o-pc-so-abre-a-bios": {
     slug: "troquei-o-ssd-e-o-pc-so-abre-a-bios",
@@ -2718,13 +2810,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "teclado-de-notebook-nao-funciona-o-que-verificar": {
     slug: "teclado-de-notebook-nao-funciona-o-que-verificar",
-    sources: [],
+    sources: ["ms-keyboard-usb-20261111", "ms-keyboard-layout-20261111", "ms-keyboard-osk-20261111", "ms-keyboard-filter-20261111", "dell-laptop-keyboard-20261111", "asus-laptop-spill-20261111"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-03",
-    stableKnowledge: true,
+    factCheckedAt: "2026-11-11",
     notes:
-      "Revisão concluída (Onda 11F): teste do teclado externo como divisor entre hardware interno e sistema, quatro sintomas com causas distintas, verificação de layout antes de suspeitar de peça, conduta específica para derramamento de líquido e limite claro de desmontagem. Conhecimento técnico estável — sem fonte visível.",
+      "Revisão material em 2026-11-11: parada por líquido antes de testar, comparação em dois programas, layout e acessibilidade, limites do teste USB e de pré-inicialização e registro antes da compra. Seis fontes oficiais visíveis e cinco FAQs.",
   },
   "computador-desliga-sozinho-o-que-verificar": {
     slug: "computador-desliga-sozinho-o-que-verificar",
@@ -2738,12 +2829,12 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
   },
   "computador-nao-conecta-na-internet-por-cabo": {
     slug: "computador-nao-conecta-na-internet-por-cabo",
-    sources: ["ms-fix-ethernet-windows", "ms-ipconfig", "ms-ping", "ms-nslookup"],
+    sources: ["ms-fix-ethernet-windows", "ms-ipconfig", "ms-ping", "ms-nslookup", "ms-windows-apipa-20261112"],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-09-14",
+    factCheckedAt: "2026-11-12",
     notes:
-      "Revisão material em 2026-09-14 com fontes Microsoft visíveis: separação de enlace, configuração DHCP/IP, gateway, DNS e acesso externo; observação por ipconfig, ping e nslookup antes de mudanças; Redefinição de Rede reservada ao fim e comparação Wi-Fi × Ethernet sem conclusão absoluta.",
+      "Revisão material em 2026-11-12: isola o caminho usado, diferencia ligação direta e ponto de parede, explicita o limite do IPv4 automático e do nslookup e evita alteração em sessão remota ou equipamento gerenciado. Cinco fontes Microsoft visíveis.",
   },
   "ventoinha-do-computador-fazendo-barulho-o-que-verificar": {
     slug: "ventoinha-do-computador-fazendo-barulho-o-que-verificar",
@@ -2770,14 +2861,15 @@ export const ARTICLE_SOURCE_MANIFEST: Record<string, ArticleSourceManifest> = {
     sources: [
       "ms-file-history",
       "ms-windows-file-recovery",
-      "ms-onedrive-folder-backup",
+      "ms-onedrive-version-restore-20261113",
+      "ms-office-open-repair-20261113",
       "ms-chkdsk-2026",
     ],
     technicalReview: "reviewed",
     factChecked: true,
-    factCheckedAt: "2026-10-01",
+    factCheckedAt: "2026-11-13",
     notes:
-      "Revisão material em 2026-10-01 guiada pelo GSC: 1 impressão, 0 cliques e posição 38 entre 2026-04-01 e 2026-09-28 para a query real 'arquivo corrompido'. A versão suplementar preserva o original, diferencia corrupção de incompatibilidade/download incompleto, prioriza versões anteriores/backup, limita CHKDSK ao sistema de arquivos, separa recuperação de arquivo apagado de reparo de documento e define quando vários arquivos falhando indicam problema de armazenamento. Fontes Microsoft visíveis; nenhuma query adicional foi inventada.",
+      "Revisão material em 2026-11-13 na versão suplementar: primeiro avaliar a mídia, depois preservar original, cópia e resultado; detalha Histórico de Versões e Abrir e Reparar, com verificação do conteúdo recuperado e FAQ única.",
   },
   "como-configurar-2fa-em-tudo": {
     slug: "como-configurar-2fa-em-tudo",
