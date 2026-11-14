@@ -1213,7 +1213,7 @@ const WAVE_11G: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-10-01",
+    reviewedAt: "2026-11-13",
     approvedAt: "2026-09-03",
     imageOrigin: "licensed",
     imageLicense: "CC BY 4.0",

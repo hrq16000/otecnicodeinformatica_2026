@@ -3059,7 +3059,8 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
 
         <h2>Resposta direta: o que fazer quando um arquivo não abre</h2>
         <ol>
-          <li>Faça uma cópia do arquivo em outro local antes de testar qualquer reparo.</li>
+          <li>Se a unidade desconecta, dá erros de leitura ou o HD faz ruídos novos, interrompa os testes. Procure uma versão íntegra fora dessa unidade.</li>
+          <li>Se a unidade está estável, preserve o original e faça uma cópia de trabalho em outro local.</li>
           <li>Confirme extensão, tamanho e aplicativo correto para abrir o formato.</li>
           <li>Tente outra cópia conhecida do mesmo arquivo, quando existir.</li>
           <li>Procure versões anteriores, histórico de arquivos, nuvem ou backup.</li>
@@ -3075,7 +3076,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           <tbody>
             <tr><td>Só um aplicativo não abre</td><td>associação ou compatibilidade</td><td>abrir em outro aplicativo compatível</td></tr>
             <tr><td>Arquivo tem 0 KB ou tamanho anormal</td><td>cópia/download incompleto</td><td>obter novamente da origem</td></tr>
-            <tr><td>Várias cópias do mesmo arquivo falham</td><td>arquivo realmente danificado</td><td>versão anterior/backup</td></tr>
+            <tr><td>Várias cópias feitas a partir do mesmo arquivo falham</td><td>o erro pode ter sido copiado junto</td><td>buscar uma versão independente ou testar o formato no aplicativo oficial</td></tr>
             <tr><td>Vários arquivos do mesmo disco começam a falhar</td><td>armazenamento/sistema de arquivos</td><td>parar escrita e diagnosticar mídia</td></tr>
             <tr><td>Arquivo abre parcialmente</td><td>estrutura interna danificada</td><td>exportar o que ainda é legível para nova cópia</td></tr>
           </tbody>
@@ -3084,8 +3085,9 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
         <h2>1. Preserve a cópia original antes de qualquer tentativa</h2>
         <p>
           Ferramentas de reparo podem modificar o arquivo. Por isso, crie uma cópia e mantenha o original intacto.
-          Se o arquivo está em um disco com sinais de falha, copie primeiro para outro armazenamento quando isso for
-          possível sem forçar leituras repetidas.
+          Se a unidade está estável, guarde o original sem editar e use uma cópia com outro nome, como
+          <code>relatorio-teste.docx</code>. Salve o resultado em um terceiro arquivo. Se a unidade desconectar
+          ou retornar erro de leitura, não force novas cópias nem rode reparos no volume.
         </p>
 
         <h2>2. Confira extensão, tamanho e origem</h2>
@@ -3099,7 +3101,8 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
         <p>
           Um documento pode não abrir em um programa específico e ainda estar íntegro. Se houver outro aplicativo
           confiável e compatível com o formato, teste a cópia nele. Isso ajuda a separar corrupção real de problema
-          de associação, versão ou compatibilidade.
+          de associação, versão ou compatibilidade. Se abrir em outro programa, isso não confirma que todas
+          as páginas, fórmulas, anexos ou imagens foram preservados.
         </p>
         <p>
           Evite enviar documentos confidenciais para “reparadores online” desconhecidos. Além do risco de privacidade,
@@ -3118,21 +3121,25 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           Uma versão íntegra é melhor do que uma reconstrução parcial.
         </p>
         <p>
-          Para arquivos protegidos pelo OneDrive, verifique o histórico/estado de sincronização e a lixeira do serviço.
-          Para backup local, confirme a data da versão antes de sobrescrever o arquivo atual.
+          No OneDrive ou SharePoint, confira a data no Histórico de Versões e preserve a versão atual antes
+          de restaurar: a versão selecionada passa a ser a atual e a mudança pode aparecer para outros usuários.
+          Se o serviço permitir, baixe a versão desejada como cópia separada antes de decidir. No Histórico de
+          Arquivos do Windows, use “Restaurar para...” e escolha outra pasta.
         </p>
 
         <h2>6. Se o arquivo abre parcialmente, salve o conteúdo recuperável em outro arquivo</h2>
         <p>
           Alguns formatos permitem abrir parte do conteúdo. Se isso acontecer, não continue salvando sobre o mesmo
-          arquivo. Exporte ou copie o conteúdo legível para um novo documento.
+          arquivo. Exporte ou copie o conteúdo legível para um novo documento. Feche e reabra o resultado:
+          em texto, confira início, meio, fim e anexos; em planilha, verifique abas, fórmulas e totais
+          que você conhece. Um arquivo que abre pode estar apenas parcialmente recuperado.
         </p>
 
         <h2>7. CHKDSK não “conserta o conteúdo” de um documento</h2>
         <p>
           O CHKDSK verifica estruturas do sistema de arquivos e pode corrigir erros do volume. Ele não reconstrói o
-          conteúdo lógico de um DOCX, XLSX, PDF, foto ou banco de dados. Use-o apenas quando há motivo para investigar
-          o sistema de arquivos, e não como reparador universal de documentos.
+          conteúdo lógico de um DOCX, XLSX, PDF, foto ou banco de dados. Não execute modos de correção do CHKDSK
+          sobre uma unidade instável com dados únicos como tentativa inicial de recuperar um documento.
         </p>
 
         <h2>8. Vários arquivos corrompendo mudam o diagnóstico</h2>
@@ -3154,8 +3161,10 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
 
         <h2>10. Reparadores do próprio aplicativo podem ajudar</h2>
         <p>
-          Alguns aplicativos oferecem “Abrir e reparar”, importação parcial ou recuperação automática. Use esses
-          recursos em uma cópia do arquivo e preserve o original. O resultado pode ser parcial.
+          No Word, Excel ou PowerPoint para desktop, quando a opção estiver disponível, vá a Arquivo → Abrir →
+          Procurar, selecione a cópia e use a seta ao lado de Abrir para escolher “Abrir e Reparar”. Salve com
+          outro nome e confira o resultado. Para PDF, priorize uma cópia válida ou uma nova exportação do
+          documento de origem. Não habilite macros nem ignore alertas para abrir anexos de procedência incerta.
         </p>
 
         <h2>11. Quando usar recuperação de arquivos</h2>
@@ -3176,35 +3185,6 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           <li>O arquivo pertence a banco de dados, projeto profissional ou formato proprietário crítico.</li>
           <li>As tentativas exigiriam sobrescrever a única cópia existente.</li>
         </ul>
-
-        <h2>Perguntas frequentes</h2>
-        <h3>Arquivo corrompido tem conserto?</h3>
-        <p>
-          Às vezes. Depende do formato, do tipo de dano e de existir conteúdo interno ainda legível. Versão anterior
-          íntegra é sempre preferível a reconstrução.
-        </p>
-
-        <h3>Posso usar CHKDSK para reparar um arquivo?</h3>
-        <p>
-          CHKDSK trabalha no sistema de arquivos do volume. Ele não repara a estrutura interna de um documento
-          específico.
-        </p>
-
-        <h3>Se o arquivo não abre, significa que está corrompido?</h3>
-        <p>
-          Não. Pode ser aplicativo incompatível, extensão incorreta, download incompleto ou falta de suporte ao formato.
-        </p>
-
-        <h3>Renomear a extensão resolve?</h3>
-        <p>
-          Não como regra. Renomear não converte o formato nem recria conteúdo perdido.
-        </p>
-
-        <h3>Devo usar um reparador online?</h3>
-        <p>
-          Só com muita cautela. Arquivos podem conter dados privados, e a taxa de recuperação varia. Prefira primeiro
-          versões anteriores, backup e ferramentas do próprio aplicativo.
-        </p>
 
         <h2>Resumo prático</h2>
         <p>
