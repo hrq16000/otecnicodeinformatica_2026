@@ -1139,14 +1139,14 @@ const WAVE_11F: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-03",
+    reviewedAt: "2026-11-11",
     approvedAt: "2026-09-03",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: Gugalcrom123 (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:HP_laptop_keyboard.jpg",
     notes:
-      "Diagnóstico de teclado interno escrito do zero na Onda 11F: separa teclado inteiro parado, teclas mortas, layout errado e dano por líquido, com teste do teclado externo como divisor. Não repete o roteiro de notebook que não liga nem o de USB não reconhecido. Capa é fotografia real licenciada, sem IA.",
+      "Diagnóstico de teclado interno da Onda 11F revisto em 2026-11-11: testes sem desmontagem, limites de inferência, parada por líquido e fontes oficiais. URL, data de aprovação e fotografia licenciada preservadas.",
   },
   {
     slug: "computador-desliga-sozinho-o-que-verificar",

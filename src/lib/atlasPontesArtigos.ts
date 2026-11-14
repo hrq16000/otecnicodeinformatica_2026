@@ -175,12 +175,12 @@ export const ATLAS_PONTES_ARTIGOS: Record<string, AtlasPonteArtigo> = {
   "teclado-de-notebook-nao-funciona-o-que-verificar": {
     temaId: "fundamentos",
     porQue:
-      "Teclado parado parece defeito único, mas há quatro sintomas com causas diferentes. Os fundamentos ensinam a separar hardware interno de configuração do sistema antes de encomendar peça.",
+      "A comparação entre programas, layout e teclado USB ajuda a separar configuração de falha restrita ao teclado interno sem abrir o notebook.",
     proximoPasso: {
-      rotulo: "Diagnóstico técnico",
-      to: "/diagnostico-tecnico",
+      rotulo: "USB não reconhecido",
+      to: "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
       contexto:
-        "Quando o teclado externo funciona, o interno não responde e a troca do módulo passa a ser a decisão.",
+        "Se um teclado USB que funciona em outro computador também falhar, verifique o reconhecimento do periférico antes de suspeitar de uma peça.",
     },
   },
   "computador-desliga-sozinho-o-que-verificar": {

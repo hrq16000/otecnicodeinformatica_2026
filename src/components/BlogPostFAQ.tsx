@@ -1080,24 +1080,24 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
   // ── Onda 11F — teclado de notebook, desligamento espontâneo e link cabeado.
   "teclado-de-notebook-nao-funciona-o-que-verificar": [
     {
-      q: "Como saber se o problema é do teclado ou do sistema?",
-      a: "Conecte um teclado USB externo. Se ele digita normalmente, o sistema e o campo de digitação estão íntegros e a suspeita fica no teclado interno ou no cabo flat dele. Se nem o externo digita, o caminho passa a ser sistema, perfil de usuário ou driver.",
+      q: "Se o teclado USB funciona, preciso trocar o interno?",
+      a: "Não necessariamente. O teste mostra que o Windows recebeu a digitação do USB naquele campo, mas não identifica se a falha está no teclado interno, no cabo, no conector ou em outra parte do notebook.",
     },
     {
       q: "Só algumas teclas falham. Isso muda o diagnóstico?",
-      a: "Muda. Falha em teclas isoladas e vizinhas costuma indicar sujeira, resíduo de líquido ou trilha rompida na membrana. Falha em bloco inteiro, especialmente uma linha ou uma coluna completa, aponta para a matriz do teclado ou para o contato do cabo flat.",
+      a: "Sim. Anote as teclas e compare o mesmo texto em dois programas. Se toques breves não entram, confira as Teclas de Filtro. Se o mesmo grupo falhar repetidamente só no teclado interno, vale investigar sem concluir qual peça falhou.",
     },
     {
-      q: "O teclado numérico parou. É defeito?",
-      a: "Nem sempre. Em muitos notebooks o bloco numérico depende da tecla Num Lock ou da combinação com Fn. Vale confirmar esse estado antes de considerar defeito físico.",
+      q: "Por que as teclas digitam símbolos diferentes ou números?",
+      a: "Para símbolos trocados, compare o layout de entrada do Windows com as teclas físicas. Se letras específicas viraram números, confira no manual se o modelo tem bloco numérico ativado por Num Lock ou Fn.",
     },
     {
       q: "Caiu líquido no teclado. O que fazer primeiro?",
-      a: "Desligue imediatamente pelo botão de ligar, desconecte a fonte e não tente ligar de novo para testar. Manter a máquina energizada com líquido dentro é o que costuma transformar um teclado danificado em placa danificada.",
+      a: "Se for seguro tocar no notebook, desligue-o e desconecte o carregador. Não ligue nem carregue para testar e não abra o gabinete para retirar a bateria interna. Siga a orientação do fabricante para o modelo.",
     },
     {
-      q: "Trocar o teclado interno resolve sempre?",
-      a: "Não. A troca resolve quando o defeito está na peça. Quando o problema é o conector do cabo flat na placa ou o controlador, o teclado novo apresenta o mesmo comportamento — por isso o teste com teclado externo e a inspeção do encaixe vêm antes da compra da peça.",
+      q: "O teclado funcionar no menu de inicialização descarta defeito físico?",
+      a: "Não. O resultado vale apenas para as teclas que o menu aceita e que você conseguiu testar naquele momento. Ele não exclui falhas intermitentes e não exige alterar configurações de firmware.",
     },
   ],
   "computador-desliga-sozinho-o-que-verificar": [
