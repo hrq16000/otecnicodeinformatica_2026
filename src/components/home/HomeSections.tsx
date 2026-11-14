@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import { BookOpen, Building2, Search, ShieldCheck, Wrench, type LucideIcon } from "lucide-react";
 import { siteConfig, whatsappLink } from "@/lib/siteConfig";
 import { EeatProofsSection } from "@/components/EeatProofsSection";
 import { ProvasDeConfiancaSection } from "@/components/home/ProvasDeConfiancaSection";
@@ -108,12 +109,13 @@ const authorityHubs: { t: string; d: string; links: { href: string; label: strin
 
 
 // ── UI helpers ───────────────────────────────────────────────────
-const SectionTitle = ({ eyebrow, title, sub }: { eyebrow?: string; title: string; sub?: string }) => (
+const SectionTitle = ({ eyebrow, title, sub, icon: Icon }: { eyebrow?: string; title: string; sub?: string; icon: LucideIcon }) => (
   <div className="mx-auto mb-10 max-w-2xl text-center">
     {eyebrow && (
       <span className="text-xs font-bold uppercase tracking-wider text-accent">{eyebrow}</span>
     )}
     <h2 className="mt-2 font-heading text-2xl font-bold tracking-tight text-foreground md:text-3xl">
+      <Icon aria-hidden="true" focusable="false" className="mr-2 inline size-5 align-[-0.1em] text-accent" />
       {title}
     </h2>
     {sub && <p className="mt-3 text-base text-muted-foreground">{sub}</p>}
@@ -157,6 +159,7 @@ export const HomeSections = () => {
         <div className="container mx-auto">
           <SectionTitle
             eyebrow="Comece pelo sintoma"
+            icon={Search}
             title="Problemas que resolvemos todo dia"
             sub="Você não precisa saber o nome do defeito. Reconheça o sintoma abaixo e descreva com suas palavras — o diagnóstico é nosso trabalho."
           />
@@ -176,6 +179,7 @@ export const HomeSections = () => {
         <div className="container mx-auto">
           <SectionTitle
             eyebrow="Serviços"
+            icon={Wrench}
             title="O que fazemos, em ordem do que mais chega aqui"
             sub="Notebook e computador em primeiro lugar, depois sistema, upgrade, dados e ambiente empresarial. Cada página explica escopo, limites e o que não está incluso."
           />
@@ -214,6 +218,7 @@ export const HomeSections = () => {
         <div className="container mx-auto">
           <SectionTitle
             eyebrow="Dois contextos diferentes"
+            icon={Building2}
             title="Uso pessoal ou operação de empresa?"
             sub="Em casa, o objetivo é devolver o equipamento funcionando. Na empresa, o objetivo é a equipe voltar a trabalhar — e isso muda prioridade, prazo e forma de atendimento."
           />
@@ -416,6 +421,7 @@ export const HomeSections = () => {
         <div className="container mx-auto">
           <SectionTitle
             eyebrow="Continue por aqui"
+            icon={BookOpen}
             title="Encontre a página certa para o seu caso"
             sub="Cada bloco leva direto ao conteúdo específico, sem repetir a mesma explicação."
           />
@@ -444,6 +450,7 @@ export const HomeSections = () => {
         <div className="container mx-auto">
           <SectionTitle
             eyebrow="Formatação de computador"
+            icon={ShieldCheck}
             title="Como uma formatação é feita sem virar prejuízo"
             sub="A ordem importa mais que a velocidade. Estes são os passos que evitam perda de arquivo e retrabalho."
           />

@@ -1,3 +1,4 @@
+import { BookOpen, CheckCircle, Compass, TriangleAlert } from "lucide-react";
 import { Link } from "@/lib/router-compat";
 import { getEnriquecimentoFase2, getLinksEspecificosFase2, FASE2_REVISADO_EM } from "@/lib/enriquecimentoFase2";
 
@@ -23,7 +24,7 @@ export const EnriquecimentoFase2 = ({ slug }: { slug: string }) => {
 
       <div className="mt-6 grid gap-6 md:grid-cols-2">
         <div>
-          <h3 className="font-heading text-base font-bold text-foreground">Até onde ir sozinho</h3>
+          <h3 className="font-heading text-base font-bold text-foreground"><CheckCircle aria-hidden="true" focusable="false" className="mr-2 inline size-4 align-[-0.1em] text-accent" />{label}</h3>
           <ul className="mt-2 space-y-2 text-sm leading-relaxed text-muted-foreground">
             {pilar.ateOndeIr.map((item) => (
               <li key={item} className="pl-4 -indent-4">— {item}</li>
@@ -31,7 +32,7 @@ export const EnriquecimentoFase2 = ({ slug }: { slug: string }) => {
           </ul>
         </div>
         <div>
-          <h3 className="font-heading text-base font-bold text-foreground">Quando parar</h3>
+          <h3 className="font-heading text-base font-bold text-foreground"><TriangleAlert aria-hidden="true" focusable="false" className="mr-2 inline size-4 align-[-0.1em] text-accent" />{label}</h3>
           <ul className="mt-2 space-y-2 text-sm leading-relaxed text-muted-foreground">
             {pilar.quandoParar.map((item) => (
               <li key={item} className="pl-4 -indent-4">— {item}</li>
@@ -41,7 +42,7 @@ export const EnriquecimentoFase2 = ({ slug }: { slug: string }) => {
       </div>
 
       <div className="mt-6">
-        <h3 className="font-heading text-base font-bold text-foreground">Fontes primárias consultadas</h3>
+        <h3 className="font-heading text-base font-bold text-foreground"><BookOpen aria-hidden="true" focusable="false" className="mr-2 inline size-4 align-[-0.1em] text-accent" />{label}</h3>
         <ul className="mt-2 space-y-2 text-sm leading-relaxed text-muted-foreground">
           {pilar.fontes.map((fonte) => (
             <li key={fonte.url}>
@@ -64,7 +65,7 @@ export const EnriquecimentoFase2 = ({ slug }: { slug: string }) => {
       </div>
 
       <div className="mt-6">
-        <h3 className="font-heading text-base font-bold text-foreground">Continue pelo caminho certo</h3>
+        <h3 className="font-heading text-base font-bold text-foreground"><Compass aria-hidden="true" focusable="false" className="mr-2 inline size-4 align-[-0.1em] text-accent" />{label}</h3>
         <ul className="mt-2 space-y-2 text-sm leading-relaxed text-muted-foreground">
           {links.map((link) => (
             <li key={link.to}>
