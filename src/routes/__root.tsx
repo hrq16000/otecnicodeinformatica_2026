@@ -121,7 +121,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "preload", as: "image", href: "/logo.webp", type: "image/webp", fetchPriority: "high" },
+      // O cabeçalho usa logo-dark.webp e já o solicita no HTML SSR.
+      // Não pré-carregar logo.webp: duplicava 37 KB antes do LCP da Home.
       { rel: "dns-prefetch", href: "https://www.googletagmanager.com" },
       { rel: "dns-prefetch", href: "https://www.google-analytics.com" },
       {
