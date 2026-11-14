@@ -79,6 +79,10 @@ for (const { nome, viewport } of VIEWPORTS) {
       await installConsentSpy(page);
       await page.goto("/");
 
+      // O SSR não pode antecipar o AdSense antes do consentimento, mesmo que
+      // o loader do cliente marque suas próprias tags com data-adsense.
+      await expect(page.locator('script[src*="adsbygoogle.js"]')).toHaveCount(0);
+
       const banner = page.getByRole("dialog", { name: /privacidade e cookies/i });
       await banner.getByRole("button", { name: "Recusar" }).click();
       await expect(banner).toBeHidden();
@@ -92,6 +96,7 @@ for (const { nome, viewport } of VIEWPORTS) {
         analytics_storage: "denied",
       });
       expect(await page.locator('script[data-adsense="1"]').count()).toBe(0);
+      await expect(page.locator('script[src*="adsbygoogle.js"]')).toHaveCount(0);
     });
 
     test('o link "Saiba mais" abre a política de privacidade', async ({ page }) => {
