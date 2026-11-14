@@ -1,8 +1,8 @@
 import React from "react";
+import { Copy, FileSearch, TriangleAlert } from "lucide-react";
 import type { BlogPostContent } from "@/data/blogPostsContent";
 import { EditorialReferences } from "@/components/BlogPostFAQ";
 import { MODALIDADES } from "@/lib/precosConfig";
-
 /**
  * Conteúdos editoriais suplementares.
  *
@@ -3068,7 +3068,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           <li>Se vários arquivos falham no mesmo disco, pare de tratar como problema de um único arquivo e investigue o armazenamento.</li>
         </ol>
 
-        <h2>Arquivo corrompido ou aplicativo incompatível?</h2>
+        <h2 className="flex items-start gap-2"><FileSearch aria-hidden="true" focusable="false" data-editorial-icon="arquivo-verificar" className="mt-0.5 size-5 shrink-0 text-accent" /><span>Arquivo corrompido ou aplicativo incompatível?</span></h2>
         <table>
           <thead>
             <tr><th>Sinal</th><th>Hipótese</th><th>Teste útil</th></tr>
@@ -3082,7 +3082,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           </tbody>
         </table>
 
-        <h2>1. Preserve a cópia original antes de qualquer tentativa</h2>
+        <h2 className="flex items-start gap-2"><Copy aria-hidden="true" focusable="false" data-editorial-icon="arquivo-preservar" className="mt-0.5 size-5 shrink-0 text-accent" /><span>1. Preserve a cópia original antes de qualquer tentativa</span></h2>
         <p>
           Ferramentas de reparo podem modificar o arquivo. Por isso, crie uma cópia e mantenha o original intacto.
           Se a unidade está estável, guarde o original sem editar e use uma cópia com outro nome, como
@@ -3177,7 +3177,7 @@ export const blogSupplementalPosts: Record<string, BlogPostContent> = {
           Quanto mais você escreve na unidade após uma exclusão, maior o risco de sobrescrever dados recuperáveis.
         </p>
 
-        <h2>12. Quando parar de tentar sozinho</h2>
+        <h2 className="flex items-start gap-2"><TriangleAlert aria-hidden="true" focusable="false" data-editorial-icon="arquivo-parar" className="mt-0.5 size-5 shrink-0 text-amber-600 dark:text-amber-400" /><span>12. Quando parar de tentar sozinho</span></h2>
         <ul>
           <li>O disco faz ruídos anormais ou desconecta durante leitura.</li>
           <li>O mesmo armazenamento está corrompendo vários arquivos.</li>

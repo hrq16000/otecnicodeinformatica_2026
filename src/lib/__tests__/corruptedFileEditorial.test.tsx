@@ -4,6 +4,7 @@ import { blogSupplementalPosts } from "@/data/blogSupplementalPosts";
 import { BlogPostFAQ } from "@/components/BlogPostFAQ";
 import { getArticleSources } from "@/lib/blogEditorialSources";
 import { getEditorialApproval } from "@/lib/blogEditorialRegistry";
+import { buildArticleToc } from "@/lib/articleToc";
 
 const jsonLd = vi.hoisted(() => ({ slot: vi.fn() }));
 vi.mock("@/lib/jsonLdSlots", () => ({
@@ -27,6 +28,21 @@ describe("Arquivo corrompido: preservar, recuperar e conferir", () => {
       expect(html).toContain(phrase);
     }
     expect(html).not.toContain("<h2>Perguntas frequentes</h2>");
+  });
+  it("renderiza três ícones decorativos sem alterar os títulos e as âncoras", () => {
+    const { content, headings } = buildArticleToc(post.content);
+    const html = renderToStaticMarkup(content);
+    const icons = html.match(/<svg\b[^>]*data-editorial-icon="arquivo-[^"]+"[^>]*>/g) ?? [];
+    expect(icons).toHaveLength(3);
+    for (const tag of icons) {
+      expect(tag).toContain('aria-hidden="true"');
+      expect(tag).toContain('focusable="false"');
+    }
+    expect(headings).toEqual(expect.arrayContaining([
+      { level: 2, text: "Arquivo corrompido ou aplicativo incompatível?", id: "arquivo-corrompido-ou-aplicativo-incompativel" },
+      { level: 2, text: "1. Preserve a cópia original antes de qualquer tentativa", id: "1-preserve-a-copia-original-antes-de-qualquer-tentativa" },
+      { level: 2, text: "12. Quando parar de tentar sozinho", id: "12-quando-parar-de-tentar-sozinho" },
+    ]));
   });
   it("renderiza cinco referências oficiais", () => {
     const html = renderToStaticMarkup(post.content);
