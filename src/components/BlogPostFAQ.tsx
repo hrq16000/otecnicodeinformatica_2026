@@ -627,24 +627,24 @@ const PILOT_FAQ: Record<string, FAQItem[]> = {
   ],
   "erro-no-bootable-device-como-resolver": [
     {
-      q: "O que significa a mensagem No bootable device?",
-      a: "Significa que o firmware procurou um carregador de inicialização e não encontrou nenhum válido. As variações Boot device not found, Operating system not found e Reboot and select proper boot device indicam a mesma condição.",
+      q: "No bootable device significa que o SSD ou HD queimou?",
+      a: "Não. O firmware não encontrou uma opção de inicialização utilizável. Confira se o disco aparece na BIOS ou UEFI. Mesmo detectado, ele pode apresentar falha intermitente; detecção não comprova saúde.",
     },
     {
-      q: "Preciso formatar para resolver esse erro?",
-      a: "Não na maioria dos casos. Quando o disco é reconhecido, o reparo do carregador com o ambiente de recuperação do Windows costuma resolver preservando os arquivos. Formatar só deve ser considerado depois de confirmada a cópia dos dados.",
+      q: "Devo formatar a EFI ou mudar para Legacy por tentativa?",
+      a: "Não. Registre a configuração anterior e confirme o modo compatível com a instalação. Formatar a EFI pode remover arquivos necessários ao Windows e a outros sistemas. Preserve os dados antes de qualquer reparo que escreva no disco.",
     },
     {
-      q: "Por que o comando bootrec /fixboot devolve acesso negado?",
-      a: "Porque esse comando pertence ao modelo antigo de inicialização, baseado em MBR. Em discos GPT com UEFI, a ferramenta correta é o bcdboot, que recria os arquivos de inicialização dentro da partição de sistema EFI.",
+      q: "O que fazer se o reparo pedir a chave BitLocker?",
+      a: "Compare o identificador exibido com o da chave de recuperação guardada. Senha e PIN não substituem a chave de 48 dígitos. Sem a chave correspondente, pare antes de operações destrutivas e consulte o administrador se o equipamento for gerenciado.",
     },
     {
-      q: "Como sei se meu disco é GPT ou MBR?",
-      a: "No prompt de comando do ambiente de recuperação, execute diskpart e depois list disk. Um asterisco na coluna GPT indica disco GPT. A presença de um volume pequeno em FAT32, de cerca de 100 MB, confirma a partição de sistema EFI.",
+      q: "Um volume FAT32 pequeno confirma qual é a partição EFI?",
+      a: "Não. Tamanho e formato são indícios. Confirme a estrutura e a qual disco pertence a partição antes de escolher o destino. Não use letras ou números de volume de outro computador.",
     },
     {
-      q: "O reparo funcionou e o erro voltou no dia seguinte. O que houve?",
-      a: "Reparo que se desfaz costuma indicar setores defeituosos na área de inicialização, disco em degradação ou divergência entre o modo usado no reparo e o modo configurado no Setup. Nesse cenário, o passo seguinte é avaliar a saúde do disco antes de repetir o procedimento.",
+      q: "BCDBoot com a opção /s sempre recria Windows Boot Manager no firmware?",
+      a: "Não. Em UEFI, a opção /s aponta a partição de destino, mas não cria a entrada na NVRAM. BCDBoot também não corrige falha física. Não execute um comando de escrita se origem ou destino forem incertos.",
     },
   ],
   "troquei-o-ssd-e-o-pc-so-abre-a-bios": [
