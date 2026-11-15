@@ -52,7 +52,6 @@ import {
 } from "@/lib/triagePreset";
 import { appendUtmsToUrl, captureUtmsFromUrl } from "@/lib/utmCapture";
 import { geoSuggestion } from "@/lib/geoContext";
-import { bairroPorPath } from "@/lib/bairrosMalha";
 import { getSessionId, recordSubmission } from "@/lib/funnelSubmission";
 import { TriageErrorBoundary } from "@/components/funnel/TriageErrorBoundary";
 import { TriageField } from "@/components/funnel/TriageField";
@@ -489,13 +488,26 @@ export const WhatsAppFunnel = () => {
     // Só preenche quando o campo está vazio — o usuário pode editar.
     // A rota é a fonte mais confiável de bairro: se o usuário já está numa
     // página de bairro, não faz sentido pedir que ele digite o mesmo dado.
-    const daRota = bairroPorPath(window.location.pathname)?.nome;
-    const sugestao = daRota ?? geoSuggestion();
-    if (sugestao) {
-      setAnswers((prev) =>
-        prev.fields.bairro ? prev : { ...prev, fields: { ...prev.fields, bairro: sugestao } },
-      );
-    }
+    const routePath = window.location.pathname;
+    // A malha local é necessária só quando a triagem abre; não pesa no JS
+    // inicial de todas as páginas. A rota continua prioritária sobre IP/GPS.
+    void import("@/lib/bairrosMalha")
+      .then(({ bairroPorPath }) => {
+        const sugestao = bairroPorPath(routePath)?.nome ?? geoSuggestion();
+        if (sugestao) {
+          setAnswers((prev) =>
+            prev.fields.bairro ? prev : { ...prev, fields: { ...prev.fields, bairro: sugestao } },
+          );
+        }
+      })
+      .catch(() => {
+        const sugestao = geoSuggestion();
+        if (sugestao) {
+          setAnswers((prev) =>
+            prev.fields.bairro ? prev : { ...prev, fields: { ...prev.fields, bairro: sugestao } },
+          );
+        }
+      });
     captureUtmsFromUrl();
     // Auditoria de produção: registra ENFILEIRADO → ENVIADO do wa_funnel_open,
     // sem PII (apenas local do CTA, presença de preset e carimbos de tempo).
