@@ -15,7 +15,6 @@ const DRAFTS = ["como-detectar-invasao-rede", "como-configurar-rede-linux-netpla
 
 const urlFor = (slug: string) => `${SITE_URL}/blog/${slug}`;
 const BASE = process.env.E2E_BASE_URL ?? "http://localhost:4173";
-const readDist = (path: string) => readFileSync(resolve("dist", path), "utf8");
 
 type JsonNode = Record<string, unknown>;
 
@@ -64,14 +63,20 @@ function checkArticle(html: string, slug: string, approved: boolean) {
 }
 
 test.describe("Contrato editorial: aprovados entram, rascunhos permanecem fora", () => {
-  test("hub /blog indexável com canônica própria após liberação do lote", () => {
-    checkRobotsAndCanonical(readDist("blog/index.html"), `${SITE_URL}/blog`, true);
+  // A matriz executa o preview SSR; os snapshots em dist/ são gerados pelo gate
+  // snapshot:dist, em outro job. Aqui validamos a resposta HTTP antes da hidratação.
+  test("hub /blog: HTML servido indexável com canônica própria", async ({ request }) => {
+    const response = await request.get(`${BASE}/blog`, { maxRedirects: 0 });
+    expect(response.status()).toBe(200);
+    checkRobotsAndCanonical(await response.text(), `${SITE_URL}/blog`, true);
   });
 
   for (const [approved, slugs] of [[true, APPROVED], [false, DRAFTS]] as const) {
     for (const slug of slugs) {
-      test(`snapshot /blog/${slug}: ${approved ? "aprovado" : "não aprovado"}`, () => {
-        checkArticle(readDist(`blog/${slug}/index.html`), slug, approved);
+      test(`HTML servido /blog/${slug}: ${approved ? "aprovado" : "não aprovado"}`, async ({ request }) => {
+        const response = await request.get(`${BASE}/blog/${slug}`, { maxRedirects: 0 });
+        expect(response.status()).toBe(200);
+        checkArticle(await response.text(), slug, approved);
       });
     }
   }
@@ -87,13 +92,5 @@ test.describe("Contrato editorial: aprovados entram, rascunhos permanecem fora",
     const paths = all.map((url) => new URL(url, SITE_URL).pathname.replace(/\/$/, ""));
     for (const slug of APPROVED) expect(editorial).toContain(urlFor(slug));
     for (const slug of DRAFTS) expect(paths).not.toContain(`/blog/${slug}`);
-  });
-
-  test("HTML servido mantém o contrato para um artigo aprovado e um rascunho", async ({ request }) => {
-    for (const [slug, approved] of [[APPROVED[4], true], [DRAFTS[0], false]] as const) {
-      const response = await request.get(`${BASE}/blog/${slug}`);
-      expect(response.status()).toBe(200);
-      checkArticle(await response.text(), slug, approved);
-    }
   });
 });
