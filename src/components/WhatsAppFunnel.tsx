@@ -3,8 +3,23 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import * as Icons from "lucide-react";
-import { ArrowRight, ArrowLeft, CheckCircle2, Lock, MessageCircle, Copy, ExternalLink } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowLeft,
+  CheckCircle2,
+  Lock,
+  MessageCircle,
+  Copy,
+  ExternalLink,
+  Laptop,
+  Tv,
+  Smartphone,
+  TabletSmartphone,
+  Speaker,
+  Gamepad2,
+  HelpCircle,
+  type LucideIcon,
+} from "lucide-react";
 import { trackCTAClick } from "@/lib/analytics";
 import {
   trackFunnelOpen,
@@ -37,7 +52,6 @@ import {
 } from "@/lib/triagePreset";
 import { appendUtmsToUrl, captureUtmsFromUrl } from "@/lib/utmCapture";
 import { geoSuggestion } from "@/lib/geoContext";
-import { bairroPorPath } from "@/lib/bairrosMalha";
 import { getSessionId, recordSubmission } from "@/lib/funnelSubmission";
 import { TriageErrorBoundary } from "@/components/funnel/TriageErrorBoundary";
 import { TriageField } from "@/components/funnel/TriageField";
@@ -87,6 +101,17 @@ import { setErrorContext } from "@/lib/errorReporter";
 
 
 const WA_HOSTS = ["wa.me", "api.whatsapp.com"];
+// O catálogo usa somente estes sete ícones. Importar `* as Icons` fazia o
+// bundle inicial incluir todo o Lucide, elevando o custo de parse/execução.
+const EQUIPMENT_ICONS: Record<string, LucideIcon> = {
+  Laptop,
+  Tv,
+  Smartphone,
+  TabletSmartphone,
+  Speaker,
+  Gamepad2,
+  HelpCircle,
+};
 const REDUCED_MOTION =
   typeof window !== "undefined" && window.matchMedia
     ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -463,13 +488,26 @@ export const WhatsAppFunnel = () => {
     // Só preenche quando o campo está vazio — o usuário pode editar.
     // A rota é a fonte mais confiável de bairro: se o usuário já está numa
     // página de bairro, não faz sentido pedir que ele digite o mesmo dado.
-    const daRota = bairroPorPath(window.location.pathname)?.nome;
-    const sugestao = daRota ?? geoSuggestion();
-    if (sugestao) {
-      setAnswers((prev) =>
-        prev.fields.bairro ? prev : { ...prev, fields: { ...prev.fields, bairro: sugestao } },
-      );
-    }
+    const routePath = window.location.pathname;
+    // A malha local é necessária só quando a triagem abre; não pesa no JS
+    // inicial de todas as páginas. A rota continua prioritária sobre IP/GPS.
+    void import("@/lib/bairrosMalha")
+      .then(({ bairroPorPath }) => {
+        const sugestao = bairroPorPath(routePath)?.nome ?? geoSuggestion();
+        if (sugestao) {
+          setAnswers((prev) =>
+            prev.fields.bairro ? prev : { ...prev, fields: { ...prev.fields, bairro: sugestao } },
+          );
+        }
+      })
+      .catch(() => {
+        const sugestao = geoSuggestion();
+        if (sugestao) {
+          setAnswers((prev) =>
+            prev.fields.bairro ? prev : { ...prev, fields: { ...prev.fields, bairro: sugestao } },
+          );
+        }
+      });
     captureUtmsFromUrl();
     // Auditoria de produção: registra ENFILEIRADO → ENVIADO do wa_funnel_open,
     // sem PII (apenas local do CTA, presença de preset e carimbos de tempo).
@@ -1065,7 +1103,7 @@ export const WhatsAppFunnel = () => {
                     <p className="text-sm font-medium">Qual o equipamento?</p>
                     <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
                       {EQUIPMENTS.map((eq) => {
-                        const Icon = (Icons[eq.icon as keyof typeof Icons] || Icons.HelpCircle) as React.ComponentType<{ className?: string }>;
+                        const Icon = EQUIPMENT_ICONS[eq.icon] || HelpCircle;
                         const active = answers.equipment === eq.id;
                         return (
                           <button
