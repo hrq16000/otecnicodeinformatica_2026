@@ -1,4 +1,4 @@
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { Link } from "@/lib/router-compat";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { PageSEO } from "@/components/PageSEO";
@@ -119,8 +119,13 @@ const CTA_BASE =
 
 export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => {
   const waHref = whatsappLink(data.whatsappMessage);
-  // Rodada 4L — variação de copy do CTA mobile (determinística por sessão).
-  const sessionId = typeof window !== "undefined" ? getSessionId() : "";
+  // A primeira renderização precisa ser idêntica no SSR e na hidratação.
+  // Atribuir a variação real somente após o mount evita mismatch de texto
+  // (e a recuperação custosa da árvore React) nas páginas de serviço.
+  const [sessionId, setSessionId] = useState("");
+  useEffect(() => {
+    setSessionId(getSessionId());
+  }, []);
   const ctaMobile = copyCtaMobile(`/servicos/${data.path}`, sessionId, data.serviceName);
   const waHrefMobile = whatsappLinkComContexto(data.whatsappMessage, {
     medium: "cta_mobile",

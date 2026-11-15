@@ -1,0 +1,43 @@
+# Somente para o preflight da arvore atual: casos PUBLICOS comprovados no
+# HEAD 6cca6300. O scan git historico abaixo usa as regras originais SEM
+# esta configuracao; qualquer novo segredo em um commit continua bloqueante.
+# Evite allowlist por arquivo inteiro, linha isolada ou apenas por regra.
+[extend]
+useDefault = true
+
+# Supabase sb_publishable_* foi projetada para uso publico no cliente.
+[[allowlists]]
+description = "Duas chaves Supabase publicas explicitamente identificadas"
+targetRules = ["generic-api-key"]
+condition = "AND"
+regexTarget = "match"
+paths = ['''(?:^|/)\.env$''']
+regexes = ['''sb_publishable_[A-Za-z0-9_-]+''']
+
+# Os quatro exemplos JWT contêm role=anon (nunca service_role).
+# O marcador abaixo e o trecho base64 da propriedade JSON role:"anon".
+[[allowlists]]
+description = "JWT de exemplo exclusivamente com papel anon"
+targetRules = ["jwt"]
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)(?:\.env\.local\.example|\.github/workflows/security\.yml)$''']
+regexes = ['''^\s*(?:VITE_)?SUPABASE_PUBLISHABLE_KEY\s*[:=].*cm9sZSI6ImFub24i''']
+
+# Chaves de localStorage para consentimento; nao sao credenciais.
+[[allowlists]]
+description = "Identificadores publicos de armazenamento de consentimento"
+targetRules = ["generic-api-key"]
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)(?:src/lib/consentStore\.ts|e2e/(?:consent-mode|funnel-consent-dedup)\.spec\.ts)$''']
+regexes = ['''^\s*(?:export\s+)?const\s+CONSENT_KEY(?:_V2|_LEGACY)?\s*=\s*["'][a-z0-9_-]*consent[a-z0-9_-]*["'];?\s*$''']
+
+# Propriedade visual token em um registro de migracao de tema, nao API key.
+[[allowlists]]
+description = "Nome de token CSS no inventario visual"
+targetRules = ["generic-api-key"]
+condition = "AND"
+regexTarget = "line"
+paths = ['''(?:^|/)\.lovable/migrate-to-tanstack/theme-port\.json$''']
+regexes = ['''^\s*\{"token":\s*"\.[a-z][a-z0-9_-]{1,31}",\s*"source":\s*"[^"]+",\s*"reappliedIn":''']
