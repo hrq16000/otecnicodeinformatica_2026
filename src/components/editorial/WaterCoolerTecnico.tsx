@@ -236,7 +236,7 @@ export const WaterCoolerTecnico = ({ variant }: { variant: Variant }) => {
                 />
                 <div className="absolute inset-x-0 bottom-0 p-6 text-white md:p-8">
                   <p className="font-heading text-xl font-bold md:text-2xl">{data.photoTitle}</p>
-                  <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/82 md:text-base">
+                  <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/80 md:text-base">
                     {data.photoText}
                   </p>
                 </div>
@@ -246,7 +246,7 @@ export const WaterCoolerTecnico = ({ variant }: { variant: Variant }) => {
             <div className="grid gap-4 sm:grid-cols-2">
               {data.insights.map(({ icon: Icon, eyebrow, title, text, action, href }, index) => (
                 <FadeIn key={title} index={index} className="h-full">
-                  <article className="group flex h-full flex-col rounded-2xl border border-border bg-card/95 p-5 shadow-sm motion-surface hover:border-accent/55 hover:shadow-[var(--shadow-md)] md:p-6">
+                  <article className="group flex h-full flex-col rounded-2xl border border-border bg-card/95 p-5 shadow-sm motion-surface hover:border-accent/50 hover:shadow-[var(--shadow-md)] md:p-6">
                     <div className="flex items-start justify-between gap-4">
                       <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-accent/20 bg-accent/10 text-accent">
                         <Icon className="h-5 w-5" aria-hidden="true" />
