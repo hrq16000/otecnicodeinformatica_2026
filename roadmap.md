@@ -1,4 +1,6 @@
 # Jornada até a OS
+- [ ] Tela de atendimento por OS com resposta pública persistida, primeira resposta real, gráfico por sintoma/bairro e idade em dias.
+- [ ] Publicar após validações e abrir endereço real; criação/conclusão de OS real depende de chamado verdadeiro confirmado pelo usuário.
 - [x] Fechamento diário, tempos de primeira resposta/conclusão e atividade nos últimos 30 min adicionados; 30 testes passaram e painéis abertos com sessão admin. Publicação aguarda gate dist/.
 - [x] Criação administrativa a partir de chamado confirmado e atualização SEO a cada 30s enquanto visível; formulário aberto com sessão admin, sem fabricar atendimento.
 - [x] Criar /admin/ordens, listar todas as OS com leitura paginada e agregar criações por sintoma/cidade/bairro em 7/30/90 dias; navegador administrativo validado.

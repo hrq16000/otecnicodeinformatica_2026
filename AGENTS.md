@@ -9,6 +9,7 @@ trabalhe neste repositório. Vale para todas as rodadas.
 - Order progress metrics use persisted transition timestamps and separate started from completed; status writes compare the previous state to avoid counting stale concurrent edits.
 - Administrative order creation copies journey and origin only from the confirmed lead after role validation; QA leads cannot create commercial orders, and dashboards refresh while visible.
 - Daily completion and duration metrics use the first valid persisted milestone per order in São Paulo time; recent activity uses existing events, not heartbeats or claims of online presence.
+- Order replies are public order updates persisted in the existing timeline through an admin-checked server function; first-response metrics use replies, not status changes, and timeline writes compare updated_at to prevent lost replies.
 
 ## 1. Identidade do projeto
 
