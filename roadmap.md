@@ -1,4 +1,7 @@
 # Jornada até a OS
+- [ ] Criar /admin/ordens, listar todas as OS e agregar criações por sintoma/cidade/bairro em 7/30/90 dias.
+- [ ] Registrar transições reais de status e medir atendimentos semanais sem confundir criação com conclusão.
+- [ ] Validar envio da caixa e vínculo explícito; conferir páginas reais e publicação quando gates permitirem.
 - [ ] CSV baixado pelo painel (25 linhas), mas descrição real não disponível: única descrição no banco marcada TESTE; filtro do CSV não confirmado.
 - [ ] Conectar WhatsApp Business para mensagens recebidas: usuário cancelou conexão; nenhuma conversa vinculada.
 - [x] Ampliar visitas por página e solicitações por sintoma/cidade/bairro com comparação exata às páginas existentes; navegador verificado em sete larguras.
