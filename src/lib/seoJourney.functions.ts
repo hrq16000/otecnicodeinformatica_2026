@@ -13,7 +13,7 @@ export const readSeoJourney = createServerFn({ method: "POST" })
     const since = new Date(Date.now() - data.days * 86400000).toISOString();
     const [events, leads, orders] = await Promise.all([
       context.supabase.from("click_events").select("created_at,session_id,utm_source,utm_medium,utm_campaign,journey_id,event_type,path,problema,cidade,neighborhood_slug,attribution_channel").gte("created_at",since).in("event_type",["page_view","wa_click"]).order("created_at",{ascending:false}).limit(1000),
-      context.supabase.from("funnel_submissions").select("id,created_at,session_id,utm_source,utm_medium,utm_campaign,journey_id,equipamento,sintoma,city,neighborhood_slug,status_atendimento").gte("created_at",since).eq("equipamento","descricao_ia").order("created_at",{ascending:false}).limit(1000),
+      context.supabase.from("funnel_submissions").select("id,created_at,session_id,utm_source,utm_medium,utm_campaign,journey_id,equipamento,sintoma,city,neighborhood_slug,status_atendimento,origin_route,service_slug").gte("created_at",since).eq("equipamento","descricao_ia").order("created_at",{ascending:false}).limit(1000),
       context.supabase.from("ordens_servico").select("id,protocolo,created_at,status,lead_id,journey_id").order("created_at",{ascending:false}).limit(1000),
     ]);
     const error = events.error ?? leads.error ?? orders.error;

@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { filtrarComerciais, type QaCheckable } from "@/lib/qaExclusion";
 
-type Linha = {
+type Linha = QaCheckable & {
   problema: string | null;
   servico: string | null;
   cidade: string | null;
@@ -29,13 +30,13 @@ export function CliquesBairroPanel() {
     const desde = new Date(Date.now() - dias * 86400000).toISOString();
     supabase
       .from("click_events")
-      .select("problema,servico,cidade,bairro,neighborhood_slug")
+      .select("problema,servico,cidade,bairro,neighborhood_slug,created_at,session_id,utm_source,utm_medium,utm_campaign")
       .eq("event_type", "wa_click")
       .gte("created_at", desde)
       .limit(5000)
       .then(({ data, error }) => {
         if (error) setErro(error.message);
-        else setLinhas((data ?? []) as Linha[]);
+        else setLinhas(filtrarComerciais((data ?? []) as Linha[]));
       });
   }, [dias]);
 
