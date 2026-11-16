@@ -1,3 +1,4 @@
+import { CircleHelp } from "lucide-react";
 import { HOME_FAQ } from "@/lib/homeFaq";
 
 /**
@@ -13,6 +14,7 @@ export const HomeFaqSsr = () => (
     <div className="container mx-auto px-4">
       <p className="text-xs font-bold uppercase tracking-widest text-accent">Dúvidas frequentes</p>
       <h2 id="faq-home-title" className="mt-2 text-2xl font-black tracking-tight text-foreground md:text-3xl">
+        <CircleHelp aria-hidden="true" focusable="false" className="mr-2 inline size-5 align-[-0.1em] text-accent" />
         O que as pessoas perguntam antes de chamar
       </h2>
       <p className="mt-2 max-w-2xl text-sm text-muted-foreground">

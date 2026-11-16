@@ -1,5 +1,5 @@
 import { useMemo, useState, type FormEvent } from "react";
-import { ArrowRight, Search, Wrench } from "lucide-react";
+import { ArrowRight, Building2, MessagesSquare, ScanSearch, Search, Wrench } from "lucide-react";
 import { siteConfig } from "@/lib/siteConfig";
 import { brandConfig } from "@/lib/config";
 import { CAMINHOS_ENTRADA } from "@/lib/homeContextos";
@@ -18,6 +18,14 @@ const track = (loc: string) => {
     page_path: window.location.pathname,
   });
 };
+
+/** Ícones vetoriais decorativos para os quatro caminhos de entrada da Home. */
+const ICONES_CAMINHO = {
+  problema: ScanSearch,
+  servico: Wrench,
+  empresa: Building2,
+  profissional: MessagesSquare,
+} as const;
 
 
 /**
@@ -171,26 +179,35 @@ export const HeroTriagem = () => {
           className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
           aria-label="Por onde você quer começar"
         >
-          {CAMINHOS_ENTRADA.map((c) => (
-            <a
-              key={c.id}
-              href={c.href}
-              onClick={() => track(`hero_caminho_${c.id}`)}
-              className="group flex flex-col justify-between rounded-2xl border border-border bg-card p-5 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-lg)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-            >
-              <div>
-                <h2 className="font-heading text-lg font-bold text-foreground">{c.titulo}</h2>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.descricao}</p>
-              </div>
-              <span className="mt-5 inline-flex items-center gap-2 font-heading text-sm font-bold text-accent">
-                {c.cta}
-                <ArrowRight
-                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                  aria-hidden="true"
-                />
-              </span>
-            </a>
-          ))}
+          {CAMINHOS_ENTRADA.map((c) => {
+            const Icon = ICONES_CAMINHO[c.id as keyof typeof ICONES_CAMINHO] ?? Wrench;
+            return (
+              <a
+                key={c.id}
+                href={c.href}
+                onClick={() => track(`hero_caminho_${c.id}`)}
+                className="group flex flex-col justify-between rounded-2xl border border-border bg-card p-5 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-lg)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                <div>
+                  <span
+                    className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-accent/20 bg-accent/10 text-accent"
+                    aria-hidden="true"
+                  >
+                    <Icon className="h-6 w-6" strokeWidth={1.8} focusable="false" />
+                  </span>
+                  <h2 className="font-heading text-lg font-bold text-foreground">{c.titulo}</h2>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.descricao}</p>
+                </div>
+                <span className="mt-5 inline-flex items-center gap-2 font-heading text-sm font-bold text-accent">
+                  {c.cta}
+                  <ArrowRight
+                    className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                    aria-hidden="true"
+                  />
+                </span>
+              </a>
+            );
+          })}
         </nav>
 
         <p className="mt-6 text-sm text-muted-foreground">

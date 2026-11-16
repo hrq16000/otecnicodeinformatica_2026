@@ -6032,7 +6032,7 @@
       "familiaTitulo": "Identificação do técnico",
       "risco": "Compromisso operacional; precisa ser cumprido em todo atendimento.",
       "arquivo": "src/components/home/HomeSections.tsx",
-      "linha": 331,
+      "linha": 336,
       "trecho": "{/* 5B. PROVA REAL — bancada, técnico identificado e atendimento (fail-closed) */}",
       "classificacao": "INSTITUCIONAL",
       "criterio": "Compromisso operacional do negócio, não métrica",
