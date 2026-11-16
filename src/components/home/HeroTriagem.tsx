@@ -89,39 +89,22 @@ export const HeroTriagem = () => {
       </div>
 
 
-      <div className="container relative z-10 mx-auto py-10 md:py-16">
+      <div className="container relative z-10 mx-auto py-7 md:py-16">
         <div className="max-w-3xl">
           <p className="inline-flex items-center gap-2 rounded-full bg-[hsl(var(--categoria)/0.12)] px-4 py-1.5 font-heading text-xs font-semibold uppercase tracking-wider text-[hsl(var(--categoria))]">
             <Wrench className="h-3.5 w-3.5" aria-hidden="true" />
             Central de soluções técnicas
           </p>
 
-          <h1 className="mt-5 font-heading text-3xl font-bold leading-[1.06] tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-[3.5rem]">
+          <h1 className="mt-4 font-heading text-3xl font-bold leading-[1.06] tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-[3.5rem]">
             Qual problema de tecnologia precisamos resolver hoje?
           </h1>
 
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+          <p className="mt-3 max-w-2xl text-base md:mt-5 leading-relaxed text-muted-foreground md:text-lg">
             Computadores, notebooks, redes, Wi-Fi, sistemas, dados e suporte para pessoas e
             empresas. Conte o que aconteceu com suas palavras — a parte técnica fica com a gente.
           </p>
-          <figure className="relative mt-6 overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-lg)] lg:hidden">
-            <picture>
-              <source srcSet="/fotos/bancada-tecnica-mobile.webp" type="image/webp" />
-              <img
-                src="/fotos/bancada-tecnica.jpg"
-                alt="Bancada de diagnóstico com notebook, SSD e ferramentas de precisão"
-                width={1024}
-                height={735}
-                loading="eager"
-                fetchPriority="high"
-                decoding="sync"
-                className="aspect-[16/9] w-full object-cover object-[65%_center]"
-              />
-            </picture>
-            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm font-medium text-white">
-              Diagnóstico técnico começa pela causa.
-            </figcaption>
-          </figure>
+
         </div>
 
         {/* Campo principal: "O que está acontecendo?" */}
@@ -129,7 +112,7 @@ export const HeroTriagem = () => {
           onSubmit={enviar}
           role="search"
           aria-label="Descreva o que está acontecendo"
-          className="mt-8 max-w-3xl"
+          className="mt-6 max-w-3xl md:mt-8"
         >
           <label
             htmlFor="triagem-sintoma"
@@ -159,7 +142,7 @@ export const HeroTriagem = () => {
             </button>
           </div>
 
-          <ul className="mt-4 flex flex-wrap gap-2" aria-label="Sintomas mais frequentes">
+          <ul className="mt-3 flex flex-wrap gap-2 md:mt-4" aria-label="Sintomas mais frequentes">
             {sugestoes.map((s) => (
               <li key={s.id}>
                 <a
@@ -174,6 +157,26 @@ export const HeroTriagem = () => {
           </ul>
         </form>
 
+        {/* No mobile, a busca e o diagnóstico vêm antes da fotografia. */}
+        <figure className="relative mt-6 overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-lg)] lg:hidden">
+          <picture>
+            <source srcSet="/fotos/bancada-tecnica-mobile.webp" type="image/webp" />
+            <img
+              src="/fotos/bancada-tecnica.jpg"
+              alt="Interior de computador desktop aberto durante manutenção"
+              width={1024}
+              height={735}
+              loading="eager"
+              fetchPriority="high"
+              decoding="sync"
+              className="aspect-[16/9] w-full object-cover object-[65%_center]"
+            />
+          </picture>
+          <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-10 text-sm font-medium text-white">
+            Diagnóstico técnico começa pela causa.
+          </figcaption>
+        </figure>
+
         {/* Quatro caminhos de entrada, cada um com CTA contextual. */}
         <nav
           className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
@@ -186,7 +189,7 @@ export const HeroTriagem = () => {
                 key={c.id}
                 href={c.href}
                 onClick={() => track(`hero_caminho_${c.id}`)}
-                className="group flex flex-col justify-between rounded-2xl border border-border bg-card p-5 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-lg)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className={`group flex flex-col justify-between rounded-2xl border p-5 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-lg)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${c.id === "problema" ? "border-accent/50 bg-accent/5" : "border-border bg-card"}`}
               >
                 <div>
                   <span
