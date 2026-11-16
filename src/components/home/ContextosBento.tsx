@@ -2,9 +2,9 @@ import { ArrowUpRight, HardDrive, Laptop, MonitorCog, Router, Building2 } from "
 
 const VISUAIS = {
   computadores: { Icon: Laptop, foto: "/fotos/bancada-tecnica-mobile.webp", alt: "Bancada técnica com notebook e ferramentas" },
-  sistemas: { Icon: MonitorCog, foto: null, alt: "" },
-  dados: { Icon: HardDrive, foto: null, alt: "" },
-  redes: { Icon: Router, foto: null, alt: "" },
+  sistemas: { Icon: MonitorCog, foto: "/fotos/bancada-tecnica.jpg", alt: "Bancada técnica de manutenção de computadores" },
+  dados: { Icon: HardDrive, foto: "/fotos/bancada-tecnica-mobile.webp", alt: "Notebook e ferramentas sobre bancada técnica" },
+  redes: { Icon: Router, foto: "/fotos/roteador-wifi.jpg", alt: "Roteador de rede sem fio" },
   empresas: { Icon: Building2, foto: "/fotos/estacao-trabalho-desktop.webp", alt: "Estação de trabalho para atendimento empresarial" },
 } as const;
 
