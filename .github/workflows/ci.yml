@@ -182,8 +182,9 @@ jobs:
           "$agent_browser" --session oti-smoke --namespace oti-preview --executable-path "$chromium_path" --allowed-domains "127.0.0.1,localhost" open http://127.0.0.1:8080/
           "$agent_browser" --session oti-smoke --namespace oti-preview eval '(() => { if (location.origin !== "http://127.0.0.1:8080" || !document.title.trim()) throw new Error("preview local inválido"); return document.title; })()'
           "$agent_browser" --session oti-smoke --namespace oti-preview close
-      # Somente compatibilidade do runtime: sem LLM, APIs, credenciais ou tráfego de produção.
-      - name: Browser Use 1.0.5 smoke (Chromium local e efêmero)
+      # Reutiliza o Chromium do Playwright via CDP local: a VM Ubuntu não suporta o sandbox nativo de Chrome.
+      # Nenhum URL público é visitado, nenhuma API/LLM é chamada e a telemetria está desligada.
+      - name: Browser Use 1.0.5 smoke (CDP local e efêmero)
         continue-on-error: true
         env:
           ANONYMIZED_TELEMETRY: "false"
@@ -201,24 +202,59 @@ jobs:
           import asyncio
           import importlib.metadata
           import os
+          from pathlib import Path
+          import subprocess
+          import tempfile
           from browser_use import Browser
 
           async def smoke():
               assert importlib.metadata.version("browser-use") == "1.0.5"
-              browser = Browser(
-                  "chromium",
-                  headless=True,
-                  executable_path=os.environ["BU_CHROMIUM_EXEC"],
-                  allowed_domains=["127.0.0.1", "localhost"],
-              )
-              assert browser.use_cloud is False
-              try:
-                  env = await asyncio.wait_for(browser.start(), timeout=30)
-                  assert env, "browser-harness returned no local session"
-                  print("BROWSER_USE_105_LOCAL_START_OK")
-              finally:
-                  await browser.stop()
-              print("BROWSER_USE_105_LOCAL_STOP_OK")
+              with tempfile.TemporaryDirectory(prefix="browser-use-105-") as profile:
+                  # Chrome sem sandbox SOMENTE nesta VM efêmera, em about:blank, com CDP no loopback.
+                  chrome = subprocess.Popen(
+                      [
+                          os.environ["BU_CHROMIUM_EXEC"],
+                          "--headless=new", "--no-sandbox", "--disable-gpu",
+                          "--disable-dev-shm-usage",
+                          "--remote-debugging-address=127.0.0.1",
+                          "--remote-debugging-port=0",
+                          f"--user-data-dir={profile}",
+                          "about:blank",
+                      ],
+                      stdin=subprocess.DEVNULL,
+                      stdout=subprocess.DEVNULL,
+                      stderr=subprocess.DEVNULL,
+                  )
+                  browser = None
+                  try:
+                      port_file = Path(profile) / "DevToolsActivePort"
+                      for _ in range(150):
+                          if port_file.is_file():
+                              break
+                          if chrome.poll() is not None:
+                              raise RuntimeError("Chrome encerrou antes de criar o CDP local")
+                          await asyncio.sleep(0.2)
+                      else:
+                          raise TimeoutError("Chrome não abriu o CDP local em 30 segundos")
+                      port = int(port_file.read_text().splitlines()[0])
+                      browser = Browser(
+                          cdp_url=f"http://127.0.0.1:{port}",
+                          allowed_domains=["127.0.0.1", "localhost"],
+                      )
+                      assert not browser.use_cloud
+                      session = await asyncio.wait_for(browser.start(), timeout=30)
+                      assert session, "Browser Use não abriu a sessão local"
+                      print("BROWSER_USE_105_LOCAL_CDP_START_OK")
+                  finally:
+                      if browser is not None:
+                          await browser.stop()
+                      chrome.terminate()
+                      try:
+                          chrome.wait(timeout=5)
+                      except subprocess.TimeoutExpired:
+                          chrome.kill()
+                          chrome.wait(timeout=5)
+                  print("BROWSER_USE_105_LOCAL_CDP_STOP_OK")
 
           asyncio.run(smoke())
           PY
