@@ -560,14 +560,15 @@ export const WhatsAppFunnel = () => {
       openFunnel(loc, detail.message);
     };
     window.addEventListener("wa-funnel:open", evHandler as EventListener);
+    (window as unknown as { __waFunnelBridgeReady?: boolean }).__waFunnelBridgeReady = true;
 
     // Drena cliques capturados antes da hidratação (buffer do __root).
-    const fila = (window as unknown as { __waFunnelQueue?: Array<{ location?: string }> }).__waFunnelQueue;
+    const fila = (window as unknown as { __waFunnelQueue?: Array<{ location?: string; message?: string }> }).__waFunnelQueue;
     if (fila && fila.length) {
       const primeiro = fila[0];
       (window as unknown as { __waFunnelQueue: unknown[] }).__waFunnelQueue = [];
       trackCTAClick("whatsapp", primeiro?.location || "float");
-      openFunnel(primeiro?.location || "float");
+      openFunnel(primeiro?.location || "float", primeiro?.message);
     }
 
 
@@ -593,6 +594,7 @@ export const WhatsAppFunnel = () => {
     return () => {
       document.removeEventListener("click", handler, true);
       window.removeEventListener("wa-funnel:open", evHandler as EventListener);
+      (window as unknown as { __waFunnelBridgeReady?: boolean }).__waFunnelBridgeReady = false;
       window.open = originalOpen;
     };
   }, [openFunnel]);

@@ -171,7 +171,7 @@ async function checkStaticHtml(posts) {
     return;
   }
 
-  
+
   // O snapshot SSR roda antes deste gate em deploy:check.
   const indexHtml = path.join(DIST, "index.html");
   if (!(await exists(indexHtml))) {
