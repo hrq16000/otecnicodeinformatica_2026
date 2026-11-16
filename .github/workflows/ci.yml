@@ -168,6 +168,20 @@ jobs:
           CI: "true"
       - name: Wait for server
         run: npx wait-on http-get://127.0.0.1:8080/ --timeout 90000
+      # Piloto isolado: diagnóstico não bloqueante; não modifica os gates E2E.
+      - name: Agent Browser 0.43.0 smoke (preview local, sem credenciais)
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          pilot_dir="$RUNNER_TEMP/agent-browser-smoke"
+          mkdir -p "$pilot_dir"
+          npm install --prefix "$pilot_dir" --ignore-scripts --no-audit --no-fund --no-save agent-browser@0.43.0
+          agent_browser="$pilot_dir/node_modules/.bin/agent-browser"
+          chromium_path="$(node -e 'process.stdout.write(require("@playwright/test").chromium.executablePath())')"
+          "$agent_browser" --version
+          "$agent_browser" --session oti-smoke --namespace oti-preview --executable-path "$chromium_path" --allowed-domains "127.0.0.1,localhost" open http://127.0.0.1:8080/
+          "$agent_browser" --session oti-smoke --namespace oti-preview eval '(() => { if (location.origin !== "http://127.0.0.1:8080" || !document.title.trim()) throw new Error("preview local inválido"); return document.title; })()'
+          "$agent_browser" --session oti-smoke --namespace oti-preview close
       - name: Run targeted E2E (whatsapp + termos + sitemap + como-funciona + segurança)
         run: npx playwright test e2e/whatsapp-funnel.spec.ts e2e/termos-e-condicoes.spec.ts e2e/seo-sitemap-robots.spec.ts e2e/como-funciona-mobile.spec.ts e2e/security-data-exposure.spec.ts
         env:
