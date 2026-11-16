@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "events": {
+    "project.order_created": {
+      "event_schema_version": 1,
+      "description": "Uma OS foi criada com sucesso pela administração a partir de um chamado confirmado.",
+      "privacy": {
+        "contains_pii": false,
+        "purpose": "product_analytics"
+      },
+      "properties_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source"
+        ],
+        "properties": {
+          "source": {
+            "type": "string",
+            "enum": [
+              "confirmed_lead"
+            ]
+          }
+        }
+      }
+    },
+    "project.order_service_progressed": {
+      "event_schema_version": 1,
+      "description": "Uma atualização de OS salva com sucesso registrou início ou conclusão do serviço.",
+      "privacy": {
+        "contains_pii": false,
+        "purpose": "product_analytics"
+      },
+      "properties_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "stage"
+        ],
+        "properties": {
+          "stage": {
+            "type": "string",
+            "enum": [
+              "started",
+              "completed"
+            ]
+          }
+        }
+      }
+    },
+    "project.order_status_consulted": {
+      "event_schema_version": 1,
+      "description": "A consulta retornou uma ordem de serviço existente.",
+      "privacy": {
+        "contains_pii": false,
+        "purpose": "product_analytics"
+      },
+      "properties_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "method"
+        ],
+        "properties": {
+          "method": {
+            "type": "string",
+            "enum": [
+              "local",
+              "remote"
+            ]
+          }
+        }
+      }
+    },
+    "project.problem_description_submitted": {
+      "event_schema_version": 1,
+      "description": "A descrição da caixa de problema foi gravada com sucesso.",
+      "privacy": {
+        "contains_pii": false,
+        "purpose": "product_analytics"
+      },
+      "properties_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "route_family"
+        ],
+        "properties": {
+          "route_family": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "project.whatsapp_opened": {
+      "event_schema_version": 1,
+      "description": "O visitante acionou a saída para o WhatsApp após a deduplicação.",
+      "privacy": {
+        "contains_pii": false,
+        "purpose": "product_analytics"
+      },
+      "properties_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "route_family"
+        ],
+        "properties": {
+          "route_family": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

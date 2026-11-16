@@ -3,6 +3,13 @@
 Contrato operacional para qualquer agente (humano ou automatizado) que
 trabalhe neste repositório. Vale para todas as rodadas.
 
+- SEO journey reporting uses authenticated, role-checked reads and explicit lead-to-order links; never infer an order from a WhatsApp click or match personal text.
+- Native milestone events are emitted in successful existing handlers without identifiers or personal data; internal telemetry remains a separate, bounded reporting source.
+- Browser analytics tests must mark their navigation with QA UTMs so administrative commercial counts exclude automated test traffic without deleting history.
+- Order progress metrics use persisted transition timestamps and separate started from completed; status writes compare the previous state to avoid counting stale concurrent edits.
+- Administrative order creation copies journey and origin only from the confirmed lead after role validation; QA leads cannot create commercial orders, and dashboards refresh while visible.
+- Daily completion and duration metrics use the first valid persisted milestone per order in São Paulo time; recent activity uses existing events, not heartbeats or claims of online presence.
+
 ## 1. Identidade do projeto
 
 | Item | Valor |
