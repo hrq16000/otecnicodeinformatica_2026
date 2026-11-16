@@ -1,6 +1,30 @@
 {
   "schema_version": 1,
   "events": {
+    "project.order_service_progressed": {
+      "event_schema_version": 1,
+      "description": "Uma atualização de OS salva com sucesso registrou início ou conclusão do serviço.",
+      "privacy": {
+        "contains_pii": false,
+        "purpose": "product_analytics"
+      },
+      "properties_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "stage"
+        ],
+        "properties": {
+          "stage": {
+            "type": "string",
+            "enum": [
+              "started",
+              "completed"
+            ]
+          }
+        }
+      }
+    },
     "project.order_status_consulted": {
       "event_schema_version": 1,
       "description": "A consulta retornou uma ordem de serviço existente.",
