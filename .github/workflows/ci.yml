@@ -417,7 +417,7 @@ jobs:
             if [ "$page" = home ]; then route=/; else route=/bairros/batel; fi
             npx lighthouse "http://127.0.0.1:4173$route" \
               --save-assets --output=json --output-path="reports/lcp-traces/$page" \
-              --chrome-flags="--no-sandbox --disable-dev-shm-usage" \
+              --chrome-flags="--headless=new --no-sandbox --disable-dev-shm-usage" \
               --form-factor=mobile \
               --screenEmulation.mobile=true --screenEmulation.width=412 \
               --screenEmulation.height=915 --screenEmulation.deviceScaleFactor=1.75 \
