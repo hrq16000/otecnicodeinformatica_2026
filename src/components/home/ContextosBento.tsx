@@ -9,6 +9,7 @@ const VISUAIS = {
 } as const;
 
 import { ALEM_DA_INFORMATICA, CONTEXTOS } from "@/lib/homeContextos";
+import { RedeETriagemSection } from "@/components/home/RedeETriagemSection";
 
 const track = (loc: string) => {
   if (typeof window === "undefined" || !window.gtag) return;
@@ -33,6 +34,7 @@ const PESO_CLASSES: Record<string, string> = {
  * da marca na primeira leitura.
  */
 export const ContextosBento = () => (
+  <>
   <section className="border-b border-border bg-secondary/40 py-12 md:py-16" aria-labelledby="contextos-h2">
     <div className="container mx-auto">
       <header className="max-w-2xl">
@@ -57,7 +59,7 @@ export const ContextosBento = () => (
             key={c.id}
             href={c.href}
             onClick={() => track(`contexto_${c.id}`)}
-            className={`group flex flex-col justify-between rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-lg)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
+            className={`group flex flex-col justify-between rounded-2xl border border-border bg-card p-6 transition-all motion-safe:hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-lg)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
               PESO_CLASSES[c.peso] ?? "md:col-span-2"
             }`}
           >
@@ -71,13 +73,13 @@ export const ContextosBento = () => (
                     height={256}
                     loading="lazy"
                     decoding="async"
-                    className="absolute inset-0 h-full w-full object-cover"
+                    className="absolute inset-0 h-full w-full object-cover motion-safe:transition-transform motion-safe:duration-700 motion-safe:ease-out group-hover:scale-[1.06]"
                   />
                 ) : (
                   <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,hsl(var(--accent)/0.13),transparent_58%)]" />
                 )}
                 <span className="absolute right-3 top-3 z-10 flex h-11 w-11 items-center justify-center rounded-xl border border-border/70 bg-background/95 shadow-sm backdrop-blur-sm">
-                  <Icon className="h-6 w-6 text-primary" aria-hidden="true" strokeWidth={1.7} />
+                  <Icon className="h-6 w-6 text-primary motion-safe:transition-transform motion-safe:duration-500 group-hover:scale-110" aria-hidden="true" strokeWidth={1.7} />
                 </span>
               </div>
               <span className="font-heading text-[11px] font-bold uppercase tracking-[0.14em] text-[hsl(var(--categoria))]">
@@ -132,6 +134,8 @@ export const ContextosBento = () => (
       </div>
     </div>
   </section>
+  <RedeETriagemSection />
+  </>
 );
 
 export default ContextosBento;
