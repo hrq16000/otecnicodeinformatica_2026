@@ -265,7 +265,7 @@ export const WaterCoolerTecnico = ({ variant }: { variant: Variant }) => {
                     >
                       {action}
                       <ArrowUpRight
-                        className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                        className="h-4 w-4 motion-safe:transition-transform motion-safe:group-hover:translate-x-0.5 motion-safe:group-hover:-translate-y-0.5"
                         aria-hidden="true"
                       />
                     </Link>
