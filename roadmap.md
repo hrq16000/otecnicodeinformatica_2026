@@ -1,4 +1,8 @@
 # Jornada até a OS
+- [x] Rodada atual: telas de atendimento e SEO abertas com sessão administrativa no SHA 85b8686e; origem e exclusão QA já instrumentadas. Separadas as leituras limitadas de page_view/wa_click para cliques não ocultarem visitas; 16 testes, verify 37/37 e compilação automática OK. Painel ainda apresenta amostra parcial e zero jornadas elegíveis no recorte: não comprova ausência de tráfego.
+- [ ] Sincronização externa: conectar/confirmar GitHub e branch em Project settings → Git; chat não pode puxar ou verificar o remoto externo.
+- [ ] Publicação atual: deploy:check falhou por ausência de dist/; geração manual proibida neste ambiente, nenhuma publicação solicitada. Domínio real aberto com HTTP 200 em computador-lento e Batel, versão anteriormente publicada.
+- [ ] Atendimento real: usuário não confirmou qual chamado nem resposta/status; nenhuma OS criada ou concluída. Única OS aberta na lista é teste interno, não deve inflar semana ou tempo médio.
 - [x] Tela de atendimento por OS com resposta pública persistida, primeira resposta distinta do status, gráfico por sintoma/bairro e idade em dias; 14 testes focados e verify 37/37 passaram, prévia build OK, formulário aberto com sessão admin em desktop/celular.
 - [ ] Envio de resposta e fechamento em OS real: aguardam chamado verdadeiro confirmado; única OS disponível não foi usada para fabricar atendimento.
 - [ ] Publicar: deploy:check segue bloqueado pela ausência de dist/; build manual proibido neste ambiente. Página pública aberta, mas não representa nova publicação. Checagem básica de segurança sem achados.
