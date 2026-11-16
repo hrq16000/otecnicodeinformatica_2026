@@ -30,6 +30,12 @@ fc06ad64aae844a996340093da34e4942ddc1d95:.env:generic-api-key:3
 7404dd2ed109ade1ca4712ddd81eafe2f99c22a5:src/lib/consentStore.ts:generic-api-key:11
 c25f8c58a35184322bee654a5d2b9b620816de4e:e2e/consent-mode.spec.ts:generic-api-key:12
 
+# Três identificadores públicos de sessionStorage/consentimento em commits antigos.
+# Exclusões somente por fingerprint imutável; nenhuma regra de detecção é alterada.
+0125a11a4d322973c7f2e93de193d5d5f83e8fb1:src/components/nacional/ComunidadeSocialProof.tsx:generic-api-key:12
+7e735da7ee0ecfaf6d6d9a78b536c65a0d66cf48:src/lib/consentKeys.ts:generic-api-key:3
+7e735da7ee0ecfaf6d6d9a78b536c65a0d66cf48:src/lib/consentKeys.ts:generic-api-key:4
+
 # Token CSS de duração
 048933fa60b056b8de004cf1139a7c15c5fee509:.lovable/migrate-to-tanstack/theme-port.json:generic-api-key:176
 
