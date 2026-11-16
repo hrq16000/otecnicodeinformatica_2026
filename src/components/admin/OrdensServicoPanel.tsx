@@ -37,6 +37,7 @@ interface OrdemRow {
 
 const CAMPOS =
   "id, protocolo, status, modalidade, equipamento, cliente_nome, previsao_conclusao, observacoes_publicas, created_at, sintomas, city, neighborhood_slug, marca_modelo, etapas";
+const duration=(ms:number|null)=>ms===null?"Sem registro":`${(ms/3600000).toLocaleString("pt-BR",{maximumFractionDigits:1})} h`;
 
 /**
  * Painel de ordens de serviço: busca por código único, filtros por modalidade
@@ -70,6 +71,8 @@ export const OrdensServicoPanel = () => {
 
   useEffect(() => {
     void carregar();
+    const timer=window.setInterval(()=>{if(document.visibilityState==="visible")void carregar();},30000);
+    return()=>window.clearInterval(timer);
   }, [carregar]);
 
   const modalidades = useMemo(
@@ -119,6 +122,12 @@ export const OrdensServicoPanel = () => {
         <p className="text-sm text-muted-foreground">Semanas de São Paulo. Início e conclusão são separados; histórico anterior sem transição registrada não é presumido.</p>
         <table className="mt-3 w-full text-sm"><thead><tr className="text-left"><th>Semana de</th><th>Iniciados</th><th>Concluídos</th></tr></thead><tbody>{metricas.weeks.map(([week,n])=><tr key={week}><td className="py-2">{week}</td><td>{n.started}</td><td>{n.completed}</td></tr>)}</tbody></table>
         {!metricas.weeks.length && <p className="py-3 text-muted-foreground">Sem transições registradas no período.</p>}
+        <h2 className="mt-5 text-lg font-semibold">Fechamento por dia</h2>
+        <table className="mt-3 w-full text-sm"><thead><tr className="text-left"><th>Dia · São Paulo</th><th>Criadas</th><th>Concluídas</th></tr></thead><tbody>{metricas.daily.map(([day,n])=><tr key={day}><td className="py-2">{day}</td><td>{n.created}</td><td>{n.completed}</td></tr>)}</tbody></table>
+        <h2 className="mt-5 text-lg font-semibold">Tempo médio por sintoma e bairro</h2>
+        <p className="text-sm text-muted-foreground">Resposta operacional: criação da OS até o primeiro início registrado. Conclusão: criação até serviço pronto. Não mede mensagens no WhatsApp. Amostra por transições no período.</p>
+        <div className="overflow-x-auto"><table className="mt-3 w-full text-sm"><thead><tr className="text-left"><th>Sintoma · bairro</th><th>Primeira resposta</th><th>OS medidas</th><th>Conclusão</th><th>OS medidas</th></tr></thead><tbody>{metricas.durations.map(d=><tr key={d.key}><td className="py-2">{d.key}</td><td>{duration(d.responseMs)}</td><td>{d.responseCount}</td><td>{duration(d.completionMs)}</td><td>{d.completionCount}</td></tr>)}</tbody></table></div>
+        {!metricas.durations.length && <p className="py-3 text-muted-foreground">Sem tempos registrados no período.</p>}
       </section>
       {erro && <p role="alert" className="text-destructive">Leitura incompleta: {erro}</p>}
       {carregando && <p role="status">Carregando ordens…</p>}
@@ -186,7 +195,7 @@ export const OrdensServicoPanel = () => {
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 className="font-mono text-sm font-semibold">{os.protocolo}</h3>
                 <span className="text-xs text-muted-foreground">
-                  Aberta em {new Date(os.created_at).toLocaleDateString("pt-BR")}
+                  Criada em {new Date(os.created_at).toLocaleString("pt-BR",{timeZone:"America/Sao_Paulo",dateStyle:"short",timeStyle:"short"})} · {atual.label}
                   {os.modalidade ? ` · ${os.modalidade}` : ""}
                   {os.equipamento ? ` · ${os.equipamento}` : ""}
                 </span>
