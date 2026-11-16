@@ -41,7 +41,7 @@ export function SeoJourneyPanel() {
     try { await link({data:{leadId,orderId}}); await load(); }
     catch(e) { setError(e instanceof Error ? e.message : "Falha ao vincular"); setBusy(false); }
   }
-  return <section className="mt-8 border-t border-border pt-6" aria-labelledby="jornada-os-titulo">
+  return <section className="mt-8 border-t border-border pt-6 [&_th]:pr-4 [&_td]:pr-4 [&_th]:pb-3" aria-labelledby="jornada-os-titulo">
     <div className="flex flex-wrap items-center justify-between gap-3">
       <h2 id="jornada-os-titulo" className="text-xl font-semibold">Visitas → descrição → WhatsApp → OS</h2>
       <div className="flex gap-2">
@@ -55,7 +55,7 @@ export function SeoJourneyPanel() {
     {error && <p role="alert" className="mt-4 text-destructive">{error}</p>}
     {busy && <p role="status" className="mt-4 text-muted-foreground">Carregando…</p>}
     {data?.limited && <p role="status" className="mt-4 font-medium text-destructive">Amostra parcial: limite de leitura atingido. Os números abaixo não representam todo o período.</p>}
-    {result && <>
+    {result && data && <>
       <div className="my-5 grid gap-4 sm:grid-cols-4">{[["Visitas registradas",result.visits.length],["Descrições enviadas",result.rows.length],["Descrições com OS vinculada",result.converted],["Jornadas suspeitas",result.suspected]].map(([label,value])=><div key={label} className="border-l-2 border-border pl-3"><p className="text-xs text-muted-foreground">{label}</p><p className="text-2xl font-semibold">{value}</p></div>)}</div>
       <Select value={segment} onValueChange={setSegment}><SelectTrigger className="w-52" aria-label="Agrupar visitas por"><SelectValue /></SelectTrigger><SelectContent><SelectItem value="origin">Origem</SelectItem><SelectItem value="symptom">Sintoma</SelectItem><SelectItem value="city">Cidade</SelectItem><SelectItem value="neighborhood">Bairro</SelectItem></SelectContent></Select>
       <div className="mt-3 max-h-64 overflow-auto"><table className="w-full text-sm"><thead><tr className="text-left"><th className="py-2">Grupo</th><th>Visitas</th></tr></thead><tbody>{groups.map(([label,n])=><tr key={label} className="border-t border-border"><td className="py-2">{label}</td><td>{n}</td></tr>)}</tbody></table>{!groups.length && <p className="py-4 text-muted-foreground">Sem visitas registradas no recorte.</p>}</div>
