@@ -19,6 +19,7 @@ import { PromocaoIndexPanel } from "@/components/admin/PromocaoIndexPanel";
 import { DominioDnsPanel } from "@/components/admin/DominioDnsPanel";
 import { WhatsappCliquesPanel } from "@/components/admin/WhatsappCliquesPanel";
 import { CliquesBairroPanel } from "@/components/admin/CliquesBairroPanel";
+import { VisitantesSegmentoPanel, CaixaProblemaWhatsappPanel } from "@/components/admin/VisitantesPaineis";
 import auditoriaAfirmacoes from "@/data/trustClaimsAudit.json";
 
 
@@ -315,6 +316,8 @@ export default function AdminSeo() {
         <GscSegmentosPanel />
         <WhatsappCliquesPanel />
         <CliquesBairroPanel />
+        <VisitantesSegmentoPanel />
+        <CaixaProblemaWhatsappPanel />
       </div>
 
       <GscInventarioPanel />
