@@ -8518,17 +8518,27 @@ crontab -e
           <li>Escolha "aplicativo autenticador" e leia o QR Code com o celular.</li>
           <li>Digite o código de 6 dígitos que aparecer para confirmar.</li>
           <li>Salve os <strong>códigos de recuperação</strong> oferecidos no final — imprima ou guarde num gerenciador de senhas.</li>
-          <li>Saia da conta e entre de novo para testar antes de fechar a página.</li>
+          <li>Teste o novo método em outro navegador ou aparelho sem encerrar a sessão que já funciona.</li>
         </ol>
 
         <h2>Verificação segura: não fique trancado para fora</h2>
-        <p>O problema mais comum não é invasão, é perder o celular e não conseguir entrar. Antes de ativar em muitas contas:</p>
+        <p>Perder o único aparelho de verificação pode bloquear seu acesso. Antes de ativar em muitas contas:</p>
         <ul>
           <li>Guarde os códigos de recuperação fora do celular.</li>
           <li>Use um autenticador com backup criptografado ou exportação (Microsoft Authenticator, 2FAS, Aegis).</li>
           <li>Cadastre um segundo método em contas críticas: uma chave física reserva ou um segundo aparelho.</li>
           <li>Ao trocar de celular, transfira o autenticador <strong>antes</strong> de apagar o aparelho antigo.</li>
         </ul>
+
+        <h2>Perdi ou troquei o celular da Conta Google: por onde começo?</h2>
+        <ol>
+          <li><strong>Ainda tenho o aparelho antigo e ele é confiável:</strong> mantenha-o disponível enquanto configura e testa o acesso no novo. Só depois apague ou entregue o antigo.</li>
+          <li><strong>O Gmail ainda abre em outro aparelho:</strong> preserve essa sessão. Confira as opções de segurança da Conta Google; alterar um método pode exigir nova confirmação.</li>
+          <li><strong>Tenho um método reserva:</strong> selecione “Tentar de outra forma” na tela oficial. Use uma opção que o Google realmente exibir, como outro aparelho conectado, um código alternativo guardado e não usado ou uma chave cadastrada. Recuperar seu número com a operadora só ajuda se o login oferecer SMS ou chamada; isso não transfere os códigos do autenticador.</li>
+          <li><strong>Não tenho sessão nem método disponível:</strong> abra a <a href="https://accounts.google.com/signin/recovery" className="text-accent underline">recuperação oficial da Conta Google</a>. Se possível, use seu aparelho, navegador e local habituais. Não há garantia de recuperar o acesso.</li>
+        </ol>
+        <p>Se o celular foi roubado, use um dispositivo confiável para encerrar a sessão do aparelho perdido e trocar a senha assim que tiver acesso. Revise também os métodos de verificação e recuperação vinculados ao aparelho. Se houver sinais de uso indevido, siga o <Link to="/blog/como-recuperar-conta-hackeada" className="text-accent underline">guia de resposta a uma conta comprometida</Link>.</p>
+        <p>Em uma conta de trabalho ou escola, procure o administrador pelo canal interno. Não envie senha, códigos nem QR de transferência a quem prometa desbloquear sua conta.</p>
 
         <h2>Golpes que tentam driblar o 2FA</h2>
         <ul>
@@ -8549,6 +8559,17 @@ crontab -e
         <p>Revise as contas a cada seis meses: remova aparelhos antigos da lista de dispositivos confiáveis, confirme que o e-mail e o telefone de recuperação ainda são seus e gere novos códigos de recuperação se usou algum.</p>
         <p>Para a parte de rede do escritório, que é outro assunto, veja o guia de proteção da rede Wi-Fi da empresa.</p>
 
+        <h2>Perguntas frequentes</h2>
+        <h3>Posso reaproveitar um código alternativo da Conta Google?</h3>
+        <p>Não. Use um código que ainda não foi usado. Gerar um conjunto novo invalida os códigos do conjunto anterior.</p>
+        <h3>Recuperar o mesmo número transfere os códigos do Authenticator?</h3>
+        <p>Não. O número só ajuda se o Google oferecer SMS ou chamada. A transferência dos códigos do aplicativo é um processo separado.</p>
+        <h3>Preciso sair do Gmail para testar o celular novo?</h3>
+        <p>Não. Preserve a sessão que funciona e teste a nova forma de login em outro aparelho ou navegador.</p>
+        <h3>E se perdi o celular usado na conta de trabalho ou escola?</h3>
+        <p>Procure o administrador pelo canal interno. As opções de recuperação podem depender da política da organização.</p>
+
+        <EditorialReferences slug="como-configurar-2fa-em-tudo" />
 
       </>
     ),
