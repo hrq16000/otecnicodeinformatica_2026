@@ -405,8 +405,35 @@ jobs:
         run: node scripts/report-lighthouse-summary.mjs
       - name: Budgets de performance (FCP/LCP/CLS/TTFB/TBT/INP/A11y)
         run: node scripts/check-performance-budgets.mjs
+      # Diagnóstico independente: não modifica os três runs LHCI bloqueantes.
+      - name: Capturar trace Chromium LCP (Home/Batel)
+        if: failure()
+        continue-on-error: true
+        run: |
+          npm run preview -- --port 4173 &
+          npx wait-on http-get://127.0.0.1:4173/ --timeout 90000
+          mkdir -p reports/lcp-traces
+          for page in home batel; do
+            if [ "$page" = home ]; then route=/; else route=/bairros/batel; fi
+            npx lighthouse "http://127.0.0.1:4173$route" \
+              --save-assets --output=json --output-path="reports/lcp-traces/$page" \
+              --chrome-flags="--no-sandbox --disable-dev-shm-usage" \
+              --form-factor=mobile \
+              --screenEmulation.mobile=true --screenEmulation.width=412 \
+              --screenEmulation.height=915 --screenEmulation.deviceScaleFactor=1.75 \
+              --throttling.rttMs=150 --throttling.throughputKbps=1638.4 \
+              --throttling.cpuSlowdownMultiplier=4
+          done
       - name: Regressão de LCP/CLS contra o baseline versionado
         run: npm run perf:regression
+      - name: Upload trace bruto LCP (diagnóstico)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-lcp-traces
+          path: reports/lcp-traces/
+          retention-days: 7
+          if-no-files-found: ignore
       - name: Upload resumo Lighthouse
         if: always()
         uses: actions/upload-artifact@v4
