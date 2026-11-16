@@ -8,6 +8,7 @@ import { SkeletonList } from "@/components/SkeletonSection";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { CalculadoraDeslocamento } from "@/components/CalculadoraDeslocamento";
 import { BlocosB2b4d } from "@/components/b2b/BlocosB2b4d";
+import { WaterCoolerTecnico } from "@/components/editorial/WaterCoolerTecnico";
 import { Button } from "@/components/ui/button";
 import { whatsappLink } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
@@ -150,6 +151,8 @@ const Empresas = () => {
             ))}
           </ul>
         </section>
+
+        <WaterCoolerTecnico variant="empresas" />
 
         <section id="solicitar" className="border-y border-border bg-card">
           <div className="container mx-auto grid gap-10 py-12 lg:grid-cols-[3fr_2fr]">
