@@ -308,7 +308,7 @@ export const FastHeader = () => {
             fetchpriority="high"
             // A redução no scroll usa transform (composição), não altura:
             // animar `height` aqui reflui a barra inteira e gerava CLS.
-            className="h-11 w-auto origin-left object-scale-down transition-transform duration-200 will-change-transform sm:h-12 md:h-14 [html[data-scrolled='1']_&]:scale-[0.82]"
+            className="h-9 w-auto origin-left object-scale-down transition-transform duration-200 will-change-transform sm:h-12 md:h-14 [html[data-scrolled='1']_&]:scale-[0.82]"
           />
         </a>
 
@@ -332,9 +332,9 @@ export const FastHeader = () => {
             data-cta-location="header_agendar"
             data-wa-source="whatsapp_cta"
             aria-label="Iniciar atendimento"
-            className="inline-flex min-h-11 items-center justify-center rounded-md bg-accent px-4 text-sm font-bold text-accent-foreground shadow-sm motion-surface hover:shadow-[0_18px_40px_-12px_hsl(var(--accent)/0.55)]"
+            className="inline-flex min-h-11 shrink-0 items-center justify-center whitespace-nowrap rounded-md bg-accent px-3 text-sm font-bold text-accent-foreground shadow-sm motion-surface sm:px-4 hover:shadow-[0_18px_40px_-12px_hsl(var(--accent)/0.55)]"
           >
-            <span className="sm:hidden">Atender</span>
+            <span className="sm:hidden">Ajuda</span>
             <span className="hidden sm:inline">Solicitar atendimento</span>
           </a>
 
