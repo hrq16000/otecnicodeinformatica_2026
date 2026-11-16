@@ -4,7 +4,7 @@ import { RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { readSeoJourney, linkSeoOrder } from "@/lib/seoJourney.functions";
-import { summarizeJourneys } from "@/lib/seoJourney";
+import { recentVisitGroups, summarizeJourneys } from "@/lib/seoJourney";
 import { CLUSTER_PROBLEMAS } from "@/lib/clusterProblemas";
 import {OrderWeeklyPanel} from "@/components/admin/OrderWeeklyPanel";
 import {CreateOrderFromLead} from "@/components/admin/CreateOrderFromLead";
@@ -22,6 +22,8 @@ export function SeoJourneyPanel() {
   const [busy,setBusy] = useState(false);
   const [selections,setSelections] = useState<Record<string,string>>({});
   const [segment,setSegment] = useState("origin");
+  const [now,setNow]=useState(Date.now());
+  useEffect(()=>{const timer=window.setInterval(()=>setNow(Date.now()),10000);return()=>window.clearInterval(timer);},[]);
   const load = useCallback(async () => {
     setBusy(true); setError(null);
     try { setData(await read({data:{days}})); } catch(e) { setError(e instanceof Error ? e.message : "Falha ao carregar"); }
@@ -30,6 +32,7 @@ export function SeoJourneyPanel() {
   useEffect(()=>{ void load(); },[load]);
   useEffect(()=>{const timer=window.setInterval(()=>{if(document.visibilityState==="visible")void load();},30000);return()=>window.clearInterval(timer);},[load]);
   const result = useMemo(()=> data ? summarizeJourneys(data.events,data.leads,data.orders,exclude) : null,[data,exclude]);
+  const active=useMemo(()=>recentVisitGroups(result?.visits??[],now),[result,now]);
   const groups = useMemo(()=> {
     if (segment === "page") return (result?.pages ?? []).map(p => [p.path,p.visits] as [string,number]);
     const map = new Map<string,number>();
@@ -66,6 +69,9 @@ export function SeoJourneyPanel() {
       <div className="mt-3 max-h-64 overflow-auto"><table className="w-full text-sm"><thead><tr className="text-left"><th className="py-2">Grupo</th><th>Visitas</th></tr></thead><tbody>{groups.map(([label,n])=><tr key={label} className="border-t border-border"><td className="py-2">{label}</td><td>{n}</td></tr>)}</tbody></table>{!groups.length && <p className="py-4 text-muted-foreground">Sem visitas registradas no recorte.</p>}</div>
       <h3 className="mt-6 font-semibold">Conversão por origem</h3>
       <div className="overflow-x-auto"><table className="w-full text-sm"><thead><tr className="text-left"><th className="py-2">Origem</th><th>Visitas</th><th>Com descrição</th><th>WhatsApp</th><th>Com OS</th></tr></thead><tbody>{result.origins.map(([origin,g])=><tr key={origin} className="border-t border-border"><td className="py-2">{origins[origin] ?? "Não identificada"}</td><td>{g.visits}</td><td>{g.descriptions}</td><td>{g.whatsapp}</td><td>{g.os}</td></tr>)}</tbody></table></div>
+      <h3 className="mt-6 font-semibold">Visitantes ativos por sintoma, cidade e bairro</h3>
+      <p className="mt-1 text-sm text-muted-foreground">Visitas com atividade registrada nos últimos 30 minutos, não confirmação de presença online. Testes identificados são excluídos; histórico suspeito de Batel/Centro não comprova robôs.</p>
+      <div className="mt-3 overflow-x-auto"><table className="w-full text-sm"><thead><tr className="text-left"><th>Sintoma · cidade · bairro</th><th>Visitas recentes</th><th>Última atividade</th><th>Desde o acesso</th></tr></thead><tbody>{active.map(g=><tr key={g.key} className="border-t border-border"><td className="py-3">{g.key}</td><td>{g.visits}</td><td>{date(g.last)}</td><td>{Math.floor(g.elapsedMs/60000)} min</td></tr>)}</tbody></table>{!active.length && <p className="py-4 text-muted-foreground">Sem atividade registrada nos últimos 30 minutos.</p>}</div>
       <h3 className="mt-6 font-semibold">Descrições e ordens de serviço</h3>
       <div className="mt-3 overflow-x-auto"><table className="w-full text-sm"><thead><tr className="text-left"><th>Sintoma informado</th><th>Cidade / bairro</th><th>Página de envio</th><th>Página de sintoma existente</th></tr></thead><tbody>{result.rows.map(l=> {
         const matching = CLUSTER_PROBLEMAS.find(p=>p.path === l.origin_route || p.slug === l.service_slug || p.slug === l.sintoma);
