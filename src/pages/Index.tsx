@@ -9,6 +9,7 @@ import { HomeFaqSsr } from "@/components/home/HomeFaqSsr";
 import { EncontreSuaSolucao } from "@/components/home/EncontreSuaSolucao";
 import { DiagnosticoIa } from "@/components/home/DiagnosticoIa";
 import { CondicoesAtendimento } from "@/components/home/CondicoesAtendimento";
+import { WaterCoolerTecnico } from "@/components/editorial/WaterCoolerTecnico";
 
 
 import { TrustStrip } from "@/components/TrustStrip";
@@ -102,6 +103,7 @@ const Index = () => {
         </section>
 
         <ContextosBento />
+        <WaterCoolerTecnico variant="home" />
         <EncontreSuaSolucao />
         <DiagnosticoIa />
         <CondicoesAtendimento />
