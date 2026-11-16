@@ -57,7 +57,7 @@ export const ContextosBento = () => (
             key={c.id}
             href={c.href}
             onClick={() => track(`contexto_${c.id}`)}
-            className={`group flex flex-col justify-between rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-lg)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
+            className={`group flex flex-col justify-between rounded-2xl border border-border bg-card p-6 motion-surface hover:border-accent hover:shadow-[var(--shadow-lg)] active:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
               PESO_CLASSES[c.peso] ?? "md:col-span-2"
             }`}
           >
@@ -122,7 +122,7 @@ export const ContextosBento = () => (
               <a
                 href={item.href}
                 onClick={() => track("alem_da_informatica")}
-                className="inline-flex min-h-11 items-center rounded-full border border-border bg-background px-4 text-[13px] font-medium text-foreground transition-colors hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="motion-surface inline-flex min-h-11 items-center rounded-full border border-border bg-background px-4 text-[13px] font-medium text-foreground hover:border-accent hover:bg-accent/5 hover:text-accent active:bg-accent/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
                 {item.label}
               </a>
