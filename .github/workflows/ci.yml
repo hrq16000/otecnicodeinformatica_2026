@@ -182,6 +182,46 @@ jobs:
           "$agent_browser" --session oti-smoke --namespace oti-preview --executable-path "$chromium_path" --allowed-domains "127.0.0.1,localhost" open http://127.0.0.1:8080/
           "$agent_browser" --session oti-smoke --namespace oti-preview eval '(() => { if (location.origin !== "http://127.0.0.1:8080" || !document.title.trim()) throw new Error("preview local inválido"); return document.title; })()'
           "$agent_browser" --session oti-smoke --namespace oti-preview close
+      # Somente compatibilidade do runtime: sem LLM, APIs, credenciais ou tráfego de produção.
+      - name: Browser Use 1.0.5 smoke (Chromium local e efêmero)
+        continue-on-error: true
+        env:
+          ANONYMIZED_TELEMETRY: "false"
+          BH_TELEMETRY: "0"
+          BROWSER_USE_API_KEY: ""
+        run: |
+          set -euo pipefail
+          pilot_dir="$RUNNER_TEMP/browser-use-105-smoke"
+          python3 -m venv "$pilot_dir/venv"
+          "$pilot_dir/venv/bin/python" -m pip install --disable-pip-version-check --no-input "browser-use==1.0.5"
+          chromium_path="$(node -e 'process.stdout.write(require("@playwright/test").chromium.executablePath())')"
+          export BU_CHROMIUM_EXEC="$chromium_path"
+          cd "$pilot_dir"
+          "$pilot_dir/venv/bin/python" - <<'PY'
+          import asyncio
+          import importlib.metadata
+          import os
+          from browser_use import Browser
+
+          async def smoke():
+              assert importlib.metadata.version("browser-use") == "1.0.5"
+              browser = Browser(
+                  "chromium",
+                  headless=True,
+                  executable_path=os.environ["BU_CHROMIUM_EXEC"],
+                  allowed_domains=["127.0.0.1", "localhost"],
+              )
+              assert browser.use_cloud is False
+              try:
+                  env = await asyncio.wait_for(browser.start(), timeout=30)
+                  assert env, "browser-harness returned no local session"
+                  print("BROWSER_USE_105_LOCAL_START_OK")
+              finally:
+                  await browser.stop()
+              print("BROWSER_USE_105_LOCAL_STOP_OK")
+
+          asyncio.run(smoke())
+          PY
       - name: Run targeted E2E (whatsapp + termos + sitemap + como-funciona + segurança)
         run: npx playwright test e2e/whatsapp-funnel.spec.ts e2e/termos-e-condicoes.spec.ts e2e/seo-sitemap-robots.spec.ts e2e/como-funciona-mobile.spec.ts e2e/security-data-exposure.spec.ts
         env:
