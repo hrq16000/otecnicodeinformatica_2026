@@ -15,7 +15,7 @@ const ROTAS = [
 
 for (const rota of ROTAS) {
   test(`analytics do modal em ${rota.path}`, async ({ page }) => {
-    await page.goto(`${BASE}${rota.path}`, { waitUntil: "domcontentloaded" });
+    await page.goto(`${BASE}${rota.path}?utm_source=qa&utm_medium=qa&utm_campaign=bairro_modal_test`, { waitUntil: "domcontentloaded" });
     await page.waitForFunction(() => Array.isArray((window as any).__waFunnelEvents));
 
     // Clica no primeiro CTA visível de "Agendar/Chamar"

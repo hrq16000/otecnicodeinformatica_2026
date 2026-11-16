@@ -9,6 +9,8 @@ export type JourneyLead = QaCheckable & {
   id: string; created_at: string; journey_id: string | null; equipamento: string | null;
   sintoma: string | null; city: string | null; neighborhood_slug: string | null;
   status_atendimento: string;
+  origin_route?: string | null;
+  service_slug?: string | null;
 };
 export type JourneyOs = { id: string; protocolo: string; created_at: string; status: string; lead_id: string | null; journey_id: string | null };
 
@@ -30,8 +32,13 @@ export function summarizeJourneys(events: JourneyEvent[], leads: JourneyLead[], 
   const commercial = events.filter(e => !isQaEvent(e));
   const suspected = suspiciousJourneys(commercial);
   const visits = new Map<string, { origin: string; symptom: string; city: string; neighborhood: string; first: string; wa: string | null; statusPage: string | null }>();
+  const pages = new Map<string, Set<string>>();
   for (const e of [...commercial].sort((a,b) => a.created_at.localeCompare(b.created_at))) {
     if (!e.journey_id || (excludeSuspected && suspected.has(e.journey_id))) continue;
+    if (e.event_type === "page_view" && e.path) {
+      const ids = pages.get(e.path) ?? new Set<string>();
+      ids.add(e.journey_id); pages.set(e.path, ids);
+    }
     let v = visits.get(e.journey_id);
     if (!v) {
       // Só page_view fornece o denominador; cliques órfãos não inventam visitas.
@@ -57,5 +64,5 @@ export function summarizeJourneys(events: JourneyEvent[], leads: JourneyLead[], 
     group.visits++; if (v.wa) group.whatsapp++; if (submitted.length) group.descriptions++; if (submitted.some(l => l.orders.length)) group.os++;
     origins.set(v.origin, group);
   }
-  return { visits: [...visits.values()], origins: [...origins.entries()], rows, suspected: suspected.size, converted: rows.filter(l => l.orders.length).length };
+  return { visits: [...visits.values()], pages: [...pages].map(([path,ids]) => ({path, visits:ids.size})).sort((a,b)=>b.visits-a.visits), origins: [...origins.entries()], rows, suspected: suspected.size, converted: rows.filter(l => l.orders.length).length };
 }

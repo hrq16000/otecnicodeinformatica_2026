@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { readSeoJourney, linkSeoOrder } from "@/lib/seoJourney.functions";
 import { summarizeJourneys } from "@/lib/seoJourney";
+import { CLUSTER_PROBLEMAS } from "@/lib/clusterProblemas";
 
 const origins: Record<string,string> = {seo:"Busca orgânica",social:"Redes sociais",direto:"Direto",ads:"Anúncios",referral:"Outros sites",campanha:"Campanhas",unknown:"Não identificada"};
 const date = (iso: string | null) => iso ? new Date(iso).toLocaleString("pt-BR", {timeZone:"America/Sao_Paulo",dateStyle:"short",timeStyle:"short"}) : "—";
@@ -27,6 +28,7 @@ export function SeoJourneyPanel() {
   useEffect(()=>{ void load(); },[load]);
   const result = useMemo(()=> data ? summarizeJourneys(data.events,data.leads,data.orders,exclude) : null,[data,exclude]);
   const groups = useMemo(()=> {
+    if (segment === "page") return (result?.pages ?? []).map(p => [p.path,p.visits] as [string,number]);
     const map = new Map<string,number>();
     for(const v of result?.visits ?? []) {
       const key = segment === "symptom" ? v.symptom : segment === "city" ? v.city : segment === "neighborhood" ? v.neighborhood : origins[v.origin] ?? "Não identificada";
@@ -41,7 +43,7 @@ export function SeoJourneyPanel() {
     try { await link({data:{leadId,orderId}}); await load(); }
     catch(e) { setError(e instanceof Error ? e.message : "Falha ao vincular"); setBusy(false); }
   }
-  return <section className="mt-8 border-t border-border pt-6 [&_th]:pr-4 [&_td]:pr-4 [&_th]:pb-3" aria-labelledby="jornada-os-titulo">
+  return <section className="mt-8 min-w-0 border-t border-border pt-6 [&_th]:pr-4 [&_td]:pr-4 [&_th]:pb-3" aria-labelledby="jornada-os-titulo">
     <div className="flex flex-wrap items-center justify-between gap-3">
       <h2 id="jornada-os-titulo" className="text-xl font-semibold">Visitas → descrição → WhatsApp → OS</h2>
       <div className="flex gap-2">
@@ -57,11 +59,15 @@ export function SeoJourneyPanel() {
     {data?.limited && <p role="status" className="mt-4 font-medium text-destructive">Amostra parcial: limite de leitura atingido. Os números abaixo não representam todo o período.</p>}
     {result && data && <>
       <div className="my-5 grid gap-4 sm:grid-cols-4">{[["Visitas registradas",result.visits.length],["Descrições enviadas",result.rows.length],["Descrições com OS vinculada",result.converted],["Jornadas suspeitas",result.suspected]].map(([label,value])=><div key={label} className="border-l-2 border-border pl-3"><p className="text-xs text-muted-foreground">{label}</p><p className="text-2xl font-semibold">{value}</p></div>)}</div>
-      <Select value={segment} onValueChange={setSegment}><SelectTrigger className="w-52" aria-label="Agrupar visitas por"><SelectValue /></SelectTrigger><SelectContent><SelectItem value="origin">Origem</SelectItem><SelectItem value="symptom">Sintoma</SelectItem><SelectItem value="city">Cidade</SelectItem><SelectItem value="neighborhood">Bairro</SelectItem></SelectContent></Select>
+      <Select value={segment} onValueChange={setSegment}><SelectTrigger className="w-52" aria-label="Agrupar visitas por"><SelectValue /></SelectTrigger><SelectContent><SelectItem value="page">Página</SelectItem><SelectItem value="origin">Origem</SelectItem><SelectItem value="symptom">Sintoma</SelectItem><SelectItem value="city">Cidade</SelectItem><SelectItem value="neighborhood">Bairro</SelectItem></SelectContent></Select>
       <div className="mt-3 max-h-64 overflow-auto"><table className="w-full text-sm"><thead><tr className="text-left"><th className="py-2">Grupo</th><th>Visitas</th></tr></thead><tbody>{groups.map(([label,n])=><tr key={label} className="border-t border-border"><td className="py-2">{label}</td><td>{n}</td></tr>)}</tbody></table>{!groups.length && <p className="py-4 text-muted-foreground">Sem visitas registradas no recorte.</p>}</div>
       <h3 className="mt-6 font-semibold">Conversão por origem</h3>
       <div className="overflow-x-auto"><table className="w-full text-sm"><thead><tr className="text-left"><th className="py-2">Origem</th><th>Visitas</th><th>Com descrição</th><th>WhatsApp</th><th>Com OS</th></tr></thead><tbody>{result.origins.map(([origin,g])=><tr key={origin} className="border-t border-border"><td className="py-2">{origins[origin] ?? "Não identificada"}</td><td>{g.visits}</td><td>{g.descriptions}</td><td>{g.whatsapp}</td><td>{g.os}</td></tr>)}</tbody></table></div>
       <h3 className="mt-6 font-semibold">Descrições e ordens de serviço</h3>
+      <div className="mt-3 overflow-x-auto"><table className="w-full text-sm"><thead><tr className="text-left"><th>Sintoma informado</th><th>Cidade / bairro</th><th>Página de envio</th><th>Página de sintoma existente</th></tr></thead><tbody>{result.rows.map(l=> {
+        const matching = CLUSTER_PROBLEMAS.find(p=>p.path === l.origin_route || p.slug === l.service_slug || p.slug === l.sintoma);
+        return <tr key={l.id} className="border-t border-border"><td className="py-3">{l.sintoma || "Não informado"}</td><td>{l.city || "Não informada"} / {l.neighborhood_slug || "Não informado"}</td><td>{l.origin_route || "Não registrada"}</td><td>{matching ? <a className="text-primary underline" href={matching.path}>{matching.titulo}</a> : "Sem correspondência comprovada"}</td></tr>;
+      })}</tbody></table></div>
       <p className="mt-1 text-xs text-muted-foreground">Datas em São Paulo. Só vínculo confirmado conta como conversão; nenhuma associação por telefone ou texto é presumida.</p>
       <div className="mt-3 overflow-x-auto"><table className="w-full min-w-[850px] text-sm"><thead><tr className="text-left"><th className="py-2">Descrição enviada</th><th>Sintoma / cidade</th><th>Status do chamado</th><th>WhatsApp posterior</th><th>Página de status posterior</th><th>OS · data · status</th></tr></thead><tbody>{result.rows.map(l=><tr key={l.id} className="border-t border-border align-top"><td className="py-3">{date(l.created_at)}</td><td className="py-3">{l.sintoma || "Não identificado"}<br />{l.city || "Não identificada"}<br />{l.neighborhood_slug || "Bairro não identificado"}</td><td className="py-3">{l.status_atendimento}</td><td className="py-3">{date(l.whatsappAt)}</td><td className="py-3">{date(l.statusPageAt)}</td><td className="py-3">{l.orders.map(o=><p key={o.id}>{o.protocolo}<br />{date(o.created_at)} · {o.status}</p>)}{!l.orders.length && <div className="space-y-2"><Select value={selections[l.id]} onValueChange={v=>setSelections(p=>({...p,[l.id]:v}))}><SelectTrigger aria-label={`Vincular OS ao chamado de ${date(l.created_at)}`} className="w-52"><SelectValue placeholder="Selecionar OS real" /></SelectTrigger><SelectContent>{data.orders.filter(o=>!o.lead_id && o.created_at>=l.created_at).map(o=><SelectItem key={o.id} value={o.id}>{o.protocolo}</SelectItem>)}</SelectContent></Select><Button size="sm" variant="outline" disabled={busy || !selections[l.id]} onClick={()=>void bind(l.id)}>Confirmar vínculo</Button></div>}</td></tr>)}</tbody></table>{!result.rows.length && <p className="py-4 text-muted-foreground">Nenhuma descrição enviada no período.</p>}</div>
       <p className="mt-4 text-xs text-muted-foreground">Atualizado em {date(data.fetchedAt)}. A conversa no WhatsApp e retornos em outro dispositivo não são rastreados.</p>
