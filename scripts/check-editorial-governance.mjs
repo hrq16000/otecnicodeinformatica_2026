@@ -171,10 +171,9 @@ async function checkStaticHtml(posts) {
     return;
   }
 
-  // O prerender grava em dist/client (build SSR); builds antigos usam dist/.
-  const HTML_ROOT = (await exists(path.join(DIST, "client", "blog"))) ? path.join(DIST, "client") : DIST;
+  
   // O snapshot SSR roda antes deste gate em deploy:check.
-  const indexHtml = path.join(HTML_ROOT, "index.html");
+  const indexHtml = path.join(DIST, "index.html");
   if (!(await exists(indexHtml))) {
     fail("dist/index.html ausente no gate pós-build: gere os snapshots SSR");
     return;
@@ -182,7 +181,7 @@ async function checkStaticHtml(posts) {
 
   // Hub /blog — indexável apenas com massa editorial aprovada (>= 3).
   const hubShouldIndex = EDITORIAL_WAVE_SLUGS.length >= 3;
-  const hubPath = path.join(HTML_ROOT, "blog", "index.html");
+  const hubPath = path.join(DIST, "blog", "index.html");
   if (!(await exists(hubPath))) {
     fail("HTML do hub /blog ausente (dist/blog/index.html)");
   } else {
@@ -206,7 +205,7 @@ async function checkStaticHtml(posts) {
   const approvedPosts = posts.filter((post) => isWaveApproved(post.slug));
   let checked = 0;
   for (const post of approvedPosts) {
-    const fp = path.join(HTML_ROOT, "blog", post.slug, "index.html");
+    const fp = path.join(DIST, "blog", post.slug, "index.html");
     if (!(await exists(fp))) { fail(`artigo sem HTML próprio: /blog/${post.slug}`); continue; }
     const h = await read(fp);
     const url = `${SITE}/blog/${post.slug}`;
