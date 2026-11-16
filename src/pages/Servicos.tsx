@@ -19,6 +19,7 @@ import { LocalBusinessJsonLd } from "@/components/LocalBusinessJsonLd";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { InterlinkingBlock } from "@/components/InterlinkingBlock";
+import { WaterCoolerTecnico } from "@/components/editorial/WaterCoolerTecnico";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { ExperienciaBadge } from "@/components/social-proof/ExperienciaBadge";
 import { GarantiaNotaFiscalPagamento } from "@/components/comercial/GarantiaNotaFiscalPagamento";
@@ -348,6 +349,8 @@ const Servicos = () => {
           </div>
         </div>
       </section>
+
+      <WaterCoolerTecnico variant="servicos" />
 
       <GarantiaNotaFiscalPagamento />
 
