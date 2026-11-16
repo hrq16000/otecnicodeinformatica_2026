@@ -1,6 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import {isQaEvent} from "@/lib/qaExclusion";
+import { readJourneyEventTypes } from "@/lib/journeyEventReader";
 
 export const createSeoOrder = createServerFn({method:"POST"})
   .middleware([requireSupabaseAuth])
@@ -37,13 +38,13 @@ export const readSeoJourney = createServerFn({ method: "POST" })
     if (roleError || !admin) throw new Error("Acesso restrito à administração");
     const since = new Date(Date.now() - data.days * 86400000).toISOString();
     const [events, leads, orders] = await Promise.all([
-      context.supabase.from("click_events").select("created_at,session_id,utm_source,utm_medium,utm_campaign,journey_id,event_type,path,problema,cidade,neighborhood_slug,attribution_channel").gte("created_at",since).in("event_type",["page_view","wa_click"]).order("created_at",{ascending:false}).limit(1000),
+      readJourneyEventTypes(type => context.supabase.from("click_events").select("created_at,session_id,utm_source,utm_medium,utm_campaign,journey_id,event_type,path,problema,cidade,neighborhood_slug,attribution_channel").gte("created_at",since).eq("event_type",type).order("created_at",{ascending:false}).limit(1000)),
       context.supabase.from("funnel_submissions").select("id,created_at,session_id,utm_source,utm_medium,utm_campaign,journey_id,equipamento,sintoma,city,neighborhood_slug,status_atendimento,origin_route,service_slug").gte("created_at",since).eq("equipamento","descricao_ia").order("created_at",{ascending:false}).limit(1000),
       context.supabase.from("ordens_servico").select("id,protocolo,created_at,status,lead_id,journey_id").order("created_at",{ascending:false}).limit(1000),
     ]);
-    const error = events.error ?? leads.error ?? orders.error;
+    const error = leads.error ?? orders.error;
     if (error) throw new Error(error.message);
-    return { events: events.data ?? [], leads: leads.data ?? [], orders: orders.data ?? [], since, limited: [events.data,leads.data,orders.data].some(rows => (rows?.length ?? 0) >= 1000), fetchedAt: new Date().toISOString() };
+    return { events: events.data, leads: leads.data ?? [], orders: orders.data ?? [], since, limited: events.limited || [leads.data,orders.data].some(rows => (rows?.length ?? 0) >= 1000), fetchedAt: new Date().toISOString() };
   });
 
 export const linkSeoOrder = createServerFn({method:"POST"})

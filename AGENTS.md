@@ -10,6 +10,7 @@ trabalhe neste repositório. Vale para todas as rodadas.
 - Administrative order creation copies journey and origin only from the confirmed lead after role validation; QA leads cannot create commercial orders, and dashboards refresh while visible.
 - Daily completion and duration metrics use the first valid persisted milestone per order in São Paulo time; recent activity uses existing events, not heartbeats or claims of online presence.
 - Order replies are public order updates persisted in the existing timeline through an admin-checked server function; first-response metrics use replies, not status changes, and timeline writes compare updated_at to prevent lost replies.
+- Journey page views and WhatsApp clicks use separate bounded reads so click bursts cannot displace the visit denominator; report truncation explicitly.
 
 ## 1. Identidade do projeto
 

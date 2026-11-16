@@ -1,4 +1,5 @@
 # Jornada até a OS
+- [ ] Rodada atual: conferir sincronização externa (depende de Project settings → Git); corrigir leitura de visitas por página; publicar após gates; criar/responder/concluir apenas chamado real confirmado (usuário não informou qual).
 - [x] Tela de atendimento por OS com resposta pública persistida, primeira resposta distinta do status, gráfico por sintoma/bairro e idade em dias; 14 testes focados e verify 37/37 passaram, prévia build OK, formulário aberto com sessão admin em desktop/celular.
 - [ ] Envio de resposta e fechamento em OS real: aguardam chamado verdadeiro confirmado; única OS disponível não foi usada para fabricar atendimento.
 - [ ] Publicar: deploy:check segue bloqueado pela ausência de dist/; build manual proibido neste ambiente. Página pública aberta, mas não representa nova publicação. Checagem básica de segurança sem achados.
