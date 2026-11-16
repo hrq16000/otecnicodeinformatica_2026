@@ -48,7 +48,6 @@ export function runClientInit() {
   void import("@/lib/observability").then(({ iniciarObservabilidade }) => iniciarObservabilidade());
   // RODADA 1 — trava de indexação + analytics só da propriedade própria.
   void import("@/lib/indexingPolicy").then(({ applyIndexingPolicy }) => applyIndexingPolicy());
-  void import("@/lib/analytics").then(({ initGoogleTags }) => initGoogleTags());
 
   // Tema único (claro): remove qualquer `dark` herdado e força color-scheme light.
   try {
@@ -97,4 +96,15 @@ export function runClientInit() {
     void import("@/lib/whatsappUtm").then(({ initWhatsAppUtm }) => initWhatsAppUtm());
     void import("@/lib/webVitals").then(({ initWebVitals }) => initWebVitals());
   });
+
+  // GA4/Ads não participa da primeira pintura. O Consent Mode e o stub
+  // window.gtag já existem no HTML SSR, então eventos disparados antes do
+  // download do gtag.js permanecem enfileirados no dataLayer. Adiar o script
+  // de terceiros evita competir com hidratação/LCP e reduz TBT sem perder a
+  // semântica de consentimento nem alterar qualquer budget.
+  window.setTimeout(() => {
+    runWhenIdle(() => {
+      void import("@/lib/analytics").then(({ initGoogleTags }) => initGoogleTags());
+    });
+  }, 6000);
 }
