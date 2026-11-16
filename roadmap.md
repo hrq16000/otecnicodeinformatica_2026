@@ -1,4 +1,5 @@
 # Jornada até a OS
+- [ ] Completar criação administrativa a partir de chamado, atualizar SEO periodicamente e validar sem fabricar atendimento real.
 - [x] Criar /admin/ordens, listar todas as OS com leitura paginada e agregar criações por sintoma/cidade/bairro em 7/30/90 dias; navegador administrativo validado.
 - [x] Registrar transições de status no histórico existente e medir início/conclusão semanais; 3 testes de regras e schema de evento validados.
 - [ ] Evento de criação de OS: nenhum handler de criação existente encontrado; não foi criado fluxo novo nesta instrumentação.

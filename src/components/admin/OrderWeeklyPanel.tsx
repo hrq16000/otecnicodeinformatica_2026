@@ -8,10 +8,10 @@ export function OrderWeeklyPanel(){
   const [rows,setRows]=useState<OrderMetricRow[]|null>(null);
   const [error,setError]=useState<string|null>(null);
   useEffect(()=>{let active=true;setRows(null);setError(null);
-    void (async()=>{const all:OrderMetricRow[]=[];for(let offset=0;;offset+=500){
+    const load=async()=>{const all:OrderMetricRow[]=[];for(let offset=0;;offset+=500){
       const {data,error}=await supabase.from("ordens_servico").select("created_at,status,sintomas,city,neighborhood_slug,etapas").order("id").range(offset,offset+499);
       if(!active)return;if(error){setError(error.message);return;}all.push(...(data??[]));if((data?.length??0)<500)break;
-    }setRows(all);})();return()=>{active=false;};
+    }setRows(all);};void load();const timer=window.setInterval(()=>{if(document.visibilityState==="visible")void load();},30000);return()=>{active=false;window.clearInterval(timer);};
   },[]);
   const summary=summarizeOrders(rows??[],days);
   return <section className="mt-8 border-t border-border pt-6"><div className="flex flex-wrap items-center justify-between gap-3"><h2 className="text-xl font-semibold">Chamados atendidos por semana</h2><Button asChild variant="outline"><a href="/admin/ordens">Ordens de serviço</a></Button></div>

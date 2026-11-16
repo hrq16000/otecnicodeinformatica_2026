@@ -7,6 +7,7 @@ trabalhe neste repositório. Vale para todas as rodadas.
 - Native milestone events are emitted in successful existing handlers without identifiers or personal data; internal telemetry remains a separate, bounded reporting source.
 - Browser analytics tests must mark their navigation with QA UTMs so administrative commercial counts exclude automated test traffic without deleting history.
 - Order progress metrics use persisted transition timestamps and separate started from completed; status writes compare the previous state to avoid counting stale concurrent edits.
+- Administrative order creation copies journey and origin only from the confirmed lead after role validation; QA leads cannot create commercial orders, and dashboards refresh while visible.
 
 ## 1. Identidade do projeto
 
