@@ -4,7 +4,7 @@ import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 
 export const respondToOrder = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
-  .inputValidator(z.object({ id: z.string().uuid(), expectedUpdatedAt: z.string(), text: z.string().trim().min(1).max(4000) }))
+  .validator((input:unknown)=>z.object({ id: z.string().uuid(), expectedUpdatedAt: z.string(), text: z.string().trim().min(1).max(4000) }).parse(input))
   .handler(async ({ data, context }) => {
     const { data: admin, error: roleError } = await context.supabase.rpc("has_role", { _user_id: context.userId, _role: "admin" });
     if (roleError || !admin) throw new Error("Acesso administrativo necessário");
