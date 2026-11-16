@@ -1,8 +1,8 @@
 # Jornada até a OS
-- [ ] Conferir CSV existente sem fabricar descrição real e comparar métricas de bairro.
-- [ ] Conectar WhatsApp Business para mensagens recebidas; clique não identifica conversa e conexão ainda ausente.
-- [ ] Ampliar visitas por página e solicitações por sintoma/cidade/bairro com comparação às páginas existentes.
-- [ ] Investigar repetição Batel/Centro e melhorar exclusão de suspeitas sem afirmar identificação perfeita.
+- [ ] CSV baixado pelo painel (25 linhas), mas descrição real não disponível: única descrição no banco marcada TESTE; filtro do CSV não confirmado.
+- [ ] Conectar WhatsApp Business para mensagens recebidas: usuário cancelou conexão; nenhuma conversa vinculada.
+- [x] Ampliar visitas por página e solicitações por sintoma/cidade/bairro com comparação exata às páginas existentes; navegador verificado em sete larguras.
+- [x] Investigar repetição Batel/Centro: teste e2e abre e clica exatamente nas duas páginas sem QA. Navegações agora marcadas QA e painel de bairros exclui QA; histórico antigo não reclassificado sem prova individual.
 - [x] Painel por origem, sintoma, cidade e bairro com filtros 7/30/90 dias e suspeitas de automação; amostra parcial sinalizada.
 - [x] Conversão da caixa de problema em OS, com data, status e vínculo administrativo explícito; testes unitários passaram, sem vínculo de produção inventado.
 - [x] Instrumentar sucessos da descrição, WhatsApp e consulta de OS sem dados pessoais; três schemas validados.
