@@ -591,7 +591,7 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
   {
     "slug": "teclado-de-notebook-nao-funciona-o-que-verificar",
     "title": "Teclado de notebook não funciona: o que verificar antes de trocar",
-    "excerpt": "Teclas mortas, teclado inteiro parado ou caracteres trocados são problemas diferentes. Como separar sujeira, configuração, cabo flat e dano por líquido antes de comprar peça.",
+    "excerpt": "Teclas sem resposta, caracteres trocados ou teclado inteiro parado? Faça testes sem abrir o notebook e saiba quando interrompê-los após contato com líquido.",
     "date": "2026-09-03",
     "readTime": "10 min",
     "category": "Diagnóstico"

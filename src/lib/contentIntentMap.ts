@@ -614,8 +614,8 @@ export const CONTENT_INTENT_MAP: ContentNode[] = [
     serviceParent: "/servicos/manutencao-de-computador",
     bridgesTo: [
       "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
-      "/blog/como-limpar-notebook-por-dentro",
-      "/diagnostico-tecnico",
+      "/blog/backup-como-proteger-seus-arquivos",
+      "/servicos/manutencao-de-notebook",
     ],
     doNotDuplicate: [
       "/blog/notebook-nao-liga-o-que-fazer",
@@ -623,7 +623,7 @@ export const CONTENT_INTENT_MAP: ContentNode[] = [
     ],
     novaNestaRodada: true,
     justificativa:
-      "Periférico integrado com testes próprios (teclado externo como divisor, layout, cabo flat, líquido). Não repete o roteiro de máquina que não liga nem o de USB não reconhecido.",
+      "Periférico integrado com testes próprios (comparação USB, layout e acessibilidade), limites do diagnóstico sem desmontagem e parada por líquido. Não repete o roteiro de máquina que não liga nem o de USB não reconhecido.",
   },
   {
     url: "/blog/computador-desliga-sozinho-o-que-verificar",

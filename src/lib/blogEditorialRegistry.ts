@@ -596,7 +596,7 @@ const WAVE_9C: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-10-01",
+    reviewedAt: "2026-11-09",
     approvedAt: "2026-08-25",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 2.5",
@@ -1139,14 +1139,14 @@ const WAVE_11F: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-03",
+    reviewedAt: "2026-11-11",
     approvedAt: "2026-09-03",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: Gugalcrom123 (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:HP_laptop_keyboard.jpg",
     notes:
-      "Diagnóstico de teclado interno escrito do zero na Onda 11F: separa teclado inteiro parado, teclas mortas, layout errado e dano por líquido, com teste do teclado externo como divisor. Não repete o roteiro de notebook que não liga nem o de USB não reconhecido. Capa é fotografia real licenciada, sem IA.",
+      "Diagnóstico de teclado interno da Onda 11F revisto em 2026-11-11: testes sem desmontagem, limites de inferência, parada por líquido e fontes oficiais. URL, data de aprovação e fotografia licenciada preservadas.",
   },
   {
     slug: "computador-desliga-sozinho-o-que-verificar",
@@ -1167,7 +1167,7 @@ const WAVE_11F: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-09-14",
+    reviewedAt: "2026-11-12",
     approvedAt: "2026-09-14",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
@@ -1213,7 +1213,7 @@ const WAVE_11G: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-10-01",
+    reviewedAt: "2026-11-13",
     approvedAt: "2026-09-03",
     imageOrigin: "licensed",
     imageLicense: "CC BY 4.0",
@@ -1723,14 +1723,14 @@ const WAVE_12C: EditorialApproval[] = [
     status: "approved",
     authorType: "organization",
     authorId: INSTITUTIONAL_AUTHOR.id,
-    reviewedAt: "2026-10-01",
+    reviewedAt: "2026-11-10",
     approvedAt: "2026-08-12",
     imageOrigin: "licensed",
     imageLicense: "CC BY-SA 4.0",
     imageAttribution:
       "Foto: BrayLockBoy (Wikimedia Commons), CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:MEMZ_Trojan_running_on_Samsung_N130,_13_December_2019.jpg",
     notes:
-      "Revisão material em 2026-10-01 guiada por GSC real de página: 2 impressões, 0 cliques e posição média 28 no período fechado até 2026-09-28. Sem query individual exposta; nenhuma foi inventada. A versão suplementar preserva a URL e aprofunda contenção, Defender, credenciais, backup, ransomware, reinfecção e critérios de reinstalação.",
+      "Revisão material em 2026-10-01 guiada por GSC real de página: 2 impressões, 0 cliques e posição média 28 no período fechado até 2026-09-28. Sem query individual exposta; nenhuma foi inventada. A versão suplementar preserva a URL e aprofunda contenção, Defender, credenciais, backup, ransomware, reinfecção e critérios de reinstalação. Revisão de 2026-11-10 aprofunda a triagem de adware recorrente, sincronização e políticas de navegador.",
   },
 ];
 

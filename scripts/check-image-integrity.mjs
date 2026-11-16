@@ -18,6 +18,7 @@
 import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import path from "node:path";
+import { BASE_URL, SITE_CONFIGURED } from "./lib/site-env.mjs";
 
 const DIST = path.resolve(process.argv[2]?.startsWith("--") ? "dist" : process.argv[2] || "dist");
 const STRICT = process.argv.includes("--strict");
@@ -85,16 +86,31 @@ for (const file of htmlFiles.sort()) {
     m[1].split(",").forEach((p) => srcs.add(p.trim().split(/\s+/)[0]));
 
   const imagens = [];
+  const seen = new Set();
   for (const src of srcs) {
-    if (!src.startsWith("/") || !RASTER.test(src)) continue;
-    const rel = src.split("?")[0];
+    let parsed;
+    try {
+      if (src.startsWith("/") && !src.startsWith("//")) {
+        parsed = new URL(src, BASE_URL || "https://local.invalid");
+      } else if (/^https?:\/\//i.test(src) && SITE_CONFIGURED) {
+        parsed = new URL(src);
+      } else {
+        continue;
+      }
+    } catch {
+      continue;
+    }
+    if (SITE_CONFIGURED && parsed.origin !== new URL(BASE_URL).origin) continue;
+    const rel = parsed.pathname;
+    if (!RASTER.test(rel) || seen.has(rel)) continue;
+    seen.add(rel);
     // dist/ (snapshots SSR) e dist/client/ (assets do build TanStack Start).
     const abs = [path.join(DIST, rel), path.join(DIST, "client", rel)].find((p) => existsSync(p)) ?? path.join(DIST, rel);
     if (!existsSync(abs)) {
       errors.push(`${route}: imagem ausente no build → ${src}`);
       continue;
     }
-    if (AI_NAME.test(src)) {
+    if (AI_NAME.test(rel)) {
       errors.push(`${route}: nome de arquivo sinaliza imagem de IA → ${src}`);
       continue;
     }
@@ -109,9 +125,9 @@ for (const file of htmlFiles.sort()) {
     }
     const hash = createHash("sha256").update(buf).digest("hex").slice(0, 16);
     const sig = blockSignature(buf);
-    byHash.set(hash, new Set([...(byHash.get(hash) ?? []), src]));
-    bySignature.set(sig, new Set([...(bySignature.get(sig) ?? []), src]));
-    imagens.push({ src, bytes: buf.length, hash, sig, exif: Boolean(exif) });
+    byHash.set(hash, new Set([...(byHash.get(hash) ?? []), rel]));
+    bySignature.set(sig, new Set([...(bySignature.get(sig) ?? []), rel]));
+    imagens.push({ src: rel, bytes: buf.length, hash, sig, exif: Boolean(exif) });
   }
   paginas.push({ route, total: imagens.length, imagens });
 }

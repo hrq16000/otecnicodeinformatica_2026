@@ -1,203 +1,96 @@
 import { test, expect } from "@playwright/test";
-import { readFileSync, existsSync, readdirSync } from "fs";
-import { resolve } from "path";
+import { readFileSync, readdirSync } from "node:fs";
+import { resolve } from "node:path";
 import { SITE_URL } from "./site-env";
 
-// ─────────────────────────────────────────────────────────────
-// GOVERNANÇA EDITORIAL FAIL-CLOSED (substitui blog-sitemap-new-urls.spec.ts)
-//
-// O teste antigo codificava a estratégia fail-open (blog/artigos DENTRO do
-// sitemap, cada URL 200 + canonical self como conteúdo indexável). Essa
-// política foi revertida. Este teste valida a política ATUAL:
-//   - registro editorial vazio (zero aprovados);
-//   - /blog e os 157 artigos em noindex,follow, canonical self;
-//   - autoria institucional (sem Person / cargo fictício);
-//   - blog/problemas/marcas AUSENTES dos sitemaps;
-//   - sitemap principal = 33 URLs comerciais.
-// O teste FALHA se a política voltar a ser fail-open.
-// ─────────────────────────────────────────────────────────────
+// Amostras fixas: não derivar o esperado da mesma implementação que gera o HTML.
+const APPROVED = [
+  "erro-no-bootable-device-como-resolver",
+  "como-remover-virus-windows-iniciantes",
+  "teclado-de-notebook-nao-funciona-o-que-verificar",
+  "computador-nao-conecta-na-internet-por-cabo",
+  "arquivo-corrompido-nao-abre-o-que-fazer",
+] as const;
+const DRAFTS = ["como-detectar-invasao-rede", "como-configurar-rede-linux-netplan"] as const;
 
-const SITE = SITE_URL;
+const urlFor = (slug: string) => `${SITE_URL}/blog/${slug}`;
 const BASE = process.env.E2E_BASE_URL ?? "http://localhost:4173";
-const DIST = (p: string) => resolve("dist", p);
 
-// Amostra representativa exigida pelo prompt.
-const SAMPLE = {
-  manualAlinhado: "como-instalar-windows-11-do-zero",
-  manualOffTopic: "como-montar-pc-gamer-2026",
-  programatico: "pc-nao-liga-o-que-fazer",
-  seguranca: "como-detectar-invasao-rede",
-  redes: "como-configurar-rede-linux-netplan",
-};
-const SAMPLE_SLUGS = Object.values(SAMPLE);
+type JsonNode = Record<string, unknown>;
 
-function readDist(rel: string): string {
-  const fp = DIST(rel);
-  expect(existsSync(fp), `arquivo ausente em dist: ${rel} (rode npm run build)`).toBeTruthy();
-  return readFileSync(fp, "utf8");
+function nodes(value: unknown): JsonNode[] {
+  if (Array.isArray(value)) return value.flatMap(nodes);
+  if (!value || typeof value !== "object") return [];
+  const obj = value as JsonNode;
+  return [obj, ...Object.values(obj).flatMap(nodes)];
 }
 
-// ── 1. Registro editorial fail-closed ──────────────────────
-test.describe("Registro editorial (fail-closed)", () => {
-  const src = readFileSync(resolve("src/lib/blogEditorialRegistry.ts"), "utf8");
+function hasType(node: JsonNode, type: string): boolean {
+  return node["@type"] === type || (Array.isArray(node["@type"]) && node["@type"].includes(type));
+}
 
-  test("zero artigos aprovados — nenhum .set() de aprovação", () => {
-    expect(src).toContain("APPROVED_EDITORIAL_CONTENT = new Map");
-    expect(src, "nenhum artigo pode estar cadastrado como aprovado").not.toMatch(
-      /APPROVED_EDITORIAL_CONTENT\.set\(/,
-    );
-  });
+function checkRobotsAndCanonical(html: string, canonicalUrl: string, approved: boolean) {
+  expect(SITE_URL, "defina VITE_SITE_DOMAIN para validar o domínio canônico").not.toBe("");
+  const canon = [...html.matchAll(/<link\b[^>]*\brel=["']canonical["'][^>]*>/gi)];
+  expect(canon).toHaveLength(1);
+  expect(canon[0][0].match(/\bhref=["']([^"']+)["']/i)?.[1]).toBe(canonicalUrl);
 
-  test("slug não registrado é tratado como draft (padrão fail-closed)", () => {
-    expect(src).toMatch(/\?\?\s*"draft"/);
-  });
+  const robots = [...html.matchAll(/<meta\b[^>]*\bname=["']robots["'][^>]*>/gi)];
+  expect(robots).toHaveLength(1);
+  const directives = (robots[0][0].match(/\bcontent=["']([^"']+)["']/i)?.[1] ?? "")
+    .toLowerCase().split(",").map((directive) => directive.trim());
+  expect(directives).toContain("follow");
+  expect(directives).not.toContain("nofollow");
+  expect(directives).not.toContain(approved ? "noindex" : "index");
+  if (!approved) expect(directives).toContain("noindex");
+  expect(directives).not.toContain("none");
+}
 
-  test("categoria/tema não aprova conteúdo — aprovação exige status approved", () => {
-    expect(src).toMatch(/status\s*!==\s*"approved"/);
-    expect(src, "indexabilidade não pode depender de categoria off-topic").not.toMatch(
-      /OFF_TOPIC|isOffTopicCategory/,
-    );
-  });
+function checkArticle(html: string, slug: string, approved: boolean) {
+  checkRobotsAndCanonical(html, urlFor(slug), approved);
 
-  test("aprovação exige imagem legítima e data real (não futura)", () => {
-    expect(src).toMatch(/imageOrigin\s*===\s*"unknown"/);
-    expect(src).toMatch(/approvedAt/);
-    expect(src).toMatch(/>\s*Date\.now\(\)/);
-  });
-});
+  const jsonLd = [...html.matchAll(/<script\b[^>]*\btype=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)]
+    .flatMap(([, raw]) => nodes(JSON.parse(raw)));
+  expect(jsonLd.some((node) => hasType(node, "BreadcrumbList"))).toBe(true);
 
-// ── 2. Hub /blog no HTML estático ──────────────────────────
-test.describe("Hub /blog (estático)", () => {
-  let html: string;
-
-  test.beforeAll(() => {
-    html = readDist("blog/index.html");
-  });
-
-  test("canonical self-referente único", () => {
-    const canon = html.match(/<link\s+rel=["']canonical["'][^>]*>/gi) || [];
-    expect(canon.length).toBe(1);
-    expect(canon[0]).toContain(`${SITE}/blog`);
-  });
-
-  test("robots noindex,follow", () => {
-    const robots = html.match(/<meta\s+name=["']robots["']\s+content=["']([^"']+)["']/i);
-    expect(robots?.[1] ?? "").toMatch(/noindex/);
-  });
-
-  test("nenhum tipo Person/BlogPosting no JSON-LD", () => {
-    for (const block of html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g) || []) {
-      const json = JSON.parse(block.replace(/^<script[^>]*>/, "").replace(/<\/script>$/, ""));
-      expect(JSON.stringify(json)).not.toContain('"@type":"Person"');
-      expect(JSON.stringify(json)).not.toContain('"@type":"BlogPosting"');
-    }
-  });
-});
-
-// ── 3. Artigos (amostra) no HTML estático ──────────────────
-test.describe("Artigos em noindex,follow (estático)", () => {
-  for (const [tipo, slug] of Object.entries(SAMPLE)) {
-    test(`/blog/${slug} (${tipo}) — HTML próprio noindex,follow + canonical self`, () => {
-      const html = readDist(`blog/${slug}/index.html`);
-      const url = `${SITE}/blog/${slug}`;
-
-      const robots = html.match(/<meta\s+name=["']robots["'][^>]*>/gi) || [];
-      expect(robots.length).toBe(1);
-      expect(robots[0]).toMatch(/noindex,\s*follow/i);
-
-      const canon = html.match(/<link\s+rel=["']canonical["'][^>]*>/gi) || [];
-      expect(canon.length).toBe(1);
-      expect(canon[0]).toContain(url);
-
-      // Autoria institucional — nada de Person / cargo fictício.
-      for (const block of html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g) || []) {
-        const raw = block.replace(/^<script[^>]*>/, "").replace(/<\/script>$/, "");
-        JSON.parse(raw); // deve parsear
-        expect(raw).not.toContain('"@type":"Person"');
-        expect(raw).not.toContain("Técnico de Informática Sênior");
-        expect(raw).not.toContain("jobTitle");
-        expect(raw, 'publisher/autor deve ser "O Técnico de Informática"').not.toMatch(
-          /"(publisher|author)":\s*\{[^}]*"O Técnico de Informática"/,
-        );
-      }
-      expect(html).toContain('og:site_name" content="O Técnico de Informática"');
-    });
+  const articles = jsonLd.filter((node) => ["BlogPosting", "Article", "TechArticle"].some((type) => hasType(node, type)));
+  expect(articles).toHaveLength(approved ? 1 : 0);
+  if (approved) {
+    expect(articles[0].url).toBe(urlFor(slug));
+    expect(articles[0].author).toMatchObject({ "@type": "Organization", url: SITE_URL });
+    expect(articles[0].publisher).toMatchObject({ "@type": "Organization", url: SITE_URL });
   }
-});
+}
 
-// ── 4. Sitemaps: nenhuma família editorial ─────────────────
-test.describe("Sitemaps (fail-closed)", () => {
-  const publicDir = resolve("public");
-  const sitemaps = readdirSync(publicDir).filter((f) => /^sitemap.*\.xml$/.test(f));
+test.describe("Contrato editorial: aprovados entram, rascunhos permanecem fora", () => {
+  // A matriz executa o preview SSR; os snapshots em dist/ são gerados pelo gate
+  // snapshot:dist, em outro job. Aqui validamos a resposta HTTP antes da hidratação.
+  test("hub /blog: HTML servido indexável com canônica própria", async ({ request }) => {
+    const response = await request.get(`${BASE}/blog`, { maxRedirects: 0 });
+    expect(response.status()).toBe(200);
+    checkRobotsAndCanonical(await response.text(), `${SITE_URL}/blog`, true);
+  });
 
-  test("nenhum sitemap referencia /blog, /problemas ou /marcas", () => {
-    for (const f of sitemaps) {
-      const xml = readFileSync(resolve(publicDir, f), "utf8");
-      expect(xml, `${f} não pode conter /blog`).not.toMatch(/\/blog(\/|<)/);
-      expect(xml, `${f} não pode conter /problemas`).not.toMatch(/\/problemas?\//);
-      expect(xml, `${f} não pode conter /marcas`).not.toMatch(/\/marcas?\//);
+  for (const [approved, slugs] of [[true, APPROVED], [false, DRAFTS]] as const) {
+    for (const slug of slugs) {
+      test(`HTML servido /blog/${slug}: ${approved ? "aprovado" : "não aprovado"}`, async ({ request }) => {
+        const response = await request.get(`${BASE}/blog/${slug}`, { maxRedirects: 0 });
+        expect(response.status()).toBe(200);
+        checkArticle(await response.text(), slug, approved);
+      });
     }
-  });
+  }
 
-  test("nenhum slug editorial da amostra aparece nos sitemaps", () => {
-    for (const f of sitemaps) {
-      const xml = readFileSync(resolve(publicDir, f), "utf8");
-      for (const slug of SAMPLE_SLUGS) {
-        expect(xml, `${slug} não pode estar em ${f}`).not.toContain(`/blog/${slug}`);
-      }
-    }
-  });
-
-  test("sitemap principal = 33 URLs comerciais", () => {
-    const active = ["sitemap-main.xml", "sitemap-servicos.xml", "sitemap-regioes.xml", "sitemap-bairros.xml"];
-    let total = 0;
-    for (const f of active) {
-      const fp = resolve(publicDir, f);
-      if (existsSync(fp)) total += (readFileSync(fp, "utf8").match(/<loc>/gi) || []).length;
-    }
-    expect(total).toBe(33);
-  });
-
-  test("sitemap-news.xml vazio (sem entradas editoriais)", () => {
-    const fp = resolve(publicDir, "sitemap-news.xml");
-    if (existsSync(fp)) {
-      expect((readFileSync(fp, "utf8").match(/<url>/gi) || []).length).toBe(0);
-    }
-  });
-});
-
-// ── 5. Runtime (requer servidor + navegador) ───────────────
-test.describe("Hub /blog em runtime", () => {
-  test.beforeAll(async ({ request }) => {
-    try {
-      const r = await request.get(BASE, { timeout: 3000 });
-      test.skip(!r.ok(), `servidor ${BASE} indisponível — validação runtime bloqueada pelo ambiente`);
-    } catch {
-      test.skip(true, `servidor ${BASE} inacessível — validação runtime bloqueada pelo ambiente`);
-    }
-  });
-
-  test("/blog: H1 único, noindex, estado editorial vazio e link para /contato", async ({ page }) => {
-    await page.goto(`${BASE}/blog`, { waitUntil: "domcontentloaded" });
-
-    expect(await page.locator("h1").count()).toBe(1);
-
-    const robots = await page.locator('meta[name="robots"]').getAttribute("content");
-    expect(robots ?? "").toMatch(/noindex/);
-
-    const canonical = await page.locator('link[rel="canonical"]').getAttribute("href");
-    expect(canonical).toBe(`${SITE}/blog`);
-
-    await expect(page.getByText(/revisão editorial/i).first()).toBeVisible();
-    await expect(page.getByText(/[Pp]olítica editorial/).first()).toBeVisible();
-    expect(await page.locator('a[href="/contato"], a[href$="/contato"]').count()).toBeGreaterThan(0);
-  });
-
-  test("artigo não aprovado permanece noindex,follow em runtime", async ({ page }) => {
-    await page.goto(`${BASE}/blog/${SAMPLE.seguranca}`, { waitUntil: "domcontentloaded" });
-    const robots = await page.locator('meta[name="robots"]').getAttribute("content");
-    expect(robots ?? "").toMatch(/noindex/);
-    const canonical = await page.locator('link[rel="canonical"]').getAttribute("href");
-    expect(canonical).toBe(`${SITE}/blog/${SAMPLE.seguranca}`);
+  test("sitemaps publicam a amostra aprovada e excluem os rascunhos", () => {
+    const dir = resolve("public");
+    const files = readdirSync(dir).filter((file) => /^sitemap.*\.xml$/.test(file));
+    expect(files).toContain("sitemap-editorial.xml");
+    const locs = (xml: string) => [...xml.matchAll(/<loc>\s*([^<]+?)\s*<\/loc>/gi)].map(([, url]) => url);
+    expect(locs(readFileSync(resolve(dir, "sitemap.xml"), "utf8"))).toContain(`${SITE_URL}/sitemap-editorial.xml`);
+    const editorial = locs(readFileSync(resolve(dir, "sitemap-editorial.xml"), "utf8"));
+    const all = files.flatMap((file) => locs(readFileSync(resolve(dir, file), "utf8")));
+    const paths = all.map((url) => new URL(url, SITE_URL).pathname.replace(/\/$/, ""));
+    for (const slug of APPROVED) expect(editorial).toContain(urlFor(slug));
+    for (const slug of DRAFTS) expect(paths).not.toContain(`/blog/${slug}`);
   });
 });

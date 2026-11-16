@@ -237,6 +237,7 @@ jobs:
       - name: Wait for server (healthcheck HTTP)
         run: npx wait-on http-get://127.0.0.1:8080/ --timeout 90000
       - name: Run shard ${{ matrix.shard }}/${{ matrix.totalShards }} (${{ matrix.browser }})
+        id: run_shard
         run: npx playwright test --config=playwright.ci.config.ts --shard=${{ matrix.shard }}/${{ matrix.totalShards }}
         env:
           PW_BROWSER: ${{ matrix.browser }}
@@ -245,15 +246,33 @@ jobs:
           E2E_BASE_URL: http://localhost:8080
           E2E_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
           E2E_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
-      - name: Rerun seletivo apenas das specs que falharam (evidência de flakiness)
-        # Não substitui o resultado original: gera blob separado, claramente rotulado.
-        if: failure()
-        run: npx playwright test --config=playwright.ci.config.ts --last-failed
+      - name: Rerun seletivo apenas dos testes que falharam (evidência de flakiness)
+        # Mantém o estado original e grava a nova evidência em diretórios separados.
+        if: failure() && steps.run_shard.outcome == 'failure'
+        run: |
+          origem="test-results/${PW_BROWSER}-${PW_ORIGINAL_SHARD_TAG}/.last-run.json"
+          destino="test-results/${PW_BROWSER}-${PW_SHARD_TAG}/.last-run.json"
+          falhas=$(node -e '
+            const { failedTests } = JSON.parse(require("node:fs").readFileSync(process.argv[1], "utf8"));
+            if (!Array.isArray(failedTests) || failedTests.some(id => typeof id !== "string" || !id)) {
+              throw new Error("Estado de falhas do shard inválido");
+            }
+            console.log(failedTests.length);
+          ' "$origem")
+          if [[ "$falhas" == "0" ]]; then
+            echo "Nenhum teste falho identificado no shard original; sem rerun."
+            exit 0
+          fi
+          mkdir -p "$(dirname "$destino")"
+          cp -- "$origem" "$destino"
+          npx playwright test --config=playwright.ci.config.ts --shard="$PW_ORIGINAL_SHARD_TAG/$PW_TOTAL_SHARDS" --last-failed
         continue-on-error: true
         env:
           PW_BROWSER: ${{ matrix.browser }}
           PW_REPORT_MODE: blob
           PW_SHARD_TAG: ${{ matrix.shard }}-rerun
+          PW_ORIGINAL_SHARD_TAG: ${{ matrix.shard }}
+          PW_TOTAL_SHARDS: ${{ matrix.totalShards }}
           E2E_BASE_URL: http://localhost:8080
           E2E_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
           E2E_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
