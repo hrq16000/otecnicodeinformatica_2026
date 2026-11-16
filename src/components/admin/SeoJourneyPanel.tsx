@@ -6,6 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { readSeoJourney, linkSeoOrder } from "@/lib/seoJourney.functions";
 import { summarizeJourneys } from "@/lib/seoJourney";
 import { CLUSTER_PROBLEMAS } from "@/lib/clusterProblemas";
+import {OrderWeeklyPanel} from "@/components/admin/OrderWeeklyPanel";
 
 const origins: Record<string,string> = {seo:"Busca orgânica",social:"Redes sociais",direto:"Direto",ads:"Anúncios",referral:"Outros sites",campanha:"Campanhas",unknown:"Não identificada"};
 const date = (iso: string | null) => iso ? new Date(iso).toLocaleString("pt-BR", {timeZone:"America/Sao_Paulo",dateStyle:"short",timeStyle:"short"}) : "—";
@@ -72,5 +73,6 @@ export function SeoJourneyPanel() {
       <div className="mt-3 overflow-x-auto"><table className="w-full min-w-[850px] text-sm"><thead><tr className="text-left"><th className="py-2">Descrição enviada</th><th>Sintoma / cidade</th><th>Status do chamado</th><th>WhatsApp posterior</th><th>Página de status posterior</th><th>OS · data · status</th></tr></thead><tbody>{result.rows.map(l=><tr key={l.id} className="border-t border-border align-top"><td className="py-3">{date(l.created_at)}</td><td className="py-3">{l.sintoma || "Não identificado"}<br />{l.city || "Não identificada"}<br />{l.neighborhood_slug || "Bairro não identificado"}</td><td className="py-3">{l.status_atendimento}</td><td className="py-3">{date(l.whatsappAt)}</td><td className="py-3">{date(l.statusPageAt)}</td><td className="py-3">{l.orders.map(o=><p key={o.id}>{o.protocolo}<br />{date(o.created_at)} · {o.status}</p>)}{!l.orders.length && <div className="space-y-2"><Select value={selections[l.id]} onValueChange={v=>setSelections(p=>({...p,[l.id]:v}))}><SelectTrigger aria-label={`Vincular OS ao chamado de ${date(l.created_at)}`} className="w-52"><SelectValue placeholder="Selecionar OS real" /></SelectTrigger><SelectContent>{data.orders.filter(o=>!o.lead_id && o.created_at>=l.created_at).map(o=><SelectItem key={o.id} value={o.id}>{o.protocolo}</SelectItem>)}</SelectContent></Select><Button size="sm" variant="outline" disabled={busy || !selections[l.id]} onClick={()=>void bind(l.id)}>Confirmar vínculo</Button></div>}</td></tr>)}</tbody></table>{!result.rows.length && <p className="py-4 text-muted-foreground">Nenhuma descrição enviada no período.</p>}</div>
       <p className="mt-4 text-xs text-muted-foreground">Atualizado em {date(data.fetchedAt)}. A conversa no WhatsApp e retornos em outro dispositivo não são rastreados.</p>
     </>}
+    <OrderWeeklyPanel />
   </section>;
 }
