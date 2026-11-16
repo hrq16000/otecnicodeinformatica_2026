@@ -1,8 +1,8 @@
 # Vereditos de indexação — Onda 10C
 
-- Gerado em: 2026-09-28T05:46:40.753Z
+- Gerado em: 2026-11-16T17:09:58.405Z
 - Propriedade: `UNKNOWN` (Search Console INDISPONÍVEL — vereditos UNKNOWN)
-- Total: **26** · PUBLISHED 1 · PENDING 0 · PROBLEM 0 · UNKNOWN 25
+- Total: **26** · PUBLISHED 0 · PENDING 0 · PROBLEM 0 · UNKNOWN 26
 - Onda consolidada: **NÃO**
 
 | Lote | URL | Interno | Sitemap | IndexNow | Estado busca | Veredito |
@@ -32,6 +32,6 @@
 | 11A/4 | /blog/boot-uefi-ou-legacy-como-identificar | PUBLISHED | não | SUBMITTED | UNKNOWN | UNKNOWN |
 | 11A/4 | /blog/ordem-de-boot-na-bios-como-configurar | PUBLISHED | não | SUBMITTED | UNKNOWN | UNKNOWN |
 | 11A/4 | /blog/windows-reparo-automatico-em-loop | PUBLISHED | não | SUBMITTED | UNKNOWN | UNKNOWN |
-| CASO/0xc0000428 | /problemas/windows-nao-inicia | PUBLISHED | sim | — | INDEXED | PUBLISHED |
+| CASO/0xc0000428 | /problemas/windows-nao-inicia | PUBLISHED | sim | — | UNKNOWN | UNKNOWN |
 
 > A API do Search Console é somente leitura: ela informa o estado do índice, não solicita indexação. A submissão real ocorre por sitemap + IndexNow.
