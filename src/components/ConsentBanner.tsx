@@ -94,16 +94,18 @@ export const ConsentBanner = () => {
         padding: "10px 12px",
         boxShadow: "0 14px 30px rgba(0,0,0,.35)",
         border: "1px solid rgba(255,255,255,.12)",
-        backdropFilter: "blur(10px)",
         fontFamily: "Inter, system-ui, sans-serif",
         fontSize: "12.5px",
         lineHeight: 1.4,
       }}
     >
-      <p style={{ margin: 0, marginBottom: 8 }}>
-        Usamos <strong>cookies opcionais</strong> de análise e anúncios. Mesmo sem aceitá-los, o
-        site registra diretamente dados técnicos mínimos das interações no funil de atendimento
-        para medir etapas e conversões, sem armazenar IP, nome, telefone ou texto livre.{" "}
+      <p style={{ margin: 0 }}>
+        Usamos <strong>cookies opcionais</strong> de análise e anúncios.
+      </p>
+      <p style={{ margin: "4px 0 8px" }}>
+        Mesmo sem aceitá-los, o site registra diretamente dados técnicos mínimos das interações no
+        funil de atendimento para medir etapas e conversões, sem armazenar IP, nome, telefone ou
+        texto livre.{" "}
         <a
           href="/politica-de-privacidade#telemetria-funil"
           style={{ color: "#7dd3fc", textDecoration: "underline" }}
