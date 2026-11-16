@@ -1,4 +1,8 @@
 export type OrderMetricRow = {created_at:string; status:string; sintomas:string|null; city:string|null; neighborhood_slug:string|null; etapas:unknown};
+export function orderAgeDays(createdAt:string,now=Date.now()) {
+  const created=Date.parse(createdAt);
+  return Number.isFinite(created) && created<=now ? (now-created)/86400000 : null;
+}
 export function statusMilestone(from:string,to:string) {
   if (from === to) return null;
   if (["pronta","entregue","concluida","concluída"].includes(to) && !["pronta","entregue","concluida","concluída"].includes(from)) return "completed";
@@ -24,15 +28,18 @@ export function summarizeOrders(rows:OrderMetricRow[], days:number, now=Date.now
     const steps=(Array.isArray(row.etapas)?row.etapas:[]).filter(step=>step && typeof step==="object" && "at" in step && typeof step.at==="string").sort((a,b)=>Date.parse(a.at)-Date.parse(b.at));
     for(const step of steps) {
       if(!step || typeof step!=="object" || !("metric" in step) || !("at" in step)) continue;
-      if(typeof step.at!=="string" || !["started","completed"].includes(step.metric) || seen.has(step.metric)) continue;
+      if(typeof step.at!=="string" || !["started","completed","responded"].includes(step.metric) || seen.has(step.metric)) continue;
       const time=Date.parse(step.at);
       if(!Number.isFinite(time) || !Number.isFinite(created) || time<created || time>now)continue;
       seen.add(step.metric);
       if(time<since) continue;
       const key=[row.sintomas||"Não informado",row.neighborhood_slug||"Não informado"].join(" · ");
-      const duration=durations.get(key)??{response:[],completion:[]};
-      if(step.metric==="started")duration.response.push(time-created);else duration.completion.push(time-created);
-      durations.set(key,duration);
+      if(step.metric!=="started") {
+        const duration=durations.get(key)??{response:[],completion:[]};
+        if(step.metric==="responded")duration.response.push(time-created);else duration.completion.push(time-created);
+        durations.set(key,duration);
+      }
+      if(step.metric==="responded") continue;
       if(step.metric==="completed") {const day=localDay(time);const count=daily.get(day)??{created:0,completed:0};count.completed++;daily.set(day,count);}
       const local=new Date(time-3*3600000);
       local.setUTCDate(local.getUTCDate()-((local.getUTCDay()+6)%7));

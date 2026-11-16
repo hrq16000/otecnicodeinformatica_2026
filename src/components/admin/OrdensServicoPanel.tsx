@@ -17,6 +17,10 @@ import { Loader2, RefreshCw } from "lucide-react";
 import { normalizarStatusOs, OS_STATUS_OPTIONS } from "@/lib/os/osStatus";
 import { statusMilestone, summarizeOrders } from "@/lib/os/orderMetrics";
 import type { Json } from "@/integrations/supabase/types";
+import { useServerFn } from "@tanstack/react-start";
+import { respondToOrder } from "@/lib/os/orderAttendance.functions";
+import { OrderResponseChart } from "./OrderResponseChart";
+import { orderAgeDays } from "@/lib/os/orderMetrics";
 
 interface OrdemRow {
   id: string;
@@ -28,6 +32,7 @@ interface OrdemRow {
   previsao_conclusao: string | null;
   observacoes_publicas: string | null;
   created_at: string;
+  updated_at: string;
   sintomas: string | null;
   city: string | null;
   neighborhood_slug: string | null;
@@ -36,7 +41,7 @@ interface OrdemRow {
 }
 
 const CAMPOS =
-  "id, protocolo, status, modalidade, equipamento, cliente_nome, previsao_conclusao, observacoes_publicas, created_at, sintomas, city, neighborhood_slug, marca_modelo, etapas";
+  "id, protocolo, status, modalidade, equipamento, cliente_nome, previsao_conclusao, observacoes_publicas, created_at, updated_at, sintomas, city, neighborhood_slug, marca_modelo, etapas";
 const duration=(ms:number|null)=>ms===null?"Sem registro":`${(ms/3600000).toLocaleString("pt-BR",{maximumFractionDigits:1})} h`;
 
 /**
@@ -53,6 +58,10 @@ export const OrdensServicoPanel = () => {
   const [salvando, setSalvando] = useState<string | null>(null);
   const [dias,setDias] = useState(30);
   const [erro,setErro] = useState<string|null>(null);
+  const [selected,setSelected] = useState<string|null>(null);
+  const [reply,setReply] = useState("");
+  const sendReply=useServerFn(respondToOrder);
+  const [now,setNow]=useState(Date.now());
   const metricas=useMemo(()=>summarizeOrders(ordens,dias),[ordens,dias]);
 
   const carregar = useCallback(async () => {
@@ -66,6 +75,7 @@ export const OrdensServicoPanel = () => {
       if((data?.length??0)<500)break;
     }
     setOrdens(all);
+    setNow(Date.now());
     setCarregando(false);
   }, []);
 
@@ -101,15 +111,27 @@ export const OrdensServicoPanel = () => {
     const { error, data } = await supabase
       .from("ordens_servico")
       .update({ ...updated, updated_at: at })
-      .eq("id", id).eq("status",anterior.status).select("id").maybeSingle();
+      .eq("id", id).eq("status",anterior.status).eq("updated_at",anterior.updated_at).select("id").maybeSingle();
     setSalvando(null);
     if (error || !data) {
       toast.error(`Falha ao atualizar: ${error?.message ?? "Ordem alterada por outra pessoa; atualize a lista"}`);
       return;
     }
-    setOrdens((prev) => prev.map((o) => (o.id === id ? { ...o, ...updated } : o)));
+    setOrdens((prev) => prev.map((o) => (o.id === id ? { ...o, ...updated, updated_at:at } : o)));
     if(metric) window.__lovableEvents?.track?.("project.order_service_progressed",{stage:metric});
     toast.success("Ordem atualizada.");
+  };
+
+  const responder = async (os:OrdemRow) => {
+    if(salvando || !reply.trim()) return;
+    setSalvando(os.id);
+    try {
+      const saved=await sendReply({data:{id:os.id,expectedUpdatedAt:os.updated_at,text:reply}});
+      setOrdens(prev=>prev.map(row=>row.id===os.id?{...row,...saved}:row));
+      setReply("");
+      toast.success("Resposta publicada na consulta da ordem.");
+    } catch(e) { toast.error(e instanceof Error?e.message:"Não foi possível salvar a resposta"); }
+    finally {setSalvando(null);}
   };
 
   return (
@@ -125,7 +147,8 @@ export const OrdensServicoPanel = () => {
         <h2 className="mt-5 text-lg font-semibold">Fechamento por dia</h2>
         <table className="mt-3 w-full text-sm"><thead><tr className="text-left"><th>Dia · São Paulo</th><th>Criadas</th><th>Concluídas</th></tr></thead><tbody>{metricas.daily.map(([day,n])=><tr key={day}><td className="py-2">{day}</td><td>{n.created}</td><td>{n.completed}</td></tr>)}</tbody></table>
         <h2 className="mt-5 text-lg font-semibold">Tempo médio por sintoma e bairro</h2>
-        <p className="text-sm text-muted-foreground">Resposta operacional: criação da OS até o primeiro início registrado. Conclusão: criação até serviço pronto. Não mede mensagens no WhatsApp. Amostra por transições no período.</p>
+        <p className="text-sm text-muted-foreground">Primeira resposta publicada na OS, desde sua criação. Conclusão: criação até serviço pronto. Não inclui mensagens externas do WhatsApp.</p>
+        <OrderResponseChart rows={metricas.durations} />
         <div className="overflow-x-auto"><table className="mt-3 w-full text-sm"><thead><tr className="text-left"><th>Sintoma · bairro</th><th>Primeira resposta</th><th>OS medidas</th><th>Conclusão</th><th>OS medidas</th></tr></thead><tbody>{metricas.durations.map(d=><tr key={d.key}><td className="py-2">{d.key}</td><td>{duration(d.responseMs)}</td><td>{d.responseCount}</td><td>{duration(d.completionMs)}</td><td>{d.completionCount}</td></tr>)}</tbody></table></div>
         {!metricas.durations.length && <p className="py-3 text-muted-foreground">Sem tempos registrados no período.</p>}
       </section>
@@ -198,11 +221,23 @@ export const OrdensServicoPanel = () => {
                   Criada em {new Date(os.created_at).toLocaleString("pt-BR",{timeZone:"America/Sao_Paulo",dateStyle:"short",timeStyle:"short"})} · {atual.label}
                   {os.modalidade ? ` · ${os.modalidade}` : ""}
                   {os.equipamento ? ` · ${os.equipamento}` : ""}
+                  {` · ${orderAgeDays(os.created_at,now)?.toLocaleString("pt-BR",{maximumFractionDigits:1}) ?? "—"} dias desde a criação`}
                 </span>
               </div>
 
               <p className="mt-3 text-sm">{os.cliente_nome || "Cliente não informado"} · {os.marca_modelo || "Modelo não informado"}</p>
               <p className="text-sm">{os.sintomas || "Sintoma não informado"} · {os.city || "Cidade não informada"} · {os.neighborhood_slug || "Bairro não informado"}</p>
+              <Button variant="outline" className="mt-3" onClick={()=>{setSelected(selected===os.id?null:os.id);setReply("");}}>Atender ordem</Button>
+              {selected===os.id && <section className="mt-4 space-y-3 border-t border-border pt-4" aria-label={`Atendimento ${os.protocolo}`}>
+                <h4 className="font-semibold">Histórico de respostas</h4>
+                <div className="space-y-2">{(Array.isArray(os.etapas)?os.etapas:[]).flatMap((step,index)=>{
+                  if(!step || typeof step!=="object" || Array.isArray(step) || step.metric!=="responded" || typeof step.detalhe!=="string")return [];
+                  return <div key={index} className="border-l-2 border-primary pl-3 text-sm"><time className="text-xs text-muted-foreground">{typeof step.at==="string"?new Date(step.at).toLocaleString("pt-BR",{timeZone:"America/Sao_Paulo"}):""}</time><p className="whitespace-pre-wrap break-words">{step.detalhe}</p></div>;
+                })}</div>
+                <Label htmlFor={`reply-${os.id}`}>Resposta ao cliente (pública na consulta da OS)</Label>
+                <Textarea id={`reply-${os.id}`} value={reply} onChange={e=>setReply(e.target.value)} maxLength={4000} rows={4} />
+                <Button disabled={salvando!==null || !reply.trim()} onClick={()=>void responder(os)}>{salvando===os.id?"Salvando…":"Publicar resposta"}</Button>
+              </section>}
 
               <div className="mt-3 grid gap-3 md:grid-cols-3">
                 <div className="grid gap-1.5">
