@@ -107,6 +107,7 @@ const StatusOs = () => {
     setEstado(found ? "encontrado" : "nao-encontrado");
     if (found) {
       addOsEvento(found.protocolo, { titulo: "Consulta de status pelo site", tipo: "sistema" });
+      window.__lovableEvents?.track?.("project.order_status_consulted", { method: "local" });
     }
   }, []);
 

@@ -3,6 +3,9 @@
 Contrato operacional para qualquer agente (humano ou automatizado) que
 trabalhe neste repositório. Vale para todas as rodadas.
 
+- SEO journey reporting uses authenticated, role-checked reads and explicit lead-to-order links; never infer an order from a WhatsApp click or match personal text.
+- Native milestone events are emitted in successful existing handlers without identifiers or personal data; internal telemetry remains a separate, bounded reporting source.
+
 ## 1. Identidade do projeto
 
 | Item | Valor |
