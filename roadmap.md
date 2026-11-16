@@ -1,7 +1,9 @@
 # Jornada até a OS
-- [ ] Criar /admin/ordens, listar todas as OS e agregar criações por sintoma/cidade/bairro em 7/30/90 dias.
-- [ ] Registrar transições reais de status e medir atendimentos semanais sem confundir criação com conclusão.
-- [ ] Validar envio da caixa e vínculo explícito; conferir páginas reais e publicação quando gates permitirem.
+- [x] Criar /admin/ordens, listar todas as OS com leitura paginada e agregar criações por sintoma/cidade/bairro em 7/30/90 dias; navegador administrativo validado.
+- [x] Registrar transições de status no histórico existente e medir início/conclusão semanais; 3 testes de regras e schema de evento validados.
+- [ ] Evento de criação de OS: nenhum handler de criação existente encontrado; não foi criado fluxo novo nesta instrumentação.
+- [ ] Envio até OS não validado: publicação bloqueada por ausência de arquivos finais e única OS disponível é teste antigo. Não converter teste em atendimento real.
+- [x] Páginas públicas computador-lento e Batel abertas com HTTP 200, sem erros de navegador; versão já publicada, não nova publicação.
 - [ ] CSV baixado pelo painel (25 linhas), mas descrição real não disponível: única descrição no banco marcada TESTE; filtro do CSV não confirmado.
 - [ ] Conectar WhatsApp Business para mensagens recebidas: usuário cancelou conexão; nenhuma conversa vinculada.
 - [x] Ampliar visitas por página e solicitações por sintoma/cidade/bairro com comparação exata às páginas existentes; navegador verificado em sete larguras.
