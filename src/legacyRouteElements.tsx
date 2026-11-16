@@ -589,18 +589,18 @@ export const IdleEnhancements = () => {
 
   useEffect(() => {
     const activate = () => setEnabled(true);
-    const idleId: number = typeof window.requestIdleCallback === "function"
-      ? window.requestIdleCallback(activate, { timeout: 4500 })
-      : (globalThis.setTimeout(activate, 2500) as unknown as number);
-
-    return () => {
-      if (typeof window.cancelIdleCallback === "function") {
-        window.cancelIdleCallback(idleId);
+    // O trace Lighthouse da Home/Batel mostrou que requestIdleCallback podia
+    // disparar ainda antes do LCP e puxar chatbot, social proof, GA4 e toasters
+    // em bloco. Mantenha esses aprimoramentos fora da janela crítica do LCP.
+    const timerId = globalThis.setTimeout(() => {
+      if (typeof window.requestIdleCallback === "function") {
+        window.requestIdleCallback(activate);
       } else {
-        globalThis.clearTimeout(idleId);
+        activate();
       }
+    }, 6000);
 
-    };
+    return () => globalThis.clearTimeout(timerId);
   }, []);
 
   if (!enabled) return null;
