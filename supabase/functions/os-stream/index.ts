@@ -44,9 +44,9 @@ Deno.serve(async (req) => {
     return (data ?? []).map((o) => `${o.protocolo}:${o.status}:${o.updated_at}`).join("|");
   };
 
-  let timerPoll: number | undefined;
-  let timerBeat: number | undefined;
-  let timerFim: number | undefined;
+  let timerPoll: ReturnType<typeof setInterval> | undefined;
+  let timerBeat: ReturnType<typeof setInterval> | undefined;
+  let timerFim: ReturnType<typeof setTimeout> | undefined;
 
   const stream = new ReadableStream({
     async start(controller) {

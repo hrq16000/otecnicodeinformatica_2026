@@ -124,7 +124,7 @@ Deno.serve(async (req) => {
         const { data: signed } = await supabase.storage
           .from("os-midias")
           .createSignedUrls(paths as string[], 600);
-        fotos = (signed ?? []).map((s) => s.signedUrl).filter(Boolean);
+        fotos = (signed ?? []).map((s) => s.signedUrl).filter((u): u is string => Boolean(u));
       }
       const primeiroNome = (os.cliente_nome ?? "").trim().split(/\s+/)[0] ?? "";
       return {

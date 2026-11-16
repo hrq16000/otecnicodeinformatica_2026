@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-09-28T05:44:53.343Z",
+  "geradoEm": "2026-11-16T15:47:14.585Z",
   "baseUrl": "https://otecnicodeinformatica.com.br",
   "indexacaoLiberada": true,
-  "rotasAuditadas": 146,
+  "rotasAuditadas": 198,
   "erros": [],
   "avisos": [
     {
@@ -16,6 +16,10 @@
     {
       "rota": "/servicos/pc-gamer",
       "msg": "description com 169 chars (ideal ≤ 160)"
+    },
+    {
+      "rota": "/seguranca-dos-dados",
+      "msg": "description com 167 chars (ideal ≤ 160)"
     },
     {
       "rota": "/sobre",
@@ -46,16 +50,36 @@
       "msg": "description com 163 chars (ideal ≤ 160)"
     },
     {
+      "rota": "/bairros/santa-felicidade",
+      "msg": "title com 65 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/bairros/boa-vista",
+      "msg": "title com 65 chars (ideal ≤ 60)"
+    },
+    {
       "rota": "/bairros/bigorrilho",
-      "msg": "description com 167 chars (ideal ≤ 160)"
+      "msg": "title com 68 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/bairros/cabral",
+      "msg": "title com 62 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/bairros/afonso-pena",
+      "msg": "title com 67 chars (ideal ≤ 60)"
     },
     {
       "rota": "/bairros/cruzeiro",
-      "msg": "description com 168 chars (ideal ≤ 160)"
+      "msg": "title com 65 chars (ideal ≤ 60)"
     },
     {
       "rota": "/bairros/costeira",
-      "msg": "description com 163 chars (ideal ≤ 160)"
+      "msg": "title com 63 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/bairros/guatupe",
+      "msg": "title com 63 chars (ideal ≤ 60)"
     },
     {
       "rota": "/problemas/wifi-instavel",
@@ -96,10 +120,6 @@
     {
       "rota": "/equipamentos",
       "msg": "description com 167 chars (ideal ≤ 160)"
-    },
-    {
-      "rota": "/equipamentos/notebook",
-      "msg": "title com 68 chars (ideal ≤ 60)"
     },
     {
       "rota": "/equipamentos/desktop",
@@ -187,11 +207,123 @@
     },
     {
       "rota": "/servicos/montagem-de-pc/curitiba",
-      "msg": "description com 161 chars (ideal ≤ 160)"
+      "msg": "title com 66 chars (ideal ≤ 60)"
     },
     {
       "rota": "/servicos/suporte-home-office/curitiba",
       "msg": "description com 163 chars (ideal ≤ 160)"
+    },
+    {
+      "rota": "/servicos/suporte-empresas/curitiba",
+      "msg": "title com 61 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/atendimento-remoto/curitiba",
+      "msg": "description com 162 chars (ideal ≤ 160)"
+    },
+    {
+      "rota": "/servicos/upgrade-ssd/sao-jose-dos-pinhais",
+      "msg": "title com 67 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/montagem-de-pc/sao-jose-dos-pinhais",
+      "msg": "title com 65 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/backup-para-empresas/sao-jose-dos-pinhais",
+      "msg": "title com 66 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/conserto-pc/araucaria",
+      "msg": "title com 63 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/upgrade-ssd/araucaria",
+      "msg": "title com 62 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/suporte-empresas/araucaria",
+      "msg": "title com 65 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/suporte-tecnico-empresarial/araucaria",
+      "msg": "title com 66 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/manutencao-preventiva-empresas/araucaria",
+      "msg": "title com 64 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/backup-para-empresas/araucaria",
+      "msg": "title com 67 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/conserto-pc/campo-largo",
+      "msg": "title com 61 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/conserto-celular/campo-largo",
+      "msg": "title com 62 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/upgrade-ssd/campo-largo",
+      "msg": "title com 67 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/backup-recuperacao/campo-largo",
+      "msg": "title com 68 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/suporte-empresas/campo-largo",
+      "msg": "title com 67 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/atendimento-remoto/campo-largo",
+      "msg": "title com 65 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/montagem-de-pc/campo-largo",
+      "msg": "title com 62 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/suporte-home-office/campo-largo",
+      "msg": "title com 68 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/conserto-tv/pinhais",
+      "msg": "title com 61 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/suporte-tecnico-empresarial/pinhais",
+      "msg": "title com 68 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/conserto-tv/colombo",
+      "msg": "title com 65 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/conserto-notebook/colombo",
+      "msg": "title com 68 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/suporte-tecnico-empresarial/colombo",
+      "msg": "title com 70 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/upgrade-ssd/colombo",
+      "msg": "title com 63 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/backup-recuperacao/colombo",
+      "msg": "title com 64 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/redes-wifi/colombo",
+      "msg": "title com 69 chars (ideal ≤ 60)"
+    },
+    {
+      "rota": "/servicos/pc-gamer/colombo",
+      "msg": "title com 68 chars (ideal ≤ 60)"
     }
   ]
 }
