@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { summarizeJourneys, suspiciousJourneys, type JourneyEvent, type JourneyLead } from "./seoJourney";
+import { recentVisitGroups, summarizeJourneys, suspiciousJourneys, type JourneyEvent, type JourneyLead } from "./seoJourney";
 const event = (patch: Partial<JourneyEvent> = {}): JourneyEvent => ({ created_at: "2026-11-16T12:00:00Z", journey_id: "j1", event_type: "page_view", path: "/", problema: null, cidade: null, neighborhood_slug: null, attribution_channel: "seo", ...patch });
 const lead: JourneyLead = { id: "l1", created_at: "2026-11-16T12:01:00Z", journey_id: "j1", equipamento: "descricao_ia", sintoma: "tela", city: null, neighborhood_slug: null, status_atendimento: "novo" };
 describe("jornada até a OS", () => {
@@ -18,5 +18,9 @@ describe("jornada até a OS", () => {
     const events = Array.from({length:20}, (_,i)=> event({path:`/bairros/b${i}`}));
     expect(suspiciousJourneys(events.slice(0,19)).size).toBe(0);
     expect(suspiciousJourneys(events).has("j1")).toBe(true);
+  });
+  it("atividade recente usa último acesso em 30 minutos e não inclui QA de Batel/Centro",()=>{
+    const result=summarizeJourneys([event({created_at:"2026-11-16T11:00:00Z"}),event({created_at:"2026-11-16T12:00:00Z",cidade:"Curitiba",neighborhood_slug:"Batel",problema:"tela"}),event({journey_id:"qa",path:"/bairros/centro",utm_source:"qa"}),event({journey_id:"old",created_at:"2026-11-16T11:00:00Z"})],[],[]);
+    expect(recentVisitGroups(result.visits,Date.parse("2026-11-16T12:10:00Z"))).toEqual([{key:"tela · Curitiba · Batel",visits:1,last:"2026-11-16T12:00:00Z",elapsedMs:600000}]);
   });
 });
