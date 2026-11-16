@@ -136,6 +136,7 @@ export const ConsultaOsPorCelular = () => {
       ultimoTelefone.current = valor;
       if (!silencioso) {
         track("os_lookup_phone", { encontrou: lista.length > 0, quantidade: lista.length });
+        if (lista.length > 0) window.__lovableEvents?.track?.("project.order_status_consulted", { method: "remote" });
       }
     } catch {
       clearTimeout(timeout);

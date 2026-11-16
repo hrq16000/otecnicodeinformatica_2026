@@ -51,7 +51,7 @@ export async function recordSubmission(payload: {
     // Insert puro: visitantes anônimos têm apenas INSERT (sem SELECT) nesta
     // tabela. Um .select() aqui faria o PostgREST aplicar RETURNING, que o
     // RLS rejeita (42501) e descarta a solicitação inteira.
-    await supabase.from("funnel_submissions").insert({
+    const { error } = await supabase.from("funnel_submissions").insert({
       session_id: payload.sessionId,
       equipamento: payload.equipamento?.slice(0, 80),
       marca: payload.marca?.slice(0, 120),
@@ -71,6 +71,12 @@ export async function recordSubmission(payload: {
       landing_route: readTouchpoint("first")?.landing_route ?? null,
       ...utm,
     });
+    if (error) throw error;
+    if (payload.equipamento === "descricao_ia") {
+      window.__lovableEvents?.track?.("project.problem_description_submitted", {
+        route_family: ctx.route_family,
+      });
+    }
 
     // GA4: cada solicitação registrada vira um evento de lead (sem PII).
     try {
