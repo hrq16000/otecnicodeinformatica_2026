@@ -1,6 +1,29 @@
 {
   "schema_version": 1,
   "events": {
+    "project.order_created": {
+      "event_schema_version": 1,
+      "description": "Uma OS foi criada com sucesso pela administração a partir de um chamado confirmado.",
+      "privacy": {
+        "contains_pii": false,
+        "purpose": "product_analytics"
+      },
+      "properties_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source"
+        ],
+        "properties": {
+          "source": {
+            "type": "string",
+            "enum": [
+              "confirmed_lead"
+            ]
+          }
+        }
+      }
+    },
     "project.order_service_progressed": {
       "event_schema_version": 1,
       "description": "Uma atualização de OS salva com sucesso registrou início ou conclusão do serviço.",
