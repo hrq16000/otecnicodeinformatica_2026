@@ -3,7 +3,7 @@ import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 
 export const readSeoJourney = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
-  .inputValidator((input: { days: number }) => {
+  .validator((input: { days: number }) => {
     if (![7,30,90].includes(input.days)) throw new Error("Período inválido");
     return input;
   })
@@ -23,7 +23,7 @@ export const readSeoJourney = createServerFn({ method: "POST" })
 
 export const linkSeoOrder = createServerFn({method:"POST"})
   .middleware([requireSupabaseAuth])
-  .inputValidator((input: { leadId: string; orderId: string }) => {
+  .validator((input: { leadId: string; orderId: string }) => {
     if (![input.leadId,input.orderId].every(id => /^[0-9a-f-]{36}$/i.test(id))) throw new Error("Seleção inválida");
     return input;
   })
