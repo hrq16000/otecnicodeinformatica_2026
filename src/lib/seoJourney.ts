@@ -1,4 +1,5 @@
 import { isQaEvent, type QaCheckable } from "@/lib/qaExclusion";
+import { ehTrafegoInterno } from "@/lib/canalAtribuicao";
 
 export type JourneyEvent = QaCheckable & {
   created_at: string; journey_id: string | null; event_type: string;
@@ -29,7 +30,8 @@ export function suspiciousJourneys(events: JourneyEvent[]) {
 }
 
 export function summarizeJourneys(events: JourneyEvent[], leads: JourneyLead[], orders: JourneyOs[], excludeSuspected = true) {
-  const commercial = events.filter(e => !isQaEvent(e));
+  const excludedIds=new Set(events.filter(e=>isQaEvent(e)||ehTrafegoInterno(e)).map(e=>e.journey_id).filter((id):id is string=>Boolean(id)));
+  const commercial = events.filter(e => !isQaEvent(e) && !ehTrafegoInterno(e) && (!e.journey_id || !excludedIds.has(e.journey_id)));
   const suspected = suspiciousJourneys(commercial);
   const visits = new Map<string, { origin: string; symptom: string; city: string; neighborhood: string; first: string; last: string; wa: string | null; statusPage: string | null }>();
   const pages = new Map<string, Set<string>>();
@@ -53,7 +55,7 @@ export function summarizeJourneys(events: JourneyEvent[], leads: JourneyLead[], 
     if (e.event_type === "wa_click" && !v.wa) v.wa = e.created_at;
     if (e.path === "/status-da-ordem-de-servico" && !v.statusPage) v.statusPage = e.created_at;
   }
-  const rows = leads.filter(l => l.equipamento === "descricao_ia" && !isQaEvent(l) && (!excludeSuspected || !l.journey_id || !suspected.has(l.journey_id))).map(l => {
+  const rows = leads.filter(l => l.equipamento === "descricao_ia" && !isQaEvent(l) && !ehTrafegoInterno(l) && (!l.journey_id || !excludedIds.has(l.journey_id)) && (!excludeSuspected || !l.journey_id || !suspected.has(l.journey_id))).map(l => {
     const visit = l.journey_id ? visits.get(l.journey_id) : undefined;
     const linked = orders.filter(o => o.lead_id === l.id && o.created_at >= l.created_at);
     return { ...l, origin: visit?.origin ?? "unknown", whatsappAt: visit?.wa && visit.wa >= l.created_at ? visit.wa : null, statusPageAt: visit?.statusPage && visit.statusPage >= l.created_at ? visit.statusPage : null, orders: linked };

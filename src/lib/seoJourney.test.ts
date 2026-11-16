@@ -8,6 +8,10 @@ describe("jornada até a OS", () => {
     expect(result.pages).toEqual([{path:"/bairros/batel",visits:1},{path:"/bairros/centro",visits:1}]);
   });
   it("conta visitas sem clique e exclui QA", () => expect(summarizeJourneys([event(), event({journey_id: "qa1", utm_source: "qa"})], [], []).visits).toHaveLength(1));
+  it("exclui toda a jornada marcada como teste mesmo após navegação sem UTM",()=>{
+    expect(summarizeJourneys([event({utm_source:"playwright",path:"/bairros/batel"}),event({path:"/bairros/centro",event_type:"wa_click"}),event({path:"/bairros/centro"})],[lead],[]).visits).toHaveLength(0);
+    expect(summarizeJourneys([event({utm_source:"qa"})],[lead],[]).rows).toHaveLength(0);
+  });
   it("não conta WhatsApp anterior à descrição como passo posterior", () => expect(summarizeJourneys([event(),event({event_type: "wa_click"})], [lead], []).rows[0]?.whatsappAt).toBeNull());
   it("só converte a descrição com vínculo explícito de OS e data posterior", () => {
     const os = {id:"o1",protocolo:"OS-TEST",status:"nova",created_at:"2026-11-16T12:02:00Z",journey_id:"j1",lead_id:null};
