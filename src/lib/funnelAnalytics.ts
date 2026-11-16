@@ -500,6 +500,11 @@ function registrarConversaoClique(
     return;
   }
   persistClickEvent(eventType, location, ctx, extra);
+  if (eventType === "wa_click") {
+    window.__lovableEvents?.track?.("project.whatsapp_opened", {
+      route_family: buildRouteContext().route_family,
+    });
+  }
   if (ADS_SEND_TO) gtagReportConversion();
 }
 

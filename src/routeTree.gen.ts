@@ -115,6 +115,7 @@ import { Route as AdminLinkBuilderRouteImport } from './routes/admin_.link-build
 import { Route as AdminLoginRouteImport } from './routes/admin_.login'
 import { Route as AdminOndasRouteImport } from './routes/admin_.ondas'
 import { Route as AdminOperacaoRouteImport } from './routes/admin_.operacao'
+import { Route as AdminOrdensRouteImport } from './routes/admin_.ordens'
 import { Route as AdminPaginasRouteImport } from './routes/admin_.paginas'
 import { Route as AdminParceirosRouteImport } from './routes/admin_.parceiros'
 import { Route as AdminPerformanceLocalRouteImport } from './routes/admin_.performance-local'
@@ -1042,6 +1043,11 @@ const AdminOndasRoute = AdminOndasRouteImport.update({
 const AdminOperacaoRoute = AdminOperacaoRouteImport.update({
   id: '/admin_/operacao',
   path: '/admin/operacao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminOrdensRoute = AdminOrdensRouteImport.update({
+  id: '/admin_/ordens',
+  path: '/admin/ordens',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminPaginasRoute = AdminPaginasRouteImport.update({
@@ -3200,6 +3206,7 @@ export interface FileRoutesByFullPath {
   '/admin/login': typeof AdminLoginRoute
   '/admin/ondas': typeof AdminOndasRoute
   '/admin/operacao': typeof AdminOperacaoRoute
+  '/admin/ordens': typeof AdminOrdensRoute
   '/admin/paginas': typeof AdminPaginasRoute
   '/admin/parceiros': typeof AdminParceirosRoute
   '/admin/performance-local': typeof AdminPerformanceLocalRoute
@@ -3688,6 +3695,7 @@ export interface FileRoutesByTo {
   '/admin/login': typeof AdminLoginRoute
   '/admin/ondas': typeof AdminOndasRoute
   '/admin/operacao': typeof AdminOperacaoRoute
+  '/admin/ordens': typeof AdminOrdensRoute
   '/admin/paginas': typeof AdminPaginasRoute
   '/admin/parceiros': typeof AdminParceirosRoute
   '/admin/performance-local': typeof AdminPerformanceLocalRoute
@@ -4177,6 +4185,7 @@ export interface FileRoutesById {
   '/admin_/login': typeof AdminLoginRoute
   '/admin_/ondas': typeof AdminOndasRoute
   '/admin_/operacao': typeof AdminOperacaoRoute
+  '/admin_/ordens': typeof AdminOrdensRoute
   '/admin_/paginas': typeof AdminPaginasRoute
   '/admin_/parceiros': typeof AdminParceirosRoute
   '/admin_/performance-local': typeof AdminPerformanceLocalRoute
@@ -4667,6 +4676,7 @@ export interface FileRouteTypes {
     | '/admin/login'
     | '/admin/ondas'
     | '/admin/operacao'
+    | '/admin/ordens'
     | '/admin/paginas'
     | '/admin/parceiros'
     | '/admin/performance-local'
@@ -5155,6 +5165,7 @@ export interface FileRouteTypes {
     | '/admin/login'
     | '/admin/ondas'
     | '/admin/operacao'
+    | '/admin/ordens'
     | '/admin/paginas'
     | '/admin/parceiros'
     | '/admin/performance-local'
@@ -5643,6 +5654,7 @@ export interface FileRouteTypes {
     | '/admin_/login'
     | '/admin_/ondas'
     | '/admin_/operacao'
+    | '/admin_/ordens'
     | '/admin_/paginas'
     | '/admin_/parceiros'
     | '/admin_/performance-local'
@@ -6132,6 +6144,7 @@ export interface RootRouteChildren {
   AdminLoginRoute: typeof AdminLoginRoute
   AdminOndasRoute: typeof AdminOndasRoute
   AdminOperacaoRoute: typeof AdminOperacaoRoute
+  AdminOrdensRoute: typeof AdminOrdensRoute
   AdminPaginasRoute: typeof AdminPaginasRoute
   AdminParceirosRoute: typeof AdminParceirosRoute
   AdminPerformanceLocalRoute: typeof AdminPerformanceLocalRoute
@@ -7256,6 +7269,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/operacao'
       fullPath: '/admin/operacao'
       preLoaderRoute: typeof AdminOperacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/ordens': {
+      id: '/admin_/ordens'
+      path: '/admin/ordens'
+      fullPath: '/admin/ordens'
+      preLoaderRoute: typeof AdminOrdensRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin_/paginas': {
@@ -10031,6 +10051,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminLoginRoute: AdminLoginRoute,
   AdminOndasRoute: AdminOndasRoute,
   AdminOperacaoRoute: AdminOperacaoRoute,
+  AdminOrdensRoute: AdminOrdensRoute,
   AdminPaginasRoute: AdminPaginasRoute,
   AdminParceirosRoute: AdminParceirosRoute,
   AdminPerformanceLocalRoute: AdminPerformanceLocalRoute,

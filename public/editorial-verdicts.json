@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-28T05:46:40.753Z",
+  "geradoEm": "2026-11-16T17:09:58.405Z",
   "fonte": {
     "site": "UNKNOWN",
     "gscDisponivel": false,
@@ -7,8 +7,7 @@
   },
   "total": 26,
   "contagem": {
-    "UNKNOWN": 25,
-    "PUBLISHED": 1
+    "UNKNOWN": 26
   },
   "lotes": [
     {
@@ -62,10 +61,10 @@
     {
       "lote": "CASO/0xc0000428",
       "total": 1,
-      "published": 1,
+      "published": 0,
       "pending": 0,
       "problem": 0,
-      "unknown": 0
+      "unknown": 1
     }
   ],
   "consolidada": false,
@@ -759,13 +758,13 @@
       "sitemapLastmod": null,
       "indexNow": null,
       "indexNowEm": null,
-      "estadoBusca": "INDEXED",
-      "veredito": "PUBLISHED",
-      "motivo": "Submitted and indexed",
-      "ultimoCrawl": "2026-08-13T12:54:39Z",
-      "canonicalGoogle": "https://otecnicodeinformatica.com.br/problemas/windows-nao-inicia",
-      "canonicalDeclarado": "https://otecnicodeinformatica.com.br/problemas/windows-nao-inicia",
-      "fonteInspecao": "gsc-live",
+      "estadoBusca": "UNKNOWN",
+      "veredito": "UNKNOWN",
+      "motivo": "Sem inspeção atual da URL do caso.",
+      "ultimoCrawl": null,
+      "canonicalGoogle": null,
+      "canonicalDeclarado": null,
+      "fonteInspecao": "artefato",
       "submittedViaSitemap": true,
       "submittedViaIndexNow": false,
       "lastSubmissionAt": "2026-09-01T12:32:56.550Z",

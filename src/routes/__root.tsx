@@ -7,6 +7,7 @@ import {
   Scripts,
   useRouter,
   useRouterState,
+  type ErrorComponentProps,
 } from "@tanstack/react-router";
 import { QueryClientProvider, type QueryClient } from "@tanstack/react-query";
 import appCss from "../styles.css?url";
@@ -25,7 +26,7 @@ import { PageViewTracker } from "@/components/PageViewTracker";
 import { RouteTransition } from "@/components/motion/RouteTransition";
 import { RouteLoader } from "@/components/RouteLoader";
 import { RouteProgress } from "@/components/RouteProgress";
-import { WhatsAppFunnel } from "@/components/WhatsAppFunnel";
+import { WhatsAppFunnelOnDemand } from "@/components/WhatsAppFunnelOnDemand";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { GlobalSmartSearch } from "@/components/GlobalSmartSearch";
 import { ScrollToTop } from "@/components/ScrollToTop";
@@ -218,7 +219,7 @@ function RootComponent() {
           </JsonLdCollectorContext.Provider>
 
 
-          <WhatsAppFunnel />
+          <WhatsAppFunnelOnDemand />
           <GlobalSmartSearch />
           <WhatsAppFloat />
           <ConsentBanner />
@@ -256,7 +257,7 @@ function RootNotFound() {
   );
 }
 
-function RootErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function RootErrorComponent({ error, reset }: ErrorComponentProps) {
   const router = useRouter();
 
   useEffect(() => {

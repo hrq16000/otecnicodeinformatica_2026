@@ -111,7 +111,8 @@ test.describe("Triagem V5 — funil ramificado por equipamento", () => {
     await page.goto(`${HOME}${UTM_QS}`);
     await page.waitForLoadState("networkidle");
     await page.getByTestId("whatsapp-float").click();
-    await expect(page.getByRole("dialog")).toBeVisible({ timeout: 5000 });
+    // O banner LGPD também tem role=dialog; aguardar a triagem carregada sob demanda.
+    await expect(page.locator('[role="dialog"][data-triage="1"]')).toBeVisible({ timeout: 5000 });
 
     const eventos = await page.evaluate(() =>
       (window as unknown as { __gtagCalls: unknown[][] }).__gtagCalls
