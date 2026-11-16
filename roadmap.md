@@ -1,13 +1,12 @@
 # Jornada até a OS
-- [ ] Acrescentar fechamento diário, tempos de primeira resposta e conclusão por sintoma/bairro e visitas recentes com último acesso; validar e solicitar publicação.
+- [x] Fechamento diário, tempos de primeira resposta/conclusão e atividade nos últimos 30 min adicionados; 30 testes passaram e painéis abertos com sessão admin. Publicação aguarda gate dist/.
 - [x] Criação administrativa a partir de chamado confirmado e atualização SEO a cada 30s enquanto visível; formulário aberto com sessão admin, sem fabricar atendimento.
 - [x] Criar /admin/ordens, listar todas as OS com leitura paginada e agregar criações por sintoma/cidade/bairro em 7/30/90 dias; navegador administrativo validado.
 - [x] Registrar transições de status no histórico existente e medir início/conclusão semanais; 3 testes de regras e schema de evento validados.
 - [x] Novo fluxo solicitado de criação a partir de chamado emite project.order_created após save; cinco schemas validados.
 - [ ] Envio até OS não validado: publicação bloqueada por ausência de arquivos finais e única OS disponível é teste antigo. Não converter teste em atendimento real.
 - [x] Páginas públicas computador-lento e Batel abertas com HTTP 200, sem erros de navegador; versão já publicada, não nova publicação.
-- [ ] CSV baixado pelo painel (25 linhas), mas descrição real não disponível: única descrição no banco marcada TESTE; filtro do CSV não confirmado.
-- [ ] Conectar WhatsApp Business para mensagens recebidas: usuário cancelou conexão; nenhuma conversa vinculada.
+- CSV real e mensagens WhatsApp: pedidos anteriores arquivados; nenhuma conexão autorizada ou conversa disponível.
 - [x] Ampliar visitas por página e solicitações por sintoma/cidade/bairro com comparação exata às páginas existentes; navegador verificado em sete larguras.
 - [x] Investigar repetição Batel/Centro: teste e2e abre e clica exatamente nas duas páginas sem QA. Navegações agora marcadas QA e painel de bairros exclui QA; histórico antigo não reclassificado sem prova individual.
 - [x] Painel por origem, sintoma, cidade e bairro com filtros 7/30/90 dias e suspeitas de automação; amostra parcial sinalizada.
@@ -15,4 +14,4 @@
 - [x] Instrumentar sucessos da descrição, WhatsApp e consulta de OS sem dados pessoais; três schemas validados.
 - [ ] Publicação bloqueada: verify passou 37/37 e prévia compilou; deploy:check exige dist/ indisponível. Build manual proibido neste ambiente.
 - [x] Painel aberto com sessão administrativa e filtros; páginas reais computador-lento e Batel abertas com HTTP 200 (versão já publicada).
-- [ ] Validar vínculo completo no navegador: única OS real anterior à descrição disponível, sem OS elegível; não associar registros sem confirmação real.
+- [ ] Fluxo completo real: descrição QA enviada e botão WhatsApp abriu triagem; OS disponível é teste antigo. Falta chamado real confirmado para criar/concluir OS sem inflar atendimentos semanais.
