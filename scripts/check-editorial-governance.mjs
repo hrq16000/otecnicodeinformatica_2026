@@ -174,7 +174,7 @@ async function checkStaticHtml(posts) {
   // O prerender grava em dist/client (build SSR); builds antigos usam dist/.
   const HTML_ROOT = (await exists(path.join(DIST, "client", "blog"))) ? path.join(DIST, "client") : DIST;
   // O snapshot SSR roda antes deste gate em deploy:check.
-  const indexHtml = path.join(DIST, "index.html");
+  const indexHtml = path.join(HTML_ROOT, "index.html");
   if (!(await exists(indexHtml))) {
     fail("dist/index.html ausente no gate pós-build: gere os snapshots SSR");
     return;
