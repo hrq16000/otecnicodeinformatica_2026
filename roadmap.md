@@ -1,4 +1,5 @@
 # Jornada até a OS
+- [x] Rodada atual: origem individual, sequência de páginas/cliques, filtro de sintomas e paginação em /admin/seo; 13 testes passaram e painel autenticado abriu sem erros em desktop/celular. Recorte atual parcial sem jornadas elegíveis: caminhos reais completos não puderam ser comprovados; nenhuma publicação.
 - [x] Rodada atual: telas de atendimento e SEO abertas com sessão administrativa no SHA 85b8686e; origem e exclusão QA já instrumentadas. Separadas as leituras limitadas de page_view/wa_click para cliques não ocultarem visitas; 16 testes, verify 37/37 e compilação automática OK. Painel ainda apresenta amostra parcial e zero jornadas elegíveis no recorte: não comprova ausência de tráfego.
 - [ ] Sincronização externa: conectar/confirmar GitHub e branch em Project settings → Git; chat não pode puxar ou verificar o remoto externo.
 - [ ] Publicação atual: deploy:check falhou por ausência de dist/; geração manual proibida neste ambiente, nenhuma publicação solicitada. Domínio real aberto com HTTP 200 em computador-lento e Batel, versão anteriormente publicada.
