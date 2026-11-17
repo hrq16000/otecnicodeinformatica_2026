@@ -71,7 +71,7 @@ export function SeoJourneyPanel() {
       <div className="mt-3 max-h-64 overflow-auto"><table className="w-full text-sm"><thead><tr className="text-left"><th className="py-2">Grupo</th><th>Visitas</th></tr></thead><tbody>{groups.map(([label,n])=><tr key={label} className="border-t border-border"><td className="py-2">{label}</td><td>{n}</td></tr>)}</tbody></table>{!groups.length && <p className="py-4 text-muted-foreground">Sem visitas registradas no recorte.</p>}</div>
       <h3 className="mt-6 font-semibold">Conversão por origem</h3>
       <div className="overflow-x-auto"><table className="w-full text-sm"><thead><tr className="text-left"><th className="py-2">Origem</th><th>Visitas</th><th>Com descrição</th><th>WhatsApp</th><th>Com OS</th></tr></thead><tbody>{result.origins.map(([origin,g])=><tr key={origin} className="border-t border-border"><td className="py-2">{origins[origin] ?? "Não identificada"}</td><td>{g.visits}</td><td>{g.descriptions}</td><td>{g.whatsapp}</td><td>{g.os}</td></tr>)}</tbody></table></div>
-      <VisitPathsPanel visits={result.visits} />
+      <VisitPathsPanel visits={result.visits} rows={result.rows} />
       <CompletionConversionPanel result={result} leads={data.leads} orders={data.orders} limited={data.limited} />
       <h3 className="mt-6 font-semibold">Visitantes ativos por sintoma, cidade e bairro</h3>
       <p className="mt-1 text-sm text-muted-foreground">Visitas com atividade registrada nos últimos 30 minutos, não confirmação de presença online. Testes identificados são excluídos; histórico suspeito de Batel/Centro não comprova robôs.</p>

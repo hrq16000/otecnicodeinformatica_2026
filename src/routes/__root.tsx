@@ -94,6 +94,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1.0" },
+      { name: "google-site-verification", content: "hH7-vkXHHN9ydWs9z8BqVEQPuiuRFSRBhXJOjwFsi8g" },
       // title/description/robots/og:title/og:description/twitter:* de página
       // são emitidos por <PageSEO> (SSR via React 19). Manter defaults aqui
       // duplicaria as tags no <head> e o crawler leria a versão genérica.
