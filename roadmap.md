@@ -1,4 +1,10 @@
 # Jornada até a OS
+- [x] 17/11: publicação solicitada pelo Publish para domínio oficial; verify 37/37, 16 testes e compilação automática OK, segurança básica sem achados. deploy:check local não executou gates por ausência de dist/.
+- [ ] 17/11: confirmar nova versão pública e concluir verificação Google + sitemap: raiz pública respondeu 200, mas a tag obtida nesta rodada ainda não apareceu no HTML ao conferir uma vez; não reenviar publicação nem verificar antes de estar live.
+- [x] 17/11: caminho individual ampliado com sintoma, descrição e OS confirmada; ausência de vínculo não é alegação de desistência.
+- [ ] 17/11: atendimento verdadeiro aguarda identificação do chamado e horários reais; não criar nem concluir teste comercial.
+- [x] 17/11: orientação passo a passo enviada para Perfil Google de área de serviço sem endereço público; modalidade e horários confirmados salvos em memória. Painéis administrativos abertos sem erros em desktop e celular; amostra de visitas parcial, apenas OS interna de teste.
+- [ ] 17/11: criar/verificar Perfil Google depende de dias de atendimento, contato autorizado e verificação do proprietário; cadastro de Itatiba não identificado pelo domínio informado, nenhuma reivindicação autorizada.
 - [x] Rodada atual: painel visita → OS concluída por sintoma/cidade/bairro com filtros 7/30/90, vínculo explícito e marco persistido; taxas suprimidas em amostra parcial/k<5. Aquisição real não recebe mais site/cta falsos; QA preservado. 39 testes e verify 37/37 passaram; painel autenticado abriu em desktop/celular sem erros, prévia build OK. Simulação somente em teste isolado: 5 visitas/1 conclusão = 20%, sem escrita comercial.
 - [ ] Publicação desta rodada: deploy:check exige dist/ ausente; compilação manual proibida no ambiente. test:a11y bloqueado pelo executável de navegador ausente no runner JS; Python abriu as telas. Nenhuma publicação solicitada; domínio anteriormente publicado respondeu 200.
 - [ ] Sincronização desta rodada: GitHub deve ser conectado/confirmado em Project settings → Git; não há ferramenta de conexão/pull pelo chat. SHA reconhecido antes das alterações: f2630f06faf9e9bb95964957487b3da4e58ab783.
