@@ -589,17 +589,21 @@ export const IdleEnhancements = () => {
 
   useEffect(() => {
     const activate = () => setEnabled(true);
-    const idleId: number = typeof window.requestIdleCallback === "function"
-      ? window.requestIdleCallback(activate, { timeout: 4500 })
-      : (globalThis.setTimeout(activate, 2500) as unknown as number);
+    let idleId: number | null = null;
+    // O trabalho complementar não deve disputar rede e CPU com o LCP.
+    const delayId = globalThis.setTimeout(() => {
+      if (typeof window.requestIdleCallback === "function") {
+        idleId = window.requestIdleCallback(activate, { timeout: 2000 });
+      } else {
+        activate();
+      }
+    }, 6000);
 
     return () => {
-      if (typeof window.cancelIdleCallback === "function") {
+      globalThis.clearTimeout(delayId);
+      if (idleId !== null && typeof window.cancelIdleCallback === "function") {
         window.cancelIdleCallback(idleId);
-      } else {
-        globalThis.clearTimeout(idleId);
       }
-
     };
   }, []);
 
