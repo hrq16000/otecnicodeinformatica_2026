@@ -4,12 +4,14 @@ import { RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { readSeoJourney, linkSeoOrder } from "@/lib/seoJourney.functions";
-import { recentVisitGroups, summarizeJourneys } from "@/lib/seoJourney";
+import { JOURNEY_ORIGIN_LABELS, recentVisitGroups, summarizeJourneys } from "@/lib/seoJourney";
+import { VisitPathsPanel } from "@/components/admin/VisitPathsPanel";
+import { CompletionConversionPanel } from "@/components/admin/CompletionConversionPanel";
 import { CLUSTER_PROBLEMAS } from "@/lib/clusterProblemas";
 import {OrderWeeklyPanel} from "@/components/admin/OrderWeeklyPanel";
 import {CreateOrderFromLead} from "@/components/admin/CreateOrderFromLead";
 
-const origins: Record<string,string> = {seo:"Busca orgânica",social:"Redes sociais",direto:"Direto",ads:"Anúncios",referral:"Outros sites",campanha:"Campanhas",unknown:"Não identificada"};
+const origins = JOURNEY_ORIGIN_LABELS;
 const date = (iso: string | null) => iso ? new Date(iso).toLocaleString("pt-BR", {timeZone:"America/Sao_Paulo",dateStyle:"short",timeStyle:"short"}) : "—";
 type Payload = Awaited<ReturnType<typeof readSeoJourney>>;
 export function SeoJourneyPanel() {
@@ -57,7 +59,7 @@ export function SeoJourneyPanel() {
         <Button variant="outline" size="icon" aria-label="Atualizar jornada" onClick={()=>void load()} disabled={busy}><RefreshCw className="h-4 w-4" /></Button>
       </div>
     </div>
-    <p className="mt-2 text-sm text-muted-foreground">Visitas registradas no site, não pessoas identificadas; origem sem referência não prova acesso direto. Google e outros buscadores estão agrupados em busca orgânica.</p>
+    <p className="mt-2 text-sm text-muted-foreground">Visitas registradas no site, não pessoas identificadas; origem sem referência não prova acesso direto. Google aparece separado somente quando a origem está registrada.</p>
     <label className="mt-3 flex items-center gap-2 text-sm"><input type="checkbox" checked={exclude} onChange={e=>setExclude(e.target.checked)} />Excluir suspeitas de automação (20 páginas distintas no mesmo minuto); testes sempre excluídos</label>
     <p className="mt-1 text-xs text-muted-foreground">Suspeita não confirma robô; automações discretas podem permanecer. Abertura da página de status não confirma consulta de uma OS.</p>
     {error && <p role="alert" className="mt-4 text-destructive">{error}</p>}
@@ -69,6 +71,8 @@ export function SeoJourneyPanel() {
       <div className="mt-3 max-h-64 overflow-auto"><table className="w-full text-sm"><thead><tr className="text-left"><th className="py-2">Grupo</th><th>Visitas</th></tr></thead><tbody>{groups.map(([label,n])=><tr key={label} className="border-t border-border"><td className="py-2">{label}</td><td>{n}</td></tr>)}</tbody></table>{!groups.length && <p className="py-4 text-muted-foreground">Sem visitas registradas no recorte.</p>}</div>
       <h3 className="mt-6 font-semibold">Conversão por origem</h3>
       <div className="overflow-x-auto"><table className="w-full text-sm"><thead><tr className="text-left"><th className="py-2">Origem</th><th>Visitas</th><th>Com descrição</th><th>WhatsApp</th><th>Com OS</th></tr></thead><tbody>{result.origins.map(([origin,g])=><tr key={origin} className="border-t border-border"><td className="py-2">{origins[origin] ?? "Não identificada"}</td><td>{g.visits}</td><td>{g.descriptions}</td><td>{g.whatsapp}</td><td>{g.os}</td></tr>)}</tbody></table></div>
+      <VisitPathsPanel visits={result.visits} rows={result.rows} />
+      <CompletionConversionPanel result={result} leads={data.leads} orders={data.orders} limited={data.limited} />
       <h3 className="mt-6 font-semibold">Visitantes ativos por sintoma, cidade e bairro</h3>
       <p className="mt-1 text-sm text-muted-foreground">Visitas com atividade registrada nos últimos 30 minutos, não confirmação de presença online. Testes identificados são excluídos; histórico suspeito de Batel/Centro não comprova robôs.</p>
       <div className="mt-3 overflow-x-auto"><table className="w-full text-sm"><thead><tr className="text-left"><th>Sintoma · cidade · bairro</th><th>Visitas recentes</th><th>Última atividade</th><th>Desde o acesso</th></tr></thead><tbody>{active.map(g=><tr key={g.key} className="border-t border-border"><td className="py-3">{g.key}</td><td>{g.visits}</td><td>{date(g.last)}</td><td>{Math.floor(g.elapsedMs/60000)} min</td></tr>)}</tbody></table>{!active.length && <p className="py-4 text-muted-foreground">Sem atividade registrada nos últimos 30 minutos.</p>}</div>

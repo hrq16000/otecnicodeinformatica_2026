@@ -5,7 +5,18 @@ export type JourneyEvent = QaCheckable & {
   created_at: string; journey_id: string | null; event_type: string;
   path: string | null; problema: string | null; cidade: string | null;
   neighborhood_slug: string | null; attribution_channel: string | null;
+  event_id?: string | null; cta_location?: string | null;
 };
+export type JourneyStep = { at: string; type: string; path: string | null; location: string | null };
+export const JOURNEY_ORIGIN_LABELS: Record<string, string> = { google: "Google", bing: "Bing", seo: "Busca orgânica (buscador não registrado)", social: "Redes sociais", direto: "Direto / sem referência", ads: "Anúncios", referral: "Outros sites", campanha: "Campanhas", unknown: "Não identificada" };
+function visitOrigin(event: JourneyEvent) {
+  const source = (event.utm_source ?? "").trim().toLowerCase();
+  const channel = event.attribution_channel ?? "unknown";
+  if (channel === "seo" && /^(google|(?:www\.)?google\.[a-z.]+)$/.test(source)) return "google";
+  if (channel === "seo" && /^(bing|(?:www\.)?bing\.com)$/.test(source)) return "bing";
+  return channel;
+}
+const safePath = (path: string | null) => path?.startsWith("/") && !path.startsWith("//") ? path.split(/[?#]/)[0] ?? null : null;
 export type JourneyLead = QaCheckable & {
   id: string; created_at: string; journey_id: string | null; equipamento: string | null;
   sintoma: string | null; city: string | null; neighborhood_slug: string | null;
@@ -13,7 +24,7 @@ export type JourneyLead = QaCheckable & {
   origin_route?: string | null;
   service_slug?: string | null;
 };
-export type JourneyOs = { id: string; protocolo: string; created_at: string; status: string; lead_id: string | null; journey_id: string | null };
+export type JourneyOs = { id: string; protocolo: string; created_at: string; status: string; lead_id: string | null; journey_id: string | null; etapas?: unknown };
 
 // A rajada é um sinal de automação, nunca prova de que a visita é um robô.
 export function suspiciousJourneys(events: JourneyEvent[]) {
@@ -33,27 +44,32 @@ export function summarizeJourneys(events: JourneyEvent[], leads: JourneyLead[], 
   const excludedIds=new Set(events.filter(e=>isQaEvent(e)||ehTrafegoInterno(e)).map(e=>e.journey_id).filter((id):id is string=>Boolean(id)));
   const commercial = events.filter(e => !isQaEvent(e) && !ehTrafegoInterno(e) && (!e.journey_id || !excludedIds.has(e.journey_id)));
   const suspected = suspiciousJourneys(commercial);
-  const visits = new Map<string, { origin: string; symptom: string; city: string; neighborhood: string; first: string; last: string; wa: string | null; statusPage: string | null }>();
+  const visits = new Map<string, { id: string; origin: string; symptom: string; city: string; neighborhood: string; first: string; last: string; wa: string | null; statusPage: string | null; steps: JourneyStep[] }>();
   const pages = new Map<string, Set<string>>();
+  const seenEvents = new Set<string>();
   for (const e of [...commercial].sort((a,b) => a.created_at.localeCompare(b.created_at))) {
     if (!e.journey_id || (excludeSuspected && suspected.has(e.journey_id))) continue;
-    if (e.event_type === "page_view" && e.path) {
-      const ids = pages.get(e.path) ?? new Set<string>();
-      ids.add(e.journey_id); pages.set(e.path, ids);
+    if (e.event_id && seenEvents.has(e.event_id)) continue;
+    if (e.event_id) seenEvents.add(e.event_id);
+    const path = safePath(e.path);
+    if (e.event_type === "page_view" && path) {
+      const ids = pages.get(path) ?? new Set<string>();
+      ids.add(e.journey_id); pages.set(path, ids);
     }
     let v = visits.get(e.journey_id);
     if (!v) {
       // Só page_view fornece o denominador; cliques órfãos não inventam visitas.
       if (e.event_type !== "page_view") continue;
-      v = { origin: e.attribution_channel || "unknown", symptom: "não identificado", city: "não identificada", neighborhood: "não identificado", first: e.created_at, last:e.created_at, wa: null, statusPage: null };
+      v = { id: e.journey_id, origin: visitOrigin(e), symptom: "não identificado", city: "não identificada", neighborhood: "não identificado", first: e.created_at, last:e.created_at, wa: null, statusPage: null, steps: [] };
       visits.set(e.journey_id, v);
     }
     v.last=e.created_at;
+    v.steps.push({ at: e.created_at, type: e.event_type, path, location: e.cta_location ?? null });
     if (e.problema && e.problema !== "unknown") v.symptom = e.problema;
     if (e.cidade) v.city = e.cidade;
     if (e.neighborhood_slug) v.neighborhood = e.neighborhood_slug;
     if (e.event_type === "wa_click" && !v.wa) v.wa = e.created_at;
-    if (e.path === "/status-da-ordem-de-servico" && !v.statusPage) v.statusPage = e.created_at;
+    if (path === "/status-da-ordem-de-servico" && !v.statusPage) v.statusPage = e.created_at;
   }
   const rows = leads.filter(l => l.equipamento === "descricao_ia" && !isQaEvent(l) && !ehTrafegoInterno(l) && (!l.journey_id || !excludedIds.has(l.journey_id)) && (!excludeSuspected || !l.journey_id || !suspected.has(l.journey_id))).map(l => {
     const visit = l.journey_id ? visits.get(l.journey_id) : undefined;
@@ -81,4 +97,22 @@ export function recentVisitGroups(visits:ReturnType<typeof summarizeJourneys>["v
     group.visits++;if(visit.last>group.last){group.last=visit.last;group.elapsedMs=elapsedMs;}groups.set(key,group);
   }
   return [...groups].map(([key,g])=>({key,...g})).sort((a,b)=>a.elapsedMs-b.elapsedMs);
+}
+
+export function completionConversion(result: ReturnType<typeof summarizeJourneys>, leads: JourneyLead[], orders: JourneyOs[], dimension: "symptom" | "city" | "neighborhood", limited = false, now = Date.now()) {
+  const groups = new Map<string, { visits: number; withOrder: number; completed: number }>();
+  for (const visit of result.visits) {
+    const group = groups.get(visit[dimension]) ?? { visits: 0, withOrder: 0, completed: 0 };
+    const eligibleLeads = leads.filter(l => l.journey_id === visit.id && !isQaEvent(l) && !ehTrafegoInterno(l) && l.created_at >= visit.first);
+    const linked = orders.filter(o => o.journey_id === visit.id && eligibleLeads.some(l => o.lead_id === l.id && o.created_at >= l.created_at) && Date.parse(o.created_at) <= now);
+    group.visits++;
+    if (linked.length) group.withOrder++;
+    if (linked.some(o => ["pronta", "entregue", "concluida", "concluída"].includes(o.status) && Array.isArray(o.etapas) && o.etapas.some((s: unknown) => {
+      if (!s || typeof s !== "object" || !("metric" in s) || !("at" in s) || s.metric !== "completed" || typeof s.at !== "string") return false;
+      const at = Date.parse(s.at);
+      return Number.isFinite(at) && at >= Date.parse(o.created_at) && at <= now;
+    }))) group.completed++;
+    groups.set(visit[dimension], group);
+  }
+  return [...groups].map(([label, g]) => ({ label, ...g, rate: !limited && g.visits >= 5 ? g.completed / g.visits * 100 : null })).sort((a,b) => b.visits - a.visits);
 }
