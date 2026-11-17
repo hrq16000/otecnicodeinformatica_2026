@@ -1,4 +1,5 @@
 # Jornada até a OS
+- [ ] Rodada atual: conversão visita → OS concluída por sintoma/cidade/bairro; corrigir atribuição de aquisição sem UTMs internas falsas, testar, solicitar publicação e abrir domínio real. Git externo e atendimento real aguardam ação/confirmação do usuário.
 - [x] Rodada atual: origem individual, sequência de páginas/cliques, filtro de sintomas e paginação em /admin/seo; 13 testes passaram e painel autenticado abriu sem erros em desktop/celular. Recorte atual parcial sem jornadas elegíveis: caminhos reais completos não puderam ser comprovados; nenhuma publicação.
 - [x] Rodada atual: telas de atendimento e SEO abertas com sessão administrativa no SHA 85b8686e; origem e exclusão QA já instrumentadas. Separadas as leituras limitadas de page_view/wa_click para cliques não ocultarem visitas; 16 testes, verify 37/37 e compilação automática OK. Painel ainda apresenta amostra parcial e zero jornadas elegíveis no recorte: não comprova ausência de tráfego.
 - [ ] Sincronização externa: conectar/confirmar GitHub e branch em Project settings → Git; chat não pode puxar ou verificar o remoto externo.
