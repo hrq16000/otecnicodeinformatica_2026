@@ -6,6 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { readSeoJourney, linkSeoOrder } from "@/lib/seoJourney.functions";
 import { JOURNEY_ORIGIN_LABELS, recentVisitGroups, summarizeJourneys } from "@/lib/seoJourney";
 import { VisitPathsPanel } from "@/components/admin/VisitPathsPanel";
+import { CompletionConversionPanel } from "@/components/admin/CompletionConversionPanel";
 import { CLUSTER_PROBLEMAS } from "@/lib/clusterProblemas";
 import {OrderWeeklyPanel} from "@/components/admin/OrderWeeklyPanel";
 import {CreateOrderFromLead} from "@/components/admin/CreateOrderFromLead";
@@ -71,6 +72,7 @@ export function SeoJourneyPanel() {
       <h3 className="mt-6 font-semibold">Conversão por origem</h3>
       <div className="overflow-x-auto"><table className="w-full text-sm"><thead><tr className="text-left"><th className="py-2">Origem</th><th>Visitas</th><th>Com descrição</th><th>WhatsApp</th><th>Com OS</th></tr></thead><tbody>{result.origins.map(([origin,g])=><tr key={origin} className="border-t border-border"><td className="py-2">{origins[origin] ?? "Não identificada"}</td><td>{g.visits}</td><td>{g.descriptions}</td><td>{g.whatsapp}</td><td>{g.os}</td></tr>)}</tbody></table></div>
       <VisitPathsPanel visits={result.visits} />
+      <CompletionConversionPanel result={result} leads={data.leads} orders={data.orders} limited={data.limited} />
       <h3 className="mt-6 font-semibold">Visitantes ativos por sintoma, cidade e bairro</h3>
       <p className="mt-1 text-sm text-muted-foreground">Visitas com atividade registrada nos últimos 30 minutos, não confirmação de presença online. Testes identificados são excluídos; histórico suspeito de Batel/Centro não comprova robôs.</p>
       <div className="mt-3 overflow-x-auto"><table className="w-full text-sm"><thead><tr className="text-left"><th>Sintoma · cidade · bairro</th><th>Visitas recentes</th><th>Última atividade</th><th>Desde o acesso</th></tr></thead><tbody>{active.map(g=><tr key={g.key} className="border-t border-border"><td className="py-3">{g.key}</td><td>{g.visits}</td><td>{date(g.last)}</td><td>{Math.floor(g.elapsedMs/60000)} min</td></tr>)}</tbody></table>{!active.length && <p className="py-4 text-muted-foreground">Sem atividade registrada nos últimos 30 minutos.</p>}</div>

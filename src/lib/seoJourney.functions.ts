@@ -39,8 +39,8 @@ export const readSeoJourney = createServerFn({ method: "POST" })
     const since = new Date(Date.now() - data.days * 86400000).toISOString();
     const [events, leads, orders] = await Promise.all([
       readJourneyEventTypes(type => context.supabase.from("click_events").select("event_id,cta_location,created_at,session_id,utm_source,utm_medium,utm_campaign,journey_id,event_type,path,problema,cidade,neighborhood_slug,attribution_channel").gte("created_at",since).eq("event_type",type).order("created_at",{ascending:false}).limit(1000)),
-      context.supabase.from("funnel_submissions").select("id,created_at,session_id,utm_source,utm_medium,utm_campaign,journey_id,equipamento,sintoma,city,neighborhood_slug,status_atendimento,origin_route,service_slug").gte("created_at",since).eq("equipamento","descricao_ia").order("created_at",{ascending:false}).limit(1000),
-      context.supabase.from("ordens_servico").select("id,protocolo,created_at,status,lead_id,journey_id").order("created_at",{ascending:false}).limit(1000),
+      context.supabase.from("funnel_submissions").select("id,created_at,session_id,utm_source,utm_medium,utm_campaign,journey_id,equipamento,sintoma,city,neighborhood_slug,status_atendimento,origin_route,service_slug").gte("created_at",since).order("created_at",{ascending:false}).limit(1000),
+      context.supabase.from("ordens_servico").select("id,protocolo,created_at,status,lead_id,journey_id,etapas").gte("created_at",since).order("created_at",{ascending:false}).limit(1000),
     ]);
     const error = leads.error ?? orders.error;
     if (error) throw new Error(error.message);
