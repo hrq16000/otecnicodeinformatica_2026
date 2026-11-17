@@ -73,13 +73,13 @@ export const ContextosBento = () => (
                     height={256}
                     loading="lazy"
                     decoding="async"
-                    className="absolute inset-0 h-full w-full object-cover motion-safe:transition-transform motion-safe:duration-700 motion-safe:ease-out group-hover:scale-[1.06]"
+                    className="absolute inset-0 h-full w-full object-cover motion-safe:transition-transform motion-safe:duration-700 motion-safe:ease-out "
                   />
                 ) : (
                   <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,hsl(var(--accent)/0.13),transparent_58%)]" />
                 )}
                 <span className="absolute right-3 top-3 z-10 flex h-11 w-11 items-center justify-center rounded-xl border border-border/70 bg-background/95 shadow-sm backdrop-blur-sm">
-                  <Icon className="h-6 w-6 text-primary motion-safe:transition-transform motion-safe:duration-500 group-hover:scale-110" aria-hidden="true" strokeWidth={1.7} />
+                  <Icon className="h-6 w-6 text-primary motion-safe:transition-transform motion-safe:duration-500 " aria-hidden="true" strokeWidth={1.7} />
                 </span>
               </div>
               <span className="font-heading text-[11px] font-bold uppercase tracking-[0.14em] text-[hsl(var(--categoria))]">
