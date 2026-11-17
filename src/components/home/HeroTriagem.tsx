@@ -166,8 +166,9 @@ export const HeroTriagem = () => {
               alt="Interior de computador desktop aberto durante manutenção"
               width={1024}
               height={735}
-              loading="lazy"
-              decoding="async"
+              loading="eager"
+              fetchPriority="high"
+              decoding="sync"
               className="aspect-[16/9] w-full object-cover object-[65%_center]"
             />
           </picture>
