@@ -22,6 +22,11 @@
       "why": "Fonte única do número oficial."
     },
     {
+      "file": "src/lib/config/eutBridge.ts",
+      "rule": "whatsapp-divergente",
+      "why": "Número indicado pelo proprietário exclusivamente para a triagem de encaminhamento ao Encontre um Técnico; não substitui o contato canônico da marca nem é exposto no JSON-LD."
+    },
+    {
       "file": "src/lib/localBusinessJsonLd.ts",
       "rule": "whatsapp-divergente",
       "why": "Deriva de siteConfig."
