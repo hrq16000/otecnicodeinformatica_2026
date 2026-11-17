@@ -12,6 +12,8 @@ export const commercialConfig = {
   currency: "BRL",
   minPriceLabel: "R$ 99,99",
   diagnosticoLabel: "R$ 99,99",
+  /** Referência comercial do serviço prestado por técnicos independentes da rede EUT. Não altera os valores próprios da marca OTI nem a tarifa de acesso ao contato. */
+  networkServiceFromLabel: "R$ 169",
   pricingDisclaimer:
     "O valor final pode variar conforme equipamento, urgência, deslocamento, complexidade, peças e condição real do problema.",
 
