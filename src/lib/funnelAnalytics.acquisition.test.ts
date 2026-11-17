@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { beforeEach, describe, expect, it, vi } from "vitest";
-const insert = vi.fn(() => Promise.resolve({ error: null }));
+const insert = vi.fn((_row: unknown) => Promise.resolve({ error: null }));
 vi.mock("@/integrations/supabase/client", () => ({ supabase: { from: () => ({ insert }) } }));
 import { registrarPageView } from "./funnelAnalytics";
 import { summarizeJourneys, type JourneyEvent } from "./seoJourney";
