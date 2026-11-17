@@ -1,11 +1,11 @@
 import { ArrowUpRight, HardDrive, Laptop, MonitorCog, Router, Building2 } from "lucide-react";
 
 const VISUAIS = {
-  computadores: { Icon: Laptop, foto: "/fotos/bancada-tecnica-mobile.webp", alt: "Bancada técnica com notebook e ferramentas" },
-  sistemas: { Icon: MonitorCog, foto: "/fotos/bancada-tecnica.jpg", alt: "Bancada técnica de manutenção de computadores" },
-  dados: { Icon: HardDrive, foto: "/fotos/bancada-tecnica-mobile.webp", alt: "Notebook e ferramentas sobre bancada técnica" },
-  redes: { Icon: Router, foto: "/fotos/roteador-wifi.jpg", alt: "Roteador de rede sem fio" },
-  empresas: { Icon: Building2, foto: "/fotos/estacao-trabalho-desktop.webp", alt: "Estação de trabalho para atendimento empresarial" },
+  computadores: { Icon: Laptop, foto: "/fotos/bancada-tecnica.jpg", alt: "Interior de computador desktop aberto durante manutenção" },
+  sistemas: { Icon: MonitorCog, foto: "/fotos/estacao-trabalho-desktop.webp", alt: "Estação de trabalho com monitor e periféricos" },
+  dados: { Icon: HardDrive, foto: "/fotos/infra-empresa.jpg", alt: "Sala de servidores com racks alinhados" },
+  redes: { Icon: Router, foto: "/fotos/roteador-wifi.jpg", alt: "Roteador Wi-Fi doméstico com antenas" },
+  empresas: { Icon: Building2, foto: "/fotos/rede-cabeamento.jpg", alt: "Computador e roteador com cabeamento de rede" },
 } as const;
 
 import { ALEM_DA_INFORMATICA, CONTEXTOS } from "@/lib/homeContextos";
@@ -57,12 +57,12 @@ export const ContextosBento = () => (
             key={c.id}
             href={c.href}
             onClick={() => track(`contexto_${c.id}`)}
-            className={`group flex flex-col justify-between rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-lg)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
+            className={`group flex flex-col justify-between rounded-2xl border border-border bg-card p-6 motion-surface hover:border-accent hover:shadow-[var(--shadow-lg)] active:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
               PESO_CLASSES[c.peso] ?? "md:col-span-2"
             }`}
           >
             <div>
-              <div className="relative mb-5 flex h-28 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-primary/10 via-background to-accent/15 md:h-32">
+              <div className="relative mb-5 h-28 overflow-hidden rounded-xl bg-gradient-to-br from-primary/10 via-background to-accent/15 md:h-32">
                 {visual?.foto ? (
                   <img
                     src={visual.foto}
@@ -71,13 +71,13 @@ export const ContextosBento = () => (
                     height={256}
                     loading="lazy"
                     decoding="async"
-                    className="absolute inset-0 h-full w-full object-cover opacity-80"
+                    className="absolute inset-0 h-full w-full object-cover"
                   />
                 ) : (
                   <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,hsl(var(--accent)/0.13),transparent_58%)]" />
                 )}
-                <span className="relative flex h-14 w-14 items-center justify-center rounded-2xl border border-border/70 bg-background/90 shadow-sm backdrop-blur-sm">
-                  <Icon className="h-7 w-7 text-primary" aria-hidden="true" strokeWidth={1.7} />
+                <span className="absolute right-3 top-3 z-10 flex h-11 w-11 items-center justify-center rounded-xl border border-border/70 bg-background/95 shadow-sm backdrop-blur-sm">
+                  <Icon className="h-6 w-6 text-primary" aria-hidden="true" strokeWidth={1.7} />
                 </span>
               </div>
               <span className="font-heading text-[11px] font-bold uppercase tracking-[0.14em] text-[hsl(var(--categoria))]">
@@ -110,6 +110,8 @@ export const ContextosBento = () => (
         })}
       </div>
 
+      <p className="mt-3 text-right text-xs text-muted-foreground">Fotografias reais licenciadas. <a href="/creditos-de-imagens" className="underline underline-offset-2 hover:text-foreground">Créditos das imagens</a>.</p>
+
       <div className="mt-8 rounded-2xl border border-dashed border-border p-5">
         <h3 className="font-heading text-sm font-bold uppercase tracking-wider text-muted-foreground">
           Além da informática
@@ -120,7 +122,7 @@ export const ContextosBento = () => (
               <a
                 href={item.href}
                 onClick={() => track("alem_da_informatica")}
-                className="inline-flex min-h-11 items-center rounded-full border border-border bg-background px-4 text-[13px] font-medium text-foreground transition-colors hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="motion-surface inline-flex min-h-11 items-center rounded-full border border-border bg-background px-4 text-[13px] font-medium text-foreground hover:border-accent hover:bg-accent/5 hover:text-accent active:bg-accent/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
                 {item.label}
               </a>

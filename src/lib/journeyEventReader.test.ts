@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { readJourneyEventTypes } from "./journeyEventReader";
+import { JOURNEY_EVENT_TYPES, readJourneyEventTypes } from "./journeyEventReader";
 
 describe("bounded journey event reads", () => {
   it("keeps page views even when WhatsApp clicks fill the reading limit", async () => {
-    const result = await readJourneyEventTypes<{ type: "page_view" | "wa_click" }>(async type => ({
+    const result = await readJourneyEventTypes<{ type: (typeof JOURNEY_EVENT_TYPES)[number] }>(async type => ({
       data: type === "wa_click" ? Array.from({ length: 1000 }, () => ({ type })) : [{ type }],
       error: null,
     }));

@@ -4,12 +4,12 @@ import { FastHeader } from "@/components/FastHeader";
 import { JsonLdSchema } from "@/components/JsonLdSchema";
 import { HeroTriagem } from "@/components/home/HeroTriagem";
 import { ContextosBento } from "@/components/home/ContextosBento";
+import { WaterCoolerTecnico } from "@/components/editorial/WaterCoolerTecnico";
 import { FaixaFotografica } from "@/components/home/FaixaFotografica";
 import { HomeFaqSsr } from "@/components/home/HomeFaqSsr";
 import { EncontreSuaSolucao } from "@/components/home/EncontreSuaSolucao";
 import { DiagnosticoIa } from "@/components/home/DiagnosticoIa";
 import { CondicoesAtendimento } from "@/components/home/CondicoesAtendimento";
-import { WaterCoolerTecnico } from "@/components/editorial/WaterCoolerTecnico";
 
 
 import { TrustStrip } from "@/components/TrustStrip";
@@ -58,16 +58,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* A fotografia é o LCP mobile. Antecipar o recurso no <head> evita que
-          dependa da descoberta do <picture> após o CSS do documento. */}
-      <link
-        rel="preload"
-        as="image"
-        href="/fotos/bancada-tecnica-mobile.webp"
-        type="image/webp"
-        media="(max-width: 1023px)"
-        fetchPriority="high"
-      />
       <PageSEO title={siteConfig.homeTitle} description={siteConfig.homeDescription} path="/" />
       <JsonLdSchema />
       <FastHeader />
