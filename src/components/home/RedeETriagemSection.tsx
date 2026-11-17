@@ -159,7 +159,7 @@ export const RedeETriagemSection = () => {
             data-cta-location="home_eut_tecnico"
           >
             <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-300/20 text-emerald-100">
-              <Users className="h-6 w-6 motion-safe:transition-transform motion-safe:duration-500 group-hover:scale-110" aria-hidden="true" />
+              <Users className="h-6 w-6 motion-safe:transition-transform motion-safe:duration-500 " aria-hidden="true" />
             </span>
             <h3 className="mt-4 font-heading text-xl font-bold md:text-2xl">Sou técnico. Quero atender mais clientes.</h3>
             <p className="mt-2 text-sm leading-relaxed text-white/75">
