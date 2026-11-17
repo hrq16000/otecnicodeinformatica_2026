@@ -1,8 +1,23 @@
 import { describe, expect, it } from "vitest";
-import { recentVisitGroups, summarizeJourneys, suspiciousJourneys, type JourneyEvent, type JourneyLead } from "./seoJourney";
+import { completionConversion, recentVisitGroups, summarizeJourneys, suspiciousJourneys, type JourneyEvent, type JourneyLead } from "./seoJourney";
 const event = (patch: Partial<JourneyEvent> = {}): JourneyEvent => ({ created_at: "2026-11-16T12:00:00Z", journey_id: "j1", event_type: "page_view", path: "/", problema: null, cidade: null, neighborhood_slug: null, attribution_channel: "seo", ...patch });
 const lead: JourneyLead = { id: "l1", created_at: "2026-11-16T12:01:00Z", journey_id: "j1", equipamento: "descricao_ia", sintoma: "tela", city: null, neighborhood_slug: null, status_atendimento: "novo" };
 describe("jornada até a OS", () => {
+  it("simula conversão de cinco visitas até uma conclusão explícita: 20%, sem duplicar ordens nem incluir QA", () => {
+    const visits = Array.from({length:5}, (_,i)=>event({journey_id:`j${i}`,problema:"tela",cidade:"Curitiba",neighborhood_slug:"Batel"}));
+    const confirmed = {...lead, journey_id:"j0"};
+    const order = {id:"simulated",protocolo:"SIMULAÇÃO",lead_id:confirmed.id,journey_id:"j0",status:"concluida",created_at:"2026-11-16T12:02:00Z",etapas:[{metric:"completed",at:"2026-11-16T13:00:00Z"}]};
+    const result=summarizeJourneys([...visits,event({journey_id:"qa",utm_source:"qa"})],[confirmed],[order]);
+    for (const dimension of ["symptom","city","neighborhood"] as const) {
+      expect(completionConversion(result,[confirmed],[order,{...order,id:"other"}],dimension,false,Date.parse("2026-11-16T14:00:00Z"))[0]).toMatchObject({visits:5,withOrder:1,completed:1,rate:20});
+    }
+    expect(completionConversion(result,[confirmed],[{...order,lead_id:null}],"symptom")[0]?.completed).toBe(0);
+    expect(completionConversion(result,[confirmed],[{...order,etapas:[]}],"symptom")[0]?.completed).toBe(0);
+    expect(completionConversion(result,[confirmed],[{...order,status:"aberta"}],"symptom")[0]?.completed).toBe(0);
+    expect(completionConversion(result,[confirmed],[order],"symptom",true)[0]?.rate).toBeNull();
+    const small = summarizeJourneys(visits.slice(0,4),[],[]);
+    expect(completionConversion(small,[],[],"symptom")[0]?.rate).toBeNull();
+  });
   it("preserva origem Google na entrada e ordena páginas e cliques até o sintoma", () => {
     const result = summarizeJourneys([
       event({created_at:"2026-11-16T12:02:00Z",path:"/problemas/computador-lento",attribution_channel:"direto"}),
