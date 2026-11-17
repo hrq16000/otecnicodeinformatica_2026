@@ -120,7 +120,7 @@ export const HeroTriagem = () => {
           >
             O que está acontecendo?
           </label>
-          <div className="mt-2 flex flex-col gap-3 rounded-2xl border border-border bg-card p-2 shadow-[var(--shadow-lg)] sm:flex-row sm:items-center">
+          <div className="motion-surface mt-2 flex flex-col gap-3 rounded-2xl border border-border bg-card p-2 shadow-[var(--shadow-lg)] focus-within:border-accent focus-within:ring-2 focus-within:ring-accent/20 sm:flex-row sm:items-center">
             <div className="flex flex-1 items-center gap-3 px-3">
               <Search className="h-5 w-5 shrink-0 text-muted-foreground" aria-hidden="true" />
               <input
@@ -135,7 +135,7 @@ export const HeroTriagem = () => {
             <button
               type="submit"
               data-cta-location="hero_triagem_busca"
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-accent px-6 font-heading text-base font-bold text-accent-foreground motion-surface hover:shadow-[0_18px_40px_-12px_hsl(var(--accent)/0.55)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-accent px-6 font-heading text-base font-bold text-accent-foreground motion-surface hover:bg-accent/90 hover:shadow-[0_18px_40px_-12px_hsl(var(--accent)/0.55)] active:shadow-inner focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
               Diagnosticar meu problema
               <ArrowRight className="h-5 w-5" aria-hidden="true" />
@@ -148,7 +148,7 @@ export const HeroTriagem = () => {
                 <a
                   href={s.href}
                   onClick={() => track("hero_sintoma_chip")}
-                  className="inline-flex min-h-11 items-center rounded-full border border-border bg-card px-4 text-[13px] font-medium text-foreground transition-colors hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  className="motion-surface inline-flex min-h-11 items-center rounded-full border border-border bg-card px-4 text-[13px] font-medium text-foreground hover:border-accent hover:bg-accent/5 hover:text-accent active:bg-accent/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
                   {s.label}
                 </a>
@@ -166,7 +166,8 @@ export const HeroTriagem = () => {
               alt="Interior de computador desktop aberto durante manutenção"
               width={1024}
               height={735}
-              loading="lazy"
+              loading="eager"
+              fetchPriority="high"
               decoding="async"
               className="aspect-[16/9] w-full object-cover object-[65%_center]"
             />
@@ -188,7 +189,7 @@ export const HeroTriagem = () => {
                 key={c.id}
                 href={c.href}
                 onClick={() => track(`hero_caminho_${c.id}`)}
-                className={`group flex flex-col justify-between rounded-2xl border p-5 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-lg)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${c.id === "problema" ? "border-accent/50 bg-accent/5" : "border-border bg-card"}`}
+                className={`group flex flex-col justify-between rounded-2xl border p-5 motion-surface hover:border-accent hover:shadow-[var(--shadow-lg)] active:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${c.id === "problema" ? "border-accent/50 bg-accent/5" : "border-border bg-card"}`}
               >
                 <div>
                   <span
