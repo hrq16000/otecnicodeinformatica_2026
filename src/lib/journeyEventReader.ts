@@ -1,4 +1,4 @@
-export const JOURNEY_EVENT_TYPES = ["page_view", "wa_click"] as const;
+export const JOURNEY_EVENT_TYPES = ["page_view", "wa_click", "funnel_open", "cta_click", "call_click"] as const;
 
 // Separate bounded reads prevent a click burst from displacing page views.
 export async function readJourneyEventTypes<T>(

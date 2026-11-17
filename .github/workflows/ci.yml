@@ -247,8 +247,10 @@ jobs:
           E2E_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
       - name: Rerun seletivo apenas das specs que falharam (evidência de flakiness)
         # Não substitui o resultado original: gera blob separado, claramente rotulado.
+        # Limite a repetição diagnóstica: não deixe o job observacional expirar
+        # antes de preservar os relatórios da execução inicial.
         if: failure()
-        run: npx playwright test --config=playwright.ci.config.ts --last-failed
+        run: timeout --signal=TERM --kill-after=15s 180s npx playwright test --config=playwright.ci.config.ts --last-failed
         continue-on-error: true
         env:
           PW_BROWSER: ${{ matrix.browser }}

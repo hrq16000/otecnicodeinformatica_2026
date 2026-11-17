@@ -418,6 +418,7 @@ function persistClickEvent(eventType: string, location: string, ctx: { modalidad
   const path = window.location.pathname;
   const utms = readUtms();
   const contrato = buildRouteContext(path);
+  const acquisition = readAttribution();
   const payload = {
     event_type: eventType,
     cta_location: location,
@@ -444,13 +445,12 @@ function persistClickEvent(eventType: string, location: string, ctx: { modalidad
     path,
     // Segmentação do dashboard: tipo de rota + campanha de origem.
     route_type: routeTypeFromPath(path),
-    utm_source: utms.utm_source || DEFAULT_UTM_SOURCE,
-    utm_medium: normalizeUtmMedium(
-      (utms.utm_medium as string | undefined) ||
-        (typeof extra.utm_medium === "string" ? extra.utm_medium : undefined),
-    ),
-    utm_campaign: utms.utm_campaign || campaignFromPath(path),
-    attribution_channel: readAttribution().channel,
+    // Acquisition is not a CTA position. Preserve QA UTMs and real referrer;
+    // never manufacture site/cta markers that exclude legitimate visits.
+    utm_source: utms.utm_source || acquisition.source || null,
+    utm_medium: utms.utm_medium || null,
+    utm_campaign: utms.utm_campaign || null,
+    attribution_channel: acquisition.channel,
     // Rodada 6 — contexto contratual (nunca fallback geográfico falso).
     route_family: contrato.route_family,
     intent: contrato.intent ?? null,
