@@ -24,7 +24,7 @@ export type JourneyLead = QaCheckable & {
   origin_route?: string | null;
   service_slug?: string | null;
 };
-export type JourneyOs = { id: string; protocolo: string; created_at: string; status: string; lead_id: string | null; journey_id: string | null };
+export type JourneyOs = { id: string; protocolo: string; created_at: string; status: string; lead_id: string | null; journey_id: string | null; etapas?: unknown };
 
 // A rajada é um sinal de automação, nunca prova de que a visita é um robô.
 export function suspiciousJourneys(events: JourneyEvent[]) {
@@ -97,4 +97,22 @@ export function recentVisitGroups(visits:ReturnType<typeof summarizeJourneys>["v
     group.visits++;if(visit.last>group.last){group.last=visit.last;group.elapsedMs=elapsedMs;}groups.set(key,group);
   }
   return [...groups].map(([key,g])=>({key,...g})).sort((a,b)=>a.elapsedMs-b.elapsedMs);
+}
+
+export function completionConversion(result: ReturnType<typeof summarizeJourneys>, leads: JourneyLead[], orders: JourneyOs[], dimension: "symptom" | "city" | "neighborhood", limited = false, now = Date.now()) {
+  const groups = new Map<string, { visits: number; withOrder: number; completed: number }>();
+  for (const visit of result.visits) {
+    const group = groups.get(visit[dimension]) ?? { visits: 0, withOrder: 0, completed: 0 };
+    const eligibleLeads = leads.filter(l => l.journey_id === visit.id && !isQaEvent(l) && !ehTrafegoInterno(l) && l.created_at >= visit.first);
+    const linked = orders.filter(o => o.journey_id === visit.id && eligibleLeads.some(l => o.lead_id === l.id && o.created_at >= l.created_at) && Date.parse(o.created_at) <= now);
+    group.visits++;
+    if (linked.length) group.withOrder++;
+    if (linked.some(o => ["pronta", "entregue", "concluida", "concluída"].includes(o.status) && Array.isArray(o.etapas) && o.etapas.some((s: unknown) => {
+      if (!s || typeof s !== "object" || !("metric" in s) || !("at" in s) || s.metric !== "completed" || typeof s.at !== "string") return false;
+      const at = Date.parse(s.at);
+      return Number.isFinite(at) && at >= Date.parse(o.created_at) && at <= now;
+    }))) group.completed++;
+    groups.set(visit[dimension], group);
+  }
+  return [...groups].map(([label, g]) => ({ label, ...g, rate: !limited && g.visits >= 5 ? g.completed / g.visits * 100 : null })).sort((a,b) => b.visits - a.visits);
 }
