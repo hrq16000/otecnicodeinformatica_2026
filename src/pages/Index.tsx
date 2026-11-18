@@ -29,6 +29,47 @@ const SectionFallback = ({ height = "480px" }: { height?: string }) => (
   <SkeletonSection height={height} />
 );
 
+// Consultas presentes no snapshot histórico real do Search Console (11/08–08/09/2026).
+// As frases foram revisadas para leitura natural; não representam volumes atuais.
+const BUSCAS_REAIS = [
+  {
+    pergunta: "Computador não reconhece HD ou SSD?",
+    orientacao: "Se a unidade desapareceu, confira se ela aparece nas informações do sistema. Uma falha de conexão, energia ou da própria unidade exige diagnósticos diferentes.",
+    cuidado: "Com arquivos importantes, evite inicializar, formatar ou gravar novos dados.",
+    href: "/blog/hd-nao-e-reconhecido-na-bios-o-que-fazer",
+  },
+  {
+    pergunta: "PC desliga sozinho?",
+    orientacao: "Observe se o desligamento acontece ao ligar, durante jogos ou após alguns minutos. Temperatura, fonte e alimentação são hipóteses, não um diagnóstico fechado.",
+    cuidado: "Se houver cheiro de queimado ou aquecimento excessivo, desligue e não insista.",
+    href: "/problemas/computador-desliga-sozinho",
+  },
+  {
+    pergunta: "Impressora não quer imprimir?",
+    orientacao: "Confira papel, conexão e mensagens de erro. No Windows, verifique também se há trabalhos presos na fila antes de reinstalar qualquer coisa.",
+    cuidado: "Não force mecanismos ou retire peças para tentar destravar o equipamento.",
+    href: "/problemas/impressora-nao-imprime",
+  },
+  {
+    pergunta: "Notebook superaquecendo?",
+    orientacao: "Use uma superfície firme, observe as saídas de ar e note quando o ventilador acelera. Poeira, carga de trabalho e refrigeração podem contribuir.",
+    cuidado: "Desligamentos por temperatura merecem avaliação antes de continuar exigindo o aparelho.",
+    href: "/blog/notebook-superaquecendo-o-que-fazer",
+  },
+  {
+    pergunta: "Precisa de conserto de notebook em Curitiba?",
+    orientacao: "Tela, carregamento, teclado e lentidão pedem verificações distintas. Entenda as etapas do diagnóstico antes de autorizar troca de peças.",
+    cuidado: "O serviço e o orçamento dependem da falha confirmada e da disponibilidade.",
+    href: "/servicos/manutencao-de-notebook",
+  },
+  {
+    pergunta: "Sua empresa precisa de suporte técnico em Curitiba?",
+    orientacao: "Se estações, sistema, rede ou impressão pararam, registre o que foi afetado e quando começou. Essa informação ajuda a definir a prioridade técnica.",
+    cuidado: "Atendimento, modalidade e prazo são confirmados na triagem.",
+    href: "/servicos/suporte-tecnico-empresarial",
+  },
+] as const;
+
 const Index = () => {
   // Metadados da home agora saem no HTML do SSR (PageSEO em JSX), não em efeito.
   useEffect(() => {
@@ -92,6 +133,52 @@ const Index = () => {
         </section>
 
         <ContextosBento />
+        {/* Intenções já observadas no Search Console: respostas úteis e rotas existentes, sem páginas duplicadas. */}
+        <section className="border-b border-border bg-secondary/30 py-12 md:py-16" aria-labelledby="buscas-reais-titulo">
+          <div className="container mx-auto">
+            <div className="max-w-3xl">
+              <p className="text-xs font-bold uppercase tracking-widest text-accent">Central de informações</p>
+              <h2 id="buscas-reais-titulo" className="mt-2 font-heading text-2xl font-bold tracking-tight text-foreground md:text-3xl">
+                Pesquisou um problema no Google? Comece por aqui.
+              </h2>
+              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                Identifique sinais, faça apenas verificações seguras e consulte a explicação completa
+                antes de decidir se precisa de atendimento técnico.
+              </p>
+            </div>
+
+            <div className="mt-7 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+              {BUSCAS_REAIS.map((item) => (
+                <article key={item.href} className="flex flex-col rounded-2xl border border-border bg-card p-5">
+                  <h3 className="font-heading text-lg font-bold text-foreground">{item.pergunta}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.orientacao}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground">{item.cuidado}</p>
+                  <Link
+                    to={item.href}
+                    className="mt-auto inline-flex min-h-11 items-center pt-4 font-heading text-sm font-bold text-accent underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  >
+                    Entender o problema e as opções
+                    <span aria-hidden="true" className="ml-2">→</span>
+                  </Link>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-7 flex flex-col gap-3 rounded-2xl border border-accent/30 bg-card p-5 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-sm leading-relaxed text-foreground">
+                Não encontrou seu caso? Descreva o sintoma com suas palavras para iniciar a triagem.
+              </p>
+              <Link
+                to="/atendimento"
+                data-cta-location="home_buscas_reais_atendimento"
+                className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-xl bg-accent px-5 text-sm font-bold text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                Solicitar atendimento
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <EncontreSuaSolucao />
         <DiagnosticoIa />
         <CondicoesAtendimento />
