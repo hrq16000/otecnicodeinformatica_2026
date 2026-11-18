@@ -93,8 +93,9 @@ jobs:
                   public/editorial-submissions.json public/editorial/verdicts public/editorial/submissions \
                   public/editorial-waves-status.json public/editorial-lotes.json public/editorial/lotes \
                   public/editorial-lote4-validacao.json public/indexacao-ledger.json \
-                  reports/indexacao-historico.json reports/indexacao-ledger.md docs/relatorio-vereditos-indexacao.md \
-                  docs/relatorio-lote4-validacao.md
+                  docs/relatorio-vereditos-indexacao.md docs/relatorio-lote4-validacao.md
+          # reports/ é ignorado: adicionar somente os dois artefatos explicitamente previstos.
+          git add -f -- reports/indexacao-historico.json reports/indexacao-ledger.md
           if git diff --cached --quiet; then
             echo "Sem variação no ledger."
           else
