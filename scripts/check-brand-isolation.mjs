@@ -21,6 +21,28 @@ const ALLOWLIST = [
   /^src\/lib\/legacy\//,
 ];
 
+// Exceção operacional restrita à triagem Encontre um Técnico autorizada pelo
+// proprietário. O telefone não se torna o contato canônico da marca OTI.
+// Exige literal único na configuração de ponte e, no build, no bundle dessa
+// mesma ponte. Qualquer ocorrência adicional ou noutra superfície segue falhando.
+const TRIAGE_BRIDGE_FILE = "src/lib/config/eutBridge.ts";
+const TRIAGE_NUMBER = "5541997452053";
+const TRIAGE_BUILD_FILES = [
+  /^dist\/client\/assets\/index-[\w-]+\.js$/,
+  /^dist\/server\/_ssr\/legacyRouteElements-[\w-]+\.mjs$/,
+];
+const approvedBridgeSource = existsSync(TRIAGE_BRIDGE_FILE) &&
+  readFileSync(TRIAGE_BRIDGE_FILE, "utf8").includes(`triagemWhatsApp: "${TRIAGE_NUMBER}"`);
+
+const isApprovedTriageOccurrence = (rel, lineText, token) => {
+  if (!approvedBridgeSource || token !== TRIAGE_NUMBER) return false;
+  if (lineText.split(token).length !== 2) return false;
+  if (rel === TRIAGE_BRIDGE_FILE) return lineText.includes("triagemWhatsApp:");
+  // Bundlers mesclam código e removem nomes de campos; a auditoria das fontes
+  // acima continua exigindo que o número exista somente na ponte autorizada.
+  return TRIAGE_BUILD_FILES.some((re) => re.test(rel));
+};
+
 const SKIP_EXT = new Set([".png", ".jpg", ".jpeg", ".webp", ".avif", ".ico", ".woff", ".woff2", ".mp4", ".pdf", ".gz", ".br"]);
 
 const files = [];
@@ -49,7 +71,7 @@ for (const file of files) {
   const lines = content.split("\n");
   lines.forEach((lineText, index) => {
     for (const token of LEGACY_TOKENS) {
-      if (lineText.includes(token)) {
+      if (lineText.includes(token) && !isApprovedTriageOccurrence(rel, lineText, token)) {
         violations.push(`${rel}:${index + 1} → ${token}`);
       }
     }
