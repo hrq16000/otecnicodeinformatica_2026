@@ -62,6 +62,9 @@ export default defineConfig({
     cloudflare: {
       nodeCompat: true,
       deployConfig: true,
+      // Mantem o preview local no ultimo workerd validado pelo CI.
+      // Evita gerar uma data de compatibilidade futura para o binario instalado.
+      wrangler: { compatibility_date: "2026-11-17" },
     },
   },
   vite: {

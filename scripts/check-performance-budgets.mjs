@@ -32,14 +32,14 @@ for (const dir of dirs) {
       report.audits["experimental-interaction-to-next-paint"];
     const inp = typeof inpAudit?.numericValue === "number" ? Math.round(inpAudit.numericValue) : null;
     checked++;
-    if (fcp > maxFcp) failures.push(`${file}: FCP ${fcp}ms > ${maxFcp}ms`);
-    if (lcp > maxLcp) failures.push(`${file}: LCP ${lcp}ms > ${maxLcp}ms`);
-    if (cls > maxCls) failures.push(`${file}: CLS ${cls.toFixed(3)} > ${maxCls}`);
-    if (ttfb > maxTtfb) failures.push(`${file}: TTFB ${ttfb}ms > ${maxTtfb}ms`);
-    if (tbt > maxTbt) failures.push(`${file}: TBT ${tbt}ms > ${maxTbt}ms`);
-    if (inp !== null && inp > maxInp) failures.push(`${file}: INP ${inp}ms > ${maxInp}ms`);
+    if (fcp > maxFcp) failures.push(`${dir}/${file}: FCP ${fcp}ms > ${maxFcp}ms`);
+    if (lcp > maxLcp) failures.push(`${dir}/${file}: LCP ${lcp}ms > ${maxLcp}ms`);
+    if (cls > maxCls) failures.push(`${dir}/${file}: CLS ${cls.toFixed(3)} > ${maxCls}`);
+    if (ttfb > maxTtfb) failures.push(`${dir}/${file}: TTFB ${ttfb}ms > ${maxTtfb}ms`);
+    if (tbt > maxTbt) failures.push(`${dir}/${file}: TBT ${tbt}ms > ${maxTbt}ms`);
+    if (inp !== null && inp > maxInp) failures.push(`${dir}/${file}: INP ${inp}ms > ${maxInp}ms`);
     if (typeof a11y === "number" && a11y < minA11y)
-      failures.push(`${file}: acessibilidade ${a11y.toFixed(2)} < ${minA11y}`);
+      failures.push(`${dir}/${file}: acessibilidade ${a11y.toFixed(2)} < ${minA11y}`);
   }
 }
 
