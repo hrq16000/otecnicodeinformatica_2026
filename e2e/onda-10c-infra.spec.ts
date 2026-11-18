@@ -73,9 +73,22 @@ for (const entrada of EDITORIAL_WAVES) {
         /BreadcrumbList/.test(page) || /aria-label="[^"]*(breadcrumb|navega)/i.test(page);
       expect(temBreadcrumb, `breadcrumb ausente em ${entrada.url}`).toBe(true);
 
-      // Conversão passa pelo funil interno; link direto de WhatsApp é proibido no editorial.
-      expect(page).not.toMatch(/href="https:\/\/wa\.me\//i);
-      const temCta = /data-cta|\/diagnostico-tecnico|\/contato|funil/i.test(page);
+      // O cabeçalho global já usa WhatsApp direto. Na área editorial,
+      // a ponte contextual precisa manter rastreamento, mensagem e segurança.
+      const corpoEditorial = page.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] ?? "";
+      expect(corpoEditorial, `corpo editorial ausente em ${entrada.url}`).not.toBe("");
+
+      const linksWhatsApp = [...corpoEditorial.matchAll(/<a\b[^>]*>/gi)]
+        .map(([tag]) => tag)
+        .filter((tag) => /href="https:\/\/wa\.me\//i.test(tag));
+      for (const tag of linksWhatsApp) {
+        expect(tag, `WhatsApp fora do CTA contextual em ${entrada.url}`)
+          .toMatch(/data-cta-location="final_cta_guide"/i);
+        expect(tag).toMatch(/data-wa-source="whatsapp_cta"/i);
+        expect(tag).toMatch(/href="https:\/\/wa\.me\/[0-9]+\?text=[^"]+"/i);
+        expect(tag).toMatch(/rel="[^"]*\bnoopener\b[^"]*\bnoreferrer\b[^"]*"/i);
+      }
+      const temCta = /data-cta|\/diagnostico-tecnico|\/contato|funil/i.test(corpoEditorial);
       expect(temCta, `CTA de conversão ausente em ${entrada.url}`).toBe(true);
     });
   });
