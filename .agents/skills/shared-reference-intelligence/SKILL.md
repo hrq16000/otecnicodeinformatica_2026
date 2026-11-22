@@ -37,3 +37,7 @@ Use em tarefas não triviais de UI, portfólios **novos**, React/TanStack, QA re
 - **Demais projetos**: usar o mesmo método de seleção, subordinado aos `AGENTS.md` locais, stack, marca e regras comerciais; funcionalidades sem UI não precisam de motion.
 
 **Estado da referência:** método documentado; nenhum código externo, skill executável, CLI ou dependência do Reanimate/Gists foi instalado ou homologado em runtime.
+
+## Roteamento adicional por produto — 21/11/2026
+
+Em O Técnico de Informática, consultar `docs/agent-tools-selection-2026-11-21.md` para escolher entre segurança baseada em evidência, UI/acessibilidade, vídeo/voz offline e suporte Android TV. Respeitar as proibições editoriais, mídia real, SEO curado, marca e comandos oficiais; lista de terceiros não é homologação ou aprovação de instalação.
