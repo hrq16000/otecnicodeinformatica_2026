@@ -708,6 +708,175 @@ const rows: Array<EditorialHubSummary & { slug: string }> = [
     "readTime": "12 min",
     "category": "Linux"
   },
+  // Onda editorial: metadados de artigos já aprovados, conferidos no site público.
+  {
+    "slug": "como-configurar-2fa-em-tudo",
+    "title": "Como Configurar 2FA (Autenticação de Dois Fatores) em Tudo",
+    "excerpt": "Guia prático para ativar 2FA em e-mail, redes sociais, bancos, servidores e aplicações empresariais.",
+    "date": "2026-04-20",
+    "readTime": "10 min",
+    "category": "Segurança e Redes"
+  },
+  {
+    "slug": "como-proteger-rede-wifi-empresa",
+    "title": "Como Proteger a Rede Wi-Fi da Sua Empresa: Guia Técnico",
+    "excerpt": "WPA3, segregação de redes (VLAN), captive portal, RADIUS e monitoramento — segurança real para SMB.",
+    "date": "2026-04-20",
+    "readTime": "12 min",
+    "category": "Segurança e Redes"
+  },
+  {
+    "slug": "como-configurar-firewall-pfsense",
+    "title": "Como Configurar Firewall pfSense: Guia Completo Para Redes Empresariais",
+    "excerpt": "Instalação, regras de firewall, NAT, VPN e monitoramento com pfSense em redes de pequenas empresas.",
+    "date": "2026-04-13",
+    "readTime": "16 min",
+    "category": "Procedimentos Técnicos"
+  },
+  {
+    "slug": "como-configurar-active-directory",
+    "title": "Servidor AD: como planejar e configurar Active Directory sem depender de um assistente de versão",
+    "excerpt": "Antes de promover um Windows Server a controlador de domínio, planeje nome DNS, IP, DNS, contas administrativas, controlador adicional, GPO e backup. Veja uma sequência segura para um servidor AD.",
+    "date": "2026-10-01",
+    "readTime": "16 min",
+    "category": "Infraestrutura e Servidores"
+  },
+  {
+    "slug": "como-deixar-celular-android-mais-rapido",
+    "title": "Celular Android lento: o que realmente testar antes de instalar um app de limpeza",
+    "excerpt": "Apps de limpeza não consertam todo tipo de lentidão. Veja como separar falta de espaço, aplicativo com falha, atualização pendente e limite do aparelho.",
+    "date": "2026-08-31",
+    "readTime": "10 min",
+    "category": "Celular e aplicativos"
+  },
+  {
+    "slug": "como-configurar-repetidor-wifi",
+    "title": "Como configurar repetidor Wi-Fi sem piorar a rede: posição, WPS e teste",
+    "excerpt": "Guia prático para configurar um extensor Wi-Fi, escolher a posição correta, validar sinal e velocidade e saber quando repetidor deixa de ser a solução.",
+    "date": "2026-09-25",
+    "readTime": "10 min",
+    "category": "Redes e Wi-Fi"
+  },
+  {
+    "slug": "trocar-windows-por-linux-vale-a-pena",
+    "title": "Trocar Windows por Linux vale a pena? Checklist de compatibilidade antes de migrar",
+    "excerpt": "Decida com base em aplicativos, periféricos, arquivos, jogos e suporte do hardware. Veja como testar Linux por USB antes de alterar o disco.",
+    "date": "2026-09-25",
+    "readTime": "11 min",
+    "category": "Linux"
+  },
+  {
+    "slug": "erros-comuns-upgrade-computador",
+    "title": "Compatibilidade de PC antes do upgrade: RAM, SSD, GPU, fonte e BIOS sem comprar peça errada",
+    "excerpt": "Antes de trocar RAM, SSD, placa de vídeo ou processador, valide padrão, slot, firmware, energia, espaço físico e suporte do sistema. Use esta matriz para evitar os erros mais comuns de upgrade.",
+    "date": "2026-10-01",
+    "readTime": "14 min",
+    "category": "Hardware e Upgrades"
+  },
+  {
+    "slug": "como-configurar-vpn-empresarial",
+    "title": "VPN empresarial: como planejar acesso remoto seguro sem expor a rede",
+    "excerpt": "Arquitetura e checklist para VPN de acesso remoto: identidade, MFA, rotas, segmentação, WireGuard/OpenVPN, logs, revogação e teste de recuperação.",
+    "date": "2026-09-25",
+    "readTime": "12 min",
+    "category": "Redes e Infraestrutura"
+  },
+  {
+    "slug": "como-recuperar-conta-hackeada",
+    "title": "Conta hackeada: como recuperar acesso e fechar as portas usadas pelo invasor",
+    "excerpt": "Procedimento seguro para conta comprometida: usar recuperação oficial, revisar sessões e dados de segurança, trocar senha, ativar MFA e proteger o e-mail principal.",
+    "date": "2026-09-25",
+    "readTime": "11 min",
+    "category": "Segurança"
+  },
+  {
+    "slug": "como-deixar-windows-11-mais-rapido-iniciantes",
+    "title": "Windows 11 lento: como deixar o PC mais rápido sem truques",
+    "excerpt": "Diagnóstico prático para Windows 11 lento: inicialização, armazenamento, processos, atualizações e sinais de limite de hardware antes de instalar otimizadores.",
+    "date": "2026-09-25",
+    "readTime": "11 min",
+    "category": "Windows"
+  },
+  {
+    "slug": "como-fazer-backup-fotos-windows-iniciantes",
+    "title": "Como fazer backup de fotos no Windows e comprovar que a cópia funciona",
+    "excerpt": "Método seguro para proteger fotos no Windows usando disco externo, Histórico de Arquivos e nuvem — com verificação de restauração e sem confundir sincronização com backup.",
+    "date": "2026-09-25",
+    "readTime": "10 min",
+    "category": "Backup e Dados"
+  },
+  {
+    "slug": "como-atualizar-windows-corretamente",
+    "title": "Como atualizar o Windows 11 com segurança e o que fazer quando falha",
+    "excerpt": "Passo a passo para preparar, instalar e validar atualizações do Windows 11, com backup, energia, espaço, reinício e diagnóstico oficial quando o Windows Update falha.",
+    "date": "2026-09-25",
+    "readTime": "10 min",
+    "category": "Windows"
+  },
+  {
+    "slug": "como-recuperar-arquivos-apagados-windows",
+    "title": "Como recuperar arquivos apagados no Windows sem reduzir a chance de recuperação",
+    "excerpt": "Lixeira, versões de backup e Windows File Recovery: uma ordem segura para tentar recuperar arquivos apagados e reduzir o uso do disco após a exclusão.",
+    "date": "2026-09-25",
+    "readTime": "10 min",
+    "category": "Backup e Dados"
+  },
+  {
+    "slug": "como-fazer-teste-velocidade-internet",
+    "title": "Como fazer teste de velocidade da internet: download, upload, ping, jitter e perda sem interpretar errado",
+    "excerpt": "Teste a internet de forma comparável: controle Wi‑Fi e outros usos, repita medições e interprete download, upload, latência, jitter e perda. Veja também a diferença entre a antiga referência EAQ e as ferramentas atuais da ESAQ/Anatel.",
+    "date": "2026-10-01",
+    "readTime": "14 min",
+    "category": "Redes e Wi-Fi"
+  },
+  {
+    "slug": "como-resetar-senha-windows",
+    "title": "Esqueceu a senha do Windows? Como recuperar o acesso pelos métodos oficiais",
+    "excerpt": "Como diferenciar PIN, senha da conta Microsoft e senha local, usar os fluxos oficiais de recuperação do Windows e saber quando parar — sem bypass de autenticação.",
+    "date": "2026-09-25",
+    "readTime": "11 min",
+    "category": "Windows e Segurança"
+  },
+  {
+    "slug": "como-organizar-arquivos-windows-iniciantes",
+    "title": "Como organizar arquivos no computador: pastas, nomes, busca, backup e rotina simples",
+    "excerpt": "Organizar arquivos no computador não é criar dezenas de pastas: é conseguir encontrar, entender e proteger cada documento. Veja uma estrutura simples, regras de nome, busca, OneDrive e backup sem mover tudo por impulso.",
+    "date": "2026-10-01",
+    "readTime": "14 min",
+    "category": "Windows"
+  },
+  {
+    "slug": "como-trocar-senha-wifi",
+    "title": "Como trocar a senha do Wi-Fi com segurança sem perder a configuração do roteador",
+    "excerpt": "Passo a passo seguro para alterar a senha da rede Wi-Fi, identificar o painel correto, escolher WPA2/WPA3, reconectar dispositivos e saber quando não fazer reset do roteador.",
+    "date": "2026-09-25",
+    "readTime": "12 min",
+    "category": "Redes e Segurança"
+  },
+  {
+    "slug": "como-configurar-bios-uefi-corretamente",
+    "title": "Como configurar BIOS/UEFI corretamente: baseline, Secure Boot, TPM, armazenamento e rollback",
+    "excerpt": "Configurar BIOS/UEFI com segurança é mudar somente o que o objetivo exige. Registre o baseline, proteja a chave BitLocker, preserve o modo de boot compatível e valide cada alteração antes de seguir.",
+    "date": "2026-10-01",
+    "readTime": "16 min",
+    "category": "BIOS e UEFI"
+  },
+  {
+    "slug": "como-configurar-servidor-de-arquivos",
+    "title": "Servidor de arquivos: como planejar SMB no Windows ou Samba sem expor dados",
+    "excerpt": "Guia técnico para decidir arquitetura, usuários, grupos, permissões, compartilhamentos SMB/Samba, firewall, backup e restauração sem expor dados.",
+    "date": "2026-09-25",
+    "readTime": "17 min",
+    "category": "Redes e Infraestrutura"
+  },
+  {
+    "slug": "como-configurar-firewall-ufw-linux",
+    "title": "UFW no Linux: firewall host sem se trancar fora do servidor",
+    "excerpt": "Como planejar, testar e aplicar regras UFW em Ubuntu: SSH, portas, origem por rede, perfis de aplicação, logs, exclusão de regras e critérios de parada.",
+    "date": "2026-09-25",
+    "readTime": "14 min",
+    "category": "Segurança e Redes"
+  },
 ];
 
 export const EDITORIAL_HUB_SUMMARIES: Record<string, EditorialHubSummary> = Object.fromEntries(
