@@ -176,3 +176,7 @@ do sitemap.
 - **RiseClub** (https://riseclub.tech/): somente benchmark de comunidade, trilhas, notícias e engajamento; nunca copiar conteúdo, interface, imagens ou dados.
 - Aplicação específica: Home, /servicos, /empresas e seções de contexto. Priorizar imagens reais licenciadas; não usar IA, prova social fictícia nem animação que retarde LCP ou indexação. Preservar a separação editorial/comercial e os gates visuais existentes.
 - Implementar em micro-PR própria, medir 390/1440 e preservar SEO, SSR (se houver), LCP, segurança, privacidade, funis e conteúdo factual. Nenhuma regra aqui autoriza mexer em produção, banco, RLS, DNS ou pagamentos.
+
+## Inteligência compartilhada de skills (2026-11-20)
+
+Antes de adotar recursos externos de motion, React, QA mobile, acessibilidade ou SQL de auditoria, consultar `.agents/skills/shared-reference-intelligence/SKILL.md`. Aplicar somente competências pertinentes, sem instalar/executar código de terceiros; contratos e gates locais têm precedência. No 0WEB, aplicar a portfólios **novos**, sem retrabalhar os existentes por esta regra.
