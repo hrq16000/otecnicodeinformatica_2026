@@ -1,9 +1,9 @@
 # Design engineering premium — análise e adoção Emil Kowalski
 
-**Estado:** R0 — diagnóstico estático e diretriz documental; implementação NÃO iniciada.
+**Estado:** R0 + R1.2 — diagnóstico estático e auditoria visual desktop parcial; implementação NÃO iniciada.
 **Data:** 27/11/2026 • **Repositório:** hrq16000/otecnicodeinformatica_2026 • **Checkpoint analisado da main:** `7ed5f7835ece4eb8740489b7c495f0c2e4bbc84f`.
 
-Este documento é incremental. As regras locais de AGENTS.md, DESIGN.md, segurança, SEO, arquitetura, publicação, dados e funis prevalecem. Não autoriza alterações de runtime, instalações, custos, merge ou deploy. Não substitui a homologação visual da versão efetivamente publicada. O navegador ao vivo teve timeout nesta rodada; nenhuma inspeção de screenshots, teste visual, medição de performance ou aprovação de produção é reivindicada.
+Este documento é incremental. As regras locais de AGENTS.md, DESIGN.md, segurança, SEO, arquitetura, publicação, dados e funis prevalecem. Não autoriza alterações de runtime, instalações, custos, merge ou deploy. Não substitui a homologação visual da versão efetivamente publicada. A auditoria ao vivo posterior (R1.2) está registrada na seção 7; não implica homologação da produção.
 
 ## 1. Diagnóstico por projeto (evidência de leitura)
 
@@ -74,3 +74,13 @@ Se não existirem tokens equivalentes, avaliar curva de entrada/saída `cubic-be
 GO para implementação somente com baseline visual, brief próprio da marca, propósito de cada movimento, seleção dos módulos pertinentes e uma micro-superfície definida. GO para release somente com gates locais, comparação real nos viewports, interação funcional, reduced-motion, zero regressão crítica de performance/conversão, sem novos riscos de acessibilidade, SSR/SEO e privacidade. NO-GO se movimento interferir na ação, se houver conteúdo invisível, template copiado, alteração comercial incidental, bloqueio de dados, dependência sem justificativa ou validação inconclusiva.
 
 **Registro desta rodada:** leitura de referências e arquivos; documentação proposta/registrada em branch isolada. Nenhum código de aplicação, dependência, banco, DNS ou configuração de hospedagem foi alterado por esta diretriz.
+
+## 7. R1.2 — Auditoria visual inicial da Home (27/11/2026)
+
+- **URL pública observada:** https://otecnicodeinformatica.com.br/
+- **Viewport efetivo:** 1800 × 1125 CSS px; scrollWidth 1787; 1 h1; captura na extensão.
+- **Evidência:** captura de tela do primeiro viewport e leitura de estado público. A Home apresenta pergunta orientada ao problema, campo de diagnóstico, seis atalhos de sintomas e quatro caminhos editoriais. O CTA principal está visível e a disposição de texto é clara. O banner de cookies no canto inferior esquerdo encobre parcialmente o primeiro card/caminho e a faixa inferior; botão flutuante de atendimento ocupa o canto oposto. O espaço amplo à direita deve ser refinado com composição editorial, não preenchido por efeito ornamental. Não foi observada rolagem horizontal nessa medição.
+- **P0 — antes de direção de arte:** Separar consentimento e CTA flutuante dos caminhos principais sem retirar controles legais; conferir 390/768/1440 e foco/teclado.
+- **P1 — candidato de protótipo:** Refinar HeroTriagem e ritmos tipográficos; manter texto de sintomas, input e CTAs imediatamente disponíveis. Eventual movimento apenas no feedback de seleção e transição da etapa, não em digitação, navegação habitual ou resultados. Reutilizar MotionProvider já presente em vez de nova dependência.
+- **Skills aplicáveis:** find-animation-opportunities, remove-animations, review-animations, emil-design-eng, animation-performance, break-ui e mobile-native quando houver baseline móvel. `prototype` somente após terminar R1.
+- **Limites:** Calibração para 1440/390 px não concluída por timeout na extensão; o navegador alternativo permitiu inspeção desktop sem ajuste do viewport. Mobile e tablet pendentes. Não houve submissão de formulários, acionamento de WhatsApp, mudança de consentimento, verificação de commit implantado, medição de Web Vitals ou teste completo de acessibilidade/funil. Nenhuma captura foi incluída no Git. Não alterar contratos comerciais, SEO, dados, dependências, código ou produção com base neste diagnóstico. A aprovação R1 integral permanece pendente.
