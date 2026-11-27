@@ -176,3 +176,6 @@ do sitemap.
 - **RiseClub** (https://riseclub.tech/): somente benchmark de comunidade, trilhas, notícias e engajamento; nunca copiar conteúdo, interface, imagens ou dados.
 - Aplicação específica: Home, /servicos, /empresas e seções de contexto. Priorizar imagens reais licenciadas; não usar IA, prova social fictícia nem animação que retarde LCP ou indexação. Preservar a separação editorial/comercial e os gates visuais existentes.
 - Implementar em micro-PR própria, medir 390/1440 e preservar SEO, SSR (se houver), LCP, segurança, privacidade, funis e conteúdo factual. Nenhuma regra aqui autoriza mexer em produção, banco, RLS, DNS ou pagamentos.
+
+## Padrão anti-site genérico — R8/10
+- Para trabalho visual autorizado, ler `docs/skills/ANTI_GENERIC_EXPERIENCE.md` antes do código. A diretriz integra TasteSkill, Transitions.dev, React Bits e Emil Kowalski; não substitui as regras específicas deste repositório.
