@@ -74,7 +74,8 @@ export const BairroFotos = ({
             width={foto.width}
             height={foto.height}
             priority
-            sizes="(min-width: 768px) 55vw, 100vw"
+            decoding="async"
+            sizes="(min-width: 768px) 55vw, calc(100vw - 2rem)"
             wrapperClassName="aspect-[16/10] overflow-hidden"
             className="h-full w-full object-cover"
           />

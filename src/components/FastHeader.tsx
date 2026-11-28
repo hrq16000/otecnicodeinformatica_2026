@@ -301,6 +301,12 @@ export const FastHeader = () => {
           <img
             alt={brandConfig.logoAlt}
             src={brandConfig.logoOnLight}
+            srcSet={brandConfig.logoOnLight === "/logo-dark.webp"
+              ? "/logo-dark-320.webp 320w, /logo-dark-500.webp 500w, /logo-dark.webp 712w"
+              : undefined}
+            sizes={brandConfig.logoOnLight === "/logo-dark.webp"
+              ? "(min-width: 768px) 250px, (min-width: 640px) 214px, 161px"
+              : undefined}
             width="304"
             height="68"
             decoding="sync"
