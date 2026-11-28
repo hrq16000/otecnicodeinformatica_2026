@@ -25,7 +25,10 @@ for (const { dir, label } of SOURCES) {
     }
     if (!report.audits) continue;
     rows.push({
-      formFactor: label,
+      // A pasta pode conter execuções de outro perfil; o JSON é a fonte real.
+      formFactor: ["desktop", "mobile"].includes(report.configSettings?.formFactor)
+        ? report.configSettings.formFactor
+        : label,
       url: report.finalUrl || report.requestedUrl || file,
       performance: report.categories?.performance?.score ?? null,
       accessibility: report.categories?.accessibility?.score ?? null,
