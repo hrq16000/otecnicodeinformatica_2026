@@ -5,14 +5,17 @@ import IndexPage from "./pages/Index";
 // Importações eager apenas no bundle SSR: evitam que os textos LCP destas
 // rotas medidas dependam da revelação de uma fronteira React.lazy em isolate frio.
 // No cliente, os mesmos módulos continuam divididos por rota.
-const [termosCondicoesSsr, clusterProblemaPageSsr, problemasHubSsr, tecnicoSaoJoseSsr] = import.meta.env.SSR
+const [termosCondicoesSsr, clusterProblemaPageSsr, problemasHubSsr, tecnicoSaoJoseSsr, batelSsr, aguaVerdeSsr, servicoCoreSsr] = import.meta.env.SSR
   ? await Promise.all([
       import("./pages/TermosCondicoes"),
       import("./pages/problemas/ClusterProblemaPage"),
       import("./pages/problemas/ProblemasHub"),
       import("./pages/TecnicoInformaticaSaoJosePinhais"),
+      import("./pages/bairros/Batel"),
+      import("./pages/bairros/AguaVerde"),
+      import("./pages/servicos/ServicoCore"),
     ])
-  : [null, null, null, null];
+  : [null, null, null, null, null, null, null];
 
 /**
  * ─────────────────────────────────────────────────────────────
@@ -185,7 +188,9 @@ const VistaAlegreMalha = lazyPagina(() => import("./pages/bairros/VistaAlegre"))
 const ButiatuvinhaMalha = lazyPagina(() => import("./pages/bairros/Butiatuvinha"));
 const BairrosHub = lazyPagina(() => import("./pages/BairrosHub"));
 const Centro = lazyPagina(() => import("./pages/bairros/Centro"));
-const Batel = lazyPagina(() => import("./pages/bairros/Batel"));
+const Batel = batelSsr
+  ? comSinkDeJsonLd(batelSsr.default)
+  : lazyPagina(() => import("./pages/bairros/Batel"));
 const Portao = lazyPagina(() => import("./pages/bairros/Portao"));
 const CampoComprido = lazyPagina(() => import("./pages/bairros/CampoComprido"));
 const CIC = lazyPagina(() => import("./pages/bairros/CIC"));
@@ -318,7 +323,9 @@ const JardimMontoSantoAT = lazyPagina(() => import("./pages/bairros/JardimMontoS
 const CachoeiraAT = lazyPagina(() => import("./pages/bairros/CachoeiraAT"));
 
 // Novos bairros Curitiba
-const AguaVerde = lazyPagina(() => import("./pages/bairros/AguaVerde"));
+const AguaVerde = aguaVerdeSsr
+  ? comSinkDeJsonLd(aguaVerdeSsr.default)
+  : lazyPagina(() => import("./pages/bairros/AguaVerde"));
 const Bigorrilho = lazyPagina(() => import("./pages/bairros/Bigorrilho"));
 const Merces = lazyPagina(() => import("./pages/bairros/Merces"));
 const BoaVista = lazyPagina(() => import("./pages/bairros/BoaVista"));
@@ -431,7 +438,9 @@ const BordaDoCampoSJP = lazyPagina(() => import("./pages/bairros/BordaDoCampoSJP
 const TecnicoInformaticaCuritibaAds = lazyPagina(() => import("./pages/ads/TecnicoInformaticaCuritibaAds"));
 
 // Páginas de Serviços Individuais
-const ServicoCore = lazyPagina(() => import("./pages/servicos/ServicoCore"));
+const ServicoCore = servicoCoreSsr
+  ? comSinkDeJsonLd(servicoCoreSsr.default)
+  : lazyPagina(() => import("./pages/servicos/ServicoCore"));
 
 const MontagemPc = lazyPagina(() => import("./pages/servicos/MontagemPc"));
 const ComputadorLento = lazyPagina(() => import("./pages/servicos/ComputadorLento"));

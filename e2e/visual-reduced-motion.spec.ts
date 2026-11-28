@@ -20,6 +20,7 @@ const rotas = [
 ];
 
 const CLS_MAX = 0.02;
+// Rodada de reconciliação: captura baseline após a main pós-#446.
 
 test.use({ viewport: { width: 1280, height: 900 } });
 
