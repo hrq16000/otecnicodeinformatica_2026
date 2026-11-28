@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-11T05:32:48.550Z",
+  "geradoEm": "2026-11-28T16:08:18.779Z",
   "base": "https://otecnicodeinformatica.com.br",
   "lote": "11A/4",
   "schemasExigidos": [
@@ -15,8 +15,8 @@
       "url": "/blog/boot-uefi-ou-legacy-como-identificar",
       "alvo": "https://otecnicodeinformatica.com.br/blog/boot-uefi-ou-legacy-como-identificar",
       "httpStatus": 200,
-      "title": "UEFI ou Legacy: como identificar o modo de inicialização do seu PC",
-      "description": "Como descobrir em qual modo o Windows foi instalado, por que GPT e MBR importam e o que muda ao alternar entre UEFI e Legacy sem preparar o disco.",
+      "title": "Boot mode UEFI ou Legacy: como saber qual seu PC usa",
+      "description": "Veja como identificar UEFI ou Legacy no Windows com msinfo32, conferir GPT/MBR e entender quando mudar o modo de boot sem perder a inicialização.",
       "canonical": "https://otecnicodeinformatica.com.br/blog/boot-uefi-ou-legacy-como-identificar",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "schemas": [
@@ -39,8 +39,8 @@
       "url": "/blog/ordem-de-boot-na-bios-como-configurar",
       "alvo": "https://otecnicodeinformatica.com.br/blog/ordem-de-boot-na-bios-como-configurar",
       "httpStatus": 200,
-      "title": "Ordem de boot na BIOS: como configurar sem quebrar a inicialização",
-      "description": "Para que serve a prioridade de inicialização, quando usar o menu de boot temporário e por que Fast Boot e portas USB atrapalham o reconhecimento do pendrive.",
+      "title": "Ordem de boot na BIOS/UEFI: como configurar sem quebrar a…",
+      "description": "Aprenda a diferenciar menu de boot temporário e prioridade permanente, identificar Windows Boot Manager, iniciar por USB com segurança e evitar mudanças…",
       "canonical": "https://otecnicodeinformatica.com.br/blog/ordem-de-boot-na-bios-como-configurar",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "schemas": [

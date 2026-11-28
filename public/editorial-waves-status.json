@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-01T12:33:02.153Z",
+  "geradoEm": "2026-11-28T16:08:16.508Z",
   "site": "UNKNOWN",
   "disponivel": false,
   "lotes": [
@@ -38,6 +38,114 @@
       "total": 3,
       "indexadas": "UNKNOWN",
       "cobertura": "UNKNOWN"
+    },
+    {
+      "lote": "11A/5",
+      "total": 3,
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
+    },
+    {
+      "lote": "11A/6",
+      "total": 3,
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
+    },
+    {
+      "lote": "11A/7",
+      "total": 3,
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
+    },
+    {
+      "lote": "11A/8",
+      "total": 6,
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
+    },
+    {
+      "lote": "11A/9",
+      "total": 5,
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
+    },
+    {
+      "lote": "11A/10",
+      "total": 5,
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
+    },
+    {
+      "lote": "11A/11",
+      "total": 5,
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
+    },
+    {
+      "lote": "11A/12",
+      "total": 3,
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
+    },
+    {
+      "lote": "11A/13",
+      "total": 3,
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
+    },
+    {
+      "lote": "11A/14",
+      "total": 1,
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
+    },
+    {
+      "lote": "11A/15",
+      "total": 1,
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
+    },
+    {
+      "lote": "11A/16",
+      "total": 1,
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
+    },
+    {
+      "lote": "11A/17",
+      "total": 1,
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
+    },
+    {
+      "lote": "11A/18",
+      "total": 1,
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
+    },
+    {
+      "lote": "11A/19",
+      "total": 1,
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
+    },
+    {
+      "lote": "11A/20",
+      "total": 1,
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
+    },
+    {
+      "lote": "11A/21",
+      "total": 1,
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
+    },
+    {
+      "lote": "11A/22",
+      "total": 1,
+      "indexadas": "UNKNOWN",
+      "cobertura": "UNKNOWN"
     }
   ],
   "rotas": [
@@ -54,7 +162,7 @@
       "internalState": "PUBLISHED",
       "contentHash": "cba47ddd4ab081a6",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -73,7 +181,7 @@
       "internalState": "PUBLISHED",
       "contentHash": "8ec249313054318c",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -92,7 +200,7 @@
       "internalState": "PUBLISHED",
       "contentHash": "3f80566c863cdfed",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -109,9 +217,9 @@
       "role": "satelite",
       "publishedAt": "2026-08-25",
       "internalState": "PUBLISHED",
-      "contentHash": "9392f7964190fc61",
+      "contentHash": "11210862b1bdd133",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -130,7 +238,7 @@
       "internalState": "PUBLISHED",
       "contentHash": "8815a2f22052efd9",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -147,9 +255,9 @@
       "role": "satelite",
       "publishedAt": "2026-08-26",
       "internalState": "PUBLISHED",
-      "contentHash": "ed7de44f66517ceb",
+      "contentHash": "937e49744f94f1c2",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -168,7 +276,7 @@
       "internalState": "PUBLISHED",
       "contentHash": "b0a31cf6858dda7c",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -185,9 +293,9 @@
       "role": "satelite",
       "publishedAt": "2026-08-26",
       "internalState": "PUBLISHED",
-      "contentHash": "ba7d864b73e0953e",
+      "contentHash": "efbff79190d32cad",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -204,9 +312,9 @@
       "role": "satelite",
       "publishedAt": "2026-08-26",
       "internalState": "PUBLISHED",
-      "contentHash": "0f9c121902a02c16",
+      "contentHash": "b633c36b223c0d9f",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -225,7 +333,7 @@
       "internalState": "PUBLISHED",
       "contentHash": "8cc6dd5a67fa4804",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -242,9 +350,9 @@
       "role": "pilar",
       "publishedAt": "2026-08-26",
       "internalState": "PUBLISHED",
-      "contentHash": "c6ac43157fa13296",
+      "contentHash": "85ede6015e6e9ffa",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -263,7 +371,7 @@
       "internalState": "PUBLISHED",
       "contentHash": "af001374a0c36d76",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -282,7 +390,7 @@
       "internalState": "PUBLISHED",
       "contentHash": "02bdd4293fd98d12",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -301,7 +409,7 @@
       "internalState": "PUBLISHED",
       "contentHash": "da3b4f48d0ebd9ad",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -318,9 +426,9 @@
       "role": "satelite",
       "publishedAt": "2026-08-26",
       "internalState": "PUBLISHED",
-      "contentHash": "42c27b904b258a4b",
+      "contentHash": "08a547e51683dbc2",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -339,7 +447,7 @@
       "internalState": "PUBLISHED",
       "contentHash": "21df8cdfe71b2adc",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -358,7 +466,7 @@
       "internalState": "PUBLISHED",
       "contentHash": "a43f9d8b53e2c740",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -377,7 +485,7 @@
       "internalState": "PUBLISHED",
       "contentHash": "fd8395482ebfe7a3",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -394,9 +502,9 @@
       "role": "satelite",
       "publishedAt": "2026-08-26",
       "internalState": "PUBLISHED",
-      "contentHash": "bdd26f41eb38c457",
+      "contentHash": "cb63e779c72577a2",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -415,7 +523,7 @@
       "internalState": "PUBLISHED",
       "contentHash": "83365c1748e7c146",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -434,7 +542,7 @@
       "internalState": "PUBLISHED",
       "contentHash": "d0e46137cd64a8f8",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -451,9 +559,9 @@
       "role": "satelite",
       "publishedAt": "2026-08-26",
       "internalState": "PUBLISHED",
-      "contentHash": "b81c2bd88e8987d7",
+      "contentHash": "9007c0574de20e90",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -470,9 +578,9 @@
       "role": "pilar",
       "publishedAt": "2026-08-31",
       "internalState": "PUBLISHED",
-      "contentHash": "bc469f3e44b8b03a",
+      "contentHash": null,
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -491,7 +599,7 @@
       "internalState": "PUBLISHED",
       "contentHash": "cfa3a7f8a392f89f",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
@@ -508,14 +616,869 @@
       "role": "satelite",
       "publishedAt": "2026-08-31",
       "internalState": "PUBLISHED",
-      "contentHash": "fcac1a3eca318119",
+      "contentHash": "95c7043c184e9536",
       "sitemapLastmod": null,
-      "indexNowSentAt": "2026-09-01T06:48:35.101Z",
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "5",
+      "lote": "11A/5",
+      "url": "/blog/manutencao-preventiva-de-computador-guia-completo",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/manutencao-preventiva-de-computador-guia-completo",
+      "ownerId": "manutencao-preventiva-de-computador-guia-completo",
+      "cluster": "manutencao-preventiva",
+      "role": "pilar",
+      "publishedAt": "2026-09-03",
+      "internalState": "PUBLISHED",
+      "contentHash": "5ed8dd1124a699f4",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "5",
+      "lote": "11A/5",
+      "url": "/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/dispositivo-usb-nao-reconhecido-o-que-fazer",
+      "ownerId": "dispositivo-usb-nao-reconhecido-o-que-fazer",
+      "cluster": "perifericos-usb",
+      "role": "pilar",
+      "publishedAt": "2026-09-03",
+      "internalState": "PUBLISHED",
+      "contentHash": "1b465a808f7cb513",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "5",
+      "lote": "11A/5",
+      "url": "/blog/como-testar-restauracao-de-backup",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-testar-restauracao-de-backup",
+      "ownerId": "como-testar-restauracao-de-backup",
+      "cluster": "dados-backup",
+      "role": "pilar",
+      "publishedAt": "2026-09-03",
+      "internalState": "PUBLISHED",
+      "contentHash": "6f00d662b3511696",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "6",
+      "lote": "11A/6",
+      "url": "/blog/como-monitorar-temperatura-do-computador",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-monitorar-temperatura-do-computador",
+      "ownerId": "como-monitorar-temperatura-do-computador",
+      "cluster": "manutencao-preventiva",
+      "role": "satelite",
+      "publishedAt": "2026-09-03",
+      "internalState": "PUBLISHED",
+      "contentHash": "9f16034716e46140",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "6",
+      "lote": "11A/6",
+      "url": "/blog/pendrive-somente-leitura-protegido-contra-gravacao",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/pendrive-somente-leitura-protegido-contra-gravacao",
+      "ownerId": "pendrive-somente-leitura-protegido-contra-gravacao",
+      "cluster": "perifericos-usb",
+      "role": "satelite",
+      "publishedAt": "2026-09-03",
+      "internalState": "PUBLISHED",
+      "contentHash": "aac691a61c665a43",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "6",
+      "lote": "11A/6",
+      "url": "/blog/historico-de-arquivos-windows-como-configurar",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/historico-de-arquivos-windows-como-configurar",
+      "ownerId": "historico-de-arquivos-windows-como-configurar",
+      "cluster": "dados-backup",
+      "role": "satelite",
+      "publishedAt": "2026-09-03",
+      "internalState": "PUBLISHED",
+      "contentHash": "6c8a312961cedf7d",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "7",
+      "lote": "11A/7",
+      "url": "/blog/monitor-sem-sinal-o-que-verificar",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/monitor-sem-sinal-o-que-verificar",
+      "ownerId": "monitor-sem-sinal-o-que-verificar",
+      "cluster": "video-e-exibicao",
+      "role": "satelite",
+      "publishedAt": "2026-09-03",
+      "internalState": "PUBLISHED",
+      "contentHash": "b51f3078a335b657",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "7",
+      "lote": "11A/7",
+      "url": "/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/bateria-de-notebook-nao-carrega-o-que-verificar",
+      "ownerId": "bateria-de-notebook-nao-carrega-o-que-verificar",
+      "cluster": "manutencao-preventiva",
+      "role": "satelite",
+      "publishedAt": "2026-09-03",
+      "internalState": "PUBLISHED",
+      "contentHash": "8dced5cf10a0f77e",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "7",
+      "lote": "11A/7",
+      "url": "/blog/como-migrar-arquivos-para-um-computador-novo",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-migrar-arquivos-para-um-computador-novo",
+      "ownerId": "como-migrar-arquivos-para-um-computador-novo",
+      "cluster": "dados-backup",
+      "role": "satelite",
+      "publishedAt": "2026-09-03",
+      "internalState": "PUBLISHED",
+      "contentHash": "ba9ded587e3e5d17",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "8",
+      "lote": "11A/8",
+      "url": "/blog/teclado-de-notebook-nao-funciona-o-que-verificar",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/teclado-de-notebook-nao-funciona-o-que-verificar",
+      "ownerId": "teclado-de-notebook-nao-funciona-o-que-verificar",
+      "cluster": "perifericos-usb",
+      "role": "satelite",
+      "publishedAt": "2026-09-03",
+      "internalState": "PUBLISHED",
+      "contentHash": "29109cfb8982afa0",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "8",
+      "lote": "11A/8",
+      "url": "/blog/computador-desliga-sozinho-o-que-verificar",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/computador-desliga-sozinho-o-que-verificar",
+      "ownerId": "computador-desliga-sozinho-o-que-verificar",
+      "cluster": "liga-e-desliga",
+      "role": "satelite",
+      "publishedAt": "2026-09-03",
+      "internalState": "PUBLISHED",
+      "contentHash": "24f79b4f806034a1",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "8",
+      "lote": "11A/8",
+      "url": "/blog/computador-nao-conecta-na-internet-por-cabo",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/computador-nao-conecta-na-internet-por-cabo",
+      "ownerId": "computador-nao-conecta-na-internet-por-cabo",
+      "cluster": "internet-wifi",
+      "role": "satelite",
+      "publishedAt": "2026-09-03",
+      "internalState": "PUBLISHED",
+      "contentHash": "aa3ff4992aa42d8f",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "8",
+      "lote": "11A/8",
+      "url": "/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/ventoinha-do-computador-fazendo-barulho-o-que-verificar",
+      "ownerId": "ventoinha-do-computador-fazendo-barulho-o-que-verificar",
+      "cluster": "liga-e-desliga",
+      "role": "satelite",
+      "publishedAt": "2026-09-03",
+      "internalState": "PUBLISHED",
+      "contentHash": "26eed805c0c0c59c",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "8",
+      "lote": "11A/8",
+      "url": "/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/rede-wifi-nao-aparece-na-lista-o-que-verificar",
+      "ownerId": "rede-wifi-nao-aparece-na-lista-o-que-verificar",
+      "cluster": "internet-wifi",
+      "role": "satelite",
+      "publishedAt": "2026-09-03",
+      "internalState": "PUBLISHED",
+      "contentHash": "34e9112b72852384",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "8",
+      "lote": "11A/8",
+      "url": "/blog/arquivo-corrompido-nao-abre-o-que-fazer",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/arquivo-corrompido-nao-abre-o-que-fazer",
+      "ownerId": "arquivo-corrompido-nao-abre-o-que-fazer",
+      "cluster": "dados-backup",
+      "role": "satelite",
+      "publishedAt": "2026-09-03",
+      "internalState": "PUBLISHED",
+      "contentHash": "ed904ab6e7bb0823",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "9",
+      "lote": "11A/9",
+      "url": "/blog/como-configurar-2fa-em-tudo",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-configurar-2fa-em-tudo",
+      "ownerId": "mfa-2fa-contas-criticas",
+      "cluster": "seguranca-identidade",
+      "role": "pilar",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "af4fee6c25c1987b",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "9",
+      "lote": "11A/9",
+      "url": "/blog/como-proteger-rede-wifi-empresa",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-proteger-rede-wifi-empresa",
+      "ownerId": "wifi-empresa-seguranca",
+      "cluster": "internet-wifi",
+      "role": "pilar",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "b4b89539b8b62ca1",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "9",
+      "lote": "11A/9",
+      "url": "/blog/como-configurar-firewall-pfsense",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-configurar-firewall-pfsense",
+      "ownerId": "pfsense-firewall-configuracao",
+      "cluster": "internet-wifi",
+      "role": "satelite",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "6da600e6db49be48",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "9",
+      "lote": "11A/9",
+      "url": "/blog/como-configurar-active-directory",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-configurar-active-directory",
+      "ownerId": "active-directory-planejamento",
+      "cluster": "informatica-empresas",
+      "role": "pilar",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "9e5bf56425594ebd",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "9",
+      "lote": "11A/9",
+      "url": "/blog/como-deixar-celular-android-mais-rapido",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-deixar-celular-android-mais-rapido",
+      "ownerId": "android-lento-diagnostico",
+      "cluster": "fundamentos",
+      "role": "satelite",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "3cb58aaa86d23be7",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "10",
+      "lote": "11A/10",
+      "url": "/blog/como-configurar-repetidor-wifi",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-configurar-repetidor-wifi",
+      "ownerId": "repetidor-wifi-configuracao",
+      "cluster": "internet-wifi",
+      "role": "satelite",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "f74ae4f230db5dcb",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "10",
+      "lote": "11A/10",
+      "url": "/blog/trocar-windows-por-linux-vale-a-pena",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/trocar-windows-por-linux-vale-a-pena",
+      "ownerId": "windows-linux-migracao",
+      "cluster": "fundamentos",
+      "role": "pilar",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "37aff7aa57ae25bb",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "10",
+      "lote": "11A/10",
+      "url": "/blog/erros-comuns-upgrade-computador",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/erros-comuns-upgrade-computador",
+      "ownerId": "upgrade-compatibilidade-hardware",
+      "cluster": "hardware-upgrade",
+      "role": "satelite",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "fc335f2031f80749",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "10",
+      "lote": "11A/10",
+      "url": "/blog/como-configurar-vpn-empresarial",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-configurar-vpn-empresarial",
+      "ownerId": "vpn-empresarial-acesso-remoto",
+      "cluster": "informatica-empresas",
+      "role": "pilar",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "424899c86b6816a4",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "10",
+      "lote": "11A/10",
+      "url": "/blog/como-recuperar-conta-hackeada",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-recuperar-conta-hackeada",
+      "ownerId": "conta-comprometida-recuperacao",
+      "cluster": "seguranca-identidade",
+      "role": "pilar",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "e86a9db8bbc7582c",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "11",
+      "lote": "11A/11",
+      "url": "/blog/como-deixar-windows-11-mais-rapido-iniciantes",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-deixar-windows-11-mais-rapido-iniciantes",
+      "ownerId": "windows-11-desempenho-diagnostico",
+      "cluster": "lentidao",
+      "role": "satelite",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "41dca71786ce634c",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "11",
+      "lote": "11A/11",
+      "url": "/blog/como-fazer-backup-fotos-windows-iniciantes",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-fazer-backup-fotos-windows-iniciantes",
+      "ownerId": "backup-fotos-windows",
+      "cluster": "dados-backup",
+      "role": "satelite",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "113e3647806efda2",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "11",
+      "lote": "11A/11",
+      "url": "/blog/como-atualizar-windows-corretamente",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-atualizar-windows-corretamente",
+      "ownerId": "windows-update-manutencao-segura",
+      "cluster": "windows-update",
+      "role": "satelite",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "82d0801640878469",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "11",
+      "lote": "11A/11",
+      "url": "/blog/como-recuperar-arquivos-apagados-windows",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-recuperar-arquivos-apagados-windows",
+      "ownerId": "arquivos-apagados-windows-recuperacao",
+      "cluster": "dados-backup",
+      "role": "satelite",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "58910504c4645256",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "11",
+      "lote": "11A/11",
+      "url": "/blog/como-fazer-teste-velocidade-internet",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-fazer-teste-velocidade-internet",
+      "ownerId": "teste-velocidade-internet-diagnostico",
+      "cluster": "internet-wifi",
+      "role": "satelite",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "6dad00cd2d156db1",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "12",
+      "lote": "11A/12",
+      "url": "/blog/como-resetar-senha-windows",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-resetar-senha-windows",
+      "ownerId": "windows-recuperacao-credencial-oficial",
+      "cluster": "sistemas-operacionais",
+      "role": "satelite",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "29892f69044c1dd0",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "12",
+      "lote": "11A/12",
+      "url": "/blog/como-organizar-arquivos-windows-iniciantes",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-organizar-arquivos-windows-iniciantes",
+      "ownerId": "windows-organizacao-arquivos",
+      "cluster": "dados-backup",
+      "role": "satelite",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "aca62253d831d6ba",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "12",
+      "lote": "11A/12",
+      "url": "/blog/como-trocar-senha-wifi",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-trocar-senha-wifi",
+      "ownerId": "wifi-alterar-credencial-seguranca",
+      "cluster": "internet-wifi",
+      "role": "satelite",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "d305767149fad25d",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "13",
+      "lote": "11A/13",
+      "url": "/blog/como-configurar-bios-uefi-corretamente",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-configurar-bios-uefi-corretamente",
+      "ownerId": "bios-uefi-configuracao-segura",
+      "cluster": "sistemas-operacionais",
+      "role": "satelite",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "79de5042b6bb6762",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "13",
+      "lote": "11A/13",
+      "url": "/blog/como-configurar-servidor-de-arquivos",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-configurar-servidor-de-arquivos",
+      "ownerId": "servidor-arquivos-smb-samba",
+      "cluster": "informatica-empresas",
+      "role": "pilar",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "b4c91a115ae3e409",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "13",
+      "lote": "11A/13",
+      "url": "/blog/como-configurar-firewall-ufw-linux",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-configurar-firewall-ufw-linux",
+      "ownerId": "ufw-firewall-host-ubuntu",
+      "cluster": "internet-wifi",
+      "role": "satelite",
+      "publishedAt": "2026-09-25",
+      "internalState": "PUBLISHED",
+      "contentHash": "ca96d5e1ce9d7a03",
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "14",
+      "lote": "11A/14",
+      "url": "/blog/como-fazer-backup-na-nuvem",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-fazer-backup-na-nuvem",
+      "ownerId": "backup-nuvem-restauracao-verificavel",
+      "cluster": "dados-backup",
+      "role": "satelite",
+      "publishedAt": "2026-09-26",
+      "internalState": "PUBLISHED",
+      "contentHash": null,
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "15",
+      "lote": "11A/15",
+      "url": "/blog/wifi-caindo-toda-hora",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/wifi-caindo-toda-hora",
+      "ownerId": "wifi-instavel-camadas-diagnostico",
+      "cluster": "internet-wifi",
+      "role": "satelite",
+      "publishedAt": "2026-09-26",
+      "internalState": "PUBLISHED",
+      "contentHash": null,
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "16",
+      "lote": "11A/16",
+      "url": "/blog/pc-nao-liga-o-que-fazer",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/pc-nao-liga-o-que-fazer",
+      "ownerId": "desktop-nao-liga-energia-post-video",
+      "cluster": "liga-e-desliga",
+      "role": "pilar",
+      "publishedAt": "2026-09-26",
+      "internalState": "PUBLISHED",
+      "contentHash": null,
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "17",
+      "lote": "11A/17",
+      "url": "/blog/ssd-nao-aparece-no-instalador-do-windows",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/ssd-nao-aparece-no-instalador-do-windows",
+      "ownerId": "ssd-ausente-windows-setup",
+      "cluster": "armazenamento-nao-detectado",
+      "role": "satelite",
+      "publishedAt": "2026-09-26",
+      "internalState": "PUBLISHED",
+      "contentHash": null,
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "18",
+      "lote": "11A/18",
+      "url": "/blog/como-instalar-ubuntu-do-zero",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-instalar-ubuntu-do-zero",
+      "ownerId": "ubuntu-instalacao-segura-desktop",
+      "cluster": "sistemas-operacionais",
+      "role": "pilar",
+      "publishedAt": "2026-09-26",
+      "internalState": "PUBLISHED",
+      "contentHash": null,
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "19",
+      "lote": "11A/19",
+      "url": "/blog/como-usar-rsync-backup-linux",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-usar-rsync-backup-linux",
+      "ownerId": "rsync-copia-sincronizacao-backup",
+      "cluster": "dados-backup",
+      "role": "satelite",
+      "publishedAt": "2026-09-27",
+      "internalState": "PUBLISHED",
+      "contentHash": null,
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "20",
+      "lote": "11A/20",
+      "url": "/blog/como-configurar-ssh-seguro-linux",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-configurar-ssh-seguro-linux",
+      "ownerId": "openssh-chaves-validacao-rollback",
+      "cluster": "seguranca-infra",
+      "role": "satelite",
+      "publishedAt": "2026-09-27",
+      "internalState": "PUBLISHED",
+      "contentHash": null,
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "21",
+      "lote": "11A/21",
+      "url": "/blog/como-gerenciar-pacotes-apt-dnf-linux",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/como-gerenciar-pacotes-apt-dnf-linux",
+      "ownerId": "linux-pacotes-apt-dnf",
+      "cluster": "linux-fundamentos",
+      "role": "satelite",
+      "publishedAt": "2026-09-27",
+      "internalState": "PUBLISHED",
+      "contentHash": null,
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
+      "google": {
+        "status": "UNKNOWN",
+        "motivo": "credenciais do Search Console ausentes"
+      }
+    },
+    {
+      "wave": "11A",
+      "batch": "22",
+      "lote": "11A/22",
+      "url": "/blog/comandos-linux-essenciais-iniciantes",
+      "urlAbsoluta": "https://otecnicodeinformatica.com.br/blog/comandos-linux-essenciais-iniciantes",
+      "ownerId": "linux-terminal-comandos-basicos",
+      "cluster": "linux-fundamentos",
+      "role": "pilar",
+      "publishedAt": "2026-09-27",
+      "internalState": "PUBLISHED",
+      "contentHash": null,
+      "sitemapLastmod": null,
+      "indexNowSentAt": null,
       "google": {
         "status": "UNKNOWN",
         "motivo": "credenciais do Search Console ausentes"
       }
     }
   ],
-  "alertasNovos": 0
+  "alertasNovos": 45
 }
