@@ -4,6 +4,7 @@ import { FastHeader } from "@/components/FastHeader";
 import { JsonLdSchema } from "@/components/JsonLdSchema";
 import { HeroTriagem } from "@/components/home/HeroTriagem";
 import { ContextosBento } from "@/components/home/ContextosBento";
+import { WaterCoolerTecnico } from "@/components/editorial/WaterCoolerTecnico";
 import { FaixaFotografica } from "@/components/home/FaixaFotografica";
 import { HomeFaqSsr } from "@/components/home/HomeFaqSsr";
 import { EncontreSuaSolucao } from "@/components/home/EncontreSuaSolucao";
@@ -92,6 +93,7 @@ const Index = () => {
         </section>
 
         <ContextosBento />
+        <WaterCoolerTecnico variant="home" />
         <EncontreSuaSolucao />
         <DiagnosticoIa />
         <CondicoesAtendimento />
