@@ -36,6 +36,7 @@ issue → branch → PR → validação (build + gates) → merge em main
 ```
 
 - Nada entra em `main` sem PR validado.
+- Para adotar ferramentas abertas de mídia, voz, pesquisa ou agentes, consultar `docs/integrations/open-source-editorial-workflow-2026-11-18.md` antes de instalar ou integrar; a curadoria não aprova execução automática.
 - Commit apenas das alterações da rodada em curso.
 - Build verde **não** é deploy público (ver seção 7).
 - Em triagem de segurança, autenticação, RLS, segredos ou achados de PR, aplicar `.agents/skills/security-evidence-triage/SKILL.md` como método complementar, sem substituir `SECURITY.md` nem os gates.
